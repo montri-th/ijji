@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "landometer-navigation-preset/1.0",
+  "presetId": "ijji-public-th-r3",
+  "product": "ijji",
+  "locale": "th-TH",
+  "profile": {
+    "classification": "current-v0.9.1-safe-adaptation",
+    "normativeAuthority": "Landometer Design System 0.9.1 / 0.9.1-r8",
+    "candidateInput": "Unified navbar design handoff r7",
+    "candidateInputIsNormative": false
+  },
+  "identity": {
+    "masterBrand": "Landometer",
+    "masterBrandRendering": "live_text_Arvo_700",
+    "productIndicator": "/ ijji",
+    "homeUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html"
+  },
+  "controlBudget": {
+    "desktopMinWidth": 900,
+    "desktop": [
+      "Landometer brand",
+      "CityMETER shortcut",
+      "open ijji CTA",
+      "menu"
+    ],
+    "desktopTotal": 4,
+    "compactMaxWidth": 899,
+    "compact": [
+      "Landometer brand",
+      "menu"
+    ],
+    "compactTotal": 2
+  },
+  "destinations": {
+    "primaryCta": "https://ijji.landometer.com",
+    "ecosystem": [
+      "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
+      "https://montri-th.github.io/CityMETER/",
+      "https://landometer.com/v3/citywiki",
+      "https://montri-th.github.io/Landom/"
+    ],
+    "languageSwitch": "hidden_until_English_route_exists"
+  },
+  "calmState": {
+    "scrollThresholdPx": 24,
+    "directionDeltaPx": 4,
+    "prominentHeightPx": {
+      "desktop": 76,
+      "compact": 68
+    },
+    "calmVisibleSurfaceHeightPx": {
+      "desktop": 29,
+      "compact": 27
+    },
+    "calmSemanticHitboxHeightPx": 44,
+    "visualScale": 0.5,
+    "contentOpacity": 1,
+    "canvasMixPercent": {
+      "prominent": 92,
+      "calmLight": 80,
+      "calmDark": 78
+    },
+    "transitionMs": 560,
+    "returnsToProminentOn": [
+      "scroll_up",
+      "near_page_top",
+      "visible_surface_hover",
+      "navigation_focus",
+      "menu_open"
+    ],
+    "reducedMotion": "always_prominent"
+  },
+  "ctaCue": {
+    "type": "sweeping_text_highlight",
+    "durationMs": 540,
+    "bandPercent": 28,
+    "playCount": "once_per_page_load",
+    "trigger": "first_visible_CTA_entry",
+    "movesButtonGeometry": false,
+    "reducedMotion": "hidden"
+  },
+  "bookmarkRail": {
+    "minViewportWidthPx": 1280,
+    "position": "fixed_right_center",
+    "targets": [
+      { "marker": "01", "id": "top", "label": "ภาพรวม" },
+      { "marker": "02", "id": "why", "label": "ทำไมต้องมีอิจจี้" },
+      { "marker": "03", "id": "locale", "label": "รอบย่าน" },
+      { "marker": "04", "id": "answer", "label": "ตัวอย่างคำตอบ" },
+      { "marker": "05", "id": "problems", "label": "ปัญหาร้าน 12 แบบ" }
+    ],
+    "targetSizePx": 44,
+    "labelMode": "visible_tooltip_on_hover_or_focus",
+    "currentState": [
+      "aria-current_location",
+      "accent_ink",
+      "tinted_surface",
+      "inset_outline"
+    ],
+    "compactFallback": "same_targets_in_disclosure_menu"
+  },
+  "menu": {
+    "semantics": "ordinary_link_disclosure",
+    "opensFocusOn": "first_visible_link",
+    "closesOn": [
+      "Escape",
+      "backdrop_click",
+      "trigger_toggle",
+      "section_selection",
+      "focus_leave"
+    ],
+    "noJavaScriptFallback": "expanded_inline_navigation"
+  },
+  "icons": {
+    "family": "Material Symbols Rounded",
+    "fill": 0,
+    "weight": 300,
+    "navigationSubset": "assets/fonts/material-symbols-rounded-nav-300-v0.9.1.woff2",
+    "pageFont": "assets/fonts/material-symbols-rounded-full-v370.woff2",
+    "license": "assets/licenses/material-symbols-Apache-2.0.txt"
+  },
+  "rejectedCandidateDivergences": [
+    "continuous CTA animation",
+    "semantic targets scaled below 44px",
+    "unapproved reconstructed master-brand symbol",
+    "filled selected-state icon glyphs"
+  ]
+}

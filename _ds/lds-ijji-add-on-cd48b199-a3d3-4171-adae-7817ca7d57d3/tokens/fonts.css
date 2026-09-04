@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,200..400,0..1,0&display=swap");
+
+/* Governed webfaces — eleven packaged binaries in assets/fonts with recorded hashes
+   (machine/v0.9.1/SHA256SUMS.txt). Fontsource 5.3.0, SIL OFL 1.1; no synthesis.
+   Roles (type-script-aware-02): Arvo 700 = Latin display. IBM Plex Sans Thai Looped 700 =
+   Thai display. Bai Jamjuree 400/600 = body + UI (both scripts). JetBrains Mono 400 =
+   Latin technical. IBM Plex Sans Thai 400 = Thai technical companion (proportional).
+   Material Symbols Rounded (Apache 2.0) is the approved icon face at FILL 0 / wght 300 /
+   GRAD 0 — FILL 0 in every state. The two packaged subsets (nav, open-in-new · wght 300)
+   are self-hosted beside the text faces for production binding; the Google import above
+   stays only so this reference folder can preview any approved glyph. A production or
+   portable build binds the packaged subsets (or a build-specific subset with its glyph
+   map) through the asset registry instead of the CDN. */
+@font-face{font-family:Arvo;src:url("../assets/fonts/arvo-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+0000-024F,U+1E00-1EFF}
+@font-face{font-family:"IBM Plex Sans Thai Looped";src:url("../assets/fonts/ibm-plex-sans-thai-looped-thai-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+0E00-0E7F}
+@font-face{font-family:"IBM Plex Sans Thai Looped";src:url("../assets/fonts/ibm-plex-sans-thai-looped-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+0000-024F,U+1E00-1EFF}
+@font-face{font-family:"Bai Jamjuree";src:url("../assets/fonts/bai-jamjuree-thai-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0E00-0E7F}
+@font-face{font-family:"Bai Jamjuree";src:url("../assets/fonts/bai-jamjuree-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0000-024F,U+1E00-1EFF}
+@font-face{font-family:"Bai Jamjuree";src:url("../assets/fonts/bai-jamjuree-thai-600-normal.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;unicode-range:U+0E00-0E7F}
+@font-face{font-family:"Bai Jamjuree";src:url("../assets/fonts/bai-jamjuree-latin-600-normal.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;unicode-range:U+0000-024F,U+1E00-1EFF}
+@font-face{font-family:"JetBrains Mono";src:url("../assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0000-024F,U+1E00-1EFF}
+@font-face{font-family:"IBM Plex Sans Thai";src:url("../assets/fonts/ibm-plex-sans-thai-thai-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;size-adjust:102%;unicode-range:U+0E00-0E7F}
+
+/* Fallback-stack families named by the kit's --font-*-fallback tokens. These ship
+   no binary and make no network request: src:local() means "use the reader's own
+   installed copy, or skip to the next entry in the stack" — which is exactly what
+   an unregistered family name already did. Declared here, never in the kit. */
+@font-face{font-family:Cambria;src:local("Cambria");font-display:swap}
+@font-face{font-family:"Noto Sans Thai";src:local("Noto Sans Thai");font-display:swap;unicode-range:U+0E00-0E7F}
+@font-face{font-family:"Noto Sans Thai Looped";src:local("Noto Sans Thai Looped");font-display:swap;unicode-range:U+0E00-0E7F}

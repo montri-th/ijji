@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "ijji-product-web-release/1.0",
+  "releaseId": "ijji-web-20260904-r3",
+  "releaseDate": "2026-09-04",
+  "product": "ijji",
+  "locale": "th-TH",
+  "entrypoint": "ijji-TH.dc.html",
+  "canonicalUrl": "https://montri-th.github.io/ijji/ijji-TH.dc.html",
+  "index": {
+    "path": "index.html",
+    "behavior": "client_redirect",
+    "target": "ijji-TH.dc.html"
+  },
+  "provider": {
+    "repository": "montri-th/ijji",
+    "branch": "main",
+    "path": "/",
+    "liveUrl": "https://montri-th.github.io/ijji/"
+  },
+  "authority": {
+    "ijjiDesignSystem": "0.5.0",
+    "ijjiAddOn": "0.5.3",
+    "ijjiAssetPackage": "ijji-ds-addon-assets-v0.5.3",
+    "ijjiArtifactRef": "ds-addon-ui-20260902-01",
+    "parentLDS": "0.9.1",
+    "parentAuthoringRevision": "0.9.1-r8",
+    "parentRuleset": "lds-rules-0.9.1",
+    "parentMachineIdentity": "v0.9.1-mp7",
+    "colorSet": "color-srgb-05",
+    "conformanceClaim": "authoring_aligned",
+    "machinePackageValidationClaim": false
+  },
+  "sourcePins": [
+    {
+      "name": "ijji product website ออกแบบ.zip",
+      "role": "product_page_source",
+      "sha256": "2144261da856a646ccf6dc395cb82e34388a8b1ceeee3f93782acedbb7d3162b"
+    },
+    {
+      "name": "Unified navbar design handoff r7.zip",
+      "role": "candidate_design_reference",
+      "sha256": "47a26f9546316856357040d7a716619a8fa5289484851b4d25bdbb9501ef60fa"
+    },
+    {
+      "name": "PUBLISH-ijji.md",
+      "role": "predecessor_publish_qa_reference",
+      "sha256": "8991118cd9c27f17808682319318d985e6ed0312faa1c22d58311f295ccedcdd"
+    }
+  ],
+  "scope": {
+    "added": [
+      "unified Landometer and ijji navbar",
+      "accessible calm scroll state",
+      "one-shot CTA sweeping text highlight",
+      "bookmark rail and compact-screen section menu",
+      "ecosystem disclosure menu",
+      "self-hosted page runtime and icon fonts",
+      "no-JavaScript navigation fallback"
+    ],
+    "unchanged": [
+      "product positioning and claims",
+      "owner-facing page content",
+      "evidence and privacy boundaries",
+      "destination of the primary ijji CTA"
+    ],
+    "notIncluded": [
+      "English route",
+      "analytics",
+      "cookie banner",
+      "favicon pending a separately approved asset",
+      "Locale Insight data or copied canonical JSON"
+    ]
+  },
+  "runtime": {
+    "selfHostedCriticalAssets": true,
+    "reactVersion": "18.3.1",
+    "reactSha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd",
+    "reactDomSha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d",
+    "reactLicenseSha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+    "navigationFontSha256": "d7e283106ed2898726b24504c4e0f5ad524292984a90a4d29553c7dcf53b9657",
+    "pageIconFontSha256": "7ad6b7611a0915c52559172f8ed4ae60a881faaa2c3ffd6ee157cf193d12af23",
+    "materialSymbolsLicenseSha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+  },
+  "navigationPreset": "navigation-preset.json",
+  "releaseNotes": "RELEASE-NOTES.md",
+  "checksumLedger": "SHA256SUMS.txt",
+  "excludedSourcePaths": [
+    ".thumbnail",
+    "github.md",
+    "handoff/",
+    "uploads/"
+  ],
+  "openManualGates": [
+    "physical iPhone Safari and embedded WKWebView"
+  ],
+  "postDeployEvidence": "GitHub release assets bound to the immutable release tag",
+  "localeInsightUsage": false
+}

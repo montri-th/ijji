@@ -1,0 +1,125 @@
+/* Extension registry: values the build-kit projection does not carry, kept here
+   so no file outside build-kit/ ever redefines a projection token. Raw values in
+   this file are registry values quoted from machine/v0.9.1/tokens.v0.9.1.json
+   (asset colours, the nine named scale families, cues, control geometry, layout
+   limits) that the projection omits. */
+:root{
+  /* Brand values the projection omits: the dark beige as an explicitly named
+     accent, and the two colours that only ever appear inside an approved asset. */
+  --brand-beige-dark:#D8CFB2;
+  --brand-logo-gray:#757575;
+  --brand-logo-cyan:#0194CA;
+
+  /* Asset-only motif recipes. Never a surface, never a reconstructed logo.
+     The signature pair matches --ldm-signature-closing-light/-dark exactly. */
+  --atmosphere-angle:135deg; /* @kind other */
+  --motif-brand-signature:linear-gradient(135deg,#1D4497 0%,#176B82 54%,#08756F 100%); /* @kind color */
+  --motif-brand-signature-dark:linear-gradient(135deg,#68C4E2 0%,#15919A 52%,#08756F 100%); /* @kind color */
+  --motif-civic-cool:linear-gradient(135deg,#147A9F 0%,#3BD3CB 52%,#3BD19B 100%); /* @kind color */
+  --motif-civic-warm:linear-gradient(135deg,#C33F55 0%,#FF8A4C 52%,#F4C44E 100%); /* @kind color */
+
+  /* Redundant shape cue per categorical series — hue alone never encodes a
+     category, and colour-only identification stops at six (A5). */
+  --series-01-cue:circle; /* @kind other */
+  --series-02-cue:square; /* @kind other */
+  --series-03-cue:triangle; /* @kind other */
+  --series-04-cue:diamond; /* @kind other */
+  --series-05-cue:cross; /* @kind other */
+  --series-06-cue:star; /* @kind other */
+  --series-07-cue:hexagon; /* @kind other */
+  --series-08-cue:ring; /* @kind other */
+  --series-09-cue:dash; /* @kind other */
+  --series-10-cue:plus; /* @kind other */
+
+  /* Nine named scale families, three governed anchors each — exact values from
+     master A6 at Color Set color-srgb-05. Render 5/7/9 classes from the generated
+     41-stop LUT with its scaleVersion; runtime interpolation MUST NOT occur, and
+     no scale gate may be claimed before dataviz.tokens.json and its hash exist. */
+  --scale-growth-low:#F2F1DF;--scale-growth-mid:#55B8C2;--scale-growth-high:#126F68;
+  --scale-water-low:#F2F1DF;--scale-water-mid:#55B8C2;--scale-water-high:#206C9A;
+  --scale-risk-low:#F2F1DF;--scale-risk-mid:#E0B443;--scale-risk-high:#B74436;
+  --scale-activity-low:#F2F1DF;--scale-activity-mid:#E86A8C;--scale-activity-high:#C52C00;
+  --scale-density-low:#F2F1DF;--scale-density-mid:#6797AF;--scale-density-high:#225F78;
+  --scale-confidence-low:#F2F1DF;--scale-confidence-mid:#85A5A2;--scale-confidence-high:#08756F;
+  --scale-balance-neg:#C52C00;--scale-balance-mid:#F2F1DF;--scale-balance-pos:#186A9E;
+  --scale-delta-neg:#B74436;--scale-delta-mid:#F2F1DF;--scale-delta-pos:#007C78;
+  --scale-tradeoff-neg:#B23F74;--scale-tradeoff-mid:#F2F1DF;--scale-tradeoff-pos:#007E91;
+
+  /* No data is never zero: both need a label, not only a fill. The kit carries the
+     flat fill and the zero outline; the diagonal pattern is built from them. */
+  --data-no-data-pattern:repeating-linear-gradient(135deg,#D5DAD6 0 6px,#B9C0BB 6px 10px); /* @kind color */
+  --map-ground:#F2F1DF;
+  --map-water:#55B8C2;
+
+  /* Scene contract defaults for the kit's .scene-atmosphere block. The kit sets
+     these inside each scene variant; declaring the deep pair at :root registers
+     them as tokens and matches the kit's own fallback (fg-on-deep-*) exactly. */
+  --on-atmosphere:var(--fg-on-deep-primary); /* @kind color */
+  --on-atmosphere-2:var(--fg-on-deep-secondary); /* @kind color */
+
+  /* Type roles the projection omits */
+  --type-h4:1.125rem; /* @kind font */
+  --leading-technical-th:1.48; /* @kind other */
+  --tracking-display:-.02em; /* @kind other */
+  --tracking-eyebrow:.08em; /* @kind other */
+  --tracking-technical-th:.008em; /* @kind other */
+  --measure-reading-en:72ch; /* @kind other */
+  --measure-reading-th:66ch; /* @kind other */
+
+  /* Icon delivery [ICON-01] — icon-rounded-outline-01. Axes locked: FILL 0 · wght 300 ·
+     GRAD 0 · opsz matches rendered size. FILL stays 0 in EVERY state (v0.9.1): selected
+     is carried by semantic surface, colour, a visible label or an outline container.
+     Packaged self-hosted subsets with recorded hashes sit in assets/fonts. These two
+     variable-axis inputs feed the legacy .ls-icon/Icon components; they must resolve
+     to the locked values. */
+  --font-icon:"Material Symbols Rounded"; /* @kind font */
+  --icon-weight:300; /* @kind other */
+  /* never 1 — a fill change by state is prohibited */
+  --icon-fill:0; /* @kind other */
+  --icon-size-sm:18px; /* @kind spacing */
+  --icon-size-md:22px; /* @kind spacing */
+  --icon-size-lg:28px; /* @kind spacing */
+
+  /* Control geometry (CTRL-01, browser branch — CSS px). Text/icon+label = capsule;
+     icon-only = circle with an accessible name; inline text links keep the WCAG
+     text-link exception. */
+  --control-capsule-min-height:44px; /* @kind spacing */
+  --control-capsule-pad-inline:24px; /* @kind spacing */
+  --control-capsule-gap:8px; /* @kind spacing */
+  --control-border:2px; /* @kind spacing */
+  --control-circle-size:44px; /* @kind spacing */
+
+  /* Riddim Approach observer + CTA discovery cue geometry (browser-only; MOTION-02, §7.3).
+     Observer rootMargin is 0px 0px -12% 0px; the cue sweeps -120% → 120%. */
+  --motion-observer-threshold:.14; /* @kind other */
+  --motion-watchdog:2400ms; /* @kind other */
+  --motion-cta-cue-ceiling:600ms; /* @kind other */
+  --motion-cta-cue-band:28%; /* @kind other */
+
+  /* Layout limits the projection omits */
+  --target-min:44px; /* @kind spacing */
+  --gutter:32px; /* @kind spacing */
+  --header-height:76px; /* @kind spacing */
+  --breakpoint-xs:360px; /* @kind spacing */
+  --breakpoint-sm:600px; /* @kind spacing */
+  --breakpoint-md:900px; /* @kind spacing */
+  --breakpoint-lg:1200px; /* @kind spacing */
+  --breakpoint-xl:1600px; /* @kind spacing */
+
+  /* Scrim and blur: elevation is quiet and rare, hairlines do the separating. */
+  --scrim-dialog:rgba(17,25,29,.66); /* @kind color */
+  --blur-header:10px; /* @kind other */
+  --blur-scrim:3px; /* @kind other */
+}
+:root[data-theme="dark"]{
+  --scale-growth-low:#6F8984;--scale-growth-mid:#53BDD0;--scale-growth-high:#86E0B8;
+  --scale-water-low:#6C838C;--scale-water-mid:#55B8C2;--scale-water-high:#68C4E2;
+  --scale-risk-low:#8D9D99;--scale-risk-mid:#D0A42F;--scale-risk-high:#FF8C7D;
+  --scale-activity-low:#808A96;--scale-activity-mid:#F079A1;--scale-activity-high:#FFB06A;
+  --scale-density-low:#728C9A;--scale-density-mid:#47A6C4;--scale-density-high:#9BE4F2;
+  --scale-confidence-low:#7C8B8C;--scale-confidence-mid:#95A9AA;--scale-confidence-high:#D8E6E5;
+  --scale-balance-neg:#FF8A4C;--scale-balance-mid:#7C8A84;--scale-balance-pos:#4FAFE0;
+  --scale-delta-neg:#F28575;--scale-delta-mid:#7C8A84;--scale-delta-pos:#55C8BC;
+  --scale-tradeoff-neg:#F06FA6;--scale-tradeoff-mid:#7C8A84;--scale-tradeoff-pos:#61C2D3;
+  --data-no-data-pattern:repeating-linear-gradient(135deg,#404844 0 6px,#2B3534 6px 10px); /* @kind color */
+}

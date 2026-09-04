@@ -1,0 +1,51 @@
+/* Legacy name bridge (v0.8.9 → v0.9.0 → v0.9.1). var() only — never a raw value,
+   never a projection redefinition. The 16 components, cards, templates and the
+   identity playground were authored against older names, so those names stay as
+   aliases and resolve per theme at use time. */
+:root{
+  /* v0.9.0 motion names → motion-riddim-approach-02 */
+  --motion-duration-reveal:var(--motion-duration-approach-opacity);
+  --motion-duration-emphasis:var(--motion-duration-cta-cue);
+  --motion-distance-reveal:var(--motion-distance-approach-block);
+
+  /* interaction.focus.ring → --interaction-focus-ring */
+  --focus-ring:var(--interaction-focus-ring);
+
+  /* semantic.<state>.<slot> → --semantic-<state>-<slot> */
+  --success-fill:var(--semantic-success-fill);--success-ink:var(--semantic-success-ink);
+  --warning-fill:var(--semantic-warning-fill);--warning-ink:var(--semantic-warning-ink);
+  --danger-fill:var(--semantic-danger-fill);--danger-ink:var(--semantic-danger-ink);
+  --info-fill:var(--semantic-info-fill);--info-ink:var(--semantic-info-ink);
+  --neutral-fill:var(--semantic-neutral-fill);--neutral-ink:var(--semantic-neutral-ink);
+  --pending-fill:var(--semantic-pending-fill);--pending-ink:var(--semantic-pending-ink);
+  --assisted-fill:var(--semantic-assisted-fill);--assisted-ink:var(--semantic-assisted-ink);
+
+  /* Foreground contracts → --fg-* (A4.1). The kit publishes two ink levels per
+     ground plus one interactive pair; the older six-slot naming maps onto them. */
+  --on-deep-primary:var(--fg-on-deep-primary);
+  --on-deep-secondary:var(--fg-on-deep-secondary);
+  --on-deep-metadata:var(--fg-on-deep-secondary);
+  --on-deep-separator:var(--fg-on-deep-secondary);
+  --on-deep-surface:var(--fg-interactive-surface);
+  --on-deep-ink:var(--fg-interactive-ink);
+  --on-deep-focus-inner:var(--fg-on-light-primary);
+  --on-deep-focus-outer:var(--fg-on-deep-primary);
+  --on-light-primary:var(--fg-on-light-primary);
+  --on-light-secondary:var(--fg-on-light-secondary);
+  --on-light-metadata:var(--fg-on-light-secondary);
+  --on-light-separator:var(--fg-on-light-primary);
+  --on-light-surface:var(--fg-interactive-surface);
+  --on-light-ink:var(--fg-interactive-ink);
+  --on-light-focus-inner:var(--fg-interactive-surface);
+  --on-light-focus-outer:var(--fg-on-light-primary);
+
+  /* Technical type families → --font-technical* */
+  --font-mono:var(--font-technical-latin);
+  --font-mono-th:var(--font-technical-th);
+
+  /* Analytical + map renames */
+  --data-no-data:var(--dataviz-no-data-fill);
+  --data-zero:var(--dataviz-zero-outline);
+  --map-marker-halo:var(--marker-halo);
+  --map-marker-stroke:var(--marker-stroke);
+}

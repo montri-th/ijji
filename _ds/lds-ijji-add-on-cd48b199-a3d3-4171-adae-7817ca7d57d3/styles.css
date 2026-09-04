@@ -1,0 +1,17 @@
+/* Landometer Design System v0.9.1 (authoring 0.9.1-r8 · machine package v0.9.1-mp7) — global entry point.
+   Consumers link this one file. Load order is normative:
+     1. tokens/fonts.css      — @font-face only; binaries live in assets/fonts with recorded hashes
+     2. build-kit/*.css       — the v0.9.1 token projection + base anatomy: the only source of raw
+                                values, generated from machine/v0.9.1/tokens.v0.9.1.json (Token
+                                Schema 7); color values identical to color-srgb-05.production.css
+     3. tokens/ext-*.css      — extension layer: legacy name bridge + registry values the
+                                projection does not carry (scale families, tracking, icon sizes,
+                                breakpoints, control geometry)
+     4. tokens/base.css       — element defaults the projection does not carry
+   Nothing outside build-kit/ may redefine a projection token or selector [TOKEN-01/COLOR-01]. */
+@import url("tokens/fonts.css");
+@import url("build-kit/lds-tokens.css");
+@import url("build-kit/lds-base.css");
+@import url("tokens/ext-aliases.css");
+@import url("tokens/ext-registry.css");
+@import url("tokens/base.css");

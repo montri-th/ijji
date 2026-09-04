@@ -1,0 +1,61 @@
+/* ijji product layer — ijji DS Add-on v0.5.3 (ds-addon-ui-20260902-01) on Landometer Design System v0.9.1.
+   Load AFTER styles.css and scope with data-product="ijji". var() only: ijji owns no palette, font, icon
+   family, spacing, radius or motion value [IJJI-IDENTITY-01]; every binding below is the one the approved
+   reference (machine/ijji-ds-addon/v0.5.3/assets/example-source/styles.css) uses. Authority, hashes and
+   the rule digest: addons/ijji/README.md. */
+@import url("motif/ijji-motion.css"); /* ijji.four-beat motif motion layer (approved bytes, unmodified) — only bites on .ijji-motif elements */
+[data-product="ijji"]{
+  --ijji-primary-button-bg:var(--interaction-accent);
+  --ijji-primary-button-ink:var(--fg-on-deep-primary);
+  --ijji-identity-surface:var(--brand-blue);
+  --ijji-identity-ink:var(--energy-mint);
+  --ijji-section-rule:var(--border-default);
+  --ijji-atmosphere:var(--product-ijji-gradient);
+  --ijji-on-atmosphere:var(--fg-on-light-primary);
+  --ijji-on-atmosphere-2:var(--fg-on-light-secondary);
+  --ijji-leading-display-th:1.25;
+}
+[data-theme="dark"] [data-product="ijji"],[data-product="ijji"][data-theme="dark"]{--ijji-primary-button-ink:var(--fg-on-light-primary)}
+
+/* TYPE-01 — 1.25 is the safe fallback; 1.16 is never a universal Thai rule */
+[data-product="ijji"] :is(h1,.ijji-display):lang(th),[data-product="ijji"] :lang(th) :is(h1,.ijji-display){line-height:var(--ijji-leading-display-th)}
+
+/* IJJI-DSA-EVIDENCE-VIS-01 — no colored card-edge rail on owner-facing answer, evidence or teaching
+   specimens. The kit's verified-lineage rail is neutralised in ijji scope; verified provenance is carried
+   by the bounded, labelled marker below instead. */
+[data-product="ijji"] .card--verified{border-top:1px solid var(--border-default)}
+
+/* ijji.owner-benefit-answer — label → answer → limit/next step on a neutral or blue-tint surface */
+[data-product="ijji"] .ijji-owner-answer{display:grid;gap:var(--space-2);margin:0;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-blue-tint);padding:var(--space-4) var(--space-5);color:var(--text-primary)}
+[data-product="ijji"] .ijji-label{margin:0;color:var(--text-metadata);font-size:var(--type-body-sm)}
+[data-product="ijji"] .ijji-value{margin:0;color:var(--text-primary);font-weight:600}
+[data-product="ijji"] .ijji-limit{margin:0;border-top:1px solid var(--border-hairline);padding-top:var(--space-3);color:var(--text-metadata);font-size:var(--type-body-sm)}
+
+/* ijji.evidence-group + ijji.evidence-fact — recorded / stated / missing read from heading, order, gap and hairlines */
+[data-product="ijji"] .ijji-evidence-group{display:grid;gap:0;margin:0;border:1px solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-raised);overflow:hidden}
+[data-product="ijji"] .ijji-evidence-fact{display:grid;grid-template-columns:minmax(10rem,.42fr) minmax(0,1fr);gap:var(--space-4);align-items:baseline;margin:0;border-top:1px solid var(--border-hairline);padding:var(--space-4)}
+[data-product="ijji"] .ijji-evidence-fact:first-child{border-top:0}
+[data-product="ijji"] .ijji-evidence-fact>dt{margin:0;color:var(--text-metadata);font-size:var(--type-body-sm)}
+[data-product="ijji"] .ijji-evidence-fact>dd{margin:0;color:var(--text-primary);font-weight:600}
+@media (max-width:719px){[data-product="ijji"] .ijji-evidence-fact{grid-template-columns:1fr;gap:var(--space-1)}}
+
+/* ijji.provenance-label — ONLY for a record whose governed provenance field is verified. The visible
+   text is the meaning; the color is redundancy. Bounded marker, never a card-edge rail. */
+[data-product="ijji"] .ijji-provenance-label{display:inline-flex;align-items:center;gap:var(--space-1);padding:1px var(--space-2);border:1px solid currentColor;border-radius:var(--radius-pill);color:var(--status-source-verified-bar);font-family:var(--font-technical);font-size:var(--type-label);line-height:var(--leading-label)}
+
+/* ijji.primary-action — .btn (capsule, 44px) from lds-base or the Button component; interaction tokens only, never filled Brand Blue */
+[data-product="ijji"] .btn--ijji-primary{background:var(--ijji-primary-button-bg);color:var(--ijji-primary-button-ink);border-color:var(--ijji-primary-button-bg)}
+[data-product="ijji"] .btn--ijji-primary:hover{background:var(--ijji-primary-button-bg);color:var(--ijji-primary-button-ink);opacity:.92}
+
+/* Identity panel — the ONLY approved logo context: exact PNG, direct brand.blue, no white carrier */
+[data-product="ijji"] .ijji-identity-panel{display:grid;aspect-ratio:1;place-items:center;overflow:hidden;border-radius:var(--radius-xl);background:var(--ijji-identity-surface);box-shadow:var(--elevation-md)}
+[data-product="ijji"] .ijji-identity-panel>img{width:100%;height:100%;object-fit:contain;display:block}
+
+/* Product label — live-text identity for header/footer while no logo variant is approved there */
+[data-product="ijji"] .ijji-product-label{display:inline-flex;min-height:44px;align-items:center;gap:var(--space-3);color:var(--text-primary);font-family:var(--font-technical);font-size:var(--type-label);text-decoration:none;text-transform:uppercase}
+[data-product="ijji"] .ijji-product-label>span:first-child{border-right:1px solid var(--border-emphasis);padding-right:var(--space-3);font-weight:600;letter-spacing:.1em}
+
+/* IJJI-DSA-MOTION-01 — explicit no-motion decision inside ijji scope; governed state feedback stays */
+[data-product="ijji"] :is(.reveal,.approach-soft,.approach-inline-start,.approach-inline-end,.media-arrival,.stagger-child,.settle){animation:none}
+
+@media (forced-colors:active){[data-product="ijji"] :is(.ijji-provenance-label,.source-status,.status){border:1px solid currentColor}}

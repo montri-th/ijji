@@ -1,0 +1,28 @@
+/* Element defaults the kit does not carry. lds-base.css owns body, h1–h3, focus,
+   .btn, .status, .card, .container, .icon-symbol and the reduced-motion kill
+   switch; this layer adds link colour, mixed-script routing, numerals and the
+   two legacy utility classes. It defines no token and no kit selector. */
+html{background:var(--surface-canvas);scroll-behavior:smooth}
+body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{letter-spacing:var(--tracking-display);text-wrap:balance}
+h4{margin:0 0 var(--space-4);font-family:var(--font-ui-heading-en);font-size:var(--type-h4);font-weight:700;line-height:var(--leading-ui-heading-en)}
+/* The kit routes script by html[lang]. Cards, decks and bilingual pages carry
+   both scripts inside one document, so :lang() has to route per element too. */
+h1:lang(th){font-family:var(--font-display-th);font-size:var(--type-h1-th);line-height:var(--leading-display-th)}
+h2:lang(th),h3:lang(th),h4:lang(th){font-family:var(--font-ui-heading-th);line-height:var(--leading-ui-heading-th)}
+p,li,dd{margin-top:0;max-width:var(--measure-reading-en);text-wrap:pretty}
+:lang(th) p,:lang(th) li,:lang(th) dd{max-width:var(--measure-reading-th)}
+a{color:var(--interaction-accent);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{color:var(--interaction-accent);text-decoration-thickness:2px}
+a:active{color:var(--brand-blue)}
+code:lang(th),.mono:lang(th){font-family:var(--font-technical-th);letter-spacing:var(--tracking-technical-th);line-height:var(--leading-technical-th)}
+.mono{font-family:var(--font-technical)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{min-height:var(--target-min);touch-action:manipulation}
+::selection{background:var(--energy-yellow);color:var(--fg-on-light-primary)}
+.number,.metric,.table-number,.legend-value,.timestamp,.coordinate,.token,.hex-code{font-family:var(--font-number);font-variant-numeric:tabular-nums lining-nums;font-feature-settings:"tnum" 1,"lnum" 1}
+/* Legacy alias of the kit's .icon-symbol, kept for the components and cards that
+   already use it. Same locked axes; --icon-weight resolves to 300 and --icon-fill
+   stays 0 in every state (v0.9.1: no fill/weight change on selection). */
+.ls-icon{font-family:var(--font-icon);font-weight:normal;font-style:normal;font-size:var(--icon-size-md);line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:"liga";font-feature-settings:"liga";-webkit-font-smoothing:antialiased;font-variation-settings:"FILL" var(--icon-fill),"wght" var(--icon-weight),"GRAD" 0,"opsz" 24}
+.eyebrow{font-family:var(--font-technical);font-size:var(--type-label);font-weight:400;text-transform:uppercase;letter-spacing:var(--tracking-eyebrow);color:var(--text-metadata)}
