@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "artifact-owned-identity-binding/1.1",
+  "artifact": "ijji public website r5 mark-only identity renditions",
+  "authorityEvidenceRef": "owner-message:2026-09-04:ijji-reference-logo-crop",
+  "authorizedContexts": [
+    "browser-tab favicon",
+    "comparison table ijji column header"
+  ],
+  "source": {
+    "ownerPath": "/Users/montri/Downloads/ijji-ds-addon-assets-v0.5.3/assets/identity/ijji-logo-full-square.reference.png",
+    "packagePath": "ijji-ds-addon-assets-v0.5.3/assets/identity/ijji-logo-full-square.reference.png",
+    "packageVersion": "ijji-ds-addon-assets-v0.5.3",
+    "sha256": "cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86",
+    "dimensions": "2000x2000",
+    "mode": "RGBA"
+  },
+  "transform": {
+    "kind": "deterministic crop and resize",
+    "cropBoxLtrbExclusive": [575, 402, 1473, 1300],
+    "croppedDimensions": "898x898",
+    "intent": "remove the two-line embedded wordmark while preserving the complete ijji symbol and transparent clear space",
+    "pixelPolicy": "crop and resample only; no redraw, recolour, sharpening, backing plate, or generative alteration",
+    "renderer": "Pillow 12.3.0",
+    "resampling": "premultiplied RGBa LANCZOS",
+    "encoding": "PNG RGBA with explicit sRGB chunk; optimize=false; compress_level=9"
+  },
+  "derivatives": [
+    {
+      "path": "ijji-favicon-mark-32-r5-6d6ac0921352.png",
+      "sha256": "6d6ac092135290799da8d83a1323470f02e387b8983fd5159cd5943aac17e178",
+      "dimensions": "32x32",
+      "bytes": 1780,
+      "contexts": ["browser-tab favicon"]
+    },
+    {
+      "path": "ijji-favicon-mark-192-r5-b5cdf9987c6a.png",
+      "sha256": "b5cdf9987c6a26dc5711586780927e5f7f367f20fc9cdb364513f8f866b7bb34",
+      "dimensions": "192x192",
+      "bytes": 12747,
+      "contexts": ["browser-tab favicon", "comparison table ijji column header"]
+    }
+  ],
+  "scope": "This ijji public website r5 artifact and the two named contexts only.",
+  "sharedDesignSystemApproval": false,
+  "supersedesWithinArtifact": "assets/identity/ijji-favicon-r4.json",
+  "historicalReleaseBytesChanged": false
+}

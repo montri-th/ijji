@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta id="ijji-theme-color" name="theme-color" content="#F6F7F3">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/identity/ijji-favicon-32-r4.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/identity/ijji-favicon-192-r4.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/identity/ijji-favicon-mark-32-r5-6d6ac0921352.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/identity/ijji-favicon-mark-192-r5-b5cdf9987c6a.png">
 <link rel="alternate" hreflang="th" href="https://montri-th.github.io/ijji/ijji-TH.dc.html">
 <link rel="alternate" hreflang="en" href="https://montri-th.github.io/ijji/ijji-EN.dc.html">
 <link rel="alternate" hreflang="x-default" href="https://montri-th.github.io/ijji/ijji-TH.dc.html">
@@ -55,6 +55,8 @@
     body{margin:0;background:var(--surface-canvas);color:var(--text-primary)}
     .ij-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:var(--space-8);align-items:center}
     .ij-hero-grid>*{min-width:0}
+    .ij-hero-shell{box-sizing:border-box;min-height:calc(100svh - var(--header-height));padding:clamp(32px,5vh,56px) clamp(16px,4vw,32px)!important}
+    .ij-hero-copy{gap:clamp(14px,2vh,20px)!important}
     .ij-two{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--space-8);align-items:start}
     .ij-two-rev{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--space-8);align-items:start}
     .ij-sticky{position:sticky;top:calc(var(--header-height) + var(--space-5))}
@@ -65,8 +67,11 @@
     .ij-page[data-theme="dark"].ij-calm{--ij-bar-mix:78%}
     @keyframes ijCtaSweep{0%{clip-path:inset(0 100% 0 0)}12%{clip-path:inset(0 72% 0 0)}88%{clip-path:inset(0 0 0 72%)}100%{clip-path:inset(0 0 0 100%)}}
     .ij-thought{position:relative;margin:var(--space-1) 0 0;min-height:calc(2 * 1.5 * var(--type-body-sm));font-size:var(--type-body-sm);line-height:1.5;color:var(--text-metadata);text-wrap:pretty}
-    .ij-thought span{position:absolute;inset:0;opacity:0;transform:translateY(8px);filter:blur(3px);transition:opacity 220ms var(--motion-ease-state),transform 220ms var(--motion-ease-state),filter 220ms var(--motion-ease-state)}
-    .ij-thought span.is-on{opacity:1;transform:none;filter:none;transition:opacity 1400ms cubic-bezier(.3,0,.6,1) 400ms,transform 1400ms var(--motion-ease-enter) 400ms,filter 1400ms cubic-bezier(.3,0,.6,1) 400ms}
+    .ij-thought span{position:absolute;inset:0;visibility:hidden;opacity:0;transform:translateY(8px);filter:blur(3px);transition:visibility 0s linear 220ms,opacity 220ms var(--motion-ease-state),transform 220ms var(--motion-ease-state),filter 220ms var(--motion-ease-state)}
+    .ij-thought span.is-on{visibility:visible;opacity:1;transform:none;filter:none;transition:visibility 0s,opacity 1400ms cubic-bezier(.3,0,.6,1) 400ms,transform 1400ms var(--motion-ease-enter) 400ms,filter 1400ms cubic-bezier(.3,0,.6,1) 400ms}
+    .ij-wander-control{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:44px;width:max-content;padding:0 var(--space-4);border:1.5px solid var(--border-emphasis);border-radius:999px;background:var(--surface-card);color:var(--text-primary);font:inherit;font-size:var(--type-body-sm);font-weight:600;cursor:pointer}
+    .ij-wander-control:hover{background:var(--surface-blue-tint)}
+    .ij-wander-control:focus-visible{outline:3px solid var(--interaction-focus-ring);outline-offset:2px}
     li[data-cell]{position:relative;isolation:isolate}
     li[data-cell]::before{content:"";position:absolute;inset:0;background:var(--product-ijji-gradient);opacity:0;transition:opacity 560ms var(--motion-ease-state);z-index:-1;pointer-events:none}
     li[data-cell].is-live::before{opacity:1}
@@ -130,7 +135,30 @@
     .ij-utility-choice[aria-pressed="true"],.ij-utility-choice[aria-current="page"]{background:var(--surface-soft);box-shadow:inset 0 0 0 1.5px var(--border-emphasis);font-weight:600}
     .ij-utility-choice[aria-disabled="true"]{color:var(--text-disabled);cursor:not-allowed}
     .ij-choice-status{font-size:var(--type-label);color:var(--text-metadata)}
-    .ij-line-mark{display:block;flex:none;width:20px;height:20px}
+    .ij-line-mark{display:block;flex:none;width:20px;height:20px;filter:saturate(0);opacity:.72;transition:opacity var(--motion-duration-state) var(--motion-ease-state)}
+    a:hover .ij-line-mark,a:focus-visible .ij-line-mark{opacity:1}
+    .ij-sr-only{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
+    .ij-compare-shell{overflow-x:auto;border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--surface-card)}
+    .ij-compare-table{width:100%;min-width:960px;border-collapse:collapse;table-layout:fixed;font-size:var(--type-body-sm)}
+    .ij-compare-table th,.ij-compare-table td{box-sizing:border-box;padding:var(--space-3) var(--space-4);vertical-align:top;overflow-wrap:anywhere}
+    .ij-compare-table thead tr{background:var(--surface-alt);text-align:left}
+    .ij-compare-table thead th{font-family:var(--font-technical-th,var(--font-technical));font-weight:400;font-size:var(--type-label);color:var(--text-metadata)}
+    .ij-compare-table thead th:nth-child(1){width:17%}.ij-compare-table thead th:nth-child(2){width:16%}.ij-compare-table thead th:nth-child(3){width:20%}.ij-compare-table thead th:nth-child(4){width:16%}.ij-compare-table thead th:nth-child(5){width:31%}
+    .ij-compare-table tbody tr{border-top:1px solid var(--border-hairline)}
+    .ij-compare-table tbody th{text-align:left;font-weight:600;background:var(--surface-card)}
+    .ij-compare-table tbody td{color:var(--text-secondary);background:var(--surface-card)}
+    .ij-compare-table .ij-is-ijji{background:var(--surface-blue-tint);color:var(--text-primary);font-weight:600}
+    .ij-compare-head,.ij-compare-rowhead,.ij-compare-cell{display:flex;align-items:flex-start;gap:var(--space-2)}
+    .ij-compare-head{align-items:center;font-weight:600;color:var(--text-primary)}
+    .ij-compare-head .ls-icon,.ij-compare-rowhead .ls-icon,.ij-compare-cell>.ls-icon{flex:none;font-size:22px;line-height:1.2;font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;color:var(--text-metadata)}
+    .ij-compare-cell>span:last-child{min-width:0}
+    .ij-compare-product{display:none;font-family:var(--font-technical-th,var(--font-technical));font-size:var(--type-label);font-weight:400;color:var(--text-metadata)}
+    .ij-compare-brand{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;width:72px;min-height:48px;padding:4px 10px;border-radius:var(--radius-sm);background:var(--brand-blue)}
+    .ij-compare-brand img{display:block;width:42px;height:42px;object-fit:contain}
+    .ij-compare-price{border-top:2px solid var(--border-emphasis)!important}
+    .ij-compare-price strong{display:block;color:var(--text-primary);font-size:1.08em;line-height:1.35;white-space:nowrap}
+    .ij-compare-note{margin:0;color:var(--text-metadata);font-size:var(--type-label);text-wrap:pretty}
+    @media (min-width:1280px){.ij-compare-layout{max-width:min(2080px,calc(100vw - 160px))!important}.ij-compare-intro{max-width:72rem!important}.ij-compare-intro h2{font-size:clamp(64px,4.5vw,88px)!important;line-height:1.15!important}.ij-compare-intro>p:last-child{max-width:68rem;font-size:clamp(20px,1.25vw,28px);line-height:1.55}.ij-compare-table{font-size:var(--type-body)}.ij-compare-table th,.ij-compare-table td{padding:var(--space-4) var(--space-5)}}
     .ij-bookmark-rail{position:fixed;right:16px;top:50%;z-index:95;transform:translateY(-50%);display:none;flex-direction:column;gap:4px;padding:6px;border:1px solid var(--border-default);border-radius:16px;background:color-mix(in srgb,var(--surface-canvas) 92%,transparent);backdrop-filter:blur(10px) saturate(1.2);-webkit-backdrop-filter:blur(10px) saturate(1.2);box-shadow:var(--elevation-sm)}
     .ij-bookmark-link{position:relative;box-sizing:border-box;width:44px;height:44px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:background-color var(--motion-duration-state) var(--motion-ease-state),transform var(--motion-duration-feedback) var(--motion-ease-press)}
     .ij-bookmark-icon{font-size:22px;line-height:1;font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}
@@ -141,10 +169,13 @@
     .ij-bookmark-link:hover::after,.ij-bookmark-link:focus-visible::after{opacity:1;visibility:visible;transform:translate(0,-50%)}
     .ij-nav-focus-target:focus,#main-content:focus{outline:3px solid var(--interaction-focus-ring);outline-offset:-3px}
     @media (min-width:1280px){.ij-bookmark-rail{display:flex}.ij-menu-local{display:none}}
-    @media (max-width:899px){.ij-page{--ij-prominent-h:68px;--ij-brand-wordmark-size:20px}.ij-calm{--ij-bar-h:27px;--ij-brand-wordmark-size:18px}.ij-row{padding:0 16px;gap:6px}.ij-desktop-control{display:none}.ij-brand-control{padding:0 12px}.ij-product-slash{font-size:13px}.ij-product-name{font-size:15px}.ij-menu-label{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ij-menu-trigger-visual{padding:0;width:44px}.ij-menu-panel{top:var(--ij-prominent-h);left:8px;right:8px;width:auto;max-height:calc(100dvh - var(--ij-prominent-h) - 8px);border-radius:0 0 16px 16px}.ij-mobile-cta{display:flex}.ij-line-mark{width:40px;height:40px}}
-    @media (max-width:1000px){.ij-hero-grid,.ij-two,.ij-two-rev{grid-template-columns:1fr;gap:var(--space-6)}.ij-sticky{position:static}.ij-hero-panel{max-width:280px;margin:0 auto}}
+    @media (max-width:1050px){.ij-compare-shell{overflow:visible;border:0;background:transparent}.ij-compare-table{display:block;min-width:0}.ij-compare-table thead{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}.ij-compare-table tbody{display:grid;gap:var(--space-4)}.ij-compare-table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;border:1px solid var(--border-default);border-radius:var(--radius-sm);overflow:hidden;background:var(--border-default)}.ij-compare-table tbody th{grid-column:1 / -1;display:block;padding:var(--space-4)}.ij-compare-table tbody td{display:block;padding:var(--space-4)}.ij-compare-table .ij-compare-product{display:block}.ij-compare-table .ij-compare-cell{display:grid;grid-template-columns:auto 1fr;align-content:start}.ij-compare-table .ij-compare-product{grid-column:1 / -1}.ij-compare-price{border-top:0!important}.ij-compare-table tbody tr.ij-compare-price{border-top:2px solid var(--border-emphasis)}}
+    @media (max-width:899px){.ij-page{--ij-prominent-h:68px;--ij-brand-wordmark-size:20px}.ij-calm{--ij-bar-h:27px;--ij-brand-wordmark-size:18px}.ij-row{padding:0 16px;gap:6px}.ij-desktop-control{display:none}.ij-brand-control{padding:0 12px}.ij-product-slash{font-size:13px}.ij-product-name{font-size:15px}.ij-menu-label{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ij-menu-trigger-visual{padding:0;width:44px}.ij-menu-panel{top:var(--ij-prominent-h);left:8px;right:8px;width:auto;max-height:calc(100dvh - var(--ij-prominent-h) - 8px);border-radius:0 0 16px 16px}.ij-mobile-cta{display:flex}}
+    @media (max-width:1000px){.ij-hero-grid,.ij-two,.ij-two-rev{grid-template-columns:1fr;gap:var(--space-6)}.ij-sticky{position:static}.ij-hero-panel{max-width:240px;margin:0 auto}.ij-hero-shell{min-height:0;padding:clamp(40px,7vw,64px) clamp(16px,4vw,32px)!important}}
+    @media (min-width:1001px) and (max-height:760px){.ij-hero-shell{padding-top:24px!important;padding-bottom:24px!important}.ij-hero-copy{gap:12px!important}.ij-hero-copy [data-ij-motif]{width:48px!important;height:48px!important}.ij-hero-copy h1{font-size:clamp(52px,5vw,68px)!important;line-height:1.08!important}.ij-hero-copy>p:not(.eyebrow){font-size:var(--type-body)!important}.ij-hero-panel{max-width:340px!important}}
+    @media (max-width:599px){.ij-compare-table tbody tr{grid-template-columns:1fr}}
     @media (max-width:380px){.ij-brand-control{padding:0 8px}.ij-product-slash{display:none}.ij-product-name{font-size:14px}.ij-row{gap:2px}}
-    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ij-page{--ij-bar-h:var(--ij-prominent-h);--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1}.ij-cta-cue{display:none}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ij-page{--ij-bar-h:var(--ij-prominent-h);--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1}.ij-cta-cue,.ij-wander-control{display:none}}
   </style>
 </helmet>
 <div ref="{{ rootRef }}" class="ij-page" data-product="ijji" lang="th" data-theme="{{ theme }}" data-theme-mode="{{ themeMode }}" style="min-height:100vh;background:var(--surface-canvas);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body)">
@@ -181,6 +212,7 @@
         <a class="ij-menu-row" data-bookmark-target="why" href="#why" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">lightbulb</span><span>ทำไมต้องมีอิจจี้</span></a>
         <a class="ij-menu-row" data-bookmark-target="locale" href="#locale" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">map</span><span>รอบย่าน</span></a>
         <a class="ij-menu-row" data-bookmark-target="answer" href="#answer" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">chat</span><span>ตัวอย่างคำตอบ</span></a>
+        <a class="ij-menu-row" data-bookmark-target="compare" href="#compare" onClick="{{ followSection }}"><span class="ij-menu-index ls-icon" aria-hidden="true">balance</span><span>เปรียบเทียบทางเลือก</span></a>
         <a class="ij-menu-row" data-bookmark-target="problems" href="#problems" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">problem</span><span>ปัญหาร้าน 12 แบบ</span></a>
         <div class="ij-menu-divider"></div>
         <a class="ij-mobile-cta ij-cta-cue-host" data-cta-cue href="https://ijji.landometer.com" target="_blank" rel="noopener noreferrer"><span>เปิด ijji <span aria-hidden="true">↗</span></span><span class="ij-cta-cue" aria-hidden="true"><span>เปิด ijji ↗</span></span><span class="visually-hidden">เปิดในแท็บใหม่</span></a>
@@ -216,14 +248,15 @@
     <a class="ij-bookmark-link" data-bookmark-target="why" data-label="ทำไมต้องมีอิจจี้" href="#why" aria-label="ทำไมต้องมีอิจจี้" title="ทำไมต้องมีอิจจี้" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">lightbulb</span></a>
     <a class="ij-bookmark-link" data-bookmark-target="locale" data-label="รอบย่าน" href="#locale" aria-label="รอบย่าน" title="รอบย่าน" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">map</span></a>
     <a class="ij-bookmark-link" data-bookmark-target="answer" data-label="ตัวอย่างคำตอบ" href="#answer" aria-label="ตัวอย่างคำตอบ" title="ตัวอย่างคำตอบ" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">chat</span></a>
+    <a class="ij-bookmark-link" data-bookmark-target="compare" data-label="เปรียบเทียบทางเลือก" href="#compare" aria-label="เปรียบเทียบทางเลือก" title="เปรียบเทียบทางเลือก" onClick="{{ followSection }}"><span class="ls-icon ij-bookmark-icon" aria-hidden="true">balance</span></a>
     <a class="ij-bookmark-link" data-bookmark-target="problems" data-label="ปัญหาร้าน 12 แบบ" href="#problems" aria-label="ปัญหาร้าน 12 แบบ" title="ปัญหาร้าน 12 แบบ" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">problem</span></a>
   </nav>
 
   <main id="main-content" tabindex="-1" style="padding-top:var(--header-height);scroll-margin-top:var(--header-height)">
 
     <section id="top" data-screen-label="Hero" aria-label="ijji — ภาพรวม" style="background:var(--product-ijji-gradient);color:var(--fg-on-light-primary);border-bottom:1px solid var(--border-hairline);scroll-margin-top:var(--header-height)">
-      <div class="ij-hero-grid" style="max-width:var(--container-default);margin:0 auto;padding:clamp(56px,9vw,112px) clamp(16px,4vw,32px)">
-        <div style="display:grid;gap:var(--space-5)">
+      <div class="ij-hero-grid ij-hero-shell" style="max-width:var(--container-default);margin:0 auto">
+        <div class="ij-hero-copy" style="display:grid;gap:var(--space-5)">
           <div data-ij-motif="rings-c-transparent-ink" aria-hidden="true" style="width:72px;height:72px"><img src="ijji-addon/motif/svg/ijji-rings-c-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></div>
           <p class="eyebrow" lang="en" style="margin:0;color:var(--fg-on-light-secondary)">ijji · Your business buddy around the corner</p>
           <h1 style="margin:0;font-family:var(--font-display-th);font-weight:700;font-size:var(--type-h1-th);line-height:1.25;letter-spacing:0;text-wrap:balance;color:var(--fg-on-light-primary)">คู่หูธุรกิจ รอบรู้ รอบย่าน รอบร้านคุณ</h1>
@@ -325,12 +358,10 @@
 
     <section id="locale" data-screen-label="รอบย่าน" aria-labelledby="locale-title" style="scroll-margin-top:var(--header-height)">
       <div class="ij-two-rev" style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px)">
-        <figure class="ij-sticky" style="margin:0;border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-card)">
-          <img src="assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp" width="1200" height="800" loading="lazy" decoding="async" alt="ผู้ประกอบการร้านอาหารยืนอยู่หน้าร้านของตนเองริมถนนในย่านชุมชน" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:52% 43%">
-          <figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">ร้านอาหารริมถนนในย่านชุมชน — ภาพจากทีม Landometer ใช้โดยไม่ปรับแต่ง บุคคลในภาพไม่ใช่ผู้ใช้ ijji</figcaption>
-          <img src="assets/photos/customer-eating-1600.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="ลูกค้ายิ้มขณะนั่งกินข้าวกะเพรากับเพื่อนที่ร้านอาหารริมทาง" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-top:1px solid var(--border-default)">
-          <figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">ลูกค้าคือคนจริงที่มีจังหวะของตัวเอง — อิจจี้อ่านจังหวะนั้นก่อนแนะนำ — ภาพประกอบ</figcaption>
-        </figure>
+        <div class="ij-sticky" style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-card)">
+          <figure style="margin:0"><img src="assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp" width="1200" height="800" loading="lazy" decoding="async" alt="ผู้ประกอบการร้านอาหารยืนอยู่หน้าร้านของตนเองริมถนนในย่านชุมชน" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:52% 43%"><figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">ร้านอาหารริมถนนในย่านชุมชน — ภาพจากทีม Landometer ใช้โดยไม่ปรับแต่ง บุคคลในภาพไม่ใช่ผู้ใช้ ijji</figcaption></figure>
+          <figure style="margin:0;border-top:1px solid var(--border-default)"><img src="assets/photos/customer-eating-1600.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="ลูกค้ายิ้มขณะนั่งกินข้าวกะเพรากับเพื่อนที่ร้านอาหารริมทาง" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"><figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">ลูกค้าคือคนจริงที่มีจังหวะของตัวเอง — อิจจี้อ่านจังหวะนั้นก่อนแนะนำ — ภาพประกอบ</figcaption></figure>
+        </div>
         <div style="display:grid;gap:var(--space-5)">
           <div style="display:grid;gap:var(--space-4)">
             <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">map</span>รอบย่าน · สิ่งที่อิจจี้อ่านก่อนตอบ</p>
@@ -411,6 +442,51 @@
         </div>
       </div>
     </section>
+    <section id="compare" data-screen-label="ijji ต่างอย่างไร" aria-labelledby="compare-title" style="background:var(--surface-alt);border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline);scroll-margin-top:var(--header-height)">
+      <div class="ij-compare-layout" style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px);display:grid;gap:var(--space-7)">
+        <div class="ij-compare-intro" style="display:grid;gap:var(--space-4);max-width:40rem">
+          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">balance</span>อิจจี้ต่างจากทางเลือกเดิมอย่างไร</p>
+          <h2 id="compare-title" style="margin:0;font-family:var(--font-display-th);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">วินิจฉัยก่อนแนะนำ และตามผลต่อ</h2>
+          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">AI ทั่วไปต้องอาศัยบริบทที่พี่ป้อนเอง Dashboard มีตัวเลขแต่ยังต้องใช้เวลาอ่าน ส่วนที่ปรึกษาช่วยได้แต่ราคาสูงสำหรับร้านเล็ก อิจจี้จึงอยู่ตรงกลาง — เข้าใจร้านและรอบย่าน ช่วยเลือกสิ่งที่ควรทำก่อน แล้วตามผลรอบถัดไป</p>
+        </div>
+        <div class="ij-compare-shell" data-approach="soft" style="--i:0">
+          <table class="ij-compare-table" role="table" aria-describedby="compare-price-note">
+            <caption class="ij-sr-only">เปรียบเทียบ AI ทั่วไป Dashboard ข้อมูล ที่ปรึกษา และ ijji สำหรับเจ้าของร้านอาหาร</caption>
+            <thead role="rowgroup">
+              <tr role="row">
+                <th scope="col" role="columnheader"><span class="ij-compare-head"><span class="ls-icon" aria-hidden="true">checklist</span><span>สิ่งที่ร้านต้องการ</span></span></th>
+                <th scope="col" role="columnheader"><span class="ij-compare-head"><span class="ls-icon" aria-hidden="true">smart_toy</span><span>AI ทั่วไป</span></span></th>
+                <th scope="col" role="columnheader"><span class="ij-compare-head"><span class="ls-icon" aria-hidden="true">monitoring</span><span>Dashboard ข้อมูล</span></span></th>
+                <th scope="col" role="columnheader"><span class="ij-compare-head"><span class="ls-icon" aria-hidden="true">support_agent</span><span>ที่ปรึกษา</span></span></th>
+                <th class="ij-is-ijji" scope="col" role="columnheader" aria-label="ijji"><span class="ij-compare-brand"><img src="assets/identity/ijji-favicon-mark-192-r5-b5cdf9987c6a.png" width="192" height="192" alt="" aria-hidden="true"></span></th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">place</span><span>ร้าน + รอบย่าน</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">AI ทั่วไป</span><span class="ls-icon" aria-hidden="true">edit_note</span><span>พี่ต้องป้อนบริบทเอง</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Dashboard ข้อมูล</span><span class="ls-icon" aria-hidden="true">query_stats</span><span>มีข้อมูลให้พี่ตีความ</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ที่ปรึกษา</span><span class="ls-icon" aria-hidden="true">help</span><span>ขึ้นกับโจทย์งาน</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span>เชื่อมบริบทร้านกับรอบย่านเข้าด้วยกัน</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">schedule</span><span>จังหวะลูกค้า</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">AI ทั่วไป</span><span class="ls-icon" aria-hidden="true">edit_note</span><span>รู้เท่าที่พี่ป้อน</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Dashboard ข้อมูล</span><span class="ls-icon" aria-hidden="true">monitoring</span><span>แสดงเป็นกราฟ</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ที่ปรึกษา</span><span class="ls-icon" aria-hidden="true">directions_walk</span><span>ต้องลงพื้นที่</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span>คนอยู่ · คนมาเที่ยว · คนผ่านทาง แยกตามช่วงเวลา</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">fact_check</span><span>หาสาเหตุก่อน</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">AI ทั่วไป</span><span class="ls-icon" aria-hidden="true">psychology</span><span>ขึ้นกับคำถามและบริบท</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Dashboard ข้อมูล</span><span class="ls-icon" aria-hidden="true">query_stats</span><span>พี่ต้องสรุปเอง</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ที่ปรึกษา</span><span class="ls-icon" aria-hidden="true">fact_check</span><span>วิเคราะห์ได้ แต่ราคาสูง</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span>บอกสาเหตุที่เป็นไปได้และระดับความมั่นใจ</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">today</span><span>ทำได้จริงวันนี้</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">AI ทั่วไป</span><span class="ls-icon" aria-hidden="true">lightbulb</span><span>คำแนะนำกว้าง</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Dashboard ข้อมูล</span><span class="ls-icon" aria-hidden="true">hourglass_top</span><span>ต้องใช้เวลาทำความเข้าใจกราฟก่อน</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ที่ปรึกษา</span><span class="ls-icon" aria-hidden="true">event_available</span><span>ตามขอบเขตงาน</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span>หนึ่งภารกิจ พร้อมตัวเลขที่ต้องดูและข้อควรระวัง</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">sync</span><span>ตามผลหลังแนะนำ</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">AI ทั่วไป</span><span class="ls-icon" aria-hidden="true">help</span><span>ขึ้นกับแผนที่พี่ตั้ง</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Dashboard ข้อมูล</span><span class="ls-icon" aria-hidden="true">monitoring</span><span>พี่ต้องติดตามเอง</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ที่ปรึกษา</span><span class="ls-icon" aria-hidden="true">inventory_2</span><span>มักจบเป็นโปรเจกต์</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">sync</span><span>บอกผลกลับมา แล้วอิจจี้ปรับแผนรอบต่อไป</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">forum</span><span>ใช้ได้ทุกวัน</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">AI ทั่วไป</span><span class="ls-icon" aria-hidden="true">forum</span><span>แชตทั่วไป</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Dashboard ข้อมูล</span><span class="ls-icon" aria-hidden="true">code</span><span>ศัพท์และหน้าจอเชิงเทคนิค</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ที่ปรึกษา</span><span class="ls-icon" aria-hidden="true">person</span><span>ขึ้นกับที่ปรึกษา</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">chat_bubble</span><span>ภาษาคนทำร้าน บน LINE ที่ใช้อยู่แล้ว</span></span></td></tr>
+              <tr class="ij-compare-price" role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">payments</span><span>ราคา</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">AI ทั่วไป</span><span class="ls-icon" aria-hidden="true">payments</span><span><strong>เริ่ม 700 บาท<br>/เดือน</strong> ก่อนจะมีบริบทพอคุยรู้เรื่อง</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Dashboard ข้อมูล</span><span class="ls-icon" aria-hidden="true">query_stats</span><span><strong>เริ่ม 20,000 บาท<br>/เดือน</strong> ยังต้องใช้เวลาทำความเข้าใจระบบ</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ที่ปรึกษา</span><span class="ls-icon" aria-hidden="true">warning</span><span><strong>200,000 บาท<br>/เดือน</strong> ราคาสูงเกินกำลังร้านเล็ก</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span><strong>เริ่ม 29 บาท<br>/คำถาม</strong> ทดลองใช้ฟรีตอนนี้</span></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p id="compare-price-note" class="ij-compare-note">ราคาเริ่มต้นนี้เป็นตัวเลขสำหรับการเปรียบเทียบตามข้อมูลที่เจ้าของผลิตภัณฑ์ระบุ แพ็กเกจของผู้ให้บริการแต่ละรายอาจต่างกัน · ราคาและสิทธิ์ทดลอง ijji เป็นข้อมูลปัจจุบันสำหรับรุ่นนี้</p>
+        <div data-approach="soft" style="--i:1;display:grid;gap:var(--space-4)">
+          <div style="display:grid;gap:var(--space-2);max-width:40rem">
+            <h3 style="margin:0;font-family:var(--font-display-th);font-weight:700;font-size:var(--type-h3);line-height:1.3">อิจจี้ไม่ฟันธงเกินข้อมูล</h3>
+            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">ทุกคำวินิจฉัยมาพร้อมระดับความมั่นใจ ถ้าข้อมูลยังไม่พอ ภารกิจแรกจะเป็นการเก็บสัญญาณ ไม่ใช่การลงมือแก้</p>
+          </div>
+          <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-sm);overflow:hidden">
+            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--success" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">check_circle</span>สัญญาณชัด</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">ข้อมูลหลายแหล่งไปทางเดียวกัน — แนะนำแก้ตรงจุดได้เลย</p></li>
+            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--info" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">hourglass_top</span>สัญญาณเริ่มมา</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">มีข้อมูลบางส่วนสนับสนุน — น่าลองทดสอบ 3 วันแบบวัดผลได้</p></li>
+            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--pending" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">help</span>ข้อมูลยังไม่พอ</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">ต้องเก็บเพิ่มก่อนฟันธง — ภารกิจแรกคือการสังเกตและนับ</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
 
     <section id="problems" data-screen-label="ปัญหาร้าน 12 แบบ" aria-labelledby="problems-title" style="scroll-margin-top:var(--header-height)">
       <div style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px);display:grid;gap:var(--space-7)">
@@ -418,6 +494,7 @@
           <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">checklist</span>ปัญหาร้าน 12 แบบ</p>
           <h2 id="problems-title" style="margin:0;font-family:var(--font-display-th);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">เรื่องไหนก็เล่าให้อิจจี้ฟังได้ ในภาษาร้าน</h2>
           <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">อิจจี้จะแยกให้ว่าเรื่องไหนควรพิสูจน์ก่อน เรื่องไหนแก้ได้เลย และเรื่องไหนยังไม่ควรแตะจนกว่าจะมีข้อมูลพอ</p>
+          <button id="ij-wander-toggle" class="ij-wander-control" type="button" aria-pressed="false" data-pause-label="หยุดการไฮไลต์คำถาม" data-resume-label="เล่นการไฮไลต์คำถามต่อ"><span class="ls-icon" data-wander-icon aria-hidden="true">pause</span><span data-wander-label>หยุดการไฮไลต์คำถาม</span></button>
         </div>
         <ol style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
           <li data-approach="soft" data-cell="0" style="--i:0;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">groups</span>01 · คนเห็นร้าน</span><p style="margin:0;font-weight:600;text-wrap:pretty">แถวนี้มีคนแบบไหนที่น่าดึงเข้าร้านก่อน</p><p class="ij-thought" aria-live="off"><span class="is-on">“คนเดินผ่านทั้งวัน แต่ไม่มีใครเลี้ยวเข้ามา”</span><span>“หรือคนแถวนี้ไม่ใช่ลูกค้าเราตั้งแต่แรก?”</span><span>“จะเริ่มดึงใครก่อนดี ออฟฟิศ หรือคนในซอย?”</span></p></li>
@@ -434,48 +511,6 @@
           <li data-approach="soft" data-cell="11" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">trending_up</span>12 · ขยายร้าน</span><p style="margin:0;font-weight:600;text-wrap:pretty">ร้านควรโตทางไหนก่อน และเสี่ยงตรงไหน</p><p class="ij-thought" aria-live="off"><span class="is-on">“มีคนถามว่าส่งเดลิเวอรีไหม แต่ไม่รู้จะคุ้มไหม”</span><span>“จะเปิดสาขาสอง หรือทำสาขานี้ให้เต็มก่อน?”</span><span>“โตทางไหนที่ไม่ต้องเสี่ยงเงินก้อนใหญ่?”</span></p></li>
         </ol>
         <p style="margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-4);color:var(--text-secondary);text-wrap:pretty">เจอข้อไหนที่ใช่ร้านคุณ — เล่าให้อิจจี้ฟังก่อนตัดสินใจ <a class="btn" href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer"><img class="ij-line-mark" src="assets/providers/line-brand-icon-5e93437e.png" width="1001" height="1000" alt="" decoding="async">เล่าใน LINE <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a></p>
-      </div>
-    </section>
-
-    <section id="compare" data-screen-label="ijji ต่างอย่างไร" aria-labelledby="compare-title" style="background:var(--surface-alt);border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline);scroll-margin-top:var(--header-height)">
-      <div style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px);display:grid;gap:var(--space-7)">
-        <div style="display:grid;gap:var(--space-4);max-width:40rem">
-          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">balance</span>อิจจี้ต่างจากทางเลือกเดิมอย่างไร</p>
-          <h2 id="compare-title" style="margin:0;font-family:var(--font-display-th);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">วินิจฉัยก่อนแนะนำ และตามผลต่อ</h2>
-          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">ทางเลือกที่เจ้าของร้านใช้อยู่วันนี้ — ถามเพื่อน ดูคู่แข่งแล้วทำตาม ยิงโปร ถาม AI ทั่วไป หรือจ้างที่ปรึกษาเป็นครั้ง ๆ — มักเริ่มจากโปรโมชันก่อนจะรู้สาเหตุ และไม่มีใครตามผลหลังแนะนำ</p>
-        </div>
-        <div data-approach="soft" style="--i:0;overflow-x:auto;border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--surface-card)">
-          <table style="width:100%;min-width:720px;border-collapse:collapse;font-size:var(--type-body-sm)">
-            <thead>
-              <tr style="background:var(--surface-alt);text-align:left">
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical-th, var(--font-technical));font-weight:400;font-size:var(--type-label);color:var(--text-metadata)">สิ่งที่ร้านต้องการ</th>
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical-th, var(--font-technical));font-weight:400;font-size:var(--type-label);color:var(--text-metadata)">AI ทั่วไป</th>
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical-th, var(--font-technical));font-weight:400;font-size:var(--type-label);color:var(--text-metadata)">Dashboard ข้อมูล</th>
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical-th, var(--font-technical));font-weight:400;font-size:var(--type-label);color:var(--text-metadata)">ที่ปรึกษา</th>
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical-th, var(--font-technical));font-weight:400;font-size:var(--type-label);color:var(--text-primary);background:var(--surface-blue-tint)"><span lang="en">ijji</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">เข้าใจทำเลของร้าน</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ต้องป้อนเอง</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">มีตัวเลข แต่ต้องตีความเอง</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">แล้วแต่คน</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">อ่านคนรอบย่านของร้านนั้นโดยตรง</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">รู้จังหวะของลูกค้า</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ไม่รู้</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">เป็นกราฟ</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ลงพื้นที่เอง</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">คนอยู่ · คนมาเที่ยว · คนผ่านทาง แยกตามช่วงเวลา</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">วินิจฉัยก่อนแนะนำ</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ไม่สม่ำเสมอ</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">เจ้าของร้านต้องตีความเอง</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ดี แต่แพง</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">แยกอาการจากสาเหตุ พร้อมบอกระดับความมั่นใจ</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">ทำได้จริงวันนี้</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">คำแนะนำกว้าง</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ไม่มี</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ตามขอบเขตงาน</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">ภารกิจรายวัน พร้อมตัวเลขที่ต้องดูและข้อควรระวัง</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">ตามผลหลังแนะนำ</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ไม่มี</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ไม่มี</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">จบเป็นโปรเจกต์</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">บอกผลกลับมา แล้วอิจจี้ปรับแผนรอบต่อไป</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">ภาษาและช่องทาง</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">บางครั้ง</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">ศัพท์เทคนิค</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">บางครั้ง</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">ภาษาคนทำร้าน บน LINE ที่ใช้อยู่แล้ว</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div data-approach="soft" style="--i:1;display:grid;gap:var(--space-4)">
-          <div style="display:grid;gap:var(--space-2);max-width:40rem">
-            <h3 style="margin:0;font-family:var(--font-display-th);font-weight:700;font-size:var(--type-h3);line-height:1.3">อิจจี้ไม่ฟันธงเกินข้อมูล</h3>
-            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">ทุกคำวินิจฉัยมาพร้อมระดับความมั่นใจ ถ้าข้อมูลยังไม่พอ ภารกิจแรกจะเป็นการเก็บสัญญาณ ไม่ใช่การลงมือแก้</p>
-          </div>
-          <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-sm);overflow:hidden">
-            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--success" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">check_circle</span>สัญญาณชัด</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">ข้อมูลหลายแหล่งไปทางเดียวกัน — แนะนำแก้ตรงจุดได้เลย</p></li>
-            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--info" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">hourglass_top</span>สัญญาณเริ่มมา</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">มีข้อมูลบางส่วนสนับสนุน — น่าลองทดสอบ 3 วันแบบวัดผลได้</p></li>
-            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--pending" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">help</span>ข้อมูลยังไม่พอ</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">ต้องเก็บเพิ่มก่อนฟันธง — ภารกิจแรกคือการสังเกตและนับ</p></li>
-          </ul>
-        </div>
       </div>
     </section>
 
@@ -675,7 +710,7 @@ class Component extends DCLogic {
   }
   armBookmarks() {
     const root = this.rootRef.current; if (!root) return;
-    const ids = ['top', 'why', 'locale', 'answer', 'problems'];
+    const ids = ['top', 'why', 'locale', 'answer', 'compare', 'problems'];
     this._bookmarkMq = window.matchMedia('(min-width:1280px)');
     this._syncBookmarks = () => {
       const marker = Math.max(112, window.innerHeight * .24);
@@ -712,8 +747,22 @@ class Component extends DCLogic {
     if (this.props.wander === false) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const cells = Array.from(root.querySelectorAll('li[data-cell]')); if (cells.length < 2) return;
-    let i = -1, live = null, timer = null;
+    const toggle = root.querySelector('#ij-wander-toggle');
+    let i = -1, live = null, timer = null, paused = false;
+    const syncThoughts = (cell) => cell.querySelectorAll('.ij-thought span').forEach((span) => span.setAttribute('aria-hidden', span.classList.contains('is-on') ? 'false' : 'true'));
+    cells.forEach(syncThoughts);
+    const updateToggle = () => {
+      if (!toggle) return;
+      const label = paused ? toggle.dataset.resumeLabel : toggle.dataset.pauseLabel;
+      const labelNode = toggle.querySelector('[data-wander-label]');
+      const iconNode = toggle.querySelector('[data-wander-icon]');
+      toggle.setAttribute('aria-pressed', paused ? 'true' : 'false');
+      toggle.setAttribute('aria-label', label);
+      if (labelNode) labelNode.textContent = label;
+      if (iconNode) iconNode.textContent = paused ? 'play_arrow' : 'pause';
+    };
     const step = () => {
+      if (paused) return;
       if (live) live.classList.remove('is-live');
       i += 1;
       if (i >= cells.length) { i = -1; live = null; timer = setTimeout(step, 2200); return; } // rest beat before the next pass
@@ -721,12 +770,14 @@ class Component extends DCLogic {
       // surface first (560ms), then the thought: old line out, new line eases in after the surface settles
       const spans = live.querySelectorAll('.ij-thought span');
       const on = Array.from(spans).findIndex(s => s.classList.contains('is-on'));
-      if (spans.length > 1) { spans[on].classList.remove('is-on'); spans[(on + 1) % spans.length].classList.add('is-on'); }
+      if (spans.length > 1) { spans[on].classList.remove('is-on'); spans[(on + 1) % spans.length].classList.add('is-on'); syncThoughts(live); }
       timer = setTimeout(step, 3500); // surface 560 → text eases in over 1.4s from 400ms → holds
     };
-    const start = () => { if (!timer) timer = setTimeout(step, 400); };
+    const start = () => { if (!paused && !timer) timer = setTimeout(step, 400); };
     const stop = () => { clearTimeout(timer); timer = null; if (live) live.classList.remove('is-live'); live = null; };
     const grid = cells[0].parentElement;
+    this._wanderToggle = () => { paused = !paused; if (paused) stop(); else if (grid.getBoundingClientRect().bottom > 0 && grid.getBoundingClientRect().top < window.innerHeight) start(); updateToggle(); };
+    if (toggle) { toggle.addEventListener('click', this._wanderToggle); updateToggle(); }
     if ('IntersectionObserver' in window) {
       this._wanderIo = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && !document.hidden ? start() : stop()), { threshold: .2 });
       this._wanderIo.observe(grid);
@@ -802,6 +853,7 @@ class Component extends DCLogic {
     if (this._wanderStop) this._wanderStop();
     if (this._wanderIo) this._wanderIo.disconnect();
     if (this._wanderVis) document.removeEventListener('visibilitychange', this._wanderVis);
+    if (this._wanderToggle) { const toggle = this.rootRef.current && this.rootRef.current.querySelector('#ij-wander-toggle'); if (toggle) toggle.removeEventListener('click', this._wanderToggle); }
     if (this._calmBar) { this._calmBar.removeEventListener('mouseenter', this._intent); this._calmBar.removeEventListener('focusin', this._intent); }
   }
   teardown() {

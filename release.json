@@ -1,7 +1,8 @@
 {
   "schemaVersion": "ijji-product-web-release/1.0",
-  "releaseId": "ijji-web-20260904-r4",
+  "releaseId": "ijji-web-20260904-r5",
   "releaseDate": "2026-09-04",
+  "publicationStatus": "prepared_not_published",
   "product": "ijji",
   "locale": "th-TH",
   "entrypoint": "ijji-TH.dc.html",
@@ -57,6 +58,21 @@
       "name": "PUBLISH-ijji.md",
       "role": "predecessor_publish_qa_reference",
       "sha256": "8991118cd9c27f17808682319318d985e6ed0312faa1c22d58311f295ccedcdd"
+    },
+    {
+      "name": "ijji_Product_Brief_v1.9.md",
+      "role": "product_positioning_and_brand_voice_authority",
+      "sha256": "cc01bc5302797d376d9bb8041e60ccb1de8815cc93c2d4d628e30c48009661b7"
+    },
+    {
+      "name": "codex-clipboard-b64c408f-f8a8-4b58-9910-b28f363708cc.png",
+      "role": "owner_selected_comparison_section_reference",
+      "sha256": "386b001900bd6ca255dad343da8880f4d5ddf2eb677264c3a2bd54b7c2a78fe2"
+    },
+    {
+      "name": "ijji-logo-full-square.reference.png",
+      "role": "owner_selected_favicon_and_comparison_header_source",
+      "sha256": "cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86"
     }
   ],
   "scope": {
@@ -69,15 +85,21 @@
       "ecosystem disclosure menu",
       "Auto, Light, and Dark appearance controls",
       "reciprocal Thai and naturally rewritten English sibling pages",
-      "official LINE Brand Icon on every direct LINE destination",
-      "owner-authorized ijji browser favicon renditions",
+      "comparison section moved immediately before the 12 shop challenges",
+      "responsive icon-led comparison table with a governed ijji mark header",
+      "reference-calibrated wide comparison layout on large desktop viewports",
+      "owner-stated starting-price comparison with a release-time qualifier",
+      "brand-voice recalibration and shorter English hero for responsive fit",
+      "quiet LINE icon treatment on every direct LINE destination",
+      "owner-authorized mark-only ijji browser favicon renditions",
+      "pause-resume control for rotating challenge highlights with one assistive-technology-visible quote per card",
       "self-hosted page runtime and icon fonts",
       "no-JavaScript navigation fallback"
     ],
     "unchanged": [
       "Thai product positioning and claims",
-      "section order, IDs, component structure, imagery, and CTA destinations across both locale siblings",
-      "owner-facing Thai section copy",
+      "section IDs, imagery, and CTA destinations across both locale siblings except for the requested comparison-section position and accessibility-safe wrappers",
+      "owner-facing Thai section copy outside the requested comparison section",
       "evidence and privacy boundaries",
       "destination of the primary ijji CTA"
     ],
@@ -104,30 +126,46 @@
       "dimensions": "1001x1000",
       "officialArchiveUrl": "https://www.line.me/static/logo/top/LINE_Brand_icon.zip",
       "officialArchiveSha256": "0e1d2a57b68e0337c666063162daa03953176744fa727e73596825a7b90bab6a",
-      "alteration": "none",
+      "sourceByteAlteration": "none",
+      "renderTreatment": "owner-directed quiet treatment using CSS desaturation and reduced opacity",
+      "authorityEvidenceRef": "owner-message:2026-09-04:quiet-line-icon",
       "usageBoundary": "only literal links to https://page.line.me/569ifvmv"
     }
   },
   "artifactOwnedAuthorizations": [
     {
-      "authorityEvidenceRef": "owner-message:2026-09-04:ijji-favicon",
-      "scope": "ijji public website browser-tab favicon only",
-      "sourcePath": "assets/products/ijji-logo-official.png",
-      "sourceSha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f",
+      "authorityEvidenceRef": "owner-message:2026-09-04:ijji-reference-logo-crop",
+      "scope": "ijji public website r5 browser-tab favicon and comparison-table ijji column header only",
+      "sourcePath": "/Users/montri/Downloads/ijji-ds-addon-assets-v0.5.3/assets/identity/ijji-logo-full-square.reference.png",
+      "sourceSha256": "cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86",
       "derivatives": [
         {
-          "path": "assets/identity/ijji-favicon-32-r4.png",
-          "sha256": "ee2b564d52d7740f428965339126f3e4f2c8eabebdbb5a87f9e1eac98fbfd737",
+          "path": "assets/identity/ijji-favicon-mark-32-r5-6d6ac0921352.png",
+          "sha256": "6d6ac092135290799da8d83a1323470f02e387b8983fd5159cd5943aac17e178",
           "dimensions": "32x32"
         },
         {
-          "path": "assets/identity/ijji-favicon-192-r4.png",
-          "sha256": "b3ce5667942b65236f39981da50d768674983a24a341e5559e0d33d63874d453",
+          "path": "assets/identity/ijji-favicon-mark-192-r5-b5cdf9987c6a.png",
+          "sha256": "b5cdf9987c6a26dc5711586780927e5f7f367f20fc9cdb364513f8f866b7bb34",
           "dimensions": "192x192"
         }
       ],
-      "transform": "resize only; no crop, redraw, or recolour",
+      "transform": "deterministic crop of the two-line wordmark followed by premultiplied-alpha LANCZOS resize; no redraw, recolour, sharpening, backing plate, or generative alteration",
       "sharedDesignSystemApproval": false
+    },
+    {
+      "authorityEvidenceRef": "owner-message:2026-09-04:comparison-prices",
+      "scope": "public r5 comparison table only",
+      "claims": [
+        "general AI starts at THB 700 per month for a useful ongoing conversation",
+        "data dashboards start at THB 20,000 per month and require learning time",
+        "consultants cost THB 200,000 per month and are difficult for small shops to afford",
+        "ijji starts at THB 29 per question and is free to try now"
+      ],
+      "timeSensitiveClaims": [
+        "ijji is free to try now"
+      ],
+      "revalidateOnSuccessor": true
     }
   ],
   "navigationPreset": "navigation-preset.json",
@@ -140,8 +178,9 @@
     "uploads/"
   ],
   "openManualGates": [
-    "physical iPhone Safari and embedded WKWebView"
+    "physical iPhone Safari and embedded WKWebView",
+    "external publication and exact live-byte attestation"
   ],
-  "postDeployEvidence": "GitHub release assets bound to the immutable release tag",
+  "postDeployEvidence": "pending explicit publish authorization",
   "localeInsightUsage": false
 }

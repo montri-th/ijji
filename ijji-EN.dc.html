@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta id="ijji-theme-color" name="theme-color" content="#F6F7F3">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/identity/ijji-favicon-32-r4.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/identity/ijji-favicon-192-r4.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/identity/ijji-favicon-mark-32-r5-6d6ac0921352.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/identity/ijji-favicon-mark-192-r5-b5cdf9987c6a.png">
 <link rel="alternate" hreflang="th" href="https://montri-th.github.io/ijji/ijji-TH.dc.html">
 <link rel="alternate" hreflang="en" href="https://montri-th.github.io/ijji/ijji-EN.dc.html">
 <link rel="alternate" hreflang="x-default" href="https://montri-th.github.io/ijji/ijji-TH.dc.html">
@@ -39,8 +39,8 @@
 <body>
 <x-dc>
 <helmet>
-  <title>ijji — Your neighbourhood-aware business buddy | Landometer</title>
-  <meta name="description" content="ijji is a LINE-based business buddy for restaurant and café owners. It helps uncover what is really behind a shop problem, makes sense of the people nearby, and turns those signals into practical daily actions you can measure.">
+  <title>ijji — Know what to fix first | Landometer</title>
+  <meta name="description" content="Tell ijji what’s happening at your restaurant or café. It uses the shop and neighbourhood context available to find the likeliest cause and give you one practical next step on LINE.">
   <link rel="canonical" href="https://montri-th.github.io/ijji/ijji-EN.dc.html">
   <link rel="stylesheet" href="assets/styles/ijji-production-fonts.css">
   <link rel="stylesheet" href="_ds/lds-ijji-add-on-cd48b199-a3d3-4171-adae-7817ca7d57d3/build-kit/lds-tokens.css">
@@ -55,6 +55,9 @@
     body{margin:0;background:var(--surface-canvas);color:var(--text-primary)}
     .ij-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:var(--space-8);align-items:center}
     .ij-hero-grid>*{min-width:0}
+    .ij-hero-shell{box-sizing:border-box;min-height:calc(100svh - var(--header-height));padding:clamp(32px,5vh,56px) clamp(16px,4vw,32px)!important}
+    .ij-hero-copy{gap:clamp(14px,2vh,20px)!important}
+    .ij-hero-copy h1{font-size:clamp(56px,5.5vw,84px)!important;line-height:1.08!important}
     .ij-two{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--space-8);align-items:start}
     .ij-two-rev{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--space-8);align-items:start}
     .ij-sticky{position:sticky;top:calc(var(--header-height) + var(--space-5))}
@@ -65,8 +68,11 @@
     .ij-page[data-theme="dark"].ij-calm{--ij-bar-mix:78%}
     @keyframes ijCtaSweep{0%{clip-path:inset(0 100% 0 0)}12%{clip-path:inset(0 72% 0 0)}88%{clip-path:inset(0 0 0 72%)}100%{clip-path:inset(0 0 0 100%)}}
     .ij-thought{position:relative;margin:var(--space-1) 0 0;min-height:calc(2 * 1.5 * var(--type-body-sm));font-size:var(--type-body-sm);line-height:1.5;color:var(--text-metadata);text-wrap:pretty}
-    .ij-thought span{position:absolute;inset:0;opacity:0;transform:translateY(8px);filter:blur(3px);transition:opacity 220ms var(--motion-ease-state),transform 220ms var(--motion-ease-state),filter 220ms var(--motion-ease-state)}
-    .ij-thought span.is-on{opacity:1;transform:none;filter:none;transition:opacity 1400ms cubic-bezier(.3,0,.6,1) 400ms,transform 1400ms var(--motion-ease-enter) 400ms,filter 1400ms cubic-bezier(.3,0,.6,1) 400ms}
+    .ij-thought span{position:absolute;inset:0;visibility:hidden;opacity:0;transform:translateY(8px);filter:blur(3px);transition:visibility 0s linear 220ms,opacity 220ms var(--motion-ease-state),transform 220ms var(--motion-ease-state),filter 220ms var(--motion-ease-state)}
+    .ij-thought span.is-on{visibility:visible;opacity:1;transform:none;filter:none;transition:visibility 0s,opacity 1400ms cubic-bezier(.3,0,.6,1) 400ms,transform 1400ms var(--motion-ease-enter) 400ms,filter 1400ms cubic-bezier(.3,0,.6,1) 400ms}
+    .ij-wander-control{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:44px;width:max-content;padding:0 var(--space-4);border:1.5px solid var(--border-emphasis);border-radius:999px;background:var(--surface-card);color:var(--text-primary);font:inherit;font-size:var(--type-body-sm);font-weight:600;cursor:pointer}
+    .ij-wander-control:hover{background:var(--surface-blue-tint)}
+    .ij-wander-control:focus-visible{outline:3px solid var(--interaction-focus-ring);outline-offset:2px}
     li[data-cell]{position:relative;isolation:isolate}
     li[data-cell]::before{content:"";position:absolute;inset:0;background:var(--product-ijji-gradient);opacity:0;transition:opacity 560ms var(--motion-ease-state);z-index:-1;pointer-events:none}
     li[data-cell].is-live::before{opacity:1}
@@ -130,7 +136,30 @@
     .ij-utility-choice[aria-pressed="true"],.ij-utility-choice[aria-current="page"]{background:var(--surface-soft);box-shadow:inset 0 0 0 1.5px var(--border-emphasis);font-weight:600}
     .ij-utility-choice[aria-disabled="true"]{color:var(--text-disabled);cursor:not-allowed}
     .ij-choice-status{font-size:var(--type-label);color:var(--text-metadata)}
-    .ij-line-mark{display:block;flex:none;width:20px;height:20px}
+    .ij-line-mark{display:block;flex:none;width:20px;height:20px;filter:saturate(0);opacity:.72;transition:opacity var(--motion-duration-state) var(--motion-ease-state)}
+    a:hover .ij-line-mark,a:focus-visible .ij-line-mark{opacity:1}
+    .ij-sr-only{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
+    .ij-compare-shell{overflow-x:auto;border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--surface-card)}
+    .ij-compare-table{width:100%;min-width:960px;border-collapse:collapse;table-layout:fixed;font-size:var(--type-body-sm)}
+    .ij-compare-table th,.ij-compare-table td{box-sizing:border-box;padding:var(--space-3) var(--space-4);vertical-align:top;overflow-wrap:anywhere}
+    .ij-compare-table thead tr{background:var(--surface-alt);text-align:left}
+    .ij-compare-table thead th{font-family:var(--font-technical);font-weight:400;font-size:var(--type-label);color:var(--text-metadata)}
+    .ij-compare-table thead th:nth-child(1){width:17%}.ij-compare-table thead th:nth-child(2){width:16%}.ij-compare-table thead th:nth-child(3){width:20%}.ij-compare-table thead th:nth-child(4){width:16%}.ij-compare-table thead th:nth-child(5){width:31%}
+    .ij-compare-table tbody tr{border-top:1px solid var(--border-hairline)}
+    .ij-compare-table tbody th{text-align:left;font-weight:600;background:var(--surface-card)}
+    .ij-compare-table tbody td{color:var(--text-secondary);background:var(--surface-card)}
+    .ij-compare-table .ij-is-ijji{background:var(--surface-blue-tint);color:var(--text-primary);font-weight:600}
+    .ij-compare-head,.ij-compare-rowhead,.ij-compare-cell{display:flex;align-items:flex-start;gap:var(--space-2)}
+    .ij-compare-head{align-items:center;font-weight:600;color:var(--text-primary)}
+    .ij-compare-head .ls-icon,.ij-compare-rowhead .ls-icon,.ij-compare-cell>.ls-icon{flex:none;font-size:22px;line-height:1.2;font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;color:var(--text-metadata)}
+    .ij-compare-cell>span:last-child{min-width:0}
+    .ij-compare-product{display:none;font-family:var(--font-technical);font-size:var(--type-label);font-weight:400;color:var(--text-metadata)}
+    .ij-compare-brand{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;width:72px;min-height:48px;padding:4px 10px;border-radius:var(--radius-sm);background:var(--brand-blue)}
+    .ij-compare-brand img{display:block;width:42px;height:42px;object-fit:contain}
+    .ij-compare-price{border-top:2px solid var(--border-emphasis)!important}
+    .ij-compare-price strong{display:block;color:var(--text-primary);font-size:1.08em;line-height:1.35;white-space:nowrap}
+    .ij-compare-note{margin:0;color:var(--text-metadata);font-size:var(--type-label);text-wrap:pretty}
+    @media (min-width:1280px){.ij-compare-layout{max-width:min(2080px,calc(100vw - 160px))!important}.ij-compare-intro{max-width:72rem!important}.ij-compare-intro h2{font-size:clamp(64px,4.5vw,88px)!important;line-height:1.15!important}.ij-compare-intro>p:last-child{max-width:68rem;font-size:clamp(20px,1.25vw,28px);line-height:1.55}.ij-compare-table{font-size:var(--type-body)}.ij-compare-table th,.ij-compare-table td{padding:var(--space-4) var(--space-5)}}
     .ij-bookmark-rail{position:fixed;right:16px;top:50%;z-index:95;transform:translateY(-50%);display:none;flex-direction:column;gap:4px;padding:6px;border:1px solid var(--border-default);border-radius:16px;background:color-mix(in srgb,var(--surface-canvas) 92%,transparent);backdrop-filter:blur(10px) saturate(1.2);-webkit-backdrop-filter:blur(10px) saturate(1.2);box-shadow:var(--elevation-sm)}
     .ij-bookmark-link{position:relative;box-sizing:border-box;width:44px;height:44px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:background-color var(--motion-duration-state) var(--motion-ease-state),transform var(--motion-duration-feedback) var(--motion-ease-press)}
     .ij-bookmark-icon{font-size:22px;line-height:1;font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}
@@ -141,10 +170,13 @@
     .ij-bookmark-link:hover::after,.ij-bookmark-link:focus-visible::after{opacity:1;visibility:visible;transform:translate(0,-50%)}
     .ij-nav-focus-target:focus,#main-content:focus{outline:3px solid var(--interaction-focus-ring);outline-offset:-3px}
     @media (min-width:1280px){.ij-bookmark-rail{display:flex}.ij-menu-local{display:none}}
-    @media (max-width:899px){.ij-page{--ij-prominent-h:68px;--ij-brand-wordmark-size:20px}.ij-calm{--ij-bar-h:27px;--ij-brand-wordmark-size:18px}.ij-row{padding:0 16px;gap:6px}.ij-desktop-control{display:none}.ij-brand-control{padding:0 12px}.ij-product-slash{font-size:13px}.ij-product-name{font-size:15px}.ij-menu-label{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ij-menu-trigger-visual{padding:0;width:44px}.ij-menu-panel{top:var(--ij-prominent-h);left:8px;right:8px;width:auto;max-height:calc(100dvh - var(--ij-prominent-h) - 8px);border-radius:0 0 16px 16px}.ij-mobile-cta{display:flex}.ij-line-mark{width:40px;height:40px}}
-    @media (max-width:1000px){.ij-hero-grid,.ij-two,.ij-two-rev{grid-template-columns:1fr;gap:var(--space-6)}.ij-sticky{position:static}.ij-hero-panel{max-width:280px;margin:0 auto}}
+    @media (max-width:1050px){.ij-compare-shell{overflow:visible;border:0;background:transparent}.ij-compare-table{display:block;min-width:0}.ij-compare-table thead{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}.ij-compare-table tbody{display:grid;gap:var(--space-4)}.ij-compare-table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;border:1px solid var(--border-default);border-radius:var(--radius-sm);overflow:hidden;background:var(--border-default)}.ij-compare-table tbody th{grid-column:1 / -1;display:block;padding:var(--space-4)}.ij-compare-table tbody td{display:block;padding:var(--space-4)}.ij-compare-table .ij-compare-product{display:block}.ij-compare-table .ij-compare-cell{display:grid;grid-template-columns:auto 1fr;align-content:start}.ij-compare-table .ij-compare-product{grid-column:1 / -1}.ij-compare-price{border-top:0!important}.ij-compare-table tbody tr.ij-compare-price{border-top:2px solid var(--border-emphasis)}}
+    @media (max-width:899px){.ij-page{--ij-prominent-h:68px;--ij-brand-wordmark-size:20px}.ij-calm{--ij-bar-h:27px;--ij-brand-wordmark-size:18px}.ij-row{padding:0 16px;gap:6px}.ij-desktop-control{display:none}.ij-brand-control{padding:0 12px}.ij-product-slash{font-size:13px}.ij-product-name{font-size:15px}.ij-menu-label{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ij-menu-trigger-visual{padding:0;width:44px}.ij-menu-panel{top:var(--ij-prominent-h);left:8px;right:8px;width:auto;max-height:calc(100dvh - var(--ij-prominent-h) - 8px);border-radius:0 0 16px 16px}.ij-mobile-cta{display:flex}}
+    @media (max-width:1000px){.ij-hero-grid,.ij-two,.ij-two-rev{grid-template-columns:1fr;gap:var(--space-6)}.ij-sticky{position:static}.ij-hero-panel{max-width:240px;margin:0 auto}.ij-hero-shell{min-height:0;padding:clamp(40px,7vw,64px) clamp(16px,4vw,32px)!important}}
+    @media (min-width:1001px) and (max-height:760px){.ij-hero-shell{padding-top:24px!important;padding-bottom:24px!important}.ij-hero-copy{gap:12px!important}.ij-hero-copy [data-ij-motif]{width:48px!important;height:48px!important}.ij-hero-copy h1{font-size:clamp(52px,5vw,68px)!important;line-height:1.04!important}.ij-hero-copy>p:not(.eyebrow){font-size:var(--type-body)!important}.ij-hero-panel{max-width:340px!important}}
+    @media (max-width:599px){.ij-compare-table tbody tr{grid-template-columns:1fr}}
     @media (max-width:380px){.ij-brand-control{padding:0 8px}.ij-product-slash{display:none}.ij-product-name{font-size:14px}.ij-row{gap:2px}}
-    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ij-page{--ij-bar-h:var(--ij-prominent-h);--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1}.ij-cta-cue{display:none}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ij-page{--ij-bar-h:var(--ij-prominent-h);--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1}.ij-cta-cue,.ij-wander-control{display:none}}
   </style>
 </helmet>
 <div ref="{{ rootRef }}" class="ij-page" data-product="ijji" lang="en" data-theme="{{ theme }}" data-theme-mode="{{ themeMode }}" style="min-height:100vh;background:var(--surface-canvas);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body)">
@@ -181,6 +213,7 @@
         <a class="ij-menu-row" data-bookmark-target="why" href="#why" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">lightbulb</span><span>Why ijji</span></a>
         <a class="ij-menu-row" data-bookmark-target="locale" href="#locale" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">map</span><span>Your neighbourhood</span></a>
         <a class="ij-menu-row" data-bookmark-target="answer" href="#answer" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">chat</span><span>A sample answer</span></a>
+        <a class="ij-menu-row" data-bookmark-target="compare" href="#compare" onClick="{{ followSection }}"><span class="ij-menu-index ls-icon" aria-hidden="true">balance</span><span>How the options compare</span></a>
         <a class="ij-menu-row" data-bookmark-target="problems" href="#problems" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">problem</span><span>12 shop challenges</span></a>
         <div class="ij-menu-divider"></div>
         <a class="ij-mobile-cta ij-cta-cue-host" data-cta-cue href="https://ijji.landometer.com" target="_blank" rel="noopener noreferrer"><span>Open ijji <span aria-hidden="true">↗</span></span><span class="ij-cta-cue" aria-hidden="true"><span>Open ijji ↗</span></span><span class="visually-hidden">Opens in a new tab</span></a>
@@ -216,23 +249,24 @@
     <a class="ij-bookmark-link" data-bookmark-target="why" data-label="Why ijji" href="#why" aria-label="Why ijji" title="Why ijji" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">lightbulb</span></a>
     <a class="ij-bookmark-link" data-bookmark-target="locale" data-label="Your neighbourhood" href="#locale" aria-label="Your neighbourhood" title="Your neighbourhood" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">map</span></a>
     <a class="ij-bookmark-link" data-bookmark-target="answer" data-label="A sample answer" href="#answer" aria-label="A sample answer" title="A sample answer" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">chat</span></a>
+    <a class="ij-bookmark-link" data-bookmark-target="compare" data-label="How the options compare" href="#compare" aria-label="How the options compare" title="How the options compare" onClick="{{ followSection }}"><span class="ls-icon ij-bookmark-icon" aria-hidden="true">balance</span></a>
     <a class="ij-bookmark-link" data-bookmark-target="problems" data-label="12 shop challenges" href="#problems" aria-label="12 shop challenges" title="12 shop challenges" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">problem</span></a>
   </nav>
 
   <main id="main-content" tabindex="-1" style="padding-top:var(--header-height);scroll-margin-top:var(--header-height)">
 
     <section id="top" data-screen-label="Hero" aria-label="ijji — Overview" style="background:var(--product-ijji-gradient);color:var(--fg-on-light-primary);border-bottom:1px solid var(--border-hairline);scroll-margin-top:var(--header-height)">
-      <div class="ij-hero-grid" style="max-width:var(--container-default);margin:0 auto;padding:clamp(56px,9vw,112px) clamp(16px,4vw,32px)">
-        <div style="display:grid;gap:var(--space-5)">
+      <div class="ij-hero-grid ij-hero-shell" style="max-width:var(--container-default);margin:0 auto">
+        <div class="ij-hero-copy" style="display:grid;gap:var(--space-5)">
           <div data-ij-motif="rings-c-transparent-ink" aria-hidden="true" style="width:72px;height:72px"><img src="ijji-addon/motif/svg/ijji-rings-c-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></div>
           <p class="eyebrow" lang="en" style="margin:0;color:var(--fg-on-light-secondary)">ijji · Your business buddy around the corner</p>
-          <h1 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h1-en);line-height:1.25;letter-spacing:0;text-wrap:balance;color:var(--fg-on-light-primary)">Your business buddy, tuned into your shop and the area around it.</h1>
-          <p style="margin:0;max-width:34rem;font-size:var(--type-body-lg);color:var(--fg-on-light-secondary);text-wrap:pretty">ijji helps restaurant and café owners get to the likely cause of a shop problem. It works with whatever signals are available—from the shop itself, nearby people, competitors, reviews, and the menu—then turns them into practical daily actions you can measure and refine over time, all through LINE.</p>
+          <h1 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h1-en);line-height:1.25;letter-spacing:0;text-wrap:balance;color:var(--fg-on-light-primary)">Know what to fix first.</h1>
+          <p style="margin:0;max-width:34rem;font-size:var(--type-body-lg);color:var(--fg-on-light-secondary);text-wrap:pretty">Tell ijji what’s happening. It brings together the shop and neighbourhood context available, narrows down the likeliest cause, then gives you one practical step to try and measure—on LINE.</p>
           <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center">
-            <a class="btn btn--ijji-primary" href="https://ijji.landometer.com" target="_blank" rel="noopener noreferrer" style="padding-left:var(--space-6);padding-right:var(--space-6)">Tell ijji what’s happening at your shop <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
-            <a href="#answer" style="display:inline-flex;align-items:center;gap:var(--space-2);min-height:44px;color:var(--fg-on-light-primary);font-weight:600;text-decoration:none"><span style="text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px">See a sample answer</span> <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↓</span></a>
+            <a class="btn btn--ijji-primary" href="https://ijji.landometer.com" target="_blank" rel="noopener noreferrer" style="padding-left:var(--space-6);padding-right:var(--space-6)">Ask ijji about your shop <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
+            <a href="#answer" style="display:inline-flex;align-items:center;gap:var(--space-2);min-height:44px;color:var(--fg-on-light-primary);font-weight:600;text-decoration:none"><span style="text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px">See an example answer</span> <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↓</span></a>
           </div>
-          <p style="margin:0;font-family:var(--font-technical);font-size:var(--type-label);color:var(--fg-on-light-secondary)">For restaurants, cafés, and other food businesses with a storefront · Start free</p>
+          <p style="margin:0;font-family:var(--font-technical);font-size:var(--type-label);color:var(--fg-on-light-secondary)">For restaurants, cafés and other food shops · Free to try now</p>
         </div>
         <div class="ij-hero-panel ijji-identity-panel" style="width:100%;max-width:440px;margin-left:auto">
           <img src="assets/identity/ijji-logo-full-square.png" width="1920" height="1920" alt="ijji — Your business buddy around the corner">
@@ -243,11 +277,11 @@
     <section id="why" data-screen-label="Why ijji" aria-labelledby="why-title" style="scroll-margin-top:var(--header-height)">
       <div class="ij-two" style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px)">
         <div class="ij-sticky" style="display:grid;gap:var(--space-4);align-content:start">
-          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">psychology</span>Why shop owners need ijji</p>
-          <h2 id="why-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">You can see the symptoms. Finding the cause is harder.</h2>
-          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">Small shops often have to act on guesswork—run a promotion, cut prices, change the menu—before anyone knows where the leak is. ijji starts by separating symptoms from possible causes, then helps you choose one thing worth doing first.</p>
-          <p style="margin:0;color:var(--text-metadata);font-size:var(--type-body-sm)">Describe the problem → See a direction → Get an action → Share the result → ijji sharpens the next step</p>
-          <figure style="margin:var(--space-2) 0 0;border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-card)"><img src="assets/photos/cafe-owner-pensive-1600.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="A café owner stands behind the coffee machine, thinking as she looks out at an empty shop." style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"><figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">On a quiet night, the first question is not “Should we discount?” but “Where did the customers go?” — Illustrative image</figcaption></figure>
+          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">psychology</span>Start with the cause</p>
+          <h2 id="why-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">You can see what’s going wrong. ijji helps you find where to start.</h2>
+          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">A promotion, a price cut or a new menu can feel like the quickest fix. But if the cause is somewhere else, the shop spends time and money without learning. ijji helps you check the likeliest cause first, then choose one step worth trying.</p>
+          <p style="margin:0;color:var(--text-metadata);font-size:var(--type-body-sm)">Tell ijji what you see → Check the likeliest cause → Try one step → Share the result → Adjust the next step</p>
+          <figure style="margin:var(--space-2) 0 0;border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-card)"><img src="assets/photos/cafe-owner-pensive-1600.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="A café owner stands behind the coffee machine, thinking as she looks out at an empty shop." style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"><figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">Before cutting prices, ask where the customers went. — Illustrative image</figcaption></figure>
         </div>
         <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-card)">
           <div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-4);padding:var(--space-3) var(--space-5);background:var(--surface-alt);font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)">
@@ -278,18 +312,18 @@
     <section id="shops" data-screen-label="Three shop situations" aria-labelledby="shops-title" style="background:var(--surface-alt);border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline);scroll-margin-top:var(--header-height)">
       <div style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px);display:grid;gap:var(--space-7)">
         <div style="display:grid;gap:var(--space-4);max-width:40rem">
-          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">storefront</span>Where ijji can help first</p>
-          <h2 id="shops-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Three shop situations. Three places to begin.</h2>
-          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">ijji does not make you complete a long questionnaire before offering a first answer. It starts with what is happening at your shop and gives you something useful to do now.</p>
+          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">storefront</span>Start where your shop is today</p>
+          <h2 id="shops-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Where is your shop today?</h2>
+          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">No long setup. Begin with the situation you’re in, and ijji will help you choose one useful step you can take now.</p>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
           <article data-approach="soft" style="--i:0;background:var(--surface-card);padding:0 var(--space-5) var(--space-6);display:grid;gap:var(--space-4);align-content:start">
             <img src="assets/photos/cafe-new-barista-1600.jpg" width="1068" height="1600" loading="lazy" decoding="async" alt="A smiling barista stands behind the counter of a newly opened café." style="display:block;width:calc(100% + 2 * var(--space-5));max-width:none;min-width:0;margin:0 calc(-1 * var(--space-5)) var(--space-2);aspect-ratio:3/2;object-fit:cover">
-            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">flag</span>A newly opened shop</p>
-            <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3;text-wrap:balance">“If I open here, will people nearby actually buy from us?”</h3>
+            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">flag</span>Just opened</p>
+            <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3;text-wrap:balance">“We’re open—but who nearby should we win over first?”</h3>
             <div class="ijji-owner-answer">
               <p class="ijji-label">ijji says</p>
-              <p class="ijji-value" style="font-weight:400">First, ijji helps you understand who is around the shop and which customer group is most promising to reach first.</p>
+              <p class="ijji-value" style="font-weight:400">ijji helps you see who is around the shop and which group is most promising to start with.</p>
             </div>
             <ol style="margin:0;padding:0 0 0 1.4em;display:grid;gap:var(--space-1);color:var(--text-secondary);font-size:var(--type-body-sm)">
               <li>Pin your shop location</li><li>See the groups of people nearby</li><li>Choose a first action and capture the first signal</li>
@@ -297,11 +331,11 @@
           </article>
           <article data-approach="soft" style="--i:1;background:var(--surface-card);padding:0 var(--space-5) var(--space-6);display:grid;gap:var(--space-4);align-content:start">
             <img src="assets/photos/owner-thinking-counter-1600.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="A shop owner sits thoughtfully at her counter, resting her chin on one hand beside a laptop." style="display:block;width:calc(100% + 2 * var(--space-5));max-width:none;min-width:0;margin:0 calc(-1 * var(--space-5)) var(--space-2);aspect-ratio:3/2;object-fit:cover">
-            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">trending_flat</span>The shop is steady, but sales are flat</p>
-            <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3;text-wrap:balance">“We’ve tried so many things. Which one actually moves sales?”</h3>
+            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">trending_flat</span>Steady, but stuck</p>
+            <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3;text-wrap:balance">“We’ve tried a lot. What might actually move sales?”</h3>
             <div class="ijji-owner-answer">
               <p class="ijji-label">ijji says</p>
-              <p class="ijji-value" style="font-weight:400">ijji helps identify one lever worth moving first, then turns it into a measurable test.</p>
+              <p class="ijji-value" style="font-weight:400">ijji looks for one lever worth testing first, then turns it into a small experiment with a number to watch.</p>
             </div>
             <ol style="margin:0;padding:0 0 0 1.4em;display:grid;gap:var(--space-1);color:var(--text-secondary);font-size:var(--type-body-sm)">
               <li>Choose the problem that is bothering you most</li><li>Compare it with nearby people and their timing</li><li>Run a small test with a number you can track</li>
@@ -309,11 +343,11 @@
           </article>
           <article data-approach="soft" style="--i:2;background:var(--surface-card);padding:0 var(--space-5) var(--space-6);display:grid;gap:var(--space-4);align-content:start">
             <img src="assets/photos/cook-serious-wok-1600.jpg" width="1075" height="1600" loading="lazy" decoding="async" alt="A street-food cook looks ahead with focus while working at the stove." style="display:block;width:calc(100% + 2 * var(--space-5));max-width:none;min-width:0;margin:0 calc(-1 * var(--space-5)) var(--space-2);aspect-ratio:3/2;object-fit:cover">
-            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">trending_down</span>Sales have fallen sharply</p>
-            <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3;text-wrap:balance">“What should I fix first before the shop can’t keep going?”</h3>
+            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">trending_down</span>Sales are falling</p>
+            <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3;text-wrap:balance">“What do we need to fix first before things get worse?”</h3>
             <div class="ijji-owner-answer">
               <p class="ijji-label">ijji says</p>
-              <p class="ijji-value" style="font-weight:400">You do not have to fix everything tonight. ijji helps separate the symptoms and choose one priority for now.</p>
+              <p class="ijji-value" style="font-weight:400">You don’t have to fix everything tonight. ijji helps sort the symptoms, rank the likely causes and choose one priority.</p>
             </div>
             <ol style="margin:0;padding:0 0 0 1.4em;display:grid;gap:var(--space-1);color:var(--text-secondary);font-size:var(--type-body-sm)">
               <li>Review the symptoms calmly</li><li>Rank the most likely causes</li><li>Follow a seven-day plan and check the result each day</li>
@@ -325,25 +359,23 @@
 
     <section id="locale" data-screen-label="Your neighbourhood" aria-labelledby="locale-title" style="scroll-margin-top:var(--header-height)">
       <div class="ij-two-rev" style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px)">
-        <figure class="ij-sticky" style="margin:0;border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-card)">
-          <img src="assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp" width="1200" height="800" loading="lazy" decoding="async" alt="A food-business owner stands outside his street-side shop in a local neighbourhood." style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:52% 43%">
-          <figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">A street-side food shop in a local neighbourhood — an unedited image from the Landometer team; the person shown is not an ijji user.</figcaption>
-          <img src="assets/photos/customer-eating-1600.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="A smiling customer eats pad kra pao with friends at a street-side restaurant." style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-top:1px solid var(--border-default)">
-          <figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">Customers are real people with rhythms of their own. ijji reads those rhythms before offering advice. — Illustrative image</figcaption>
-        </figure>
+        <div class="ij-sticky" style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-card)">
+          <figure style="margin:0"><img src="assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp" width="1200" height="800" loading="lazy" decoding="async" alt="A food-business owner stands outside his street-side shop in a local neighbourhood." style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:52% 43%"><figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">A street-side food shop in a local neighbourhood — an unedited image from the Landometer team; the person shown is not an ijji user.</figcaption></figure>
+          <figure style="margin:0;border-top:1px solid var(--border-default)"><img src="assets/photos/customer-eating-1600.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="A smiling customer eats pad kra pao with friends at a street-side restaurant." style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"><figcaption style="padding:var(--space-3) var(--space-4);background:var(--surface-alt);color:var(--text-metadata);font-size:var(--type-body-sm)">Customers are real people with rhythms of their own. ijji reads those rhythms before offering advice. — Illustrative image</figcaption></figure>
+        </div>
         <div style="display:grid;gap:var(--space-5)">
           <div style="display:grid;gap:var(--space-4)">
-            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">map</span>Your neighbourhood · What ijji reads before answering</p>
-            <h2 id="locale-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Foot traffic is not the same as sales.</h2>
-            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">ijji looks beyond the name of the neighbourhood or the number of people passing by. It asks who those people are, when they arrive, whether they can stop to buy, and whether the shop offers something simple enough to choose in that moment. At minimum, the people around a shop fall into three groups, each creating opportunity at a different time of day.</p>
+            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">map</span>Your neighbourhood · Before ijji suggests a move</p>
+            <h2 id="locale-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">A busy street doesn’t always mean a busy shop.</h2>
+            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">Lots of people nearby only matters if they can notice, stop and choose your shop in that moment. ijji looks at who is around, when they pass and what could fit that occasion—then helps you decide what the shop should try.</p>
           </div>
           <dl class="ijji-evidence-group" data-approach="soft" style="--i:0">
-            <div class="ijji-evidence-fact"><dt><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">home</span>People who live nearby</dt><dd>They return as part of a routine, with different patterns on weekdays and weekends—useful for repeat visits, regular favourites, and short delivery radiuses close to home.</dd></div>
-            <div class="ijji-evidence-fact"><dt><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">luggage</span>People visiting the area</dt><dd>They come for an occasion, often in groups, and search before arriving—useful for signature dishes, strong photos and reviews, weekends, and little indulgences.</dd></div>
+            <div class="ijji-evidence-fact"><dt><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">home</span>Neighbours</dt><dd>They return as part of a routine, with different patterns on weekdays and weekends—useful for repeat visits, regular favourites, and short delivery radiuses close to home.</dd></div>
+            <div class="ijji-evidence-fact"><dt><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">luggage</span>Visitors</dt><dd>They come for an occasion, often in groups, and search before arriving—useful for signature dishes, strong photos and reviews, weekends, and little indulgences.</dd></div>
             <div class="ijji-evidence-fact"><dt><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">commute</span>People passing through</dt><dd>They move through at particular times and in a particular direction, often in a hurry—useful for quick ordering, grab-and-go, breakfast, lunch, and after work.</dd></div>
           </dl>
           <div data-approach="soft" style="--i:1;display:grid;gap:var(--space-3)">
-            <p style="margin:0;font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)">Four more questions ijji asks before calling it an opportunity</p>
+            <p style="margin:0;font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)">Before ijji calls it an opportunity, it checks four things.</p>
             <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-sm);overflow:hidden">
               <li style="background:var(--surface-card);padding:var(--space-3) var(--space-4)"><strong style="display:block;font-weight:600">Can they stop to buy?</strong><span style="color:var(--text-secondary);font-size:var(--type-body-sm)">Are they ready to buy, or simply passing by?</span></li>
               <li style="background:var(--surface-card);padding:var(--space-3) var(--space-4)"><strong style="display:block;font-weight:600">What can they realistically buy then?</strong><span style="color:var(--text-secondary);font-size:var(--type-body-sm)">Breakfast, a quick break, or something after work?</span></li>
@@ -353,7 +385,7 @@
           </div>
           <blockquote data-approach="soft" style="--i:2;margin:0;padding:var(--space-4) var(--space-5);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-blue-tint)">
             <p class="ijji-label" style="margin:0 0 var(--space-2)">Here is how ijji would put it</p>
-            <p style="margin:0;text-wrap:pretty">“Lots of people nearby is encouraging, but it does not automatically mean sales. We still need to ask whether they can stop and buy—and whether your shop has an option simple enough to fit the moment they are in.”</p>
+            <p style="margin:0;text-wrap:pretty">“A busy area is a good sign, but it isn’t a sales answer yet. First, let’s check whether people can stop, see the offer clearly and choose it in the time they have.”</p>
           </blockquote>
         </div>
       </div>
@@ -362,19 +394,19 @@
     <section id="answer" data-screen-label="A sample answer" aria-labelledby="answer-title" style="background:var(--surface-alt);border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline);scroll-margin-top:var(--header-height)">
       <div style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px);display:grid;gap:var(--space-7)">
         <div style="display:grid;gap:var(--space-4);max-width:44rem">
-          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">chat</span>A sample answer from ijji</p>
-          <h2 id="answer-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Grounded in your shop and neighbourhood—not generic advice.</h2>
-          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">Every answer begins with what the owner shares. ijji looks for the likely cause before offering advice, states how confident it is, and ends with something you can do today plus the number to watch.</p>
-          <p style="margin:0;color:var(--text-metadata);font-size:var(--type-body-sm)">This example is based on a test shop in Khlong San, Bangkok. It demonstrates the format of an answer, not a guaranteed result for your shop.</p>
+          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">chat</span>What an ijji answer looks like</p>
+          <h2 id="answer-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Not a generic answer. A next step that fits this shop.</h2>
+          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">ijji starts with what you tell it, checks the shop and neighbourhood context available, and separates the symptom from the likeliest cause. Then it gives you one action for today, a number to watch and a clear note on what is still uncertain.</p>
+          <p style="margin:0;color:var(--text-metadata);font-size:var(--type-body-sm)">Illustrative format based on a test shop in Khlong San, Bangkok—not a prediction for your shop.</p>
         </div>
         <div class="ij-two-rev">
           <div style="display:grid;gap:var(--space-5)">
             <div class="ijji-owner-answer" data-approach="soft" style="--i:0">
               <p class="ijji-label"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">chat_bubble</span>What you told ijji</p>
               <p class="ijji-value" style="font-weight:400">Our shop is on a main road. People pass all day, especially in the morning and evening, but very few come in. We have changed the frontage and signs several times without seeing a difference.</p>
-              <p class="ijji-label" style="border-top:1px solid var(--border-hairline);padding-top:var(--space-3)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">lightbulb</span>ijji’s leading hypothesis</p>
-              <p class="ijji-value">Morning and evening passers-by may not be sure what the shop sells, what it costs, or whether it is open, so they hesitate to walk in.</p>
-              <p class="ijji-limit">We cannot yet conclude that competitors are taking customers. The first action is designed to test the cause before changing the offer—not to discount.</p>
+              <p class="ijji-label" style="border-top:1px solid var(--border-hairline);padding-top:var(--space-3)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">lightbulb</span>What may be getting in the way</p>
+              <p class="ijji-value">People passing in the morning and evening may not quickly see what the shop sells, what it costs or whether it is open. That hesitation is the first thing worth testing.</p>
+              <p class="ijji-limit">There isn’t enough evidence yet to blame competitors. Let’s test clarity first—no discount needed yet.</p>
             </div>
             <dl class="ijji-evidence-group" data-approach="soft" style="--i:1">
               <div class="ijji-evidence-fact"><dt><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">groups</span>People around the shop</dt><dd>Office workers commuting through Sathorn–Silom in the morning and evening · residents of Charoen Nakhon–Khlong San condominiums · visitors heading to ICONSIAM</dd></div>
@@ -386,7 +418,7 @@
             <article class="card" data-approach="soft" style="--i:2;display:grid;gap:var(--space-4)">
               <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--space-3)">
                 <span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)">Action 1 / 7</span>
-                <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:22px;vertical-align:-5px">checklist</span>A pavement sign with three stand-out items and clear prices</h3>
+                <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:22px;vertical-align:-5px">checklist</span>Make the offer clear in three seconds</h3>
               </div>
               <p style="margin:0;text-wrap:pretty">There is no need to change the whole shop today. Put a freestanding sign where passers-by can see it at eye level. Show your top-selling dish alongside a signature drink, both with clear prices. From 3–5 metres away, people should understand within three seconds that they can get a filling, affordable meal here.</p>
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:var(--space-4);border-top:1px solid var(--border-hairline);padding-top:var(--space-4)">
@@ -399,7 +431,7 @@
                   <p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">Do not cram in so many item names that the sign becomes hard to read. Focus on two or three key items with photos and clear prices.</p>
                 </div>
               </div>
-              <p style="margin:0;border-top:1px solid var(--border-hairline);padding-top:var(--space-3);color:var(--text-metadata);font-size:var(--type-body-sm)">When it is done, send back one number. ijji will use it to sharpen the next day’s action.</p>
+              <p style="margin:0;border-top:1px solid var(--border-hairline);padding-top:var(--space-3);color:var(--text-metadata);font-size:var(--type-body-sm)">When it’s done, send back one number. ijji will use it to shape tomorrow’s step.</p>
             </article>
           </div>
           <sc-if value="{{ showScreens }}" hint-placeholder-val="{{ true }}">
@@ -411,18 +443,64 @@
         </div>
       </div>
     </section>
+    <section id="compare" data-screen-label="How ijji is different" aria-labelledby="compare-title" style="background:var(--surface-alt);border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline);scroll-margin-top:var(--header-height)">
+      <div class="ij-compare-layout" style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px);display:grid;gap:var(--space-7)">
+        <div class="ij-compare-intro" style="display:grid;gap:var(--space-4);max-width:40rem">
+          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">balance</span>How the options compare</p>
+          <h2 id="compare-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Advice is only useful when it fits your shop.</h2>
+          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">General AI needs you to bring the context. A dashboard leaves you to make sense of the numbers. A consultant can help, but often at a cost small shops can’t carry. ijji is built for the space between: it understands the shop and neighbourhood, gives you one move to try, and follows what happens next.</p>
+        </div>
+        <div class="ij-compare-shell" data-approach="soft" style="--i:0">
+          <table class="ij-compare-table" role="table" aria-describedby="compare-price-note">
+            <caption class="ij-sr-only">Comparison of general AI, data dashboards, consultants and ijji for local food-shop owners</caption>
+            <thead role="rowgroup">
+              <tr role="row">
+                <th scope="col" role="columnheader"><span class="ij-compare-head"><span class="ls-icon" aria-hidden="true">checklist</span><span>What the shop needs</span></span></th>
+                <th scope="col" role="columnheader"><span class="ij-compare-head"><span class="ls-icon" aria-hidden="true">smart_toy</span><span>General AI</span></span></th>
+                <th scope="col" role="columnheader"><span class="ij-compare-head"><span class="ls-icon" aria-hidden="true">monitoring</span><span>Data dashboard</span></span></th>
+                <th scope="col" role="columnheader"><span class="ij-compare-head"><span class="ls-icon" aria-hidden="true">support_agent</span><span>Consultant</span></span></th>
+                <th class="ij-is-ijji" scope="col" role="columnheader" aria-label="ijji"><span class="ij-compare-brand"><img src="assets/identity/ijji-favicon-mark-192-r5-b5cdf9987c6a.png" width="192" height="192" alt="" aria-hidden="true"></span></th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">place</span><span>Shop + neighbourhood</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">General AI</span><span class="ls-icon" aria-hidden="true">edit_note</span><span>You supply the context</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Data dashboard</span><span class="ls-icon" aria-hidden="true">query_stats</span><span>Data to interpret</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Consultant</span><span class="ls-icon" aria-hidden="true">help</span><span>Depends on the brief</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span>Brings shop and neighbourhood context together</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">schedule</span><span>Customer timing</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">General AI</span><span class="ls-icon" aria-hidden="true">edit_note</span><span>Only what you provide</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Data dashboard</span><span class="ls-icon" aria-hidden="true">monitoring</span><span>Shown in charts</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Consultant</span><span class="ls-icon" aria-hidden="true">directions_walk</span><span>Requires fieldwork</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span>People and time of day</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">fact_check</span><span>Likely cause first</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">General AI</span><span class="ls-icon" aria-hidden="true">psychology</span><span>Varies by prompt</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Data dashboard</span><span class="ls-icon" aria-hidden="true">query_stats</span><span>You draw the conclusion</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Consultant</span><span class="ls-icon" aria-hidden="true">fact_check</span><span>Strong, but costly</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span>Likely cause and confidence</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">today</span><span>Something for today</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">General AI</span><span class="ls-icon" aria-hidden="true">lightbulb</span><span>Broad suggestions</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Data dashboard</span><span class="ls-icon" aria-hidden="true">hourglass_top</span><span>Time needed to understand the charts first</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Consultant</span><span class="ls-icon" aria-hidden="true">event_available</span><span>Within the project scope</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span>One action, a measure and a watch-out</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">sync</span><span>What happens next</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">General AI</span><span class="ls-icon" aria-hidden="true">help</span><span>Depends on the plan</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Data dashboard</span><span class="ls-icon" aria-hidden="true">monitoring</span><span>You monitor it</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Consultant</span><span class="ls-icon" aria-hidden="true">inventory_2</span><span>Usually project-based</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">sync</span><span>Share the result; ijji adjusts</span></span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">forum</span><span>Everyday use</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">General AI</span><span class="ls-icon" aria-hidden="true">forum</span><span>General chat</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Data dashboard</span><span class="ls-icon" aria-hidden="true">code</span><span>Technical</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Consultant</span><span class="ls-icon" aria-hidden="true">person</span><span>Varies by adviser</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">chat_bubble</span><span>Shop-owner language on LINE</span></span></td></tr>
+              <tr class="ij-compare-price" role="row"><th scope="row" role="rowheader"><span class="ij-compare-rowhead"><span class="ls-icon" aria-hidden="true">payments</span><span>Starting price</span></span></th><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">General AI</span><span class="ls-icon" aria-hidden="true">payments</span><span><strong>From THB 700<br>/month</strong> Before the conversation becomes genuinely useful</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Data dashboard</span><span class="ls-icon" aria-hidden="true">query_stats</span><span><strong>From THB 20,000<br>/month</strong> Plus a dashboard you still have to learn</span></span></td><td role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">Consultant</span><span class="ls-icon" aria-hidden="true">warning</span><span><strong>THB 200,000<br>/month</strong> Hard for a small shop to afford</span></span></td><td class="ij-is-ijji" role="cell"><span class="ij-compare-cell"><span class="ij-compare-product">ijji</span><span class="ls-icon" aria-hidden="true">check_circle</span><span><strong>From THB 29<br>/question</strong> Free to try right now</span></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p id="compare-price-note" class="ij-compare-note">Indicative starting prices supplied for this comparison; providers and plans vary. ijji pricing and free-trial availability are current for this release.</p>
+        <div data-approach="soft" style="--i:1;display:grid;gap:var(--space-4)">
+          <div style="display:grid;gap:var(--space-2);max-width:40rem">
+            <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3">ijji won’t pretend to know more than the evidence allows.</h3>
+            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">Every answer shows how strong the signal is. When the picture is still thin, the first step is to gather one useful clue—not change the whole business.</p>
+          </div>
+          <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-sm);overflow:hidden">
+            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--success" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">check_circle</span>Clear enough to act</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">Several sources point in the same direction—the shop can act on the likely cause.</p></li>
+            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--info" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">hourglass_top</span>Worth a small test</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">Some evidence supports it—worth a measurable three-day test.</p></li>
+            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--pending" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">help</span>Need one more signal</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">Gather more before deciding—the first action is to observe and count.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
 
     <section id="problems" data-screen-label="12 shop challenges" aria-labelledby="problems-title" style="scroll-margin-top:var(--header-height)">
       <div style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px);display:grid;gap:var(--space-7)">
         <div style="display:grid;gap:var(--space-4);max-width:40rem">
-          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">checklist</span>12 shop challenges</p>
-          <h2 id="problems-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Whatever the problem, tell ijji in the way you talk about your shop.</h2>
-          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">ijji helps separate what should be tested first, what can be acted on now, and what should wait until there is enough evidence.</p>
+          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">checklist</span>12 everyday shop challenges</p>
+          <h2 id="problems-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Start with the problem that keeps coming back.</h2>
+          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">No business jargon needed. Tell ijji what you’re seeing; it helps sort what to check first, what you can do now and what can wait.</p>
+          <button id="ij-wander-toggle" class="ij-wander-control" type="button" aria-pressed="false" data-pause-label="Pause question highlights" data-resume-label="Resume question highlights"><span class="ls-icon" data-wander-icon aria-hidden="true">pause</span><span data-wander-label>Pause question highlights</span></button>
         </div>
         <ol style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
           <li data-approach="soft" data-cell="0" style="--i:0;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">groups</span>01 · Getting noticed</span><p style="margin:0;font-weight:600;text-wrap:pretty">Which people nearby should we try to bring in first?</p><p class="ij-thought" aria-live="off"><span class="is-on">“People pass all day, but no one turns in.”</span><span>“What if the people around here were never our customers?”</span><span>“Who should we focus on first—office workers or people who live in the side streets?”</span></p></li>
           <li data-approach="soft" data-cell="1" style="--i:1;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">door_open</span>02 · Walking in</span><p style="margin:0;font-weight:600;text-wrap:pretty">They can see the shop. Why are they still not buying?</p><p class="ij-thought" aria-live="off"><span class="is-on">“People stop to read the menu, then keep walking.”</span><span>“Are they unsure about the price—or worried the wait will be too long?”</span><span>“We have a sign and photos. What is still missing?”</span></p></li>
-          <li data-approach="soft" data-cell="2" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">add_shopping_cart</span>03 · A little more per order</span><p style="margin:0;font-weight:600;text-wrap:pretty">What else would this customer group be happy to add?</p><p class="ij-thought" aria-live="off"><span class="is-on">“They order one dish, drink water, and leave.”</span><span>“How do we suggest an add-on without being pushy?”</span><span>“Would a meal-and-drink set work for them—or only for us?”</span></p></li>
+          <li data-approach="soft" data-cell="2" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">add_shopping_cart</span>03 · A little more per order</span><p style="margin:0;font-weight:600;text-wrap:pretty">What might customers happily add to their order?</p><p class="ij-thought" aria-live="off"><span class="is-on">“They order one dish, drink water, and leave.”</span><span>“How do we suggest an add-on without being pushy?”</span><span>“Would a meal-and-drink set work for them—or only for us?”</span></p></li>
           <li data-approach="soft" data-cell="3" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">schedule</span>04 · Quiet hours</span><p style="margin:0;font-weight:600;text-wrap:pretty">How can the empty hours earn more?</p><p class="ij-thought" aria-live="off"><span class="is-on">“From two to five, every table is empty.”</span><span>“The lights and air-conditioning are on, the team is ready, but no customers come in.”</span><span>“Should we close for the afternoon or find something that sells then?”</span></p></li>
           <li data-approach="soft" data-cell="4" style="--i:0;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">event_repeat</span>05 · Coming back</span><p style="margin:0;font-weight:600;text-wrap:pretty">How do we give nearby customers a reason to return?</p><p class="ij-thought" aria-live="off"><span class="is-on">“New customers come once, then disappear.”</span><span>“Which places do people around here return to?”</span><span>“We tried a loyalty card. They still do not come back.”</span></p></li>
           <li data-approach="soft" data-cell="5" style="--i:1;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">sell</span>06 · Price and value</span><p style="margin:0;font-weight:600;text-wrap:pretty">Which items could carry a price increase and still feel worth it?</p><p class="ij-thought" aria-live="off"><span class="is-on">“We are afraid customers will leave if prices rise, but we cannot keep them here.”</span><span>“Do customers think it is expensive, or do they just not understand what they are getting?”</span><span>“The shop next door charges more and still fills up.”</span></p></li>
@@ -433,49 +511,7 @@
           <li data-approach="soft" data-cell="10" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">room_service</span>11 · Service</span><p style="margin:0;font-weight:600;text-wrap:pretty">Which moments in the service journey stop a purchase or keep people from returning?</p><p class="ij-thought" aria-live="off"><span class="is-on">“Food is slow during the rush and customers look frustrated.”</span><span>“Do we need more people, or just a better queue?”</span><span>“Which customers genuinely cannot wait?”</span></p></li>
           <li data-approach="soft" data-cell="11" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">trending_up</span>12 · Growing the business</span><p style="margin:0;font-weight:600;text-wrap:pretty">Where should the shop grow first—and where is the risk?</p><p class="ij-thought" aria-live="off"><span class="is-on">“People ask about delivery, but I do not know if it would pay off.”</span><span>“Do we open a second branch, or fill this one first?”</span><span>“How can we grow without putting a large sum at risk?”</span></p></li>
         </ol>
-        <p style="margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-4);color:var(--text-secondary);text-wrap:pretty">If one of these sounds familiar, tell ijji before you decide. <a class="btn" href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer"><img class="ij-line-mark" src="assets/providers/line-brand-icon-5e93437e.png" width="1001" height="1000" alt="" decoding="async">Tell us on LINE <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a></p>
-      </div>
-    </section>
-
-    <section id="compare" data-screen-label="How ijji is different" aria-labelledby="compare-title" style="background:var(--surface-alt);border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline);scroll-margin-top:var(--header-height)">
-      <div style="max-width:var(--container-default);margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px);display:grid;gap:var(--space-7)">
-        <div style="display:grid;gap:var(--space-4);max-width:40rem">
-          <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">balance</span>How ijji differs from the usual options</p>
-          <h2 id="compare-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Find the cause first. Recommend the next move. Then follow the result.</h2>
-          <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">The options owners use today—asking friends, copying a competitor, running a promotion, asking general AI, or hiring a consultant for a one-off project—often jump to tactics before the cause is clear, then stop before anyone sees what happened next.</p>
-        </div>
-        <div data-approach="soft" style="--i:0;overflow-x:auto;border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--surface-card)">
-          <table style="width:100%;min-width:720px;border-collapse:collapse;font-size:var(--type-body-sm)">
-            <thead>
-              <tr style="background:var(--surface-alt);text-align:left">
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical);font-weight:400;font-size:var(--type-label);color:var(--text-metadata)">What the shop needs</th>
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical);font-weight:400;font-size:var(--type-label);color:var(--text-metadata)">General AI</th>
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical);font-weight:400;font-size:var(--type-label);color:var(--text-metadata)">Data dashboard</th>
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical);font-weight:400;font-size:var(--type-label);color:var(--text-metadata)">Consultant</th>
-                <th scope="col" style="padding:var(--space-3) var(--space-4);font-family:var(--font-technical);font-weight:400;font-size:var(--type-label);color:var(--text-primary);background:var(--surface-blue-tint)"><span lang="en">ijji</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">Understand the shop’s location</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">You provide the context</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Provides numbers; you interpret them</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Depends on the person</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">Reads the people around that shop directly</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">Understand customer timing</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Does not know</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Shown as charts</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Requires fieldwork</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">Residents · visitors · passers-by, by time of day</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">Diagnose before recommending</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Inconsistent</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">The owner must interpret it</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Strong, but costly</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">Separates symptoms from likely causes and states its confidence</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">Something doable today</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Broad advice</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">None</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Within the project scope</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">A daily action, what to measure, and what to watch</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">Follow up after advice</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">None</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">None</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Ends with the project</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">Share the result and ijji adjusts the next round</td></tr>
-              <tr style="border-top:1px solid var(--border-hairline)"><th scope="row" style="padding:var(--space-3) var(--space-4);text-align:left;font-weight:600">Language and channel</th><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Sometimes</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Technical jargon</td><td style="padding:var(--space-3) var(--space-4);color:var(--text-secondary)">Sometimes</td><td style="padding:var(--space-3) var(--space-4);background:var(--surface-blue-tint);font-weight:600">The way shop owners talk, on the LINE app they already use</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div data-approach="soft" style="--i:1;display:grid;gap:var(--space-4)">
-          <div style="display:grid;gap:var(--space-2);max-width:40rem">
-            <h3 style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h3);line-height:1.3">ijji never claims more certainty than the evidence allows.</h3>
-            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">Every diagnosis includes a confidence level. When the evidence is not strong enough, the first action is to gather a signal—not to start changing the business.</p>
-          </div>
-          <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-sm);overflow:hidden">
-            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--success" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">check_circle</span>Clear signal</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">Several sources point in the same direction—the shop can act on the likely cause.</p></li>
-            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--info" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">hourglass_top</span>Early signal</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">Some evidence supports it—worth a measurable three-day test.</p></li>
-            <li style="background:var(--surface-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start"><span class="status status--pending" style="justify-self:start"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:16px;margin-right:2px;vertical-align:-3px">help</span>Not enough information</span><p style="margin:0;color:var(--text-secondary);font-size:var(--type-body-sm)">Gather more before deciding—the first action is to observe and count.</p></li>
-          </ul>
-        </div>
+        <p style="margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-4);color:var(--text-secondary);text-wrap:pretty">Does one sound familiar? Ask ijji before you decide. <a class="btn" href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer"><img class="ij-line-mark" src="assets/providers/line-brand-icon-5e93437e.png" width="1001" height="1000" alt="" decoding="async">Ask on LINE <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a></p>
       </div>
     </section>
 
@@ -489,15 +525,15 @@
         <div style="display:grid;gap:var(--space-5)">
           <div data-ij-motif="graph-b-transparent-ink" aria-hidden="true" style="width:96px;height:96px"><img src="ijji-addon/motif/svg/ijji-graph-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></div>
           <div style="display:grid;gap:var(--space-4)">
-            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">favorite</span>For the people who run the shop</p>
-            <h2 id="with-you-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">Small shops should not have to figure everything out alone.</h2>
-            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">Owners are often first to arrive, last to leave, and responsible for nearly every decision—menu, prices, front-of-house, rent, reviews. Too often, those decisions must be made before anyone knows what is really happening. ijji knows how tiring that is. It is not here to lecture, but to offer another view, help set priorities, and stay with the result.</p>
-            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">On a good sales day, ijji helps identify what worked. When sales fall, it helps separate what needs attention first. And when the picture is still unclear, ijji says so plainly. Whatever the day brings, ijji is here.</p>
+            <p class="eyebrow" style="margin:0"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">favorite</span>Built for the person running the shop</p>
+            <h2 id="with-you-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance">You shouldn’t have to work it all out alone.</h2>
+            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">Running a shop means making dozens of decisions while doing the work itself. ijji doesn’t lecture or blame. It helps you pause, see what matters most and take one manageable step.</p>
+            <p style="margin:0;color:var(--text-secondary);text-wrap:pretty">When sales rise, ijji helps you spot what worked. When they fall, it helps you find what to check first. And when the evidence is thin, it says so. Then it stays for the next round.</p>
           </div>
           <ul data-approach="soft" style="--i:0;margin:0;padding:0;list-style:none;display:grid;gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-sm);overflow:hidden">
             <li style="background:var(--surface-card);max-width:none;width:100%;padding:var(--space-4) var(--space-5);display:grid;grid-template-columns:auto 1fr;gap:var(--space-3);align-items:start"><span class="ls-icon" aria-hidden="true" style="font-size:28px;line-height:1;color:var(--interaction-accent)">handshake</span><span><strong style="display:block;font-weight:600">No judgement. No blame.</strong><span style="color:var(--text-secondary);font-size:var(--type-body-sm)">Every shop symptom is information, not someone’s fault.</span></span></li>
-            <li style="background:var(--surface-card);max-width:none;width:100%;padding:var(--space-4) var(--space-5);display:grid;grid-template-columns:auto 1fr;gap:var(--space-3);align-items:start"><span class="ls-icon" aria-hidden="true" style="font-size:28px;line-height:1;color:var(--interaction-accent)">fact_check</span><span><strong style="display:block;font-weight:600">Never more certainty than the evidence</strong><span style="color:var(--text-secondary);font-size:var(--type-body-sm)">ijji always states its confidence and suggests a test when the answer is not yet clear.</span></span></li>
-            <li style="background:var(--surface-card);max-width:none;width:100%;padding:var(--space-4) var(--space-5);display:grid;grid-template-columns:auto 1fr;gap:var(--space-3);align-items:start"><span class="ls-icon" aria-hidden="true" style="font-size:28px;line-height:1;color:var(--interaction-accent)">support_agent</span><span><strong style="display:block;font-weight:600">Here to answer every day</strong><span style="color:var(--text-secondary);font-size:var(--type-body-sm)">The more you share, the better ijji understands your shop—ask on LINE every day from 09:00–18:00.</span></span></li>
+            <li style="background:var(--surface-card);max-width:none;width:100%;padding:var(--space-4) var(--space-5);display:grid;grid-template-columns:auto 1fr;gap:var(--space-3);align-items:start"><span class="ls-icon" aria-hidden="true" style="font-size:28px;line-height:1;color:var(--interaction-accent)">fact_check</span><span><strong style="display:block;font-weight:600">Honest about uncertainty</strong><span style="color:var(--text-secondary);font-size:var(--type-body-sm)">ijji says when the picture is still thin, then suggests one useful way to learn more.</span></span></li>
+            <li style="background:var(--surface-card);max-width:none;width:100%;padding:var(--space-4) var(--space-5);display:grid;grid-template-columns:auto 1fr;gap:var(--space-3);align-items:start"><span class="ls-icon" aria-hidden="true" style="font-size:28px;line-height:1;color:var(--interaction-accent)">support_agent</span><span><strong style="display:block;font-weight:600">Here for the next question</strong><span style="color:var(--text-secondary);font-size:var(--type-body-sm)">The more you share, the better ijji understands your shop—ask on LINE every day from 09:00–18:00.</span></span></li>
           </ul>
         </div>
       </div>
@@ -506,14 +542,14 @@
     <section id="start" data-screen-label="Get started" aria-labelledby="start-title" style="background:var(--product-ijji-gradient);color:var(--fg-on-light-primary);scroll-margin-top:var(--header-height)">
       <div style="max-width:var(--container-reading);margin:0 auto;padding:clamp(56px,9vw,112px) clamp(16px,4vw,32px);display:grid;gap:var(--space-5);justify-items:start">
         <div data-ij-motif="rotate-b-transparent-ink" aria-hidden="true" style="width:48px;height:48px"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></div>
-        <p class="eyebrow" style="margin:0;color:var(--fg-on-light-secondary)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">rocket_launch</span>Start free</p>
-        <h2 id="start-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance;color:var(--fg-on-light-primary)">Start by telling ijji what is happening at your shop.</h2>
-        <p style="margin:0;font-size:var(--type-body-lg);color:var(--fg-on-light-secondary);text-wrap:pretty">No long form to complete. Pin your shop, describe the problem on your mind, and get a diagnosis plus your first action. The clearer the story, the more specific the answer can be.</p>
+        <p class="eyebrow" style="margin:0;color:var(--fg-on-light-secondary)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">rocket_launch</span>Try ijji free</p>
+        <h2 id="start-title" style="margin:0;font-family:var(--font-display-en);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance;color:var(--fg-on-light-primary)">Start with the question on your mind today.</h2>
+        <p style="margin:0;font-size:var(--type-body-lg);color:var(--fg-on-light-secondary);text-wrap:pretty">Pin your shop and tell ijji what’s happening. You’ll get a likely cause, one practical next step and a number to watch—without a long form.</p>
         <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center">
-          <a class="btn btn--ijji-primary" href="https://ijji.landometer.com" target="_blank" rel="noopener noreferrer" style="padding-left:var(--space-6);padding-right:var(--space-6)">Open ijji <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
+          <a class="btn btn--ijji-primary" href="https://ijji.landometer.com" target="_blank" rel="noopener noreferrer" style="padding-left:var(--space-6);padding-right:var(--space-6)">Ask ijji <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
           <a href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:var(--space-2);min-height:44px;color:var(--fg-on-light-primary);font-weight:600;text-decoration:none"><img class="ij-line-mark" src="assets/providers/line-brand-icon-5e93437e.png" width="1001" height="1000" alt="" decoding="async"><span style="text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px">Add ijji on LINE</span> <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
         </div>
-        <p style="margin:0;font-family:var(--font-technical);font-size:var(--type-label);color:var(--fg-on-light-secondary)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">schedule</span>The ijji team replies on LINE every day from 09:00–18:00 · A Landometer product</p>
+        <p style="margin:0;font-family:var(--font-technical);font-size:var(--type-label);color:var(--fg-on-light-secondary)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">schedule</span>Free to try now · The ijji team replies on LINE daily, 09:00–18:00 · A Landometer product</p>
       </div>
     </section>
   </main>
@@ -675,7 +711,7 @@ class Component extends DCLogic {
   }
   armBookmarks() {
     const root = this.rootRef.current; if (!root) return;
-    const ids = ['top', 'why', 'locale', 'answer', 'problems'];
+    const ids = ['top', 'why', 'locale', 'answer', 'compare', 'problems'];
     this._bookmarkMq = window.matchMedia('(min-width:1280px)');
     this._syncBookmarks = () => {
       const marker = Math.max(112, window.innerHeight * .24);
@@ -712,8 +748,22 @@ class Component extends DCLogic {
     if (this.props.wander === false) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const cells = Array.from(root.querySelectorAll('li[data-cell]')); if (cells.length < 2) return;
-    let i = -1, live = null, timer = null;
+    const toggle = root.querySelector('#ij-wander-toggle');
+    let i = -1, live = null, timer = null, paused = false;
+    const syncThoughts = (cell) => cell.querySelectorAll('.ij-thought span').forEach((span) => span.setAttribute('aria-hidden', span.classList.contains('is-on') ? 'false' : 'true'));
+    cells.forEach(syncThoughts);
+    const updateToggle = () => {
+      if (!toggle) return;
+      const label = paused ? toggle.dataset.resumeLabel : toggle.dataset.pauseLabel;
+      const labelNode = toggle.querySelector('[data-wander-label]');
+      const iconNode = toggle.querySelector('[data-wander-icon]');
+      toggle.setAttribute('aria-pressed', paused ? 'true' : 'false');
+      toggle.setAttribute('aria-label', label);
+      if (labelNode) labelNode.textContent = label;
+      if (iconNode) iconNode.textContent = paused ? 'play_arrow' : 'pause';
+    };
     const step = () => {
+      if (paused) return;
       if (live) live.classList.remove('is-live');
       i += 1;
       if (i >= cells.length) { i = -1; live = null; timer = setTimeout(step, 2200); return; } // rest beat before the next pass
@@ -721,12 +771,14 @@ class Component extends DCLogic {
       // surface first (560ms), then the thought: old line out, new line eases in after the surface settles
       const spans = live.querySelectorAll('.ij-thought span');
       const on = Array.from(spans).findIndex(s => s.classList.contains('is-on'));
-      if (spans.length > 1) { spans[on].classList.remove('is-on'); spans[(on + 1) % spans.length].classList.add('is-on'); }
+      if (spans.length > 1) { spans[on].classList.remove('is-on'); spans[(on + 1) % spans.length].classList.add('is-on'); syncThoughts(live); }
       timer = setTimeout(step, 3500); // surface 560 → text eases in over 1.4s from 400ms → holds
     };
-    const start = () => { if (!timer) timer = setTimeout(step, 400); };
+    const start = () => { if (!paused && !timer) timer = setTimeout(step, 400); };
     const stop = () => { clearTimeout(timer); timer = null; if (live) live.classList.remove('is-live'); live = null; };
     const grid = cells[0].parentElement;
+    this._wanderToggle = () => { paused = !paused; if (paused) stop(); else if (grid.getBoundingClientRect().bottom > 0 && grid.getBoundingClientRect().top < window.innerHeight) start(); updateToggle(); };
+    if (toggle) { toggle.addEventListener('click', this._wanderToggle); updateToggle(); }
     if ('IntersectionObserver' in window) {
       this._wanderIo = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && !document.hidden ? start() : stop()), { threshold: .2 });
       this._wanderIo.observe(grid);
@@ -802,6 +854,7 @@ class Component extends DCLogic {
     if (this._wanderStop) this._wanderStop();
     if (this._wanderIo) this._wanderIo.disconnect();
     if (this._wanderVis) document.removeEventListener('visibilitychange', this._wanderVis);
+    if (this._wanderToggle) { const toggle = this.rootRef.current && this.rootRef.current.querySelector('#ij-wander-toggle'); if (toggle) toggle.removeEventListener('click', this._wanderToggle); }
     if (this._calmBar) { this._calmBar.removeEventListener('mouseenter', this._intent); this._calmBar.removeEventListener('focusin', this._intent); }
   }
   teardown() {
