@@ -2,7 +2,7 @@
   "schemaVersion": "ijji-product-web-release/1.0",
   "releaseId": "ijji-web-20260904-r5",
   "releaseDate": "2026-09-04",
-  "publicationStatus": "prepared_not_published",
+  "publicationStatus": "published",
   "product": "ijji",
   "locale": "th-TH",
   "entrypoint": "ijji-TH.dc.html",
@@ -73,6 +73,11 @@
       "name": "ijji-logo-full-square.reference.png",
       "role": "owner_selected_favicon_and_comparison_header_source",
       "sha256": "cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86"
+    },
+    {
+      "name": "codex-clipboard-e3e8d2ca-d04e-462f-84b6-7cedd432384f.png",
+      "role": "owner_reported_dark_motif_contrast_reference",
+      "sha256": "c09b85a0edaa64ef6362023ddc0da5fcb8d9430d2b6439e257e30f5322f9fafe"
     }
   ],
   "scope": {
@@ -92,6 +97,8 @@
       "brand-voice recalibration and shorter English hero for responsive fit",
       "quiet LINE icon treatment on every direct LINE destination",
       "owner-authorized mark-only ijji browser favicon renditions",
+      "owner-selected Rebuild 02 Landometer symbol paired with the governed live-text wordmark in the navbar",
+      "dark-canvas motif contrast correction in the with-you section without changing its motion behavior",
       "pause-resume control for rotating challenge highlights with one assistive-technology-visible quote per card",
       "self-hosted page runtime and icon fonts",
       "no-JavaScript navigation fallback"
@@ -166,6 +173,35 @@
         "ijji is free to try now"
       ],
       "revalidateOnSuccessor": true
+    },
+    {
+      "authorityEvidenceRef": "owner-message:2026-09-04:navbar-logo-like-rebuild02",
+      "scope": "ijji public website r5 navbar only",
+      "sourcePath": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "sourceSha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+      "dimensions": "1601x1601",
+      "presentation": "exact full-colour Rebuild 02 symbol on the direct navbar surface, paired with an Arvo 700 live-text Landometer wordmark",
+      "themeBehavior": "same source asset in light and dark",
+      "transform": "none",
+      "acceptedKnownRisk": "the small dark-blue pin in the immutable full-colour source measures approximately 2.01:1 on the dark navbar; retained because the owner explicitly selected the exact Rebuild 02 presentation",
+      "sharedDesignSystemApproval": false
+    },
+    {
+      "authorityEvidenceRef": "owner-message:2026-09-04:animated-motif-contrast",
+      "scope": "with-you motif in both r5 locale siblings only",
+      "before": {
+        "key": "graph-b-transparent-ink",
+        "path": "ijji-addon/motif/svg/ijji-graph-b-transparent-ink.svg",
+        "darkCanvasContrast": "1.11:1"
+      },
+      "after": {
+        "key": "graph-b-brand-blue",
+        "path": "ijji-addon/motif/svg/ijji-graph-b-brand-blue.svg",
+        "sha256": "f99e49088f14a97e6ba5c787708a1d1252734638d0f363f0c2f113258f57ee48",
+        "internalMarkContrast": "4.78:1"
+      },
+      "motionBehaviorChanged": false,
+      "sharedDesignSystemApproval": false
     }
   ],
   "navigationPreset": "navigation-preset.json",
@@ -178,9 +214,8 @@
     "uploads/"
   ],
   "openManualGates": [
-    "physical iPhone Safari and embedded WKWebView",
-    "external publication and exact live-byte attestation"
+    "physical iPhone Safari and embedded WKWebView"
   ],
-  "postDeployEvidence": "pending explicit publish authorization",
+  "postDeployEvidence": "the annotated git tag ijji-web-20260904-r5 records the exact source SHA, GitHub Pages workflow/deployment identifiers, live-byte attestation time, and remaining manual gate",
   "localeInsightUsage": false
 }

@@ -1,5 +1,6 @@
-"""Static release checks for the ijji web r5 candidate."""
+"""Static release checks for the ijji web r5 release."""
 
+import json
 from hashlib import sha256
 from pathlib import Path
 from urllib.parse import urlparse
@@ -21,6 +22,15 @@ SECTION_ORDER = [
     "start",
 ]
 LINE_URL = "https://page.line.me/569ifvmv"
+BRAND_SYMBOL = (
+    "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+    "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+)
+WITH_YOU_MOTIF = (
+    "graph-b-brand-blue",
+    "ijji-addon/motif/svg/ijji-graph-b-brand-blue.svg",
+    "f99e49088f14a97e6ba5c787708a1d1252734638d0f363f0c2f113258f57ee48",
+)
 FAVICONS = {
     "32x32": (
         "assets/identity/ijji-favicon-mark-32-r5-6d6ac0921352.png",
@@ -46,6 +56,22 @@ for name in PAGES:
         for element in document.xpath("//main//section[@id]")
     ]
     assert sections == SECTION_ORDER, (name, sections)
+
+    brand_links = document.xpath("//a[@data-identity-asset='artifact.ijji-r5.landometer-symbol.rebuild02-r6.01']")
+    assert len(brand_links) == 1, (name, len(brand_links))
+    brand_images = brand_links[0].xpath(
+        f".//img[@src='{BRAND_SYMBOL[0]}' and @width='1601' and @height='1601']"
+    )
+    assert len(brand_images) == 1, (name, len(brand_images))
+    assert brand_links[0].xpath(".//*[normalize-space()='Landometer']")
+    assert "--ij-brand-symbol-size:54px" in raw
+    assert "--ij-brand-symbol-size:45px" in raw
+
+    with_you = document.get_element_by_id("with-you")
+    motifs = with_you.xpath(".//*[@data-ij-motif]")
+    assert len(motifs) == 1, (name, len(motifs))
+    assert motifs[0].get("data-ij-motif") == WITH_YOU_MOTIF[0]
+    assert motifs[0].xpath(f".//img[@src='{WITH_YOU_MOTIF[1]}']")
 
     table = document.get_element_by_id("compare").xpath(
         ".//table[contains(concat(' ', normalize-space(@class), ' '), ' ij-compare-table ')]"
@@ -102,6 +128,17 @@ for name in PAGES:
 
 for _, (relative_path, expected_sha) in FAVICONS.items():
     assert sha256((ROOT / relative_path).read_bytes()).hexdigest() == expected_sha
+
+assert sha256((ROOT / BRAND_SYMBOL[0]).read_bytes()).hexdigest() == BRAND_SYMBOL[1]
+assert sha256((ROOT / WITH_YOU_MOTIF[1]).read_bytes()).hexdigest() == WITH_YOU_MOTIF[2]
+
+release = json.loads((ROOT / "release.json").read_text(encoding="utf-8"))
+navigation = json.loads((ROOT / "navigation-preset.json").read_text(encoding="utf-8"))
+assert release["releaseId"] == "ijji-web-20260904-r5"
+assert release["publicationStatus"] == "published"
+assert navigation["presetId"] == "ijji-public-bilingual-r5"
+assert navigation["identity"]["masterBrandSymbol"]["sha256"] == BRAND_SYMBOL[1]
+assert navigation["motifContrast"]["replacementSha256"] == WITH_YOU_MOTIF[2]
 
 english = html.document_fromstring((ROOT / "ijji-EN.dc.html").read_text(encoding="utf-8"))
 assert english.xpath("normalize-space(//section[@id='top']//h1)") == "Know what to fix first."

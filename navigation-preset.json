@@ -1,6 +1,6 @@
 {
   "schemaVersion": "landometer-navigation-preset/1.0",
-  "presetId": "ijji-public-bilingual-r4",
+  "presetId": "ijji-public-bilingual-r5",
   "product": "ijji",
   "locale": "th-TH",
   "siblingLocales": [
@@ -11,11 +11,22 @@
     "classification": "current-v0.9.1-safe-adaptation",
     "normativeAuthority": "Landometer Design System 0.9.1 / 0.9.1-r8",
     "candidateInput": "Unified navbar design handoff r7",
-    "candidateInputIsNormative": false
+    "candidateInputIsNormative": false,
+    "ownerSelectedArtifactReference": "Rebuild 02 master-brand presentation"
   },
   "identity": {
     "masterBrand": "Landometer",
-    "masterBrandRendering": "live_text_Arvo_700",
+    "masterBrandRendering": "rebuild02_symbol_plus_live_text_Arvo_700",
+    "masterBrandSymbol": {
+      "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "sha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+      "dimensions": "1601x1601",
+      "rendition": "full_colour_on_direct_surface",
+      "themeBehavior": "same_asset_in_light_and_dark",
+      "transform": "none",
+      "sharedDesignSystemApproval": false,
+      "authorityEvidenceRef": "owner-message:2026-09-04:navbar-logo-like-rebuild02"
+    },
     "productIndicator": "/ ijji",
     "homeUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html"
   },
@@ -96,6 +107,7 @@
       { "icon": "lightbulb", "id": "why", "label": { "th": "ทำไมต้องมีอิจจี้", "en": "Why ijji" } },
       { "icon": "map", "id": "locale", "label": { "th": "รอบย่าน", "en": "Your neighbourhood" } },
       { "icon": "chat", "id": "answer", "label": { "th": "ตัวอย่างคำตอบ", "en": "Sample answer" } },
+      { "icon": "balance", "id": "compare", "label": { "th": "เปรียบเทียบทางเลือก", "en": "How the options compare" } },
       { "icon": "problem", "id": "problems", "label": { "th": "ปัญหาร้าน 12 แบบ", "en": "12 shop challenges" } }
     ],
     "targetSizePx": 44,
@@ -162,10 +174,21 @@
     "pageFont": "assets/fonts/material-symbols-rounded-full-v370.woff2",
     "license": "assets/licenses/material-symbols-Apache-2.0.txt"
   },
+  "motifContrast": {
+    "scope": "with-you section only",
+    "replaced": "graph-b-transparent-ink",
+    "replacement": "graph-b-brand-blue",
+    "replacementPath": "ijji-addon/motif/svg/ijji-graph-b-brand-blue.svg",
+    "replacementSha256": "f99e49088f14a97e6ba5c787708a1d1252734638d0f363f0c2f113258f57ee48",
+    "measuredDarkCanvasContrastBefore": "1.11:1",
+    "replacementInternalMarkContrast": "4.78:1",
+    "motionBehaviorChanged": false
+  },
   "rejectedCandidateDivergences": [
     "continuous CTA animation",
     "semantic targets scaled below 44px",
-    "unapproved reconstructed master-brand symbol",
+    "flattened artwork replacing the live Landometer wordmark",
+    "recoloured or theme-specific master-brand symbol variants",
     "filled selected-state icon glyphs"
   ]
 }
