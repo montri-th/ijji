@@ -1,11 +1,23 @@
 {
   "schemaVersion": "ijji-product-web-release/1.0",
-  "releaseId": "ijji-web-20260904-r3",
+  "releaseId": "ijji-web-20260904-r4",
   "releaseDate": "2026-09-04",
   "product": "ijji",
   "locale": "th-TH",
   "entrypoint": "ijji-TH.dc.html",
   "canonicalUrl": "https://montri-th.github.io/ijji/ijji-TH.dc.html",
+  "locales": [
+    {
+      "id": "th-TH",
+      "entrypoint": "ijji-TH.dc.html",
+      "canonicalUrl": "https://montri-th.github.io/ijji/ijji-TH.dc.html"
+    },
+    {
+      "id": "en",
+      "entrypoint": "ijji-EN.dc.html",
+      "canonicalUrl": "https://montri-th.github.io/ijji/ijji-EN.dc.html"
+    }
+  ],
   "index": {
     "path": "index.html",
     "behavior": "client_redirect",
@@ -53,21 +65,25 @@
       "accessible calm scroll state",
       "one-shot CTA sweeping text highlight",
       "bookmark rail and compact-screen section menu",
+      "semantic section icons in the bookmark rail and compact menu",
       "ecosystem disclosure menu",
+      "Auto, Light, and Dark appearance controls",
+      "reciprocal Thai and naturally rewritten English sibling pages",
+      "official LINE Brand Icon on every direct LINE destination",
+      "owner-authorized ijji browser favicon renditions",
       "self-hosted page runtime and icon fonts",
       "no-JavaScript navigation fallback"
     ],
     "unchanged": [
-      "product positioning and claims",
-      "owner-facing page content",
+      "Thai product positioning and claims",
+      "section order, IDs, component structure, imagery, and CTA destinations across both locale siblings",
+      "owner-facing Thai section copy",
       "evidence and privacy boundaries",
       "destination of the primary ijji CTA"
     ],
     "notIncluded": [
-      "English route",
       "analytics",
       "cookie banner",
-      "favicon pending a separately approved asset",
       "Locale Insight data or copied canonical JSON"
     ]
   },
@@ -77,10 +93,43 @@
     "reactSha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd",
     "reactDomSha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d",
     "reactLicenseSha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
-    "navigationFontSha256": "d7e283106ed2898726b24504c4e0f5ad524292984a90a4d29553c7dcf53b9657",
+    "navigationFontSha256": "0c40b8075d443802f098e1d431ce2f526416d9d47e23533e3225016db41a2eaf",
     "pageIconFontSha256": "7ad6b7611a0915c52559172f8ed4ae60a881faaa2c3ffd6ee157cf193d12af23",
     "materialSymbolsLicenseSha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
   },
+  "providerAssets": {
+    "lineBrandIcon": {
+      "path": "assets/providers/line-brand-icon-5e93437e.png",
+      "sha256": "5e93437eb5ec0dcdece92d1562fcd435d1d521cca5c013d2d9e15b544a1d8a39",
+      "dimensions": "1001x1000",
+      "officialArchiveUrl": "https://www.line.me/static/logo/top/LINE_Brand_icon.zip",
+      "officialArchiveSha256": "0e1d2a57b68e0337c666063162daa03953176744fa727e73596825a7b90bab6a",
+      "alteration": "none",
+      "usageBoundary": "only literal links to https://page.line.me/569ifvmv"
+    }
+  },
+  "artifactOwnedAuthorizations": [
+    {
+      "authorityEvidenceRef": "owner-message:2026-09-04:ijji-favicon",
+      "scope": "ijji public website browser-tab favicon only",
+      "sourcePath": "assets/products/ijji-logo-official.png",
+      "sourceSha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f",
+      "derivatives": [
+        {
+          "path": "assets/identity/ijji-favicon-32-r4.png",
+          "sha256": "ee2b564d52d7740f428965339126f3e4f2c8eabebdbb5a87f9e1eac98fbfd737",
+          "dimensions": "32x32"
+        },
+        {
+          "path": "assets/identity/ijji-favicon-192-r4.png",
+          "sha256": "b3ce5667942b65236f39981da50d768674983a24a341e5559e0d33d63874d453",
+          "dimensions": "192x192"
+        }
+      ],
+      "transform": "resize only; no crop, redraw, or recolour",
+      "sharedDesignSystemApproval": false
+    }
+  ],
   "navigationPreset": "navigation-preset.json",
   "releaseNotes": "RELEASE-NOTES.md",
   "checksumLedger": "SHA256SUMS.txt",

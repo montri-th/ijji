@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "font-subset-binding/1.0",
+  "family": "Material Symbols Rounded",
+  "version": "370",
+  "axes": {
+    "opsz": 24,
+    "wght": 300,
+    "FILL": 0,
+    "GRAD": 0
+  },
+  "glyphs": [
+    "chat",
+    "close",
+    "contrast",
+    "dark_mode",
+    "light_mode",
+    "lightbulb",
+    "map",
+    "menu",
+    "problem",
+    "storefront"
+  ],
+  "asset": "material-symbols-rounded-ijji-nav-r4.woff2",
+  "sha256": "0c40b8075d443802f098e1d431ce2f526416d9d47e23533e3225016db41a2eaf",
+  "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=chat,close,contrast,dark_mode,light_mode,lightbulb,map,menu,problem,storefront",
+  "license": "Apache-2.0",
+  "licensePath": "../licenses/material-symbols-Apache-2.0.txt"
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "artifact-owned-identity-binding/1.0",
+  "artifact": "ijji public website browser-tab favicon",
+  "authorityEvidenceRef": "owner-message:2026-09-04:ijji-favicon",
+  "source": {
+    "path": "../products/ijji-logo-official.png",
+    "sha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f",
+    "dimensions": "725x725"
+  },
+  "derivatives": [
+    {
+      "path": "ijji-favicon-32-r4.png",
+      "sha256": "ee2b564d52d7740f428965339126f3e4f2c8eabebdbb5a87f9e1eac98fbfd737",
+      "dimensions": "32x32"
+    },
+    {
+      "path": "ijji-favicon-192-r4.png",
+      "sha256": "b3ce5667942b65236f39981da50d768674983a24a341e5559e0d33d63874d453",
+      "dimensions": "192x192"
+    }
+  ],
+  "transform": "Deterministic square resize only; no crop, redraw, or recolour.",
+  "scope": "This release and browser-tab role only.",
+  "sharedDesignSystemApproval": false
+}

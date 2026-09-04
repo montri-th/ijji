@@ -3,13 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta id="ijji-theme-color" name="theme-color" content="#F6F7F3">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/identity/ijji-favicon-32-r4.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/identity/ijji-favicon-192-r4.png">
+<link rel="alternate" hreflang="th" href="https://montri-th.github.io/ijji/ijji-TH.dc.html">
+<link rel="alternate" hreflang="en" href="https://montri-th.github.io/ijji/ijji-EN.dc.html">
+<link rel="alternate" hreflang="x-default" href="https://montri-th.github.io/ijji/ijji-TH.dc.html">
+<script>
+  (function () {
+    var storedMode = null;
+    try { storedMode = window.localStorage.getItem('ijji-theme-mode'); } catch (error) {}
+    var mode = storedMode === 'light' || storedMode === 'dark' || storedMode === 'auto' ? storedMode : 'auto';
+    var preferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var theme = mode === 'auto' ? preferred : mode;
+    document.documentElement.dataset.themeMode = mode;
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    var themeColor = document.getElementById('ijji-theme-color');
+    if (themeColor) themeColor.setAttribute('content', theme === 'dark' ? '#11191D' : '#F6F7F3');
+  }());
+</script>
 <script src="./assets/vendor/react-18.3.1.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
 <script src="./assets/vendor/react-dom-18.3.1.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
 <script src="./support.js"></script>
 <noscript><style>
   .ij-bar{position:static!important;height:auto!important;pointer-events:auto!important}
   .ij-bar-surface,.ij-row{height:var(--ij-prominent-h)!important}
-  .ij-menu-trigger,.ij-menu-backdrop,.ij-bookmark-rail{display:none!important}
+  .ij-menu-trigger,.ij-menu-backdrop,.ij-bookmark-rail,.ij-menu-utilities-wrap{display:none!important}
   .ij-menu-local{display:block!important}
   .ij-menu-panel{position:static!important;display:block!important;width:100%!important;max-height:none!important;border-radius:0!important;box-shadow:none!important}
   .ij-mobile-cta{display:flex!important}
@@ -31,16 +51,17 @@
   <link rel="stylesheet" href="ijji-addon/ijji.css">
   <script src="_ds/lds-ijji-add-on-cd48b199-a3d3-4171-adae-7817ca7d57d3/_ds_bundle.js"></script>
   <style>
-    @font-face{font-family:"Landometer Nav Symbols";src:url("assets/fonts/material-symbols-rounded-nav-300-v0.9.1.woff2") format("woff2");font-style:normal;font-weight:300;font-display:block}
+    @font-face{font-family:"Landometer Nav Symbols";src:url("assets/fonts/material-symbols-rounded-ijji-nav-r4.woff2") format("woff2");font-style:normal;font-weight:300;font-display:block}
     body{margin:0;background:var(--surface-canvas);color:var(--text-primary)}
     .ij-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:var(--space-8);align-items:center}
+    .ij-hero-grid>*{min-width:0}
     .ij-two{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--space-8);align-items:start}
     .ij-two-rev{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--space-8);align-items:start}
     .ij-sticky{position:sticky;top:calc(var(--header-height) + var(--space-5))}
     .ij-armed [data-approach]:not(.is-in){opacity:0;transform:translateY(var(--motion-distance-approach-block)) scale(var(--motion-scale-approach-from))}
     .ij-armed [data-approach].is-in{opacity:1;transform:none;transition:opacity var(--motion-duration-approach-opacity) var(--motion-ease-enter),transform var(--motion-duration-approach-transform) var(--motion-ease-settle);transition-delay:calc(min(var(--i,0),3) * var(--motion-delay-stagger))}
-    .ij-page{--ij-prominent-h:76px;--header-height:var(--ij-prominent-h);--ij-bar-h:var(--ij-prominent-h);--ij-hitbox-h:var(--ij-prominent-h);--ij-calm-offset:0px;--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1}
-    .ij-calm{--ij-bar-h:29px;--ij-hitbox-h:44px;--ij-calm-offset:calc((var(--ij-bar-h) - var(--ij-hitbox-h))/2);--ij-bar-mix:80%;--ij-bar-border:color-mix(in srgb,var(--border-hairline) 20%,transparent);--ij-row-op:1;--ij-calm-scale:.5}
+    .ij-page{--ij-prominent-h:76px;--header-height:var(--ij-prominent-h);--ij-bar-h:var(--ij-prominent-h);--ij-hitbox-h:var(--ij-prominent-h);--ij-calm-offset:0px;--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1;--ij-brand-wordmark-size:20px}
+    .ij-calm{--ij-bar-h:29px;--ij-hitbox-h:44px;--ij-calm-offset:calc((var(--ij-bar-h) - var(--ij-hitbox-h))/2);--ij-bar-mix:80%;--ij-bar-border:color-mix(in srgb,var(--border-hairline) 20%,transparent);--ij-row-op:1;--ij-calm-scale:.5;--ij-brand-wordmark-size:18px}
     .ij-page[data-theme="dark"].ij-calm{--ij-bar-mix:78%}
     @keyframes ijCtaSweep{0%{clip-path:inset(0 100% 0 0)}12%{clip-path:inset(0 72% 0 0)}88%{clip-path:inset(0 0 0 72%)}100%{clip-path:inset(0 0 0 100%)}}
     .ij-thought{position:relative;margin:var(--space-1) 0 0;min-height:calc(2 * 1.5 * var(--type-body-sm));font-size:var(--type-body-sm);line-height:1.5;color:var(--text-metadata);text-wrap:pretty}
@@ -66,15 +87,14 @@
     .ij-nav-target{box-sizing:border-box;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;color:var(--text-primary);text-decoration:none;white-space:nowrap;flex:none;pointer-events:auto;transition:width 560ms var(--motion-ease-state),background-color var(--motion-duration-state) var(--motion-ease-state),color var(--motion-duration-state) var(--motion-ease-state)}
     .ij-nav-target:hover{background:var(--surface-blue-tint)}
     .ij-nav-target:active{background:var(--surface-soft);transform:translateY(1px)}
-    .ij-nav-target:focus-visible,.ij-menu-row:focus-visible,.ij-bookmark-link:focus-visible{outline:3px solid var(--interaction-focus-ring);outline-offset:2px}
+    .ij-nav-target:focus-visible,.ij-menu-row:focus-visible,.ij-bookmark-link:focus-visible,.ij-utility-control:focus-visible,.ij-utility-choice:focus-visible{outline:3px solid var(--interaction-focus-ring);outline-offset:2px}
     .ij-brand-control{justify-content:flex-start;padding:0 15px;border-radius:8px}
-    .ij-brand-text{font-family:var(--font-display-en);font-size:20px;font-weight:700;line-height:1.2;letter-spacing:0}
+    .ij-brand-text{font-family:var(--font-display-en);font-size:var(--ij-brand-wordmark-size);font-weight:700;line-height:1.2;letter-spacing:0;color:var(--brand-logo-gray,#757575);font-synthesis:none;transition:font-size 560ms var(--motion-ease-state)}
     .ij-product-slash{font-family:var(--font-technical);font-size:15px;color:var(--text-metadata)}
     .ij-product-name{font-weight:600;font-size:16.5px;line-height:1.25;white-space:nowrap}
     .ij-nav-spacer{flex:1;min-width:4px}
     .ij-nav-visual{display:inline-flex;align-items:center;justify-content:center;transform:translateY(var(--ij-calm-offset)) scale(var(--ij-calm-scale));transform-origin:center;transition:transform 560ms var(--motion-ease-state)}
-    .ij-brand-control .ij-nav-visual{transform:translateY(var(--ij-calm-offset)) scale(var(--ij-brand-scale,1));transform-origin:left center}
-    .ij-calm{--ij-brand-scale:.9}
+    .ij-brand-control .ij-nav-visual{transform:translateY(var(--ij-calm-offset));transform-origin:left center}
     .ij-calm .ij-product-slash,.ij-calm .ij-product-name{transform:translateY(var(--ij-calm-offset)) scale(.72)}
     .ij-ecosystem-shortcut{width:96px;font-weight:600;border-radius:10px}
     .ij-calm .ij-ecosystem-shortcut{width:48px}
@@ -94,11 +114,26 @@
     .ij-menu-row{box-sizing:border-box;display:flex;align-items:center;gap:12px;min-height:48px;padding:8px 14px;border-radius:10px;color:var(--text-primary);text-decoration:none;line-height:1.4}
     .ij-menu-row:hover{background:var(--surface-blue-tint)}
     .ij-menu-row[aria-current="page"],.ij-menu-row[aria-current="location"]{background:var(--surface-soft);box-shadow:inset 0 0 0 1.5px var(--border-emphasis);font-weight:600}
-    .ij-menu-index{min-width:24px;font-family:var(--font-technical);font-size:12px;color:var(--text-metadata)}
+    .ij-menu-index{min-width:24px;color:var(--text-metadata);font-size:20px}
     .ij-menu-divider{height:1px;margin:8px 6px;background:var(--border-hairline)}
     .ij-mobile-cta{position:relative;display:none;box-sizing:border-box;min-height:48px;margin:6px;padding:0 18px;border:2px solid var(--interaction-accent);border-radius:999px;align-items:center;justify-content:center;color:var(--interaction-accent);font-weight:600;text-decoration:none;overflow:hidden}
+    .ij-menu-utilities-wrap{border-top:1px solid var(--border-hairline);margin:8px 6px 0;padding-top:2px}
+    .ij-menu-utilities{display:flex;align-items:center;justify-content:flex-end;gap:8px;min-height:48px;padding:2px 8px 8px}
+    .ij-utility-control{box-sizing:border-box;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--border-emphasis);border-radius:999px;background:var(--surface-card);color:var(--text-primary);font:inherit;cursor:pointer;transition:background-color var(--motion-duration-state) var(--motion-ease-state),transform var(--motion-duration-feedback) var(--motion-ease-press)}
+    .ij-utility-control:hover{background:var(--surface-blue-tint)}
+    .ij-utility-control:active{transform:translateY(1px);background:var(--surface-soft)}
+    .ij-language-badge{font-family:var(--font-technical-latin,var(--font-technical));font-size:14px;line-height:1;letter-spacing:.04em}
+    .ij-utility-panel{display:grid;gap:4px;padding:0 8px 8px}
+    .ij-utility-panel:not(.is-open){display:none}
+    .ij-utility-choice{box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:8px 12px;border:0;border-radius:10px;background:transparent;color:var(--text-primary);font:inherit;text-align:left;text-decoration:none;cursor:pointer}
+    .ij-utility-choice:not([aria-disabled="true"]):hover{background:var(--surface-blue-tint)}
+    .ij-utility-choice[aria-pressed="true"],.ij-utility-choice[aria-current="page"]{background:var(--surface-soft);box-shadow:inset 0 0 0 1.5px var(--border-emphasis);font-weight:600}
+    .ij-utility-choice[aria-disabled="true"]{color:var(--text-disabled);cursor:not-allowed}
+    .ij-choice-status{font-size:var(--type-label);color:var(--text-metadata)}
+    .ij-line-mark{display:block;flex:none;width:20px;height:20px}
     .ij-bookmark-rail{position:fixed;right:16px;top:50%;z-index:95;transform:translateY(-50%);display:none;flex-direction:column;gap:4px;padding:6px;border:1px solid var(--border-default);border-radius:16px;background:color-mix(in srgb,var(--surface-canvas) 92%,transparent);backdrop-filter:blur(10px) saturate(1.2);-webkit-backdrop-filter:blur(10px) saturate(1.2);box-shadow:var(--elevation-sm)}
-    .ij-bookmark-link{position:relative;box-sizing:border-box;width:44px;height:44px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;font-family:var(--font-technical);font-size:12px;transition:background-color var(--motion-duration-state) var(--motion-ease-state),transform var(--motion-duration-feedback) var(--motion-ease-press)}
+    .ij-bookmark-link{position:relative;box-sizing:border-box;width:44px;height:44px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:background-color var(--motion-duration-state) var(--motion-ease-state),transform var(--motion-duration-feedback) var(--motion-ease-press)}
+    .ij-bookmark-icon{font-size:22px;line-height:1;font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}
     .ij-bookmark-link:hover{background:var(--surface-blue-tint)}
     .ij-bookmark-link:active{transform:translateY(1px);background:var(--surface-soft)}
     .ij-bookmark-link[aria-current="location"]{background:var(--surface-blue-tint);color:var(--interaction-accent);box-shadow:inset 0 0 0 2px currentColor;font-weight:600}
@@ -106,20 +141,20 @@
     .ij-bookmark-link:hover::after,.ij-bookmark-link:focus-visible::after{opacity:1;visibility:visible;transform:translate(0,-50%)}
     .ij-nav-focus-target:focus,#main-content:focus{outline:3px solid var(--interaction-focus-ring);outline-offset:-3px}
     @media (min-width:1280px){.ij-bookmark-rail{display:flex}.ij-menu-local{display:none}}
-    @media (max-width:899px){.ij-page{--ij-prominent-h:68px}.ij-calm{--ij-bar-h:27px}.ij-row{padding:0 16px;gap:6px}.ij-desktop-control{display:none}.ij-brand-control{padding:0 12px}.ij-product-slash{font-size:13px}.ij-product-name{font-size:15px}.ij-menu-label{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ij-menu-trigger-visual{padding:0;width:44px}.ij-menu-panel{top:var(--ij-prominent-h);left:8px;right:8px;width:auto;max-height:calc(100dvh - var(--ij-prominent-h) - 8px);border-radius:0 0 16px 16px}.ij-mobile-cta{display:flex}}
+    @media (max-width:899px){.ij-page{--ij-prominent-h:68px;--ij-brand-wordmark-size:20px}.ij-calm{--ij-bar-h:27px;--ij-brand-wordmark-size:18px}.ij-row{padding:0 16px;gap:6px}.ij-desktop-control{display:none}.ij-brand-control{padding:0 12px}.ij-product-slash{font-size:13px}.ij-product-name{font-size:15px}.ij-menu-label{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ij-menu-trigger-visual{padding:0;width:44px}.ij-menu-panel{top:var(--ij-prominent-h);left:8px;right:8px;width:auto;max-height:calc(100dvh - var(--ij-prominent-h) - 8px);border-radius:0 0 16px 16px}.ij-mobile-cta{display:flex}.ij-line-mark{width:40px;height:40px}}
     @media (max-width:1000px){.ij-hero-grid,.ij-two,.ij-two-rev{grid-template-columns:1fr;gap:var(--space-6)}.ij-sticky{position:static}.ij-hero-panel{max-width:280px;margin:0 auto}}
     @media (max-width:380px){.ij-brand-control{padding:0 8px}.ij-product-slash{display:none}.ij-product-name{font-size:14px}.ij-row{gap:2px}}
-    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ij-page{--ij-bar-h:var(--ij-prominent-h);--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1;--ij-brand-scale:1}.ij-cta-cue{display:none}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ij-page{--ij-bar-h:var(--ij-prominent-h);--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1}.ij-cta-cue{display:none}}
   </style>
 </helmet>
-<div ref="{{ rootRef }}" class="ij-page" data-product="ijji" lang="th" data-theme="{{ theme }}" style="min-height:100vh;background:var(--surface-canvas);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body)">
+<div ref="{{ rootRef }}" class="ij-page" data-product="ijji" lang="th" data-theme="{{ theme }}" data-theme-mode="{{ themeMode }}" style="min-height:100vh;background:var(--surface-canvas);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body)">
 
   <header class="ij-bar" style="position:fixed;top:0;left:0;right:0;z-index:100">
     <a class="ij-skip-link" href="#main-content">ข้ามไปเนื้อหาหลัก</a>
     <nav class="ij-bar-surface" aria-label="Landometer และ ijji">
       <div class="ij-row">
         <div class="ij-brand-cluster">
-          <a class="ij-nav-target ij-brand-control" href="https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html" aria-label="Landometer หน้าหลัก">
+          <a class="ij-nav-target ij-brand-control" href="https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html" aria-label="Landometer หน้าหลัก" title="Landometer" data-identity-implementation="identity.text.landometer.portfolio-name.01" data-identity-surface="web_header">
             <span class="ij-nav-visual ij-brand-text" lang="en">Landometer</span>
           </a>
           <span class="ij-nav-visual ij-product-slash" aria-hidden="true">/</span>
@@ -142,14 +177,30 @@
     <div id="ij-nav-panel" class="ij-menu-panel {{ menuPanelClass }}" aria-labelledby="ij-menu-trigger">
       <div class="ij-menu-local">
         <p class="ij-menu-group-label">ในหน้านี้</p>
-        <a class="ij-menu-row" data-bookmark-target="top" href="#top" onClick="{{ followSection }}"><span class="ij-menu-index">01</span><span>ภาพรวม</span></a>
-        <a class="ij-menu-row" data-bookmark-target="why" href="#why" onClick="{{ followSection }}"><span class="ij-menu-index">02</span><span>ทำไมต้องมีอิจจี้</span></a>
-        <a class="ij-menu-row" data-bookmark-target="locale" href="#locale" onClick="{{ followSection }}"><span class="ij-menu-index">03</span><span>รอบย่าน</span></a>
-        <a class="ij-menu-row" data-bookmark-target="answer" href="#answer" onClick="{{ followSection }}"><span class="ij-menu-index">04</span><span>ตัวอย่างคำตอบ</span></a>
-        <a class="ij-menu-row" data-bookmark-target="problems" href="#problems" onClick="{{ followSection }}"><span class="ij-menu-index">05</span><span>ปัญหาร้าน 12 แบบ</span></a>
+        <a class="ij-menu-row" data-bookmark-target="top" href="#top" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">storefront</span><span>ภาพรวม</span></a>
+        <a class="ij-menu-row" data-bookmark-target="why" href="#why" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">lightbulb</span><span>ทำไมต้องมีอิจจี้</span></a>
+        <a class="ij-menu-row" data-bookmark-target="locale" href="#locale" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">map</span><span>รอบย่าน</span></a>
+        <a class="ij-menu-row" data-bookmark-target="answer" href="#answer" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">chat</span><span>ตัวอย่างคำตอบ</span></a>
+        <a class="ij-menu-row" data-bookmark-target="problems" href="#problems" onClick="{{ followSection }}"><span class="ij-menu-index ij-nav-symbol" aria-hidden="true">problem</span><span>ปัญหาร้าน 12 แบบ</span></a>
         <div class="ij-menu-divider"></div>
         <a class="ij-mobile-cta ij-cta-cue-host" data-cta-cue href="https://ijji.landometer.com" target="_blank" rel="noopener noreferrer"><span>เปิด ijji <span aria-hidden="true">↗</span></span><span class="ij-cta-cue" aria-hidden="true"><span>เปิด ijji ↗</span></span><span class="visually-hidden">เปิดในแท็บใหม่</span></a>
         <div class="ij-menu-divider"></div>
+      </div>
+      <div class="ij-menu-utilities-wrap">
+        <p class="ij-menu-group-label">การแสดงผลและภาษา</p>
+        <div class="ij-menu-utilities">
+          <button id="ij-theme-trigger" class="ij-utility-control" type="button" aria-controls="ij-theme-options" aria-expanded="{{ themePanelExpanded }}" aria-label="{{ themeMenuLabel }}" title="{{ themeMenuLabel }}" onClick="{{ toggleThemePanel }}"><span class="ij-nav-symbol" aria-hidden="true">{{ themeGlyph }}</span></button>
+          <button id="ij-language-trigger" class="ij-utility-control" type="button" aria-controls="ij-language-options" aria-expanded="{{ languageExpanded }}" aria-label="เลือกภาษา — ภาษาไทย" title="เลือกภาษา — ภาษาไทย" onClick="{{ toggleLanguagePanel }}"><span class="ij-language-badge" aria-hidden="true">TH</span></button>
+        </div>
+        <div id="ij-theme-options" class="ij-utility-panel {{ themePanelClass }}" role="group" aria-label="เลือกธีมสี">
+          <button class="ij-utility-choice" type="button" aria-pressed="{{ themeAutoPressed }}" onClick="{{ setThemeAuto }}"><span>อัตโนมัติตามอุปกรณ์</span><span class="ij-choice-status" lang="en">Auto</span></button>
+          <button class="ij-utility-choice" type="button" aria-pressed="{{ themeLightPressed }}" onClick="{{ setThemeLight }}"><span>ธีมสว่าง</span><span class="ij-choice-status" lang="en">Light</span></button>
+          <button class="ij-utility-choice" type="button" aria-pressed="{{ themeDarkPressed }}" onClick="{{ setThemeDark }}"><span>ธีมมืด</span><span class="ij-choice-status" lang="en">Dark</span></button>
+        </div>
+        <div id="ij-language-options" class="ij-utility-panel {{ languagePanelClass }}" role="group" aria-label="เลือกภาษา">
+          <a class="ij-utility-choice" href="ijji-TH.dc.html" aria-current="page" onClick="{{ closeMenuNoFocus }}"><span>ภาษาไทย</span><span class="ij-choice-status" lang="en">TH</span></a>
+          <a class="ij-utility-choice" href="ijji-EN.dc.html" hreflang="en" lang="en" onClick="{{ closeMenuNoFocus }}"><span>English</span><span class="ij-choice-status">EN</span></a>
+        </div>
       </div>
       <p class="ij-menu-group-label">Landometer ecosystem</p>
       <a class="ij-menu-row" href="ijji-TH.dc.html" aria-current="page" onClick="{{ closeMenuNoFocus }}"><span><strong lang="en">ijji</strong><br><span style="font-size:var(--type-body-sm);color:var(--text-metadata)">คู่หูธุรกิจรอบร้าน · อยู่ที่นี่</span></span></a>
@@ -161,11 +212,11 @@
   </header>
 
   <nav class="ij-bookmark-rail" aria-label="ส่วนสำคัญในหน้านี้">
-    <a class="ij-bookmark-link" data-bookmark-target="top" data-label="ภาพรวม" href="#top" aria-label="ภาพรวม" aria-current="location" onClick="{{ followSection }}"><span aria-hidden="true">01</span></a>
-    <a class="ij-bookmark-link" data-bookmark-target="why" data-label="ทำไมต้องมีอิจจี้" href="#why" aria-label="ทำไมต้องมีอิจจี้" onClick="{{ followSection }}"><span aria-hidden="true">02</span></a>
-    <a class="ij-bookmark-link" data-bookmark-target="locale" data-label="รอบย่าน" href="#locale" aria-label="รอบย่าน" onClick="{{ followSection }}"><span aria-hidden="true">03</span></a>
-    <a class="ij-bookmark-link" data-bookmark-target="answer" data-label="ตัวอย่างคำตอบ" href="#answer" aria-label="ตัวอย่างคำตอบ" onClick="{{ followSection }}"><span aria-hidden="true">04</span></a>
-    <a class="ij-bookmark-link" data-bookmark-target="problems" data-label="ปัญหาร้าน 12 แบบ" href="#problems" aria-label="ปัญหาร้าน 12 แบบ" onClick="{{ followSection }}"><span aria-hidden="true">05</span></a>
+    <a class="ij-bookmark-link" data-bookmark-target="top" data-label="ภาพรวม" href="#top" aria-label="ภาพรวม" title="ภาพรวม" aria-current="location" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">storefront</span></a>
+    <a class="ij-bookmark-link" data-bookmark-target="why" data-label="ทำไมต้องมีอิจจี้" href="#why" aria-label="ทำไมต้องมีอิจจี้" title="ทำไมต้องมีอิจจี้" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">lightbulb</span></a>
+    <a class="ij-bookmark-link" data-bookmark-target="locale" data-label="รอบย่าน" href="#locale" aria-label="รอบย่าน" title="รอบย่าน" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">map</span></a>
+    <a class="ij-bookmark-link" data-bookmark-target="answer" data-label="ตัวอย่างคำตอบ" href="#answer" aria-label="ตัวอย่างคำตอบ" title="ตัวอย่างคำตอบ" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">chat</span></a>
+    <a class="ij-bookmark-link" data-bookmark-target="problems" data-label="ปัญหาร้าน 12 แบบ" href="#problems" aria-label="ปัญหาร้าน 12 แบบ" title="ปัญหาร้าน 12 แบบ" onClick="{{ followSection }}"><span class="ij-nav-symbol ij-bookmark-icon" aria-hidden="true">problem</span></a>
   </nav>
 
   <main id="main-content" tabindex="-1" style="padding-top:var(--header-height);scroll-margin-top:var(--header-height)">
@@ -382,7 +433,7 @@
           <li data-approach="soft" data-cell="10" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">room_service</span>11 · บริการ</span><p style="margin:0;font-weight:600;text-wrap:pretty">บริการช่วงไหนทำให้ลูกค้าซื้อไม่จบหรือไม่กลับมา</p><p class="ij-thought" aria-live="off"><span class="is-on">“ช่วงพีคออกอาหารช้า ลูกค้าหน้าเสีย”</span><span>“ควรเพิ่มคน หรือแค่จัดคิวใหม่?”</span><span>“ลูกค้ากลุ่มไหนที่รอไม่ได้จริง ๆ?”</span></p></li>
           <li data-approach="soft" data-cell="11" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">trending_up</span>12 · ขยายร้าน</span><p style="margin:0;font-weight:600;text-wrap:pretty">ร้านควรโตทางไหนก่อน และเสี่ยงตรงไหน</p><p class="ij-thought" aria-live="off"><span class="is-on">“มีคนถามว่าส่งเดลิเวอรีไหม แต่ไม่รู้จะคุ้มไหม”</span><span>“จะเปิดสาขาสอง หรือทำสาขานี้ให้เต็มก่อน?”</span><span>“โตทางไหนที่ไม่ต้องเสี่ยงเงินก้อนใหญ่?”</span></p></li>
         </ol>
-        <p style="margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-4);color:var(--text-secondary);text-wrap:pretty">เจอข้อไหนที่ใช่ร้านคุณ — เล่าให้อิจจี้ฟังก่อนตัดสินใจ <a class="btn" href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer">เล่าใน LINE <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a></p>
+        <p style="margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-4);color:var(--text-secondary);text-wrap:pretty">เจอข้อไหนที่ใช่ร้านคุณ — เล่าให้อิจจี้ฟังก่อนตัดสินใจ <a class="btn" href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer"><img class="ij-line-mark" src="assets/providers/line-brand-icon-5e93437e.png" width="1001" height="1000" alt="" decoding="async">เล่าใน LINE <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a></p>
       </div>
     </section>
 
@@ -460,7 +511,7 @@
         <p style="margin:0;font-size:var(--type-body-lg);color:var(--fg-on-light-secondary);text-wrap:pretty">ไม่ต้องกรอกฟอร์มยาว ปักหมุดร้าน เล่าปัญหาที่กวนใจ แล้วรับคำวินิจฉัยกับภารกิจแรกได้เลย ยิ่งเล่าชัด คำตอบยิ่งตรงร้านของคุณ</p>
         <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center">
           <a class="btn btn--ijji-primary" href="https://ijji.landometer.com" target="_blank" rel="noopener noreferrer" style="padding-left:var(--space-6);padding-right:var(--space-6)">เปิด ijji <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
-          <a href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:var(--space-2);min-height:44px;color:var(--fg-on-light-primary);font-weight:600;text-decoration:none"><span style="text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px">เพิ่มเพื่อน LINE OA</span> <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
+          <a href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:var(--space-2);min-height:44px;color:var(--fg-on-light-primary);font-weight:600;text-decoration:none"><img class="ij-line-mark" src="assets/providers/line-brand-icon-5e93437e.png" width="1001" height="1000" alt="" decoding="async"><span style="text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px">เพิ่มเพื่อน LINE OA</span> <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
         </div>
         <p style="margin:0;font-family:var(--font-technical-th, var(--font-technical));font-size:var(--type-label);color:var(--fg-on-light-secondary)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">schedule</span>ทีมอิจจี้ตอบใน LINE ทุกวัน 09:00–18:00 · เป็นผลิตภัณฑ์ของ Landometer</p>
       </div>
@@ -483,7 +534,7 @@
       <div style="display:grid;gap:var(--space-3);align-content:start">
         <p class="eyebrow" style="margin:0">ติดตามอิจจี้</p>
         <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)">
-          <a class="btn" href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer" style="gap:var(--space-2)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:block;flex:none"><path d="M12 4.5c-4.7 0-8.5 3.1-8.5 6.9 0 3.4 3 6.2 7 6.8.3 0 .5.2.6.5l-.2 1.9c0 .5.4.8.8.5 2.6-1.4 6-4 7.4-6.2.9-1.1 1.4-2.3 1.4-3.5 0-3.8-3.8-6.9-8.5-6.9Z"/><path d="M8.2 9.5v4M11 9.5v4M13.7 9.5v4l2.6-4v4"/></svg>LINE OA <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
+          <a class="btn" href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer" style="gap:var(--space-2)"><img class="ij-line-mark" src="assets/providers/line-brand-icon-5e93437e.png" width="1001" height="1000" alt="" decoding="async">LINE OA <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
           <a class="btn" href="https://www.facebook.com/profile.php?id=61587871792985" target="_blank" rel="noopener noreferrer" style="gap:var(--space-2)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:block;flex:none"><path d="M15.5 4.5h-2A3.5 3.5 0 0 0 10 8v2.5H8V14h2v5.5h3.5V14h2.3l.7-3.5h-3V8.7c0-.4.3-.7.7-.7h1.3Z"/></svg>Facebook <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
           <a class="btn" href="https://www.tiktok.com/@ijji.landometer" target="_blank" rel="noopener noreferrer" style="gap:var(--space-2)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:block;flex:none"><path d="M14 4v11.3a3.3 3.3 0 1 1-3.3-3.3"/><path d="M14 4c0 2.9 2.3 5.3 5.2 5.3"/></svg>TikTok <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a>
         </div>
@@ -497,15 +548,57 @@
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;light&quot;,&quot;options&quot;:[&quot;light&quot;,&quot;dark&quot;],&quot;tsType&quot;:&quot;'light' | 'dark'&quot;,&quot;section&quot;:&quot;Appearance&quot;},&quot;reveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;wander&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showScreens&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;reveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;wander&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showScreens&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
 class Component extends DCLogic {
   rootRef = React.createRef();
-  state = { menuOpen: false };
-  componentDidMount() { this.arm(); this.mountMotifs(); this.armNavigation(); this.armCalm(); this.armBookmarks(); this.armCtaCue(); this.armWander(); }
+  state = { menuOpen: false, themeMode: 'auto', resolvedTheme: 'light', themePanelOpen: false, languagePanelOpen: false };
+  componentDidMount() {
+    const doc = document.documentElement;
+    const mode = ['auto', 'light', 'dark'].includes(doc.dataset.themeMode) ? doc.dataset.themeMode : 'auto';
+    const resolved = doc.dataset.theme === 'dark' ? 'dark' : 'light';
+    this.setState({ themeMode: mode, resolvedTheme: resolved });
+    this._themeMedia = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    this._themeMediaChange = () => { if (this.state.themeMode === 'auto') this.applyThemeMode('auto', false); };
+    if (this._themeMedia) {
+      if (this._themeMedia.addEventListener) this._themeMedia.addEventListener('change', this._themeMediaChange);
+      else this._themeMedia.addListener(this._themeMediaChange);
+    }
+    this.arm(); this.mountMotifs(); this.armNavigation(); this.armCalm(); this.armBookmarks(); this.armCtaCue(); this.armWander();
+  }
+  applyThemeMode(nextMode, persist) {
+    const mode = ['auto', 'light', 'dark'].includes(nextMode) ? nextMode : 'auto';
+    const preferred = this._themeMedia ? (this._themeMedia.matches ? 'dark' : 'light') : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const resolved = mode === 'auto' ? preferred : mode;
+    const doc = document.documentElement;
+    doc.dataset.themeMode = mode;
+    doc.dataset.theme = resolved;
+    doc.style.colorScheme = resolved;
+    const themeColor = document.getElementById('ijji-theme-color');
+    if (themeColor) themeColor.setAttribute('content', resolved === 'dark' ? '#11191D' : '#F6F7F3');
+    if (persist) { try { window.localStorage.setItem('ijji-theme-mode', mode); } catch (error) {} }
+    this.setState({ themeMode: mode, resolvedTheme: resolved, themePanelOpen: false });
+  }
+  chooseTheme(mode) {
+    this.applyThemeMode(mode, true);
+    requestAnimationFrame(() => {
+      const trigger = this.rootRef.current && this.rootRef.current.querySelector('#ij-theme-trigger');
+      if (trigger) trigger.focus();
+    });
+  }
+  toggleThemePanel() { this.setState({ themePanelOpen: !this.state.themePanelOpen, languagePanelOpen: false }); }
+  toggleLanguagePanel() { this.setState({ languagePanelOpen: !this.state.languagePanelOpen, themePanelOpen: false }); }
   armNavigation() {
     this._navKeydown = (e) => {
       if (e.key === 'Escape' && this.state.menuOpen) {
         e.preventDefault();
+        if (this.state.themePanelOpen || this.state.languagePanelOpen) {
+          const focusId = this.state.themePanelOpen ? '#ij-theme-trigger' : '#ij-language-trigger';
+          this.setState({ themePanelOpen: false, languagePanelOpen: false }, () => {
+            const trigger = this.rootRef.current && this.rootRef.current.querySelector(focusId);
+            if (trigger) trigger.focus();
+          });
+          return;
+        }
         this.closeNav(true);
       }
     };
@@ -523,7 +616,7 @@ class Component extends DCLogic {
     const root = this.rootRef.current; if (!root) return;
     root.classList.remove('ij-calm');
     root.classList.add('ij-menu-open');
-    this.setState({ menuOpen: true }, () => {
+    this.setState({ menuOpen: true, themePanelOpen: false, languagePanelOpen: false }, () => {
       requestAnimationFrame(() => {
         if (this._syncBookmarks) this._syncBookmarks();
         const first = Array.from(root.querySelectorAll('#ij-nav-panel a[href]')).find((link) => link.getClientRects().length > 0);
@@ -535,7 +628,7 @@ class Component extends DCLogic {
   closeNav(restoreFocus) {
     const root = this.rootRef.current; if (!root) return;
     root.classList.remove('ij-menu-open');
-    this.setState({ menuOpen: false }, () => {
+    this.setState({ menuOpen: false, themePanelOpen: false, languagePanelOpen: false }, () => {
       if (this._syncBookmarks) this._syncBookmarks();
       if (restoreFocus) {
         const trigger = root.querySelector('#ij-menu-trigger');
@@ -561,7 +654,7 @@ class Component extends DCLogic {
     };
     const root = this.rootRef.current;
     if (root) root.classList.remove('ij-menu-open');
-    if (this.state.menuOpen) this.setState({ menuOpen: false }, () => requestAnimationFrame(land));
+    if (this.state.menuOpen) this.setState({ menuOpen: false, themePanelOpen: false, languagePanelOpen: false }, () => requestAnimationFrame(land));
     else requestAnimationFrame(land);
   }
   armCtaCue() {
@@ -702,6 +795,10 @@ class Component extends DCLogic {
       if (this._reducedMotion.removeEventListener) this._reducedMotion.removeEventListener('change', this._motionChange);
       else this._reducedMotion.removeListener(this._motionChange);
     }
+    if (this._themeMedia && this._themeMediaChange) {
+      if (this._themeMedia.removeEventListener) this._themeMedia.removeEventListener('change', this._themeMediaChange);
+      else this._themeMedia.removeListener(this._themeMediaChange);
+    }
     if (this._wanderStop) this._wanderStop();
     if (this._wanderIo) this._wanderIo.disconnect();
     if (this._wanderVis) document.removeEventListener('visibilitychange', this._wanderVis);
@@ -737,15 +834,35 @@ class Component extends DCLogic {
   }
   renderVals() {
     const menuOpen = !!this.state.menuOpen;
+    const themeMode = this.state.themeMode || 'auto';
+    const resolvedTheme = this.state.resolvedTheme === 'dark' ? 'dark' : 'light';
+    const themePanelOpen = !!this.state.themePanelOpen;
+    const languagePanelOpen = !!this.state.languagePanelOpen;
+    const themeMenuLabel = themeMode === 'auto' ? 'ธีม: อัตโนมัติตามอุปกรณ์' : (themeMode === 'dark' ? 'ธีม: มืด' : 'ธีม: สว่าง');
     return {
       rootRef: this.rootRef,
-      theme: this.props.theme ?? 'light',
+      theme: resolvedTheme,
+      themeMode,
       showScreens: this.props.showScreens ?? true,
       menuExpanded: menuOpen ? 'true' : 'false',
       menuPanelClass: menuOpen ? 'is-open' : '',
       menuGlyph: menuOpen ? 'close' : 'menu',
       menuLabel: menuOpen ? 'ปิดเมนู' : 'เปิดเมนู',
+      themeGlyph: themeMode === 'auto' ? 'contrast' : (themeMode === 'dark' ? 'dark_mode' : 'light_mode'),
+      themeMenuLabel,
+      themePanelExpanded: themePanelOpen ? 'true' : 'false',
+      themePanelClass: themePanelOpen ? 'is-open' : '',
+      themeAutoPressed: themeMode === 'auto' ? 'true' : 'false',
+      themeLightPressed: themeMode === 'light' ? 'true' : 'false',
+      themeDarkPressed: themeMode === 'dark' ? 'true' : 'false',
+      languageExpanded: languagePanelOpen ? 'true' : 'false',
+      languagePanelClass: languagePanelOpen ? 'is-open' : '',
       toggleMenu: () => this.toggleNav(),
+      toggleThemePanel: () => this.toggleThemePanel(),
+      toggleLanguagePanel: () => this.toggleLanguagePanel(),
+      setThemeAuto: () => this.chooseTheme('auto'),
+      setThemeLight: () => this.chooseTheme('light'),
+      setThemeDark: () => this.chooseTheme('dark'),
       closeMenu: () => this.closeNav(true),
       closeMenuNoFocus: () => this.closeNav(false),
       followSection: (e) => this.followNavSection(e)

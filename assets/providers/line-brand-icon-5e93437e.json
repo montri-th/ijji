@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "provider-asset-binding/1.0",
+  "provider": "LINE",
+  "asset": "line-brand-icon-5e93437e.png",
+  "sha256": "5e93437eb5ec0dcdece92d1562fcd435d1d521cca5c013d2d9e15b544a1d8a39",
+  "dimensions": "1001x1000",
+  "officialArchiveUrl": "https://www.line.me/static/logo/top/LINE_Brand_icon.zip",
+  "officialArchiveSha256": "0e1d2a57b68e0337c666063162daa03953176744fa727e73596825a7b90bab6a",
+  "guidelinesUrl": "https://www.line.me/en/logo",
+  "bytePreserved": true,
+  "usageBoundary": "Displayed only inside anchors whose literal destination is https://page.line.me/569ifvmv; visible action text supplies the accessible name."
+}

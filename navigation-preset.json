@@ -1,8 +1,12 @@
 {
   "schemaVersion": "landometer-navigation-preset/1.0",
-  "presetId": "ijji-public-th-r3",
+  "presetId": "ijji-public-bilingual-r4",
   "product": "ijji",
   "locale": "th-TH",
+  "siblingLocales": [
+    "th-TH",
+    "en"
+  ],
   "profile": {
     "classification": "current-v0.9.1-safe-adaptation",
     "normativeAuthority": "Landometer Design System 0.9.1 / 0.9.1-r8",
@@ -39,7 +43,12 @@
       "https://landometer.com/v3/citywiki",
       "https://montri-th.github.io/Landom/"
     ],
-    "languageSwitch": "hidden_until_English_route_exists"
+    "languageSwitch": {
+      "default": "th-TH",
+      "th-TH": "ijji-TH.dc.html",
+      "en": "ijji-EN.dc.html"
+    },
+    "directLine": "https://page.line.me/569ifvmv"
   },
   "calmState": {
     "scrollThresholdPx": 24,
@@ -83,11 +92,11 @@
     "minViewportWidthPx": 1280,
     "position": "fixed_right_center",
     "targets": [
-      { "marker": "01", "id": "top", "label": "ภาพรวม" },
-      { "marker": "02", "id": "why", "label": "ทำไมต้องมีอิจจี้" },
-      { "marker": "03", "id": "locale", "label": "รอบย่าน" },
-      { "marker": "04", "id": "answer", "label": "ตัวอย่างคำตอบ" },
-      { "marker": "05", "id": "problems", "label": "ปัญหาร้าน 12 แบบ" }
+      { "icon": "storefront", "id": "top", "label": { "th": "ภาพรวม", "en": "Overview" } },
+      { "icon": "lightbulb", "id": "why", "label": { "th": "ทำไมต้องมีอิจจี้", "en": "Why ijji" } },
+      { "icon": "map", "id": "locale", "label": { "th": "รอบย่าน", "en": "Your neighbourhood" } },
+      { "icon": "chat", "id": "answer", "label": { "th": "ตัวอย่างคำตอบ", "en": "Sample answer" } },
+      { "icon": "problem", "id": "problems", "label": { "th": "ปัญหาร้าน 12 แบบ", "en": "12 shop challenges" } }
     ],
     "targetSizePx": 44,
     "labelMode": "visible_tooltip_on_hover_or_focus",
@@ -111,11 +120,45 @@
     ],
     "noJavaScriptFallback": "expanded_inline_navigation"
   },
+  "menuUtilities": {
+    "theme": {
+      "modes": [
+        "auto",
+        "light",
+        "dark"
+      ],
+      "default": "auto",
+      "persistence": "localStorage:ijji-theme-mode",
+      "synchronizes": [
+        "documentElement.data-theme-mode",
+        "documentElement.data-theme",
+        "componentRoot.data-theme-mode",
+        "componentRoot.data-theme",
+        "meta[name=theme-color]",
+        "color-scheme"
+      ]
+    },
+    "language": {
+      "type": "reciprocal_sibling_links",
+      "routes": [
+        "ijji-TH.dc.html",
+        "ijji-EN.dc.html"
+      ]
+    }
+  },
+  "providerMarks": {
+    "line": {
+      "asset": "assets/providers/line-brand-icon-5e93437e.png",
+      "source": "https://www.line.me/static/logo/top/LINE_Brand_icon.zip",
+      "usage": "only links whose literal destination is https://page.line.me/569ifvmv",
+      "alteration": "none"
+    }
+  },
   "icons": {
     "family": "Material Symbols Rounded",
     "fill": 0,
     "weight": 300,
-    "navigationSubset": "assets/fonts/material-symbols-rounded-nav-300-v0.9.1.woff2",
+    "navigationSubset": "assets/fonts/material-symbols-rounded-ijji-nav-r4.woff2",
     "pageFont": "assets/fonts/material-symbols-rounded-full-v370.woff2",
     "license": "assets/licenses/material-symbols-Apache-2.0.txt"
   },
