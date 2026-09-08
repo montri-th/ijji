@@ -1,7 +1,7 @@
 {
   "schemaVersion": "ijji-product-web-release/1.0",
-  "releaseId": "ijji-web-20260908-r7",
-  "releaseDate": "2026-09-08",
+  "releaseId": "ijji-web-20260909-r8",
+  "releaseDate": "2026-09-09",
   "publicationStatus": "published",
   "product": "ijji",
   "locale": "th-TH",
@@ -31,10 +31,21 @@
     "liveUrl": "https://montri-th.github.io/ijji/"
   },
   "releaseLineage": {
-    "previousPublishedRelease": "ijji-web-20260904-r5",
-    "previousPublishedSourceSha": "01ec5da14c1bd60d544341a96a85ba8ba13f85f9",
-    "notIncorporatedPreparedCandidates": [
+    "previousPublishedRelease": "ijji-web-20260908-r7",
+    "previousPublishedSourceSha": "43f8224e8db1b7d1287617e1b6b1bfff96c66396",
+    "notIncorporatedAsRelease": [
       "ijji-web-20260904-r6"
+    ],
+    "selectivelyReusedPreparedCandidateWork": [
+      {
+        "candidate": "ijji-web-20260904-r6",
+        "incorporatedPaths": [
+          "assets/providers/remixicon-line-line-v4.9.1.svg",
+          "assets/providers/remixicon-line-line-v4.9.1.json",
+          "assets/licenses/remix-icon-v4.9.1-license.txt"
+        ],
+        "boundary": "only the verified minimal LINE destination-glyph package and presentation are reused; the r6 motif adapter, rendition, and every other r6 candidate change remain excluded"
+      }
     ],
     "successorState": "published"
   },
@@ -106,6 +117,11 @@
       "name": "codex-clipboard-7856e53a-1004-434b-8d56-22f4f741265b.png",
       "role": "owner_identified_english_hero_logo_location_reference",
       "sha256": "9f75328872102d181d5887ada52c532f1a8f126d4479ffaef3ec768716440d21"
+    },
+    {
+      "name": "codex-clipboard-60561ae1-05cb-481c-b9c5-b4e72aec3b54.png",
+      "role": "owner_identified_minimal_line_logo_style_reference_for_all_line_buttons",
+      "sha256": "92cba415a2dd7ef17648bd7700ab36f856d8773de24ed08c9ae4161452a72e35"
     }
   ],
   "scope": {
@@ -123,19 +139,20 @@
       "reference-calibrated wide comparison layout on large desktop viewports",
       "owner-stated starting-price comparison with a release-time qualifier",
       "brand-voice recalibration and shorter English hero for responsive fit",
-      "quiet LINE icon treatment on every direct LINE destination",
+      "owner-directed minimal recognizable LINE destination glyph at every direct LINE link",
       "owner-authorized mark-only ijji browser favicon renditions",
       "owner-selected Rebuild 02 Landometer symbol paired with the governed live-text wordmark in the navbar",
       "dark-canvas motif contrast correction in the with-you section without changing its motion behavior",
       "pause-resume control for rotating challenge highlights with one assistive-technology-visible quote per card",
       "self-hosted page runtime and icon fonts",
       "no-JavaScript navigation fallback",
-      "finite-once ijji animated identity overlay in the English hero, with an exact complete static fallback and pause, resume, and replay control"
+      "finite-once ijji animated identity overlay with tagline in the English hero, with an exact complete static fallback and pause, resume, and replay control",
+      "all three LINE buttons in each locale use the same 20px currentColor Remix Icon line-line silhouette, matching the minimal social-icon treatment of the adjacent Facebook and TikTok symbols"
     ],
     "unchanged": [
       "Thai product positioning and claims",
-      "all non-hero copy, claims, pricing, imagery, section order, navigation, CTA destinations, and existing non-hero motion",
-      "the Thai locale sibling, including its static hero identity, byte-for-byte from r5",
+      "all non-hero copy, claims, pricing, section order, navigation, CTA destinations, existing non-hero motion, and imagery outside the LINE destination symbols",
+      "the Thai locale sibling's product content and static hero identity from r7; only its three LINE destination symbols change",
       "owner-facing Thai section copy outside the requested comparison section",
       "evidence and privacy boundaries",
       "destination of the primary ijji CTA"
@@ -223,22 +240,41 @@
     "materialSymbolsLicenseSha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
   },
   "providerAssets": {
-    "lineBrandIcon": {
+    "lineOutlineSocialIcon": {
+      "path": "assets/providers/remixicon-line-line-v4.9.1.svg",
+      "sha256": "2139cb97180e90a0b0cb50937ac9c2260231f65a4cfe1e6f123210f3887573bd",
+      "provenancePath": "assets/providers/remixicon-line-line-v4.9.1.json",
+      "provenanceSha256": "d123a9119658419e0fd602fc9e20a316f76fe83d7560dc37da9c5a23f3daf3eb",
+      "officialProviderAsset": false,
+      "library": "Remix Icon",
+      "libraryVersion": "v4.9.1",
+      "tagCommit": "39eab8b69cadaa47e1bed6a41777b1cd22227c74",
+      "iconName": "line-line",
+      "sourcePage": "https://github.com/Remix-Design/RemixIcon/blob/v4.9.1/icons/Logos/line-line.svg",
+      "upstreamSha256": "b3ffde1e2e1d93981d4e4ab7c5a1e3f619e5dc2da1ed4ab356ff043022c277d9",
+      "license": "Remix Icon License v1.0",
+      "licensePath": "assets/licenses/remix-icon-v4.9.1-license.txt",
+      "licenseSha256": "6f2f21c5f8db34635d31848e9ff831d5dc421bb83ffc9d37f82651364047ae58",
+      "renderTreatment": "20px currentColor inline SVG instances referencing one document-local symbol whose path is byte-equivalent to the exact pinned silhouette; no backing shape, filter, opacity reduction, CSS mask, or external runtime fetch",
+      "usageBoundary": "only the six literal links to https://page.line.me/569ifvmv: three in each locale",
+      "trademarkBoundary": "third-party social glyph used only to identify the corresponding LINE destination; not an official LINE-supplied asset and does not imply LINE endorsement",
+      "providerGuidelineDisposition": "owner explicitly directed this non-official minimal treatment after being informed that LINE's official guidance does not sanction an outline or monochrome variant; official compliance is not claimed",
+      "authorityEvidenceRef": "owner-confirmation:2026-09-09:r8-minimal-line-logo-all-links"
+    },
+    "retainedInactiveLineBrandIcon": {
       "path": "assets/providers/line-brand-icon-5e93437e.png",
       "sha256": "5e93437eb5ec0dcdece92d1562fcd435d1d521cca5c013d2d9e15b544a1d8a39",
       "dimensions": "1001x1000",
       "officialArchiveUrl": "https://www.line.me/static/logo/top/LINE_Brand_icon.zip",
       "officialArchiveSha256": "0e1d2a57b68e0337c666063162daa03953176744fa727e73596825a7b90bab6a",
       "sourceByteAlteration": "none",
-      "renderTreatment": "owner-directed quiet treatment using CSS desaturation and reduced opacity",
-      "authorityEvidenceRef": "owner-message:2026-09-04:quiet-line-icon",
-      "usageBoundary": "only literal links to https://page.line.me/569ifvmv"
+      "state": "retained for provenance and release history; no active r8 HTML reference"
     }
   },
   "artifactOwnedAuthorizations": [
     {
       "authorityEvidenceRef": "owner-message:2026-09-04:ijji-reference-logo-crop",
-      "scope": "ijji public website r7 browser-tab favicon and comparison-table ijji column header only; carried forward unchanged from r5",
+      "scope": "ijji public website r8 browser-tab favicon and comparison-table ijji column header only; carried forward unchanged from r7",
       "sourcePath": "/Users/montri/Downloads/ijji-ds-addon-assets-v0.5.3/assets/identity/ijji-logo-full-square.reference.png",
       "sourceSha256": "cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86",
       "derivatives": [
@@ -258,7 +294,7 @@
     },
     {
       "authorityEvidenceRef": "owner-message:2026-09-04:comparison-prices",
-      "scope": "public r7 comparison table only; carried forward from r5 and revalidated by the owner on 2026-09-08",
+      "scope": "public r8 comparison table only; carried forward from r7 and revalidated by the owner on 2026-09-09",
       "claims": [
         "general AI starts at THB 700 per month for a useful ongoing conversation",
         "data dashboards start at THB 20,000 per month and require learning time",
@@ -269,7 +305,7 @@
         "ijji is free to try now"
       ],
       "revalidateOnSuccessor": true,
-      "revalidationStatus": "confirmed_for_r7",
+      "revalidationStatus": "confirmed_for_r8",
       "publicationBlocking": false
     },
     {
@@ -286,8 +322,22 @@
       "sharedDesignSystemApproval": false
     },
     {
+      "authorityEvidenceRef": "owner-confirmation:2026-09-09:r8-comparison-prices-and-free-trial",
+      "scope": "ijji public website r8 comparison table only",
+      "claims": [
+        "general AI starts at THB 700 per month for a useful ongoing conversation",
+        "data dashboards start at THB 20,000 per month and require learning time",
+        "consultants cost THB 200,000 per month and are difficult for small shops to afford",
+        "ijji starts at THB 29 per question and is free to try now"
+      ],
+      "confirmation": "owner explicitly confirmed all four entries remain publishable for r8, including the time-sensitive free-trial statement",
+      "confirmedOn": "2026-09-09",
+      "revalidateOnSuccessor": true,
+      "sharedDesignSystemApproval": false
+    },
+    {
       "authorityEvidenceRef": "owner-message:2026-09-04:navbar-logo-like-rebuild02",
-      "scope": "ijji public website r7 navbar only; carried forward unchanged from r5",
+      "scope": "ijji public website r8 navbar only; carried forward unchanged from r7",
       "sourcePath": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
       "sourceSha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
       "dimensions": "1601x1601",
@@ -299,7 +349,7 @@
     },
     {
       "authorityEvidenceRef": "owner-message:2026-09-04:animated-motif-contrast",
-      "scope": "with-you motif in both r7 locale siblings only; carried forward unchanged from r5",
+      "scope": "with-you motif in both r8 locale siblings only; carried forward unchanged from r7",
       "before": {
         "key": "graph-b-transparent-ink",
         "path": "ijji-addon/motif/svg/ijji-graph-b-transparent-ink.svg",
@@ -316,7 +366,7 @@
     },
     {
       "authorityEvidenceRef": "owner-message:2026-09-08:animated-hero-logo-and-republish",
-      "scope": "ijji public website r7 English hero identity panel only",
+      "scope": "ijji public website r8 English hero identity panel only; carried forward unchanged from r7",
       "sourceOverlay": "Landometer Motif Library 1.2.1 / ijji.logo-sting.r3",
       "presentation": "exact owner-approved tagline identity on direct Brand Blue",
       "lifecycle": "play once when at least 14% visible, hold the complete final identity, no loop",
@@ -325,11 +375,74 @@
       "motionControl": "44px pause, resume, and replay control with an English accessible name in a reserved row below the identity artwork",
       "sharedDesignSystemApproval": false,
       "boundary": "artifact-local use only; does not amend Landometer Design System 0.9.1 or ijji Design System 0.5.0 / Add-on 0.5.3 no-motion canon"
+    },
+    {
+      "authorityEvidenceRef": "owner-message:2026-09-08:footer-line-outline-style",
+      "scope": "footer LINE OA button in both r8 locale siblings only",
+      "directive": "replace the grey LINE bitmap in the referenced footer social-button row with a single-colour outline symbol matching the adjacent Facebook and TikTok symbols",
+      "implementation": "existing self-hosted Material Symbols Rounded chat glyph at 20px, currentColor, FILL 0 and weight 300",
+      "providerBoundary": "generic chat interface symbol beside an explicit LINE OA text label; not a redraw, recolour, derivative, or replacement source asset for the official LINE logo",
+      "otherLineDestinationsChanged": false,
+      "status": "superseded before publication by owner-confirmation:2026-09-09:r8-minimal-line-logo-all-links",
+      "sharedDesignSystemApproval": false
+    },
+    {
+      "authorityEvidenceRef": "owner-confirmation:2026-09-09:r8-minimal-line-logo-all-links",
+      "scope": "all six direct LINE destination links across the Thai and English r8 locale pages",
+      "directive": "use a recognizable minimal LINE logo in the same visual style as the adjacent Facebook and TikTok symbols at every LINE button",
+      "implementation": "pinned Remix Icon v4.9.1 line-line silhouette rendered at 20px in currentColor through inline SVG instances referencing one document-local symbol; visible localized link text supplies the accessible name",
+      "providerBoundary": "third-party social glyph, not an official LINE-supplied asset; used only for the corresponding LINE destination and does not imply endorsement",
+      "providerGuidelineDisposition": "owner explicitly instructed the implementation to proceed after being informed that the official LINE guidance does not sanction an outline or monochrome variant; official LINE guideline compliance is not claimed",
+      "sharedDesignSystemApproval": false
+    },
+    {
+      "authorityEvidenceRef": "owner-confirmation:2026-09-09:r8-english-animated-logo-with-tagline",
+      "scope": "ijji public website r8 English hero identity panel only",
+      "directive": "use the animated ijji logo with its tagline; owner explicitly approves this presentation",
+      "implementation": "byte-identical Landometer Motif Library 1.2.1 ijji.logo-sting.r3 full-with-tagline runtime and fallback carried forward from published r7",
+      "byteChangeFromR7": false,
+      "sharedDesignSystemApproval": false,
+      "boundary": "artifact-local approval only; no amendment to the shared Design System or motif-family defaults"
     }
   ],
   "navigationPreset": "navigation-preset.json",
   "releaseNotes": "RELEASE-NOTES.md",
   "checksumLedger": "SHA256SUMS.txt",
+  "verificationEvidence": {
+    "parentLdsVerifier": {
+      "status": "passed",
+      "checks": 5394,
+      "checksums": 103
+    },
+    "ijjiResolver": {
+      "status": "passed",
+      "checks": 1421
+    },
+    "staticVerifier": {
+      "status": "passed_published",
+      "command": "python3 scripts/verify-r8.py"
+    },
+    "lineButtonsBrowserQa": {
+      "status": "passed",
+      "checks": 22,
+      "matrix": "Thai and English; all three LINE destinations per locale; 320, 390 and 1440 CSS px; light and dark; Thai 130% and English 200% text scaling; no JavaScript; forced colours; print; keyboard focus"
+    },
+    "animationRegression": {
+      "status": "passed",
+      "checks": 54,
+      "target": "published r8 English page"
+    },
+    "inheritedAdvisory": {
+      "surface": "English page at a 390 CSS px viewport with 200% root text scaling",
+      "rootScrollWidthPx": 426,
+      "viewportWidthPx": 390,
+      "overflowPx": 36,
+      "source": "#ij-wander-toggle in #problems",
+      "baselineComparison": "identical in published r7 and published r8; the LINE symbol change does not affect this overflow",
+      "footerScope": "footer remains 390px wide and its social group has matching 358px client and scroll widths",
+      "classification": "inherited_non_regression_outside_r8_scope"
+    }
+  },
   "excludedSourcePaths": [
     ".thumbnail",
     "github.md",
@@ -339,6 +452,6 @@
   "openManualGates": [
     "physical iPhone Safari and embedded WKWebView"
   ],
-  "postDeployEvidence": "the annotated git tag ijji-web-20260908-r7 records the exact source SHA, GitHub Pages workflow/build/deployment identifiers, live-byte attestation time, and remaining manual gate",
+  "postDeployEvidence": "the annotated git tag ijji-web-20260909-r8 records the exact source SHA, GitHub Pages workflow/build/deployment identifiers, live-byte attestation time, live browser QA, and remaining manual gate",
   "localeInsightUsage": false
 }
