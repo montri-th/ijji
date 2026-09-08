@@ -1,39 +1,57 @@
-# ijji web r5 — release notes
+# ijji web r7 — release notes
 
-Release ID: `ijji-web-20260904-r5`
-Date published: 4 September 2026
-Publication status: `published`
+Release ID: `ijji-web-20260908-r7`
+Date published: 8 September 2026
+Publication status: `published` with a recorded physical-device manual gate
+Previous published release: `ijji-web-20260904-r5` at `01ec5da14c1bd60d544341a96a85ba8ba13f85f9`
 
 ## What changed
 
-- Preserved the r4 unified navbar behavior, calm-on-scroll state, 44px semantic hit areas, one-shot sweeping CTA highlight, disclosure menu, scrollspy, reciprocal locale controls, Auto/Light/Dark appearance controls, and no-JavaScript fallback.
-- Added the exact full-colour Landometer symbol used by Rebuild 02 beside the governed live-text wordmark. The same immutable source is used in both themes and the whole identity remains a single semantic link.
-- Moved the comparison section directly before the 12 shop challenges without changing the section IDs or the remaining page order.
-- Rebuilt that section as an icon-led comparison: each header and data cell has a semantic graphic, the ijji column uses the owner-selected ijji mark, and the desktop five-column table reflows into labelled comparison cards at narrower widths.
-- Added an indicative price row for general AI, data dashboards, consultants, and ijji, plus a visible qualifier describing the source and time sensitivity of the figures.
-- Recalibrated the English sibling against the Product Brief rather than translating Thai sentence by sentence; the shorter hero and selected section copy keep the same meaning, interactions, imagery, and destinations while improving responsive fit.
-- Applied an owner-requested quiet treatment to the official LINE Brand Icon on all three—and only the three—direct LINE destinations using CSS desaturation and reduced opacity; the official image bytes remain unchanged.
-- Added a deterministic mark-only 32px and 192px favicon, replacing the prior incorrect product-logo rendition.
-- Replaced only the low-contrast `with-you` motif: the transparent-ink treatment measured about 1.11:1 on the dark canvas, while the selected blue-and-mint asset provides 4.78:1 internal mark contrast. Timing and reduced-motion behavior are unchanged.
-- Added a pause/resume control to rotating challenge highlights and kept one quote per card visible to assistive technology.
+- Replaced only the static ijji identity in the English hero with the owner-approved `ijji.logo-sting.r3` animated identity from Landometer Motif Library release 1.2.1.
+- The identity plays once when at least 14% visible, runs for nine seconds, and then holds the complete logo. It does not loop.
+- Added a visible 44px Pause/Resume control while the identity is moving and a Replay control after it completes.
+- Kept the exact approved complete logo visible while assets load and for reduced motion, no JavaScript, print, runtime failure, or layer failure.
+- Preserved the prior square Brand Blue panel on desktop; on compact layouts the panel follows the full identity aspect ratio so the tagline can use the available width without crop. Both modes reserve their geometry before enhancement, so the hero does not shift when the animation becomes ready.
+- Kept the Thai sibling byte-for-byte identical to published r5 because the owner identified the English URL as the requested surface.
 
-## Adaptation boundary
+All non-hero copy, claims, pricing, imagery, section order, navigation, CTA destinations, and existing non-hero motion remain unchanged from r5.
 
-The attached r7 navbar remains a candidate design reference. This successor applies its requested visual behavior through the current Landometer Design System v0.9.1 and ijji Add-on v0.5.3 boundaries: CTA motion is one-shot rather than perpetual, all direct controls stay at least 44px, selected bookmark state does not depend on colour alone, and the master-brand wordmark remains governed live text.
+## Authority and adaptation boundary
 
-The Rebuild 02 Landometer symbol is an owner-selected, artifact-owned r5 use—not a new shared Design System approval. It is byte-identical to the reference asset (SHA-256 `b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6`) and is neither recoloured nor filtered. The immutable source’s small dark-blue pin measures about 2.01:1 against the dark navbar; that known identity risk is retained because the owner explicitly requested the exact Rebuild 02 presentation.
+The animated identity is the immutable `ijji.logo-sting.r3` family from Landometer Motif Library release 1.2.1:
 
-The Thai page’s product positioning, business advice, imagery context, evidence ceiling, privacy boundary, and primary ijji destination remain unchanged outside the requested comparison section. The English page carries the same product meaning in sibling copy without a sentence-by-sentence literal translation.
+- Fallback asset: `ijji.logo-sting.tagline`
+- Runtime asset: `ijji.logo-sting.runtime.r3`
+- Surface: `brand-blue`
+- Bounce: `playful`
+- Motion mode: `finite_once_logo_sting`
+- Owner approval: `MOTIF-LIBRARY-OWNER-APPROVAL-20260906-02`
 
-The comparison prices are owner-stated, indicative starting figures for this r5 table; they are not represented as provider-verified market data. The free-trial statement is time-sensitive, and all four entries must be revalidated for any successor release.
+The runtime and its nine image layers are copied without byte alteration. The website adds only an artifact-local lifecycle and accessibility controller. This use is limited to the English hero and does not amend Landometer Design System 0.9.1 or the no-motion canon of ijji Design System 0.5.0 / Add-on 0.5.3.
 
-The owner-selected favicon source is `ijji-logo-full-square.reference.png`, SHA-256 `cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86`. The two-line wordmark is cropped away as explicitly authorized, then the intact mark is resized with premultiplied-alpha LANCZOS. There is no redraw, recolour, sharpening, backing plate, or generative alteration. The resulting 32px and 192px files match the hashes recorded in `release.json`. This authorization is artifact-owned and limited to the r5 favicon and comparison-table ijji header; it does not promote the treatment into the shared Design System.
+Existing r5 favicon, comparison-header mark, navbar symbol, comparison, and with-you motif authorizations are carried forward without visual or byte changes.
+
+## Claim revalidation
+
+The four owner-stated comparison entries remain unchanged:
+
+- General AI: starts at THB 700 per month
+- Data dashboards: start at THB 20,000 per month
+- Consultants: cost THB 200,000 per month
+- ijji: starts at THB 29 per question and is free to try now
+
+The owner explicitly revalidated all four entries for r7 on 8 September 2026, including the time-sensitive free-trial statement. Future successor releases must revalidate them again.
 
 ## Verification status
 
-- `scripts/verify-r5.py`: passed. It verifies the requested section order, five table headers, seven rows, icons in every header/data cell, ijji mark header, exactly three direct LINE links per locale, quiet LINE CSS, reciprocal comparison bookmarks, favicon paths and hashes, the exact navbar-symbol and motif bytes, local resources, and key Thai/English price copy.
-- Wide-screen visual calibration: a same-width reference/prototype comparison has been generated at `qa/reference-vs-r5-th-compare.png`.
-- Responsive navbar/motif regression: both locale siblings passed at 320×800, 360×800, 390×844, 600×900, 768×1024, 900×800, 1080×800, 1081×800, 1280×720, and 1440×900 in dark mode with zero horizontal overflow. The prominent symbol renders at 45px on compact screens and 54px on desktop; the calm visual scales to 23px and 27px respectively while its semantic target remains at least 44px.
-- Interaction and state checks passed for language/theme controls, dark/light states, prominent/calm nav, active bookmark state, challenge pause/resume, and quiet LINE icons. The final dark-state screenshot is `qa/r5-final-motif-dark-calm-1048x926.png`.
-- GitHub Pages publication and exact live-byte checks are recorded in the annotated `ijji-web-20260904-r5` tag.
-- Native physical-device Safari and embedded WKWebView remain open manual gates.
+- Parent Landometer Design System 0.9.1 verifier: passed, 5,394 checks plus 103 checksums.
+- ijji Design System 0.5.0 / Add-on 0.5.3 verifier: passed, 1,421 checks.
+- Landometer Motif Library release 1.2.1 verifier: passed, 680 checks.
+- Existing r5 static regression verifier: passed after the hero change.
+- r7 browser QA: passed 54 checks, including finite-once playback and all eleven timeline samples, Pause/Resume/Replay, final-to-fallback pixel comparison, exact configuration, below-fold and hidden-start activation, first-frame cancellation, reduced motion, no IntersectionObserver, no JavaScript, print, slow loading, runtime/layer failure, 130% and 200% text scale, light/dark states, responsive widths from 320px to 1,440px, short desktop viewports, zero horizontal overflow, and no artwork crop.
+- The exact runtime, fallback, and nine layer hashes match the approved overlay.
+- Physical iPhone Safari and embedded WKWebView remain open manual gates.
+
+## Publication evidence
+
+Nothing from the locally prepared r6 candidate is incorporated. The annotated tag `ijji-web-20260908-r7` records the exact source commit, GitHub Pages workflow/build/deployment identifiers, live-byte attestation, and the remaining physical iPhone Safari / embedded WKWebView manual gate.

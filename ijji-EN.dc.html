@@ -26,10 +26,12 @@
 <script src="./assets/vendor/react-18.3.1.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
 <script src="./assets/vendor/react-dom-18.3.1.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
 <script src="./support.js"></script>
+<script src="./assets/ijji/logo-sting/ijji-logo-controller-r7.js?v=1.2.1" data-motif-release="1.2.1"></script>
 <noscript><style>
   .ij-bar{position:static!important;height:auto!important;pointer-events:auto!important}
   .ij-bar-surface,.ij-row{height:var(--ij-prominent-h)!important}
   .ij-menu-trigger,.ij-menu-backdrop,.ij-bookmark-rail,.ij-menu-utilities-wrap{display:none!important}
+  .ij-hero-logo-controls{display:none!important}
   .ij-menu-local{display:block!important}
   .ij-menu-panel{position:static!important;display:block!important;width:100%!important;max-height:none!important;border-radius:0!important;box-shadow:none!important}
   .ij-mobile-cta{display:flex!important}
@@ -58,6 +60,17 @@
     .ij-hero-shell{box-sizing:border-box;min-height:calc(100svh - var(--header-height));padding:clamp(32px,5vh,56px) clamp(16px,4vw,32px)!important}
     .ij-hero-copy{gap:clamp(14px,2vh,20px)!important}
     .ij-hero-copy h1{font-size:clamp(56px,5.5vw,84px)!important;line-height:1.08!important}
+    .ij-hero-logo-wrap{width:100%;max-width:440px;margin-left:auto;display:grid;gap:var(--space-2);justify-items:end}
+    .ij-hero-logo-stage{position:relative;width:100%;height:100%;display:grid;place-items:center;overflow:hidden}
+    .ij-hero-logo-art{display:grid;width:min(81.94%,320px);place-items:center;line-height:0}
+    .ij-hero-logo-art>img,.ij-hero-logo-art>ijji-logo-sting{grid-area:1 / 1;display:block;width:100%;height:auto}
+    .ij-hero-logo-art:not(.is-enhanced)>ijji-logo-sting{visibility:hidden}
+    .ij-hero-logo-art.is-enhanced>[data-ijji-logo-fallback]{visibility:hidden}
+    .ij-hero-logo-controls{box-sizing:border-box;width:100%;min-height:44px;display:flex;justify-content:flex-end;align-items:center}
+    .ij-logo-motion-control{box-sizing:border-box;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--border-emphasis);border-radius:999px;background:color-mix(in srgb,var(--surface-raised) 94%,transparent);color:var(--text-primary);box-shadow:var(--elevation-xs);cursor:pointer}
+    .ij-logo-motion-control[hidden]{display:none!important}
+    .ij-logo-motion-control:hover{background:var(--surface-raised)}
+    .ij-logo-motion-control:focus-visible{outline:3px solid var(--interaction-focus-ring);outline-offset:2px}
     .ij-two{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--space-8);align-items:start}
     .ij-two-rev{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--space-8);align-items:start}
     .ij-sticky{position:sticky;top:calc(var(--header-height) + var(--space-5))}
@@ -174,11 +187,12 @@
     @media (min-width:1280px){.ij-bookmark-rail{display:flex}.ij-menu-local{display:none}}
     @media (max-width:1050px){.ij-compare-shell{overflow:visible;border:0;background:transparent}.ij-compare-table{display:block;min-width:0}.ij-compare-table thead{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}.ij-compare-table tbody{display:grid;gap:var(--space-4)}.ij-compare-table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;border:1px solid var(--border-default);border-radius:var(--radius-sm);overflow:hidden;background:var(--border-default)}.ij-compare-table tbody th{grid-column:1 / -1;display:block;padding:var(--space-4)}.ij-compare-table tbody td{display:block;padding:var(--space-4)}.ij-compare-table .ij-compare-product{display:block}.ij-compare-table .ij-compare-cell{display:grid;grid-template-columns:auto 1fr;align-content:start}.ij-compare-table .ij-compare-product{grid-column:1 / -1}.ij-compare-price{border-top:0!important}.ij-compare-table tbody tr.ij-compare-price{border-top:2px solid var(--border-emphasis)}}
     @media (max-width:899px){.ij-page{--ij-prominent-h:68px;--ij-brand-wordmark-size:19px;--ij-brand-symbol-size:45px}.ij-calm{--ij-bar-h:27px}.ij-row{padding:0 16px;gap:6px}.ij-desktop-control{display:none}.ij-brand-control{padding:0 12px}.ij-product-slash{font-size:13px}.ij-product-name{font-size:15px}.ij-menu-label{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ij-menu-trigger-visual{padding:0;width:44px}.ij-menu-panel{top:var(--ij-prominent-h);left:8px;right:8px;width:auto;max-height:calc(100dvh - var(--ij-prominent-h) - 8px);border-radius:0 0 16px 16px}.ij-mobile-cta{display:flex}}
-    @media (max-width:1000px){.ij-hero-grid,.ij-two,.ij-two-rev{grid-template-columns:1fr;gap:var(--space-6)}.ij-sticky{position:static}.ij-hero-panel{max-width:240px;margin:0 auto}.ij-hero-shell{min-height:0;padding:clamp(40px,7vw,64px) clamp(16px,4vw,32px)!important}}
+    @media (max-width:1000px){.ij-hero-grid,.ij-two,.ij-two-rev{grid-template-columns:1fr;gap:var(--space-6)}.ij-sticky{position:static}.ij-hero-panel{max-width:240px;margin:0 auto}.ij-hero-logo-wrap{max-width:320px;margin:0 auto}.ij-hero-logo-panel{max-width:320px;aspect-ratio:890.7/1086.9!important}.ij-hero-logo-art{width:100%}.ij-hero-shell{min-height:0;padding:clamp(40px,7vw,64px) clamp(16px,4vw,32px)!important}}
     @media (min-width:1001px) and (max-height:760px){.ij-hero-shell{padding-top:24px!important;padding-bottom:24px!important}.ij-hero-copy{gap:12px!important}.ij-hero-copy [data-ij-motif]{width:48px!important;height:48px!important}.ij-hero-copy h1{font-size:clamp(52px,5vw,68px)!important;line-height:1.04!important}.ij-hero-copy>p:not(.eyebrow){font-size:var(--type-body)!important}.ij-hero-panel{max-width:340px!important}}
     @media (max-width:599px){.ij-compare-table tbody tr{grid-template-columns:1fr}}
     @media (max-width:380px){.ij-brand-control{padding:0 8px}.ij-product-slash{display:none}.ij-product-name{font-size:14px}.ij-row{gap:2px}}
-    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ij-page{--ij-bar-h:var(--ij-prominent-h);--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1}.ij-cta-cue,.ij-wander-control{display:none}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ij-page{--ij-bar-h:var(--ij-prominent-h);--ij-bar-mix:92%;--ij-bar-border:var(--border-hairline);--ij-row-op:1;--ij-calm-scale:1}.ij-cta-cue,.ij-wander-control,.ij-hero-logo-controls{display:none!important}}
+    @media print{.ij-hero-logo-art.is-enhanced>[data-ijji-logo-fallback]{visibility:visible!important}.ij-hero-logo-art>ijji-logo-sting,.ij-hero-logo-controls{display:none!important}}
   </style>
 </helmet>
 <div ref="{{ rootRef }}" class="ij-page" data-product="ijji" lang="en" data-theme="{{ theme }}" data-theme-mode="{{ themeMode }}" style="min-height:100vh;background:var(--surface-canvas);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body)">
@@ -270,8 +284,16 @@
           </div>
           <p style="margin:0;font-family:var(--font-technical);font-size:var(--type-label);color:var(--fg-on-light-secondary)">For restaurants, cafés and other food shops · Free to try now</p>
         </div>
-        <div class="ij-hero-panel ijji-identity-panel" style="width:100%;max-width:440px;margin-left:auto">
-          <img src="assets/identity/ijji-logo-full-square.png" width="1920" height="1920" alt="ijji — Your business buddy around the corner">
+        <div class="ij-hero-logo-wrap" data-ijji-logo-wrap>
+          <div class="ij-hero-panel ijji-identity-panel ij-hero-logo-panel" style="width:100%">
+            <div class="ij-hero-logo-stage" data-ijji-logo-stage data-motion-state="fallback">
+              <span class="ij-hero-logo-art" data-ijji-logo-art role="img" aria-label="ijji — Your business buddy around the corner">
+                <img data-ijji-logo-fallback src="assets/ijji/logo-sting/layers/ijji-logo-still.png?v=1.2.1" width="891" height="1087" alt="" fetchpriority="high" decoding="async">
+                <ijji-logo-sting manual surface="brand-blue" bounce="playful" assets="./assets/ijji/logo-sting/layers/" aria-hidden="true"></ijji-logo-sting>
+              </span>
+            </div>
+          </div>
+          <div class="ij-hero-logo-controls"><button class="ij-logo-motion-control" type="button" hidden data-ijji-logo-control data-pause-label="Pause logo animation" data-resume-label="Resume logo animation" data-replay-label="Replay logo animation" aria-label="Pause logo animation" title="Pause logo animation"><span class="ls-icon" data-ijji-logo-icon aria-hidden="true">pause</span><span class="ij-sr-only" data-ijji-logo-label>Pause logo animation</span></button></div>
         </div>
       </div>
     </section>
@@ -601,7 +623,7 @@ class Component extends DCLogic {
       if (this._themeMedia.addEventListener) this._themeMedia.addEventListener('change', this._themeMediaChange);
       else this._themeMedia.addListener(this._themeMediaChange);
     }
-    this.arm(); this.mountMotifs(); this.armNavigation(); this.armCalm(); this.armBookmarks(); this.armCtaCue(); this.armWander();
+    this.arm(); this.mountMotifs(); this.mountHeroLogo(); this.armNavigation(); this.armCalm(); this.armBookmarks(); this.armCtaCue(); this.armWander();
   }
   applyThemeMode(nextMode, persist) {
     const mode = ['auto', 'light', 'dark'].includes(nextMode) ? nextMode : 'auto';
@@ -830,6 +852,9 @@ class Component extends DCLogic {
     this.motifMo.observe(this.rootRef.current, { childList: true, subtree: true });
     setTimeout(() => { if (this.motifMo) this.motifMo.disconnect(); }, 15000);
   }
+  mountHeroLogo() {
+    this._heroLogoController = window.IjjiHeroLogo?.mount(this.rootRef.current);
+  }
   componentDidUpdate(prev) {
     if (prev.reveal !== this.props.reveal) this.arm();
   }
@@ -858,6 +883,7 @@ class Component extends DCLogic {
     if (this._wanderVis) document.removeEventListener('visibilitychange', this._wanderVis);
     if (this._wanderToggle) { const toggle = this.rootRef.current && this.rootRef.current.querySelector('#ij-wander-toggle'); if (toggle) toggle.removeEventListener('click', this._wanderToggle); }
     if (this._calmBar) { this._calmBar.removeEventListener('mouseenter', this._intent); this._calmBar.removeEventListener('focusin', this._intent); }
+    if (this._heroLogoController) this._heroLogoController.destroy();
   }
   teardown() {
     if (this.io) this.io.disconnect();

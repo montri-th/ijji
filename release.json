@@ -1,7 +1,7 @@
 {
   "schemaVersion": "ijji-product-web-release/1.0",
-  "releaseId": "ijji-web-20260904-r5",
-  "releaseDate": "2026-09-04",
+  "releaseId": "ijji-web-20260908-r7",
+  "releaseDate": "2026-09-08",
   "publicationStatus": "published",
   "product": "ijji",
   "locale": "th-TH",
@@ -30,6 +30,14 @@
     "path": "/",
     "liveUrl": "https://montri-th.github.io/ijji/"
   },
+  "releaseLineage": {
+    "previousPublishedRelease": "ijji-web-20260904-r5",
+    "previousPublishedSourceSha": "01ec5da14c1bd60d544341a96a85ba8ba13f85f9",
+    "notIncorporatedPreparedCandidates": [
+      "ijji-web-20260904-r6"
+    ],
+    "successorState": "published"
+  },
   "authority": {
     "ijjiDesignSystem": "0.5.0",
     "ijjiAddOn": "0.5.3",
@@ -41,7 +49,17 @@
     "parentMachineIdentity": "v0.9.1-mp7",
     "colorSet": "color-srgb-05",
     "conformanceClaim": "authoring_aligned",
-    "machinePackageValidationClaim": false
+    "machinePackageValidationClaim": false,
+    "artifactOverlay": {
+      "library": "Landometer Motif Library",
+      "artifactRelease": "1.2.1",
+      "familyId": "ijji.logo-sting.r3",
+      "baselineAssetId": "ijji.logo-sting.tagline",
+      "runtimeAssetId": "ijji.logo-sting.runtime.r3",
+      "approvalRecordId": "MOTIF-LIBRARY-OWNER-APPROVAL-20260906-02",
+      "manifestSha256": "77e8185104751e2c21c2e10fb8c5d771821bcb8123e02f116638fdbf3968d483",
+      "releaseMembership": "owner_approved_artifact_overlay_not_design_system_amendment"
+    }
   },
   "sourcePins": [
     {
@@ -78,6 +96,16 @@
       "name": "codex-clipboard-e3e8d2ca-d04e-462f-84b6-7cedd432384f.png",
       "role": "owner_reported_dark_motif_contrast_reference",
       "sha256": "c09b85a0edaa64ef6362023ddc0da5fcb8d9430d2b6439e257e30f5322f9fafe"
+    },
+    {
+      "name": "motif-library-v1.2.1.zip",
+      "role": "owner_approved_ijji_animated_identity_overlay_source",
+      "sha256": "ecd44355b1c433975cfb7637679b4c8d8cb35a0bc99bf468b78b665de854ac2d"
+    },
+    {
+      "name": "codex-clipboard-7856e53a-1004-434b-8d56-22f4f741265b.png",
+      "role": "owner_identified_english_hero_logo_location_reference",
+      "sha256": "9f75328872102d181d5887ada52c532f1a8f126d4479ffaef3ec768716440d21"
     }
   ],
   "scope": {
@@ -101,11 +129,13 @@
       "dark-canvas motif contrast correction in the with-you section without changing its motion behavior",
       "pause-resume control for rotating challenge highlights with one assistive-technology-visible quote per card",
       "self-hosted page runtime and icon fonts",
-      "no-JavaScript navigation fallback"
+      "no-JavaScript navigation fallback",
+      "finite-once ijji animated identity overlay in the English hero, with an exact complete static fallback and pause, resume, and replay control"
     ],
     "unchanged": [
       "Thai product positioning and claims",
-      "section IDs, imagery, and CTA destinations across both locale siblings except for the requested comparison-section position and accessibility-safe wrappers",
+      "all non-hero copy, claims, pricing, imagery, section order, navigation, CTA destinations, and existing non-hero motion",
+      "the Thai locale sibling, including its static hero identity, byte-for-byte from r5",
       "owner-facing Thai section copy outside the requested comparison section",
       "evidence and privacy boundaries",
       "destination of the primary ijji CTA"
@@ -115,6 +145,72 @@
       "cookie banner",
       "Locale Insight data or copied canonical JSON"
     ]
+  },
+  "animatedIdentity": {
+    "scope": "English hero identity panel only",
+    "overlayRelease": "1.2.1",
+    "overlayCommit": "57eeb7c953dc8b45fe6fe97f1251467d09b0b199",
+    "overlayManifestSha256": "77e8185104751e2c21c2e10fb8c5d771821bcb8123e02f116638fdbf3968d483",
+    "ownerApprovalRecordId": "MOTIF-LIBRARY-OWNER-APPROVAL-20260906-02",
+    "ownerApprovalRecordSha256": "82e5614cf8545746becfc23318a3dff93c70c61f8a23ad628d69c6b70aa08fb0",
+    "familyId": "ijji.logo-sting.r3",
+    "fallbackAssetId": "ijji.logo-sting.tagline",
+    "runtimeAssetId": "ijji.logo-sting.runtime.r3",
+    "motionMode": "finite_once_logo_sting",
+    "durationSeconds": 9,
+    "visibilityThreshold": 0.14,
+    "rootMargin": "0px 0px -12% 0px",
+    "surface": "brand-blue",
+    "bounce": "playful",
+    "loop": false,
+    "completionBehavior": "hold_complete_final_identity",
+    "responsivePresentation": "square Brand Blue panel on desktop; runtime-viewBox 890.7:1086.9 panel using full available width below 1001px, with the exact 891x1087 fallback centered; no crop or distortion",
+    "lifecycleStops": [
+      "offscreen",
+      "document_hidden",
+      "pagehide"
+    ],
+    "fallbackStates": [
+      "loading",
+      "dependency_failure",
+      "reduced_motion",
+      "no_javascript",
+      "print"
+    ],
+    "motionControls": [
+      "pause",
+      "resume",
+      "replay"
+    ],
+    "fallback": {
+      "path": "assets/ijji/logo-sting/layers/ijji-logo-still.png",
+      "sha256": "bb1bc80e0c79a10dedb1b48c39efd187e97fe429adec4917975e265f610ccaac",
+      "dimensions": "891x1087",
+      "bytes": 222927
+    },
+    "runtime": {
+      "path": "assets/ijji/logo-sting/ijji-logo-sting.js",
+      "sha256": "1a1d1bc247b5deb92aa19e4d84524ac1f823454a9401b6ce53acf8716010433e",
+      "bytes": 12656,
+      "sourceByteAlteration": "none"
+    },
+    "controller": {
+      "path": "assets/ijji/logo-sting/ijji-logo-controller-r7.js",
+      "sha256": "e2ed80492648574e7b85b160885720e70295920810f4436d9f97e16f493c87ee",
+      "bytes": 9356,
+      "role": "artifact_local_lifecycle_and_accessibility_adapter"
+    },
+    "layers": {
+      "i-1.png": "df5fb769b2bcf84a5bbb64a5b7be424463b3883632b722cebc5d9c4a29362ac6",
+      "i-2.png": "857ca5198e350fd02f644d492f1b7b0b14b9cacb9f2dd21f2031788678ce80f5",
+      "jj.png": "cb2743b05ee7d3270bef5e5f5a5bec2916e6fe6b1e99d85793ebbd1ec398dd93",
+      "tag-1-1.png": "6b51513e93df40e2a00b928d606373e688a3b6dd9e6869a6e803a7bef5ab7784",
+      "tag-1-2.png": "fb72390fe3125ed5c5ab9c2bafd03fb71cb74e751ebd7f14737ac7c0367117fa",
+      "tag-1-3.png": "5e01f5a2303ba67e18e69153003ba1f363e6eb1c80b67aa68115b8e434072ff0",
+      "tag-2-1.png": "2e4529e6961ffa9508ae12e4346cba6870f009cc4851e2a9c613e69ef7999cf8",
+      "tag-2-2.png": "ea066302ab3f407d258260f85ba19cd184b5ddbfa313f1f480726639b9ef3713",
+      "tag-2-3.png": "3821e99ab1ff83edc12b95e06c2d2fc2cd1019905900a8f15fc57481b7d367c4"
+    }
   },
   "runtime": {
     "selfHostedCriticalAssets": true,
@@ -142,7 +238,7 @@
   "artifactOwnedAuthorizations": [
     {
       "authorityEvidenceRef": "owner-message:2026-09-04:ijji-reference-logo-crop",
-      "scope": "ijji public website r5 browser-tab favicon and comparison-table ijji column header only",
+      "scope": "ijji public website r7 browser-tab favicon and comparison-table ijji column header only; carried forward unchanged from r5",
       "sourcePath": "/Users/montri/Downloads/ijji-ds-addon-assets-v0.5.3/assets/identity/ijji-logo-full-square.reference.png",
       "sourceSha256": "cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86",
       "derivatives": [
@@ -162,7 +258,7 @@
     },
     {
       "authorityEvidenceRef": "owner-message:2026-09-04:comparison-prices",
-      "scope": "public r5 comparison table only",
+      "scope": "public r7 comparison table only; carried forward from r5 and revalidated by the owner on 2026-09-08",
       "claims": [
         "general AI starts at THB 700 per month for a useful ongoing conversation",
         "data dashboards start at THB 20,000 per month and require learning time",
@@ -172,11 +268,26 @@
       "timeSensitiveClaims": [
         "ijji is free to try now"
       ],
-      "revalidateOnSuccessor": true
+      "revalidateOnSuccessor": true,
+      "revalidationStatus": "confirmed_for_r7",
+      "publicationBlocking": false
+    },
+    {
+      "authorityEvidenceRef": "owner-confirmation:2026-09-08:comparison-prices-and-free-trial",
+      "scope": "ijji public website r7 comparison table only",
+      "claims": [
+        "general AI starts at THB 700 per month for a useful ongoing conversation",
+        "data dashboards start at THB 20,000 per month and require learning time",
+        "consultants cost THB 200,000 per month and are difficult for small shops to afford",
+        "ijji starts at THB 29 per question and is free to try now"
+      ],
+      "confirmation": "owner explicitly confirmed all four entries remain publishable for r7",
+      "confirmedOn": "2026-09-08",
+      "sharedDesignSystemApproval": false
     },
     {
       "authorityEvidenceRef": "owner-message:2026-09-04:navbar-logo-like-rebuild02",
-      "scope": "ijji public website r5 navbar only",
+      "scope": "ijji public website r7 navbar only; carried forward unchanged from r5",
       "sourcePath": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
       "sourceSha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
       "dimensions": "1601x1601",
@@ -188,7 +299,7 @@
     },
     {
       "authorityEvidenceRef": "owner-message:2026-09-04:animated-motif-contrast",
-      "scope": "with-you motif in both r5 locale siblings only",
+      "scope": "with-you motif in both r7 locale siblings only; carried forward unchanged from r5",
       "before": {
         "key": "graph-b-transparent-ink",
         "path": "ijji-addon/motif/svg/ijji-graph-b-transparent-ink.svg",
@@ -202,6 +313,18 @@
       },
       "motionBehaviorChanged": false,
       "sharedDesignSystemApproval": false
+    },
+    {
+      "authorityEvidenceRef": "owner-message:2026-09-08:animated-hero-logo-and-republish",
+      "scope": "ijji public website r7 English hero identity panel only",
+      "sourceOverlay": "Landometer Motif Library 1.2.1 / ijji.logo-sting.r3",
+      "presentation": "exact owner-approved tagline identity on direct Brand Blue",
+      "lifecycle": "play once when at least 14% visible, hold the complete final identity, no loop",
+      "fallbackAssetId": "ijji.logo-sting.tagline",
+      "fallbackBoundary": "exact final fallback for loading, dependency failure, reduced motion, no JavaScript, and print",
+      "motionControl": "44px pause, resume, and replay control with an English accessible name in a reserved row below the identity artwork",
+      "sharedDesignSystemApproval": false,
+      "boundary": "artifact-local use only; does not amend Landometer Design System 0.9.1 or ijji Design System 0.5.0 / Add-on 0.5.3 no-motion canon"
     }
   ],
   "navigationPreset": "navigation-preset.json",
@@ -216,6 +339,6 @@
   "openManualGates": [
     "physical iPhone Safari and embedded WKWebView"
   ],
-  "postDeployEvidence": "the annotated git tag ijji-web-20260904-r5 records the exact source SHA, GitHub Pages workflow/deployment identifiers, live-byte attestation time, and remaining manual gate",
+  "postDeployEvidence": "the annotated git tag ijji-web-20260908-r7 records the exact source SHA, GitHub Pages workflow/build/deployment identifiers, live-byte attestation time, and remaining manual gate",
   "localeInsightUsage": false
 }
