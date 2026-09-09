@@ -1,6 +1,6 @@
 {
   "schemaVersion": "ijji-product-web-release/1.0",
-  "releaseId": "ijji-web-20260909-r8",
+  "releaseId": "ijji-web-20260909-r9",
   "releaseDate": "2026-09-09",
   "publicationStatus": "published",
   "product": "ijji",
@@ -31,8 +31,8 @@
     "liveUrl": "https://montri-th.github.io/ijji/"
   },
   "releaseLineage": {
-    "previousPublishedRelease": "ijji-web-20260908-r7",
-    "previousPublishedSourceSha": "43f8224e8db1b7d1287617e1b6b1bfff96c66396",
+    "previousPublishedRelease": "ijji-web-20260909-r8",
+    "previousPublishedSourceSha": "92c7ff31a766f833bdcec4e213d223caee40aeb1",
     "notIncorporatedAsRelease": [
       "ijji-web-20260904-r6"
     ],
@@ -55,7 +55,7 @@
     "ijjiAssetPackage": "ijji-ds-addon-assets-v0.5.3",
     "ijjiArtifactRef": "ds-addon-ui-20260902-01",
     "parentLDS": "0.9.1",
-    "parentAuthoringRevision": "0.9.1-r8",
+    "parentAuthoringRevision": "0.9.1-r9",
     "parentRuleset": "lds-rules-0.9.1",
     "parentMachineIdentity": "v0.9.1-mp7",
     "colorSet": "color-srgb-05",
@@ -66,6 +66,7 @@
       "artifactRelease": "1.2.1",
       "familyId": "ijji.logo-sting.r3",
       "baselineAssetId": "ijji.logo-sting.tagline",
+      "markAssetId": "ijji.logo-sting.mark",
       "runtimeAssetId": "ijji.logo-sting.runtime.r3",
       "approvalRecordId": "MOTIF-LIBRARY-OWNER-APPROVAL-20260906-02",
       "manifestSha256": "77e8185104751e2c21c2e10fb8c5d771821bcb8123e02f116638fdbf3968d483",
@@ -100,7 +101,7 @@
     },
     {
       "name": "ijji-logo-full-square.reference.png",
-      "role": "owner_selected_favicon_and_comparison_header_source",
+      "role": "historical_r7_r8_thai_hero_static_logo_source_inactive_in_r9",
       "sha256": "cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86"
     },
     {
@@ -114,6 +115,16 @@
       "sha256": "ecd44355b1c433975cfb7637679b4c8d8cb35a0bc99bf468b78b665de854ac2d"
     },
     {
+      "name": "assets/ijji/logo-sting/layers/ijji-mark-still.png",
+      "role": "exact_mark_only_no_tagline_source_for_r9_favicon_and_comparison_header",
+      "sha256": "acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630"
+    },
+    {
+      "name": "ijji-mark-still.png",
+      "role": "exact_mark_only_source_for_r9_favicon_and_comparison_headers",
+      "sha256": "acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630"
+    },
+    {
       "name": "codex-clipboard-7856e53a-1004-434b-8d56-22f4f741265b.png",
       "role": "owner_identified_english_hero_logo_location_reference",
       "sha256": "9f75328872102d181d5887ada52c532f1a8f126d4479ffaef3ec768716440d21"
@@ -122,6 +133,19 @@
       "name": "codex-clipboard-60561ae1-05cb-481c-b9c5-b4e72aec3b54.png",
       "role": "owner_identified_minimal_line_logo_style_reference_for_all_line_buttons",
       "sha256": "92cba415a2dd7ef17648bd7700ab36f856d8773de24ed08c9ae4161452a72e35"
+    },
+    {
+      "name": "ijji motif asset with guide.zip",
+      "role": "owner_supplied_corroborating_ijji_four_beat_motif_kit_not_logo_or_favicon_source",
+      "sha256": "516e0e510a8c7a775c8e3c05647273d28cd56f6aad1f23a712ab82a2f3cd8f38",
+      "bytes": 172941,
+      "archiveEntries": 65,
+      "relationship": "selected motif bytes match the pinned Motif Library 1.2.1 four-beat assets; the archive contains no logo-sting or mark-only identity file"
+    },
+    {
+      "name": "codex-clipboard-cf1e5c87-01ce-4def-b531-3928110fa7e2.png",
+      "role": "owner_identified_thai_hero_logo_location_reference",
+      "sha256": "a614714d08d2c97d03409e1d6eabd132b118ec7d60411e63ee6b956ded360fe9"
     }
   ],
   "scope": {
@@ -140,19 +164,23 @@
       "owner-stated starting-price comparison with a release-time qualifier",
       "brand-voice recalibration and shorter English hero for responsive fit",
       "owner-directed minimal recognizable LINE destination glyph at every direct LINE link",
-      "owner-authorized mark-only ijji browser favicon renditions",
+      "owner-authorized favicon renditions derived from the exact animated-identity mark-only artwork without its tagline, at content-revisioned r9 URLs",
       "owner-selected Rebuild 02 Landometer symbol paired with the governed live-text wordmark in the navbar",
       "dark-canvas motif contrast correction in the with-you section without changing its motion behavior",
       "pause-resume control for rotating challenge highlights with one assistive-technology-visible quote per card",
       "self-hosted page runtime and icon fonts",
       "no-JavaScript navigation fallback",
-      "finite-once ijji animated identity overlay with tagline in the English hero, with an exact complete static fallback and pause, resume, and replay control",
-      "all three LINE buttons in each locale use the same 20px currentColor Remix Icon line-line silhouette, matching the minimal social-icon treatment of the adjacent Facebook and TikTok symbols"
+      "finite-once ijji animated identity overlay with tagline in both Thai and English heroes, with an exact complete static fallback and localized pause, resume, and replay controls",
+      "owner-directed replacement of the Thai hero static lockup with the same approved animated logo behavior as the English hero",
+      "all three LINE buttons in each locale use the same 20px currentColor Remix Icon line-line silhouette, matching the minimal social-icon treatment of the adjacent Facebook and TikTok symbols",
+      "both comparison-table ijji headers use the same clean r9 mark-only rendition as the favicon",
+      "rejected r4 mark binaries and superseded r5 favicon renditions removed from the r9 branch tip while published historical tags remain immutable"
     ],
     "unchanged": [
       "Thai product positioning and claims",
-      "all non-hero copy, claims, pricing, section order, navigation, CTA destinations, existing non-hero motion, and imagery outside the LINE destination symbols",
-      "the Thai locale sibling's product content and static hero identity from r7; only its three LINE destination symbols change",
+      "all visible product, comparison, and CTA copy, all claims and pricing, section order, navigation, CTA destinations, and English-page motion from published r8",
+      "the English locale page outside its browser-tab favicon declarations and comparison-header image source",
+      "the Thai locale page outside its browser-tab favicon declarations, comparison-header image source, and hero identity implementation",
       "owner-facing Thai section copy outside the requested comparison section",
       "evidence and privacy boundaries",
       "destination of the primary ijji CTA"
@@ -164,7 +192,7 @@
     ]
   },
   "animatedIdentity": {
-    "scope": "English hero identity panel only",
+    "scope": "Thai and English hero identity panels",
     "overlayRelease": "1.2.1",
     "overlayCommit": "57eeb7c953dc8b45fe6fe97f1251467d09b0b199",
     "overlayManifestSha256": "77e8185104751e2c21c2e10fb8c5d771821bcb8123e02f116638fdbf3968d483",
@@ -199,6 +227,10 @@
       "resume",
       "replay"
     ],
+    "localizedControlLabels": {
+      "th-TH": true,
+      "en": true
+    },
     "fallback": {
       "path": "assets/ijji/logo-sting/layers/ijji-logo-still.png",
       "sha256": "bb1bc80e0c79a10dedb1b48c39efd187e97fe429adec4917975e265f610ccaac",
@@ -268,13 +300,96 @@
       "officialArchiveUrl": "https://www.line.me/static/logo/top/LINE_Brand_icon.zip",
       "officialArchiveSha256": "0e1d2a57b68e0337c666063162daa03953176744fa727e73596825a7b90bab6a",
       "sourceByteAlteration": "none",
-      "state": "retained for provenance and release history; no active r8 HTML reference"
+      "state": "retained for provenance and release history; no active r9 HTML reference"
+    }
+  },
+  "browserFavicon": {
+    "scope": [
+      "index.html browser-tab favicon",
+      "ijji-TH.dc.html browser-tab favicon",
+      "ijji-EN.dc.html browser-tab favicon"
+    ],
+    "provenancePath": "assets/identity/ijji-favicon-r9.json",
+    "provenanceSha256": "082b0d18c2ad49545a72c0c2006237a9b5cd4cbd75b494b5b5fed9a025a44efd",
+    "source": {
+      "release": "Landometer Motif Library 1.2.1",
+      "commit": "57eeb7c953dc8b45fe6fe97f1251467d09b0b199",
+      "familyId": "ijji.logo-sting.r3",
+      "assetId": "ijji.logo-sting.mark",
+      "variant": "mark_only_no_tagline",
+      "path": "assets/ijji/logo-sting/layers/ijji-mark-still.png",
+      "sha256": "acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630",
+      "dimensions": "849x840",
+      "bytes": 110298
+    },
+    "renditions": {
+      "32x32": {
+        "path": "assets/identity/ijji-favicon-animated-mark-32-r9-ba9ac2db8984.png",
+        "sha256": "ba9ac2db8984a0c0fcef4afa54776b7f2f42440c0e84696fcc73968ab684c7ab",
+        "bytes": 1924
+      },
+      "192x192": {
+        "path": "assets/identity/ijji-favicon-animated-mark-192-r9-9a647451f72f.png",
+        "sha256": "9a647451f72f0c112a50481f614c884866c2d5edb23c34c1b916cf5166800a96",
+        "bytes": 13455
+      }
+    },
+    "transform": "place the exact 849x840 RGBA mark at offset 0,4 on an 849x849 transparent canvas, then resize proportionally in premultiplied-alpha space with LANCZOS; no crop, redraw, recolour, distortion, sharpening, backing plate, or generative alteration",
+    "generator": "scripts/generate-favicon-r9.py",
+    "cacheStrategy": "new content-revisioned same-origin URLs for both declared sizes",
+    "supersedes": "rejected r4 flat-head mark and dark-fringed r5 favicon renditions",
+    "comparisonHeaderChanged": true,
+    "comparisonHeaderUsage": "the 192x192 r9 rendition is used in both Thai and English comparison-table ijji column headers",
+    "artifactLocalExceptions": [
+      "favicon and comparison-header use extends the motif asset's original animated-identity fallback role",
+      "the 32px favicon is below the motif asset's original 160px minimum delivered size",
+      "browser chrome and light comparison surfaces extend the original brand-blue/dark compatible-surface list"
+    ],
+    "sharedDesignSystemApproval": false,
+    "renderedDefectStatus": "live_byte_qa_passed_pending_native_browser_confirmation"
+  },
+  "retiredIdentityAssets": {
+    "directiveRef": "owner-message:2026-09-09:animated-mark-only-favicon-and-old-mark-ban",
+    "r9TipPolicy": "wrong and superseded raster binaries are absent from the r9 branch tip and must not be referenced; prior release tags are not rewritten",
+    "removedPaths": [
+      "assets/products/ijji-logo-official.png",
+      "assets/identity/ijji-favicon-32-r4.png",
+      "assets/identity/ijji-favicon-192-r4.png",
+      "assets/identity/ijji-favicon-mark-32-r5-6d6ac0921352.png",
+      "assets/identity/ijji-favicon-mark-192-r5-b5cdf9987c6a.png",
+      "assets/identity/ijji-favicon-32-r9-ee2b564d52d7.png",
+      "assets/identity/ijji-favicon-192-r9-b3ce5667942b.png"
+    ],
+    "removedReproductionPaths": [
+      "scripts/generate-favicon-r5.py"
+    ],
+    "bannedSha256": [
+      "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f",
+      "ee2b564d52d7740f428965339126f3e4f2c8eabebdbb5a87f9e1eac98fbfd737",
+      "b3ce5667942b65236f39981da50d768674983a24a341e5559e0d33d63874d453",
+      "6d6ac092135290799da8d83a1323470f02e387b8983fd5159cd5943aac17e178",
+      "b5cdf9987c6a26dc5711586780927e5f7f367f20fc9cdb364513f8f866b7bb34"
+    ],
+    "driveDeletion": {
+      "status": "completed_and_search_verified",
+      "deletedFiles": [
+        {
+          "title": "icon__ijjiLogo.png",
+          "fileId": "1dnidyeNor2wSzeMoYmPHyLHnVcvK8Ys5"
+        },
+        {
+          "title": "ijjiLogo.png",
+          "fileId": "1tzQMyTeLB0mbrN50fg4Tyv7YHDZeVviw"
+        }
+      ],
+      "providerDeleteTimestamp": null,
+      "verifiedOn": "2026-09-09"
     }
   },
   "artifactOwnedAuthorizations": [
     {
       "authorityEvidenceRef": "owner-message:2026-09-04:ijji-reference-logo-crop",
-      "scope": "ijji public website r8 browser-tab favicon and comparison-table ijji column header only; carried forward unchanged from r7",
+      "scope": "historical r5/r7/r8 comparison-table and browser-tab raster derivation retained for provenance only",
       "sourcePath": "/Users/montri/Downloads/ijji-ds-addon-assets-v0.5.3/assets/identity/ijji-logo-full-square.reference.png",
       "sourceSha256": "cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86",
       "derivatives": [
@@ -290,11 +405,31 @@
         }
       ],
       "transform": "deterministic crop of the two-line wordmark followed by premultiplied-alpha LANCZOS resize; no redraw, recolour, sharpening, backing plate, or generative alteration",
+      "activeR9Usage": "none",
+      "status": "superseded_and_binary_derivatives_removed_from_r9_tip",
       "sharedDesignSystemApproval": false
     },
     {
+      "authorityEvidenceRef": "owner-message:2026-09-09:animated-mark-only-favicon-and-old-mark-ban",
+      "scope": "browser-tab favicons in the r9 index, Thai, and English entry points plus both locale comparison-table ijji column headers",
+      "directive": "ban the rejected old ijji mark, remove its Drive copies, and use the same mark-only artwork as the animated logo without the tagline",
+      "implementation": "derive 32px and 192px transparent PNGs from the exact Motif Library 1.2.1 ijji.logo-sting.mark asset; use the 192px rendition in both comparison headers",
+      "source": {
+        "assetId": "ijji.logo-sting.mark",
+        "path": "assets/ijji/logo-sting/layers/ijji-mark-still.png",
+        "sha256": "acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630"
+      },
+      "provenancePath": "assets/identity/ijji-favicon-r9.json",
+      "comparisonHeaderChanged": true,
+      "roleExtension": "artifact-local approval extends an animated-identity mark-only fallback to browser favicon and comparison-header roles",
+      "sizeException": "the 32px rendition is below the motif asset's original 160px minimum delivered size",
+      "surfaceException": "browser chrome and light comparison surfaces extend the motif asset's original brand-blue/dark compatible surfaces",
+      "sharedDesignSystemApproval": false,
+      "sharedDesignSystemAmendment": false
+    },
+    {
       "authorityEvidenceRef": "owner-message:2026-09-04:comparison-prices",
-      "scope": "public r8 comparison table only; carried forward from r7 and revalidated by the owner on 2026-09-09",
+      "scope": "public r9 comparison table; content is byte-identical to the same-day owner-confirmed r8 table and covered by the owner's subsequent r9 publication instruction",
       "claims": [
         "general AI starts at THB 700 per month for a useful ongoing conversation",
         "data dashboards start at THB 20,000 per month and require learning time",
@@ -305,7 +440,7 @@
         "ijji is free to try now"
       ],
       "revalidateOnSuccessor": true,
-      "revalidationStatus": "confirmed_for_r8",
+      "revalidationStatus": "confirmed_for_r9",
       "publicationBlocking": false
     },
     {
@@ -336,8 +471,23 @@
       "sharedDesignSystemApproval": false
     },
     {
+      "authorityEvidenceRef": "owner-confirmation:2026-09-09:r9-comparison-prices-and-free-trial-and-publish",
+      "scope": "ijji public website r9 comparison table and publication",
+      "claims": [
+        "general AI starts at THB 700 per month for a useful ongoing conversation",
+        "data dashboards start at THB 20,000 per month and require learning time",
+        "consultants cost THB 200,000 per month and are difficult for small shops to afford",
+        "ijji starts at THB 29 per question and is free to try now"
+      ],
+      "confirmationBasis": "the owner explicitly confirmed all four unchanged entries for r8 earlier on 2026-09-09, then explicitly instructed publication of the unchanged r9 comparison content on the same day after the release gate had been stated",
+      "r9ClaimTextChangedFromR8": false,
+      "explicitR9ClaimRecitation": false,
+      "confirmedOn": "2026-09-09",
+      "sharedDesignSystemApproval": false
+    },
+    {
       "authorityEvidenceRef": "owner-message:2026-09-04:navbar-logo-like-rebuild02",
-      "scope": "ijji public website r8 navbar only; carried forward unchanged from r7",
+      "scope": "ijji public website r9 navbar only; carried forward unchanged from published r8",
       "sourcePath": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
       "sourceSha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
       "dimensions": "1601x1601",
@@ -349,7 +499,7 @@
     },
     {
       "authorityEvidenceRef": "owner-message:2026-09-04:animated-motif-contrast",
-      "scope": "with-you motif in both r8 locale siblings only; carried forward unchanged from r7",
+      "scope": "with-you motif in both r9 locale siblings only; carried forward unchanged from published r8",
       "before": {
         "key": "graph-b-transparent-ink",
         "path": "ijji-addon/motif/svg/ijji-graph-b-transparent-ink.svg",
@@ -366,7 +516,7 @@
     },
     {
       "authorityEvidenceRef": "owner-message:2026-09-08:animated-hero-logo-and-republish",
-      "scope": "ijji public website r8 English hero identity panel only; carried forward unchanged from r7",
+      "scope": "ijji public website r9 English hero identity panel only; carried forward unchanged from published r8",
       "sourceOverlay": "Landometer Motif Library 1.2.1 / ijji.logo-sting.r3",
       "presentation": "exact owner-approved tagline identity on direct Brand Blue",
       "lifecycle": "play once when at least 14% visible, hold the complete final identity, no loop",
@@ -377,8 +527,25 @@
       "boundary": "artifact-local use only; does not amend Landometer Design System 0.9.1 or ijji Design System 0.5.0 / Add-on 0.5.3 no-motion canon"
     },
     {
+      "authorityEvidenceRef": "owner-message:2026-09-09:thai-hero-animated-logo-and-publish",
+      "scope": "ijji public website r9 Thai hero identity panel",
+      "directive": "replace the owner-indicated Thai hero static logo panel with the animated logo and publish",
+      "implementation": "reuse the exact 1.2.1 full-with-tagline runtime, controller, layers, and complete fallback already used by the English hero; finite once, no loop, with localized Thai pause, resume, and replay labels",
+      "fallbackAssetId": "ijji.logo-sting.tagline",
+      "sharedDesignSystemApproval": false,
+      "boundary": "artifact-local approval only; no amendment to the shared Design System or motif-family defaults"
+    },
+    {
+      "authorityEvidenceRef": "owner-message:2026-09-09:motif-kit-use-and-publish",
+      "scope": "ijji public website r9 existing four-beat motif usage and release provenance",
+      "directive": "the owner supplied ijji motif asset with guide.zip, approved its use, and instructed publication",
+      "archiveSha256": "516e0e510a8c7a775c8e3c05647273d28cd56f6aad1f23a712ab82a2f3cd8f38",
+      "relationship": "the archive's selected motif bytes corroborate the existing pinned Motif Library 1.2.1 four-beat assets; it contains no logo or mark-only identity file and is not represented as the favicon or hero-logo source",
+      "sharedDesignSystemApproval": false
+    },
+    {
       "authorityEvidenceRef": "owner-message:2026-09-08:footer-line-outline-style",
-      "scope": "footer LINE OA button in both r8 locale siblings only",
+      "scope": "historical r8 footer LINE OA request retained for provenance",
       "directive": "replace the grey LINE bitmap in the referenced footer social-button row with a single-colour outline symbol matching the adjacent Facebook and TikTok symbols",
       "implementation": "existing self-hosted Material Symbols Rounded chat glyph at 20px, currentColor, FILL 0 and weight 300",
       "providerBoundary": "generic chat interface symbol beside an explicit LINE OA text label; not a redraw, recolour, derivative, or replacement source asset for the official LINE logo",
@@ -388,7 +555,7 @@
     },
     {
       "authorityEvidenceRef": "owner-confirmation:2026-09-09:r8-minimal-line-logo-all-links",
-      "scope": "all six direct LINE destination links across the Thai and English r8 locale pages",
+      "scope": "all six direct LINE destination links across the Thai and English r9 locale pages; carried forward byte-identically from published r8",
       "directive": "use a recognizable minimal LINE logo in the same visual style as the adjacent Facebook and TikTok symbols at every LINE button",
       "implementation": "pinned Remix Icon v4.9.1 line-line silhouette rendered at 20px in currentColor through inline SVG instances referencing one document-local symbol; visible localized link text supplies the accessible name",
       "providerBoundary": "third-party social glyph, not an official LINE-supplied asset; used only for the corresponding LINE destination and does not imply endorsement",
@@ -397,10 +564,10 @@
     },
     {
       "authorityEvidenceRef": "owner-confirmation:2026-09-09:r8-english-animated-logo-with-tagline",
-      "scope": "ijji public website r8 English hero identity panel only",
+      "scope": "ijji public website r9 English hero identity panel only; carried forward byte-identically from published r8",
       "directive": "use the animated ijji logo with its tagline; owner explicitly approves this presentation",
       "implementation": "byte-identical Landometer Motif Library 1.2.1 ijji.logo-sting.r3 full-with-tagline runtime and fallback carried forward from published r7",
-      "byteChangeFromR7": false,
+      "byteChangeFromR8": false,
       "sharedDesignSystemApproval": false,
       "boundary": "artifact-local approval only; no amendment to the shared Design System or motif-family defaults"
     }
@@ -420,17 +587,37 @@
     },
     "staticVerifier": {
       "status": "passed_published",
-      "command": "python3 scripts/verify-r8.py"
+      "command": "python3 scripts/verify-r9.py"
+    },
+    "faviconBrowserQa": {
+      "status": "passed_live",
+      "checks": 28,
+      "scope": "index, Thai, and English entry points; both declared favicon sizes; both locale comparison headers; reload and force-cache request modes; URL, MIME, dimensions, and bytes",
+      "command": "IJJI_FAVICON_QA_URL=https://montri-th.github.io/ijji/ node ../qa/ijji-r9-favicon-qa.mjs",
+      "cacheHitEvidence": "not observed as a browser cache hit; live force-cache requests returned the exact revisioned r9 bytes",
+      "nativeBrowserChrome": "pending"
+    },
+    "bannedIdentityAssetScan": {
+      "status": "passed",
+      "scope": "r9 branch tip files and active HTML references"
     },
     "lineButtonsBrowserQa": {
-      "status": "passed",
+      "status": "carried_forward_unchanged_from_r8",
       "checks": 22,
       "matrix": "Thai and English; all three LINE destinations per locale; 320, 390 and 1440 CSS px; light and dark; Thai 130% and English 200% text scaling; no JavaScript; forced colours; print; keyboard focus"
     },
-    "animationRegression": {
-      "status": "passed",
-      "checks": 54,
-      "target": "published r8 English page"
+    "animatedHeroBrowserQa": {
+      "status": "passed_live",
+      "checks": 62,
+      "screenshots": 20,
+      "scope": "Thai and English heroes; finite 9-second lifecycle and final hold; pause, resume, replay; responsive 390px and 1440px; reduced motion; no JavaScript; print; viewport reveal/exit; runtime and layer failure fallbacks; localized accessible labels; runtime/fallback pixel comparison",
+      "command": "IJJI_R9_HERO_QA_URL=https://montri-th.github.io/ijji/ node ../qa/ijji-r9-animated-hero-qa.mjs",
+      "runtimeFallbackPixelDifference": {
+        "th-TH": "255 of 125832 pixels (0.202651%)",
+        "en": "255 of 125832 pixels (0.202651%)",
+        "budget": "3%"
+      },
+      "liveRetest": "passed after deployment"
     },
     "inheritedAdvisory": {
       "surface": "English page at a 390 CSS px viewport with 200% root text scaling",
@@ -438,9 +625,9 @@
       "viewportWidthPx": 390,
       "overflowPx": 36,
       "source": "#ij-wander-toggle in #problems",
-      "baselineComparison": "identical in published r7 and published r8; the LINE symbol change does not affect this overflow",
+      "baselineComparison": "the English advisory is inherited unchanged from published r8; the r9 identity changes do not alter #ij-wander-toggle",
       "footerScope": "footer remains 390px wide and its social group has matching 358px client and scroll widths",
-      "classification": "inherited_non_regression_outside_r8_scope"
+      "classification": "inherited_non_regression_outside_r9_scope"
     }
   },
   "excludedSourcePaths": [
@@ -450,8 +637,9 @@
     "uploads/"
   ],
   "openManualGates": [
+    "native browser chrome favicon presentation after a fresh navigation",
     "physical iPhone Safari and embedded WKWebView"
   ],
-  "postDeployEvidence": "the annotated git tag ijji-web-20260909-r8 records the exact source SHA, GitHub Pages workflow/build/deployment identifiers, live-byte attestation time, live browser QA, and remaining manual gate",
+  "postDeployEvidence": "the annotated git tag ijji-web-20260909-r9 records the exact source SHA, GitHub Pages workflow/build/deployment identifiers, live-byte attestation time, live favicon and animated-hero browser QA, and remaining manual gates",
   "localeInsightUsage": false
 }

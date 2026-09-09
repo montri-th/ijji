@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "artifact-owned-identity-binding/1.3",
+  "artifact": "ijji public website r9 mark-only browser and comparison identity correction",
+  "authorityEvidenceRefs": [
+    "owner-message:2026-09-09:r8-favicon-regression-report",
+    "owner-message:2026-09-09:animated-mark-only-favicon-and-old-mark-ban"
+  ],
+  "reportedIssue": "The owner rejected the previously prepared flat-mint r4 favicon, directed that it must not be used again, and selected the exact mark-only artwork used by the approved animated identity family instead.",
+  "approvedSource": {
+    "library": "Landometer Motif Library",
+    "artifactRelease": "1.2.1",
+    "overlayCommit": "57eeb7c953dc8b45fe6fe97f1251467d09b0b199",
+    "manifestSha256": "77e8185104751e2c21c2e10fb8c5d771821bcb8123e02f116638fdbf3968d483",
+    "familyId": "ijji.logo-sting.r3",
+    "assetId": "ijji.logo-sting.mark",
+    "variant": "mark_only",
+    "path": "../ijji/logo-sting/layers/ijji-mark-still.png",
+    "sha256": "acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630",
+    "dimensions": "849x840",
+    "bytes": 110298,
+    "mimeType": "image/png",
+    "mode": "RGBA",
+    "originalIdentityRole": "animated_mark_final_fallback",
+    "originalMinimumDeliveredPx": 160,
+    "originalCompatibleHostSurfaces": [
+      "brand-blue",
+      "dark"
+    ]
+  },
+  "derivation": {
+    "generatorPath": "../../scripts/generate-favicon-r9.py",
+    "squareCanvas": "849x849 transparent RGBA",
+    "sourcePlacement": {
+      "x": 0,
+      "y": 4
+    },
+    "resampling": "premultiplied-alpha LANCZOS",
+    "encoding": "PNG RGBA with explicit sRGB chunk; optimize=false; compress_level=9",
+    "pixelPolicy": "Preserve the exact source geometry and colour; add transparent square padding, then resize proportionally. No crop, redraw, recolour, sharpening, backing plate, distortion, tracing, or generative alteration."
+  },
+  "renditions": [
+    {
+      "path": "ijji-favicon-animated-mark-32-r9-ba9ac2db8984.png",
+      "sha256": "ba9ac2db8984a0c0fcef4afa54776b7f2f42440c0e84696fcc73968ab684c7ab",
+      "dimensions": "32x32",
+      "bytes": 1924,
+      "contexts": [
+        "browser-tab favicon"
+      ]
+    },
+    {
+      "path": "ijji-favicon-animated-mark-192-r9-9a647451f72f.png",
+      "sha256": "9a647451f72f0c112a50481f614c884866c2d5edb23c34c1b916cf5166800a96",
+      "dimensions": "192x192",
+      "bytes": 13455,
+      "contexts": [
+        "browser-tab favicon",
+        "Thai comparison-table ijji column header",
+        "English comparison-table ijji column header"
+      ]
+    }
+  ],
+  "scope": "Browser-tab favicon declarations in the r9 index, Thai, and English entry points, plus the ijji column header in both locale comparison tables.",
+  "comparisonHeaderChanged": true,
+  "artifactLocalExceptions": {
+    "ownerAuthorized": true,
+    "authorityEvidenceRef": "owner-message:2026-09-09:animated-mark-only-favicon-and-old-mark-ban",
+    "minimumSize": "The 32px browser rendition is below the source asset's original 160px minimum-delivered-size rule; the owner directly authorized this artifact-local favicon use. The 192px rendition meets that minimum.",
+    "hostSurfaces": "Browser chrome and the comparison table may present the mark on light or dark surfaces, extending the source asset's original brand-blue/dark host-surface allowance for this artifact only.",
+    "sharedDesignSystemApproval": false,
+    "sharedDesignSystemOrMotifAmendment": false
+  },
+  "rejectedAssetTombstone": {
+    "authorityEvidenceRef": "owner-message:2026-09-09:animated-mark-only-favicon-and-old-mark-ban",
+    "directive": "Never use the rejected flat-mint mark again and remove its current copies.",
+    "forbiddenForActiveUse": true,
+    "removedFromR9BranchTip": [
+      {
+        "path": "ijji-favicon-32-r4.png",
+        "sha256": "ee2b564d52d7740f428965339126f3e4f2c8eabebdbb5a87f9e1eac98fbfd737"
+      },
+      {
+        "path": "ijji-favicon-192-r4.png",
+        "sha256": "b3ce5667942b65236f39981da50d768674983a24a341e5559e0d33d63874d453"
+      },
+      {
+        "path": "ijji-favicon-32-r9-ee2b564d52d7.png",
+        "sha256": "ee2b564d52d7740f428965339126f3e4f2c8eabebdbb5a87f9e1eac98fbfd737",
+        "state": "discarded prepublication candidate"
+      },
+      {
+        "path": "ijji-favicon-192-r9-b3ce5667942b.png",
+        "sha256": "b3ce5667942b65236f39981da50d768674983a24a341e5559e0d33d63874d453",
+        "state": "discarded prepublication candidate"
+      },
+      {
+        "path": "../products/ijji-logo-official.png",
+        "sha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f"
+      }
+    ],
+    "retainedInactiveEvidence": [
+      "ijji-favicon-r4.json",
+      "ijji-favicon-r5.json"
+    ],
+    "supersededR5RenditionsRemovedFromR9BranchTip": [
+      {
+        "path": "ijji-favicon-mark-32-r5-6d6ac0921352.png",
+        "sha256": "6d6ac092135290799da8d83a1323470f02e387b8983fd5159cd5943aac17e178"
+      },
+      {
+        "path": "ijji-favicon-mark-192-r5-b5cdf9987c6a.png",
+        "sha256": "b5cdf9987c6a26dc5711586780927e5f7f367f20fc9cdb364513f8f866b7bb34"
+      }
+    ],
+    "supersededR5GeneratorRemovedFromR9BranchTip": "../../scripts/generate-favicon-r5.py",
+    "historicalPublishedTagsChanged": false,
+    "historyBoundary": "Previously published Git tags remain immutable; rejected and superseded binary bytes are removed only from the r9 successor branch tip and prohibited from active future use. Historical provenance JSON remains as inactive evidence."
+  },
+  "driveCleanupEvidence": {
+    "requestedByOwner": true,
+    "performedOn": "2026-09-09",
+    "timezone": "Asia/Bangkok",
+    "files": [
+      {
+        "title": "icon__ijjiLogo.png",
+        "fileId": "1dnidyeNor2wSzeMoYmPHyLHnVcvK8Ys5",
+        "deleteSuccess": true
+      },
+      {
+        "title": "ijjiLogo.png",
+        "fileId": "1tzQMyTeLB0mbrN50fg4Tyv7YHDZeVviw",
+        "deleteSuccess": true
+      }
+    ],
+    "postDeleteVerification": "A follow-up Google Drive image search for ijji returned neither deleted file ID.",
+    "providerDeleteTimestamp": null
+  },
+  "supersedesWithinArtifact": "The r4 browser favicons and the r5 cropped browser/comparison renditions for active r9 favicon and comparison-header roles.",
+  "sharedDesignSystemApproval": false,
+  "historicalReleaseBytesChanged": false
+}

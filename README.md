@@ -5,23 +5,39 @@
 - Live: <https://montri-th.github.io/ijji/>
 - Thai canonical: <https://montri-th.github.io/ijji/ijji-TH.dc.html>
 - English canonical: <https://montri-th.github.io/ijji/ijji-EN.dc.html>
-- Current published release: `ijji-web-20260909-r8`
-- Previous published release: `ijji-web-20260908-r7`
+- Current published release: `ijji-web-20260909-r9`
+- Previous published release: `ijji-web-20260909-r8`
 - Stack: static HTML + self-hosted runtime, fonts, imagery, and Landometer Design System assets
 
-## r8 release
+## r9 mark-only identity correction
 
-r8 เปลี่ยนสัญลักษณ์ในลิงก์ LINE ทั้งสามจุดของแต่ละภาษา รวม 6 จุด ให้เป็น `line-line` silhouette ของ Remix Icon v4.9.1 ที่ 20px และ `currentColor` ผ่าน inline SVG เพื่อให้ขนาด สี และน้ำหนักภาพเข้าชุดกับ Facebook และ TikTok โดยไม่เปลี่ยนข้อความ ปลายทาง ลูกศร external-link หรือ accessible name เดิม
+r9 เปลี่ยน browser-tab favicon ทั้ง 32px และ 192px รวมถึงโลโก้ ijji ในหัวตารางเปรียบเทียบของทั้งสองภาษา ให้ใช้เครื่องหมายแบบ **mark-only ไม่มี tagline** ตัวเดียวกับที่อยู่ในชุด animated identity ที่เจ้าของเลือก โดยอ้างอิง asset `ijji.logo-sting.mark` จาก Landometer Motif Library 1.2.1 แบบระบุ release และ commit ตายตัว
 
-ไอคอนนี้เป็น third-party social glyph ไม่ใช่ไฟล์ที่ LINE จัดหา และไม่ได้สื่อว่า LINE รับรองการใช้งาน เจ้าของสั่งให้ใช้ minimal treatment นี้หลังรับทราบข้อจำกัดของแนวทาง LINE แล้ว ไฟล์ LINE Brand Icon ทางการเดิมยังคงอยู่เพื่อ provenance และประวัติ release แต่ไม่มี active reference ใน HTML ของ r8
+ต้นฉบับคือ `assets/ijji/logo-sting/layers/ijji-mark-still.png` ขนาด 849×840, 110,298 bytes และ SHA-256 `acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630` การสร้าง rendition ทำเพียงวางต้นฉบับที่ `(0,4)` บน canvas โปร่งใส 849×849 แล้ว resize ตามสัดส่วนด้วย premultiplied-alpha LANCZOS ไม่มีการ crop, วาดใหม่, เปลี่ยนสี, sharpen, ใส่ backing plate หรือบิดรูป
 
-ไฟล์ Remix SVG, provenance และ license สามไฟล์นำมาใช้ซ้ำแบบเจาะจงจาก candidate `ijji-web-20260904-r6` ที่ไม่เคยเผยแพร่ การเปลี่ยน motif และงานอื่นทั้งหมดจาก candidate นั้นไม่ถูกรวมใน r8
+- 32px: `ijji-favicon-animated-mark-32-r9-ba9ac2db8984.png` — SHA-256 `ba9ac2db8984a0c0fcef4afa54776b7f2f42440c0e84696fcc73968ab684c7ab`
+- 192px: `ijji-favicon-animated-mark-192-r9-9a647451f72f.png` — SHA-256 `9a647451f72f0c112a50481f614c884866c2d5edb23c34c1b916cf5166800a96`
 
-## Animated hero identity
+การใช้ 32px ต่ำกว่าขนาดส่งมอบขั้นต่ำ 160px ของ asset ต้นฉบับ และ browser chrome/หัวตารางอาจวางเครื่องหมายบนพื้นสว่างหรือมืด ซึ่งขยายจากขอบเขตพื้น brand-blue/dark เดิม เจ้าของอนุมัติข้อยกเว้นทั้งสองนี้เฉพาะเว็บไซต์ r9 เท่านั้น จึงไม่ใช่การแก้หรือขยาย Landometer Design System, ijji Design System หรือ Motif Library ร่วม
 
-English hero คง `ijji.logo-sting.r3` แบบเต็มพร้อม tagline จาก Landometer Motif Library 1.2.1 ตามที่เจ้าของอนุมัติ เล่นครั้งเดียวเมื่อมองเห็นอย่างน้อย 14% เป็นเวลา 9 วินาที แล้วค้างที่ภาพสมบูรณ์โดยไม่ loop พร้อม Pause/Resume/Replay และ fallback แบบ exact สำหรับ loading, reduced motion, no JavaScript, print และ dependency failure
+## Rejected legacy mark and history boundary
 
-runtime, fallback, controller และ image layers ทั้งเก้าชิ้นตรงกับ published r7 ทุก byte การใช้งานนี้เป็น artifact-local approval เฉพาะ English hero ไม่แก้ shared Design System หรือ motif-family defaults ส่วน Thai hero ยังคงเป็น static identity เดิม
+เครื่องหมาย flat-mint จาก r4 ถูกเจ้าของปฏิเสธและห้ามนำกลับมาใช้ ไฟล์ภาพของชุดนั้น รวมถึง r9 candidate ที่คัดลอก bytes เดิม, rendition r5 ที่ถูกแทนที่ และ generator ที่สามารถสร้าง rendition r5 ซ้ำ ถูกถอดออกจาก branch tip ของ r9 และบันทึก hashes ที่ห้ามใช้ไว้ใน `assets/identity/ijji-favicon-r9.json` โดยไม่แก้ไข tag หรือ bytes ของ release ที่เผยแพร่ไปก่อนหน้า ส่วน provenance JSON เดิมเก็บไว้เป็นหลักฐานแบบ inactive เท่านั้น
+
+สำเนา loose legacy บน Google Drive ที่พบสองไฟล์ถูกลบสำเร็จเมื่อ 9 กันยายน 2026 เวลาเขต Asia/Bangkok:
+
+- `icon__ijjiLogo.png` — file ID `1dnidyeNor2wSzeMoYmPHyLHnVcvK8Ys5`
+- `ijjiLogo.png` — file ID `1tzQMyTeLB0mbrN50fg4Tyv7YHDZeVviw`
+
+การค้นหา image ด้วยคำว่า `ijji` หลังลบไม่พบ file ID ทั้งสองรายการ โดยผู้ให้บริการไม่ได้ส่ง delete timestamp กลับมา
+
+## Animated heroes and preserved r8 experience
+
+LINE ทั้งสามจุดต่อภาษา รวม 6 จุด ยังคงใช้ `line-line` silhouette ของ Remix Icon v4.9.1 ที่ 20px และ `currentColor` แบบเดียวกับ r8 โดยไม่มีการเปลี่ยนข้อความ ปลายทาง ลูกศร external-link หรือ accessible name ไอคอนนี้เป็น third-party social glyph ไม่ใช่ไฟล์ที่ LINE จัดหา และไม่ได้สื่อว่า LINE รับรองการใช้งาน
+
+English hero ยังคง `ijji.logo-sting.r3` แบบเต็มพร้อม tagline จาก Landometer Motif Library 1.2.1 เล่นครั้งเดียว 9 วินาที แล้วค้างที่ภาพสมบูรณ์ พร้อม Pause/Resume/Replay และ exact fallback สำหรับ loading, reduced motion, no JavaScript, print และ dependency failure ตาม r8 ส่วน r9 เปลี่ยน Thai hero จากภาพนิ่งเป็น animated logo ชุดเดียวกัน พร้อมปุ่มภาษาไทยและ lifecycle เดียวกัน การแก้ mark-only ของ favicon/หัวตารางไม่ได้ถอด tagline ออกจาก hero ทั้งสองภาษา
+
+แพ็กเกจ `ijji motif asset with guide.zip` ที่เจ้าของส่งเพิ่มมี SHA-256 `516e0e510a8c7a775c8e3c05647273d28cd56f6aad1f23a712ab82a2f3cd8f38` และยืนยัน bytes ของ four-beat motifs ที่หน้าใช้อยู่กับ Motif Library 1.2.1 แต่แพ็กเกจไม่มีไฟล์โลโก้ จึงบันทึกเป็น corroborating motif source เท่านั้น ไม่อ้างเป็นต้นทางของ favicon หรือ animated hero logo
 
 ## Claim boundary
 
@@ -32,22 +48,19 @@ runtime, fallback, controller และ image layers ทั้งเก้าช
 - ที่ปรึกษา 200,000 บาท/เดือน
 - ijji 29 บาท/คำถาม พร้อมทดลองใช้ฟรีในขณะนี้
 
-เจ้าของยืนยันทั้งสี่รายการสำหรับ r8 เมื่อ 9 กันยายน 2026 รวมถึงข้อความที่ขึ้นกับเวลา “ทดลองใช้ฟรีตอนนี้” และ successor release ต้องตรวจยืนยันใหม่
+เนื้อหาทั้งสี่รายการตรงกับ r8 ทุกไบต์ เจ้าของยืนยันทั้งสี่รายการสำหรับ r8 ในวันเดียวกัน และหลังจากระบุ gate นี้แล้วได้สั่งเผยแพร่ r9 อีกครั้ง จึงบันทึกเป็นการยืนยัน r9 บนฐานข้อความเดิมโดยไม่มีการแก้ claim (ไม่ได้อ้างว่าเจ้าของพิมพ์ราคาทั้งสี่ซ้ำในข้อความล่าสุด)
 
 ## Verification status
 
 - Parent Landometer Design System 0.9.1 verifier: ผ่าน 5,394 checks และ 103 checksums
 - ijji Design System 0.5.0 / Add-on 0.5.3 resolver: ผ่าน 1,421 checks
-- Static r8 verifier: ผ่านสำหรับ published byte set
-- LINE browser QA: ผ่าน 22/22 checks ครบสองภาษาและ LINE ทั้งหกจุด ที่ 320/390/1,440px, light/dark, Thai 130%, English 200%, no JavaScript, forced colours, print และ keyboard focus
-- Full animated-hero regression: ผ่าน 54/54 checks รวม finite-once playback, controls, responsive layout, reduced motion, no JavaScript, print, slow/failing dependencies และ exact fallback
-- Inherited advisory: ที่ viewport 390px และ English 200% text scale ยังมี page-wide overflow 36px จาก `#ij-wander-toggle` ใน `#problems` เท่ากับ r7; footer และ social group ยัง contained จึงไม่ใช่ regression จากไอคอน LINE
-- Open manual gate: physical iPhone Safari และ embedded WKWebView
-- Source SHA, GitHub Pages run/build/deployment, live-byte attestation และ live browser QA บันทึกใน annotated tag `ijji-web-20260909-r8`
+- Static r9 verifier ผ่านบน published byte set; live favicon และ comparison-header browser QA ผ่าน 28/28; live Thai/English animated-hero QA ผ่าน 62/62 พร้อมภาพหลักฐาน 20 ภาพ
+- LINE browser QA 22/22 จาก r8 ยังใช้เป็นหลักฐานของ implementation ที่ไม่ได้เปลี่ยน; English hero baseline จาก r8 ใช้เป็น reference และ Thai hero มีผลทดสอบ r9 ใหม่แล้ว
+- Open manual gates: การแสดง favicon ใน native browser chrome หลังเปิดหน้าใหม่ และ physical iPhone Safari / embedded WKWebView
 
 ## Provenance and integrity
 
-ขอบเขต release และ owner authorizations อยู่ใน [`release.json`](release.json) ส่วน [`SHA256SUMS.txt`](SHA256SUMS.txt) เป็น byte ledger ของ committed release files ทั้งหมด ยกเว้นตัว ledger เอง การอ้างอิง ijji และ parent LDS เป็น `authoring_aligned` เท่านั้น ไม่ใช่ full machine-package หรือ production-device conformance
+ขอบเขต release และ owner authorizations อยู่ใน [`release.json`](release.json) รายละเอียด source, transform, ข้อยกเว้นเฉพาะ artifact, asset tombstone และ Drive cleanup อยู่ใน [`assets/identity/ijji-favicon-r9.json`](assets/identity/ijji-favicon-r9.json) ส่วน [`SHA256SUMS.txt`](SHA256SUMS.txt) เป็น byte ledger ของ release files ทั้งหมด ยกเว้นตัว ledger เอง การอ้างอิง ijji และ parent LDS เป็น `authoring_aligned` เท่านั้น ไม่ใช่ full machine-package หรือ production-device conformance
 
 ## Local preview
 
