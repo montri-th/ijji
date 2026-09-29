@@ -93,7 +93,7 @@
   "verification": {
     "sourcePackageIntegrity": "pass: LDS 0.9.5 owner package 3705/3705 checks, 0 warnings",
     "vendoredRuntimeParity": "pass: 50 exact LDS runtime files, 18 exact ijji motif SVGs, registry, approval and source archive",
-    "staticRegression": "pass: scripts/verify-r10.py 596 bounded checks and git diff --check",
+    "staticRegression": "pass: scripts/verify-r10.py 596 bounded checks; full branch diff has only whitespace notices in byte-preserved historical imports",
     "renderedLocal": "bounded_pass: local in-app browser TH/EN at 320 and 1280 CSS px; light/dark menu; mobile answer, comparison, problems and closing sections; reentry lifecycle",
     "deployedByteParity": "pending_publication",
     "browserLive": "pending_publication"
