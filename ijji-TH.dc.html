@@ -50,8 +50,9 @@
   <link rel="stylesheet" href="_ds/lds-ijji-add-on-cd48b199-a3d3-4171-adae-7817ca7d57d3/tokens/ext-aliases.css">
   <link rel="stylesheet" href="_ds/lds-ijji-add-on-cd48b199-a3d3-4171-adae-7817ca7d57d3/tokens/ext-registry.css">
   <link rel="stylesheet" href="_ds/lds-ijji-add-on-cd48b199-a3d3-4171-adae-7817ca7d57d3/tokens/base.css">
+  <link rel="stylesheet" href="assets/lds/v0.9.5/build-kit/lds-0.9.5.css">
+  <link rel="stylesheet" href="assets/lds/v0.9.5/ijji-compat.css">
   <link rel="stylesheet" href="ijji-addon/ijji.css">
-  <script src="_ds/lds-ijji-add-on-cd48b199-a3d3-4171-adae-7817ca7d57d3/_ds_bundle.js"></script>
   <style>
     @font-face{font-family:"Landometer Nav Symbols";src:url("assets/fonts/material-symbols-rounded-ijji-nav-r4.woff2") format("woff2");font-style:normal;font-weight:300;font-display:block}
     body{margin:0;background:var(--surface-canvas);color:var(--text-primary)}
@@ -133,7 +134,7 @@
     .ij-menu-group-label{margin:0;padding:10px 12px 6px;font-family:var(--font-technical-th,var(--font-technical));font-size:var(--type-label);color:var(--text-metadata)}
     .ij-menu-row{box-sizing:border-box;display:flex;align-items:center;gap:12px;min-height:48px;padding:8px 14px;border-radius:10px;color:var(--text-primary);text-decoration:none;line-height:1.4}
     .ij-menu-row:hover{background:var(--surface-blue-tint)}
-    .ij-menu-row[aria-current="page"],.ij-menu-row[aria-current="location"]{background:var(--surface-soft);box-shadow:inset 0 0 0 1.5px var(--border-emphasis);font-weight:600}
+    .ij-menu-row[aria-current="page"],.ij-menu-row[aria-current="location"]{background:var(--surface-soft);font-weight:600}
     .ij-menu-index{min-width:24px;color:var(--text-metadata);font-size:20px}
     .ij-menu-divider{height:1px;margin:8px 6px;background:var(--border-hairline)}
     .ij-mobile-cta{position:relative;display:none;box-sizing:border-box;min-height:48px;margin:6px;padding:0 18px;border:2px solid var(--interaction-accent);border-radius:999px;align-items:center;justify-content:center;color:var(--interaction-accent);font-weight:600;text-decoration:none;overflow:hidden}
@@ -147,7 +148,7 @@
     .ij-utility-panel:not(.is-open){display:none}
     .ij-utility-choice{box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:8px 12px;border:0;border-radius:10px;background:transparent;color:var(--text-primary);font:inherit;text-align:left;text-decoration:none;cursor:pointer}
     .ij-utility-choice:not([aria-disabled="true"]):hover{background:var(--surface-blue-tint)}
-    .ij-utility-choice[aria-pressed="true"],.ij-utility-choice[aria-current="page"]{background:var(--surface-soft);box-shadow:inset 0 0 0 1.5px var(--border-emphasis);font-weight:600}
+    .ij-utility-choice[aria-pressed="true"],.ij-utility-choice[aria-current="page"]{background:var(--surface-soft);font-weight:600}
     .ij-utility-choice[aria-disabled="true"]{color:var(--text-disabled);cursor:not-allowed}
     .ij-choice-status{font-size:var(--type-label);color:var(--text-metadata)}
     .ij-line-mark{display:block;flex:none;width:20px;height:20px}
@@ -178,7 +179,7 @@
     .ij-bookmark-icon{font-size:22px;line-height:1;font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}
     .ij-bookmark-link:hover{background:var(--surface-blue-tint)}
     .ij-bookmark-link:active{transform:translateY(1px);background:var(--surface-soft)}
-    .ij-bookmark-link[aria-current="location"]{background:var(--surface-blue-tint);color:var(--interaction-accent);box-shadow:inset 0 0 0 2px currentColor;font-weight:600}
+    .ij-bookmark-link[aria-current="location"]{background:var(--surface-blue-tint);color:var(--interaction-accent);font-weight:600}
     .ij-bookmark-link::after{content:attr(data-label);position:absolute;right:calc(100% + 10px);top:50%;transform:translate(6px,-50%);padding:7px 10px;border:1px solid var(--border-default);border-radius:8px;background:var(--surface-raised);box-shadow:var(--elevation-xs);color:var(--text-primary);font-family:var(--font-body);font-size:13px;font-weight:600;line-height:1.3;white-space:nowrap;opacity:0;visibility:hidden;pointer-events:none;transition:opacity var(--motion-duration-state) var(--motion-ease-state),transform var(--motion-duration-state) var(--motion-ease-state)}
     .ij-bookmark-link:hover::after,.ij-bookmark-link:focus-visible::after{opacity:1;visibility:visible;transform:translate(0,-50%)}
     .ij-nav-focus-target:focus,#main-content:focus{outline:3px solid var(--interaction-focus-ring);outline-offset:-3px}
@@ -193,7 +194,7 @@
     @media print{.ij-hero-logo-art.is-enhanced>[data-ijji-logo-fallback]{visibility:visible!important}.ij-hero-logo-art>ijji-logo-sting,.ij-hero-logo-controls{display:none!important}}
   </style>
 </helmet>
-<div ref="{{ rootRef }}" class="ij-page" data-product="ijji" lang="th" data-theme="{{ theme }}" data-theme-mode="{{ themeMode }}" style="min-height:100vh;background:var(--surface-canvas);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body)">
+<div ref="{{ rootRef }}" class="ij-page" data-product="ijji" data-lds-release="0.9.5" data-ijji-ds="0.5.2" data-ijji-addon="0.5.5" lang="th" data-theme="{{ theme }}" data-theme-mode="{{ themeMode }}" style="min-height:100vh;background:var(--surface-canvas);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body)">
   <svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden"><symbol id="ij-line-logo" viewBox="0 0 24 24"><path d="M22.001 10.6904C22.001 12.477 21.3143 14.0895 19.8776 15.6637C17.7776 18.0779 13.0901 21.027 12.0143 21.4762C10.9401 21.927 11.1026 21.1895 11.1401 20.9387L11.2768 20.0887C11.311 19.827 11.3451 19.4395 11.2451 19.1887C11.1326 18.912 10.6893 18.7654 10.3635 18.697C5.55931 18.0587 2.00098 14.6995 2.00098 10.6904C2.00098 6.21452 6.48848 2.57202 12.001 2.57202C17.5135 2.57202 22.001 6.21452 22.001 10.6904ZM18.4004 14.3155C19.514 13.0952 20.001 11.954 20.001 10.6904C20.001 7.42195 16.4903 4.57202 12.001 4.57202C7.51164 4.57202 4.00098 7.42195 4.00098 10.6904C4.00098 13.5953 6.7293 16.1966 10.6269 16.7144L10.774 16.7396C11.8525 16.9658 12.6581 17.3539 13.1029 18.448C13.1158 18.4802 13.1279 18.5121 13.1395 18.5438C14.9449 17.3676 17.313 15.565 18.4004 14.3155ZM18.1385 10.3145C18.4293 10.3145 18.6635 10.552 18.6635 10.8404C18.6635 11.1279 18.4293 11.3654 18.1385 11.3654H16.676V12.3029H18.1385C18.4293 12.3029 18.6635 12.5387 18.6635 12.8279C18.6635 13.1145 18.4293 13.352 18.1385 13.352H16.1501C15.8626 13.352 15.6276 13.1145 15.6276 12.8279V8.85202C15.6276 8.56452 15.8626 8.32702 16.1526 8.32702H18.141C18.4293 8.32702 18.6635 8.56452 18.6635 8.85202C18.6635 9.14286 18.4293 9.37702 18.1385 9.37702H16.676V10.3145H18.1385ZM14.926 12.8279C14.926 13.0529 14.781 13.2529 14.566 13.3245C14.5126 13.342 14.4551 13.3504 14.4001 13.3504C14.2243 13.3504 14.0743 13.2754 13.9751 13.142L11.9393 10.3779V12.8279C11.9393 13.1145 11.7068 13.352 11.4135 13.352C11.1251 13.352 10.8918 13.1145 10.8918 12.8279V8.85202C10.8918 8.62702 11.036 8.42702 11.2501 8.35619C11.3001 8.33702 11.3635 8.32869 11.4118 8.32869C11.5743 8.32869 11.7243 8.41536 11.8243 8.54036L13.876 11.3154V8.85202C13.876 8.56452 14.111 8.32702 14.401 8.32702C14.6885 8.32702 14.926 8.56452 14.926 8.85202V12.8279ZM10.1418 12.8279C10.1418 13.1145 9.90681 13.352 9.61598 13.352C9.32848 13.352 9.09348 13.1145 9.09348 12.8279V8.85202C9.09348 8.56452 9.32848 8.32702 9.61848 8.32702C9.90681 8.32702 10.1418 8.56452 10.1418 8.85202V12.8279ZM8.08681 13.352H6.09848C5.81098 13.352 5.57348 13.1145 5.57348 12.8279V8.85202C5.57348 8.56452 5.81098 8.32702 6.09848 8.32702C6.38848 8.32702 6.62348 8.56452 6.62348 8.85202V12.3029H8.08681C8.37681 12.3029 8.61098 12.5387 8.61098 12.8279C8.61098 13.1145 8.37598 13.352 8.08681 13.352Z"/></symbol></svg>
 
   <header class="ij-bar" style="position:fixed;top:0;left:0;right:0;z-index:100">
@@ -273,7 +274,6 @@
     <section id="top" data-screen-label="Hero" aria-label="ijji — ภาพรวม" style="background:var(--product-ijji-gradient);color:var(--fg-on-light-primary);border-bottom:1px solid var(--border-hairline);scroll-margin-top:var(--header-height)">
       <div class="ij-hero-grid ij-hero-shell" style="max-width:var(--container-default);margin:0 auto">
         <div class="ij-hero-copy" style="display:grid;gap:var(--space-5)">
-          <div data-ij-motif="rings-c-transparent-ink" aria-hidden="true" style="width:72px;height:72px"><img src="ijji-addon/motif/svg/ijji-rings-c-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></div>
           <p class="eyebrow" lang="en" style="margin:0;color:var(--fg-on-light-secondary)">ijji · Your business buddy around the corner</p>
           <h1 style="margin:0;font-family:var(--font-display-th);font-weight:700;font-size:var(--type-h1-th);line-height:1.25;letter-spacing:0;text-wrap:balance;color:var(--fg-on-light-primary)">คู่หูธุรกิจ รอบรู้ รอบย่าน รอบร้านคุณ</h1>
           <p style="margin:0;max-width:34rem;font-size:var(--type-body-lg);color:var(--fg-on-light-secondary);text-wrap:pretty">อิจจี้ช่วยเจ้าของร้านอาหารและคาเฟ่ดูว่าปัญหาที่ร้านเจอมาจากอะไร — จากข้อมูลร้าน คนรอบย่าน คู่แข่ง รีวิว และเมนูเท่าที่มี — แล้วแปลงเป็นภารกิจรายวันที่ทำได้จริง วัดผลได้ และปรับแผนต่อเนื่อง ผ่าน LINE</p>
@@ -521,18 +521,18 @@
           <button id="ij-wander-toggle" class="ij-wander-control" type="button" aria-pressed="false" data-pause-label="หยุดการไฮไลต์คำถาม" data-resume-label="เล่นการไฮไลต์คำถามต่อ"><span class="ls-icon" data-wander-icon aria-hidden="true">pause</span><span data-wander-label>หยุดการไฮไลต์คำถาม</span></button>
         </div>
         <ol style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
-          <li data-approach="soft" data-cell="0" style="--i:0;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">groups</span>01 · คนเห็นร้าน</span><p style="margin:0;font-weight:600;text-wrap:pretty">แถวนี้มีคนแบบไหนที่น่าดึงเข้าร้านก่อน</p><p class="ij-thought" aria-live="off"><span class="is-on">“คนเดินผ่านทั้งวัน แต่ไม่มีใครเลี้ยวเข้ามา”</span><span>“หรือคนแถวนี้ไม่ใช่ลูกค้าเราตั้งแต่แรก?”</span><span>“จะเริ่มดึงใครก่อนดี ออฟฟิศ หรือคนในซอย?”</span></p></li>
-          <li data-approach="soft" data-cell="1" style="--i:1;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">door_open</span>02 · คนเข้าร้าน</span><p style="margin:0;font-weight:600;text-wrap:pretty">คนเห็นร้านแล้ว ทำไมยังไม่ตัดสินใจซื้อ</p><p class="ij-thought" aria-live="off"><span class="is-on">“ยืนอ่านเมนูหน้าร้านแล้วก็เดินต่อ”</span><span>“เขาไม่แน่ใจราคา หรือไม่แน่ใจว่าจะรอนานไหม?”</span><span>“ป้ายก็มี รูปก็มี แล้วขาดอะไร?”</span></p></li>
-          <li data-approach="soft" data-cell="2" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">add_shopping_cart</span>03 · ซื้อเพิ่มอีกนิด</span><p style="margin:0;font-weight:600;text-wrap:pretty">ลูกค้ากลุ่มนี้น่าซื้ออะไรเพิ่มอีกนิด</p><p class="ij-thought" aria-live="off"><span class="is-on">“สั่งจานเดียว น้ำเปล่า แล้วกลับ”</span><span>“จะชวนซื้อเพิ่มยังไงไม่ให้ดูยัดเยียด?”</span><span>“เซตคู่เครื่องดื่มจะคุ้มเขา หรือคุ้มเราคนเดียว?”</span></p></li>
-          <li data-approach="soft" data-cell="3" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">schedule</span>04 · ช่วงที่ร้านเงียบ</span><p style="margin:0;font-weight:600;text-wrap:pretty">ช่วงว่างของร้านควรเอาไปสร้างยอดแบบไหน</p><p class="ij-thought" aria-live="off"><span class="is-on">“บ่ายสองถึงห้าโมง โต๊ะว่างทั้งร้าน”</span><span>“เปิดไฟ เปิดแอร์ มีคนยืนรอ แต่ไม่มีลูกค้า”</span><span>“ปิดพักบ่ายดีไหม หรือหาอะไรขายช่วงนี้?”</span></p></li>
-          <li data-approach="soft" data-cell="4" style="--i:0;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">event_repeat</span>05 · กลับมาซ้ำ</span><p style="margin:0;font-weight:600;text-wrap:pretty">จะทำให้คนแถวนี้กลับมาซ้ำได้อย่างไร</p><p class="ij-thought" aria-live="off"><span class="is-on">“ลูกค้าใหม่มาแล้วหาย ไม่เห็นหน้าอีก”</span><span>“คนละแวกนี้เขากินร้านประจำร้านไหนกัน?”</span><span>“ทำบัตรสะสมแต้มก็แล้ว ยังไม่กลับมา”</span></p></li>
-          <li data-approach="soft" data-cell="5" style="--i:1;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">sell</span>06 · ราคากับความคุ้ม</span><p style="margin:0;font-weight:600;text-wrap:pretty">เมนูไหนมีโอกาสขยับราคาได้ โดยลูกค้ายังรู้สึกว่าคุ้ม</p><p class="ij-thought" aria-live="off"><span class="is-on">“ขึ้นราคาก็กลัวคนหาย ไม่ขึ้นก็ไม่ไหว”</span><span>“ลูกค้าคิดว่าแพง หรือแค่ยังไม่รู้ว่าได้อะไร?”</span><span>“ร้านข้าง ๆ ขายแพงกว่า แต่คนเต็ม”</span></p></li>
-          <li data-approach="soft" data-cell="6" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">restaurant</span>07 · ต้นทุนวัตถุดิบ</span><p style="margin:0;font-weight:600;text-wrap:pretty">เมนูไหนควรดัน เมนูไหนควรระวัง</p><p class="ij-thought" aria-live="off"><span class="is-on">“ของขึ้นทุกเดือน ขายราคาเท่าเดิม”</span><span>“เมนูขายดีที่สุด กำไรน้อยที่สุดหรือเปล่า?”</span><span>“ตัดเมนูไหนได้บ้าง โดยลูกค้าไม่รู้สึก”</span></p></li>
-          <li data-approach="soft" data-cell="7" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">receipt_long</span>08 · ค่าใช้จ่ายประจำ</span><p style="margin:0;font-weight:600;text-wrap:pretty">ค่าเช่าและเวลาเปิดร้านควรถูกใช้ให้คุ้มขึ้นจากยอดช่วงไหน</p><p class="ij-thought" aria-live="off"><span class="is-on">“ค่าเช่าถึงก่อนยอดถึง ทุกสิ้นเดือน”</span><span>“เปิดนานขึ้นจะคุ้มค่าไฟ ค่าคนไหม?”</span><span>“ค่าใช้จ่ายเท่าเดิม แต่ยอดไม่เท่าเดิมแล้ว”</span></p></li>
-          <li data-approach="soft" data-cell="8" style="--i:0;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">reviews</span>09 · รีวิวและคะแนน</span><p style="margin:0;font-weight:600;text-wrap:pretty">รีวิวบอกว่าร้านควรดันหรือแก้อะไรก่อน</p><p class="ij-thought" aria-live="off"><span class="is-on">“รีวิว 3 ดาวอันเดียว ค้างอยู่หน้าแรก”</span><span>“ลูกค้าบอกว่าอร่อย แต่ไม่มีใครเขียนให้”</span><span>“ควรตอบรีวิวนั้นยังไง หรือปล่อยไป?”</span></p></li>
-          <li data-approach="soft" data-cell="9" style="--i:1;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">store</span>10 · ร้านรอบตัว</span><p style="margin:0;font-weight:600;text-wrap:pretty">ร้านเราจะต่างจากร้านรอบตัวตรงไหนในสายตาลูกค้า</p><p class="ij-thought" aria-live="off"><span class="is-on">“ร้านใหม่เปิดข้าง ๆ คนต่อคิวยาว”</span><span>“เขาดีกว่าตรงไหน หรือแค่เห็นง่ายกว่า?”</span><span>“ต้องทำอะไรที่เขาไม่ทำ หรือทำเหมือนเขาให้ดีกว่า?”</span></p></li>
-          <li data-approach="soft" data-cell="10" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">room_service</span>11 · บริการ</span><p style="margin:0;font-weight:600;text-wrap:pretty">บริการช่วงไหนทำให้ลูกค้าซื้อไม่จบหรือไม่กลับมา</p><p class="ij-thought" aria-live="off"><span class="is-on">“ช่วงพีคออกอาหารช้า ลูกค้าหน้าเสีย”</span><span>“ควรเพิ่มคน หรือแค่จัดคิวใหม่?”</span><span>“ลูกค้ากลุ่มไหนที่รอไม่ได้จริง ๆ?”</span></p></li>
-          <li data-approach="soft" data-cell="11" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span class="ij-listen" data-ij-motif="rotate-b-transparent-ink" aria-hidden="true"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></span><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">trending_up</span>12 · ขยายร้าน</span><p style="margin:0;font-weight:600;text-wrap:pretty">ร้านควรโตทางไหนก่อน และเสี่ยงตรงไหน</p><p class="ij-thought" aria-live="off"><span class="is-on">“มีคนถามว่าส่งเดลิเวอรีไหม แต่ไม่รู้จะคุ้มไหม”</span><span>“จะเปิดสาขาสอง หรือทำสาขานี้ให้เต็มก่อน?”</span><span>“โตทางไหนที่ไม่ต้องเสี่ยงเงินก้อนใหญ่?”</span></p></li>
+          <li data-approach="soft" data-cell="0" style="--i:0;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">groups</span>01 · คนเห็นร้าน</span><p style="margin:0;font-weight:600;text-wrap:pretty">แถวนี้มีคนแบบไหนที่น่าดึงเข้าร้านก่อน</p><p class="ij-thought" aria-live="off"><span class="is-on">“คนเดินผ่านทั้งวัน แต่ไม่มีใครเลี้ยวเข้ามา”</span><span>“หรือคนแถวนี้ไม่ใช่ลูกค้าเราตั้งแต่แรก?”</span><span>“จะเริ่มดึงใครก่อนดี ออฟฟิศ หรือคนในซอย?”</span></p></li>
+          <li data-approach="soft" data-cell="1" style="--i:1;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">door_open</span>02 · คนเข้าร้าน</span><p style="margin:0;font-weight:600;text-wrap:pretty">คนเห็นร้านแล้ว ทำไมยังไม่ตัดสินใจซื้อ</p><p class="ij-thought" aria-live="off"><span class="is-on">“ยืนอ่านเมนูหน้าร้านแล้วก็เดินต่อ”</span><span>“เขาไม่แน่ใจราคา หรือไม่แน่ใจว่าจะรอนานไหม?”</span><span>“ป้ายก็มี รูปก็มี แล้วขาดอะไร?”</span></p></li>
+          <li data-approach="soft" data-cell="2" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">add_shopping_cart</span>03 · ซื้อเพิ่มอีกนิด</span><p style="margin:0;font-weight:600;text-wrap:pretty">ลูกค้ากลุ่มนี้น่าซื้ออะไรเพิ่มอีกนิด</p><p class="ij-thought" aria-live="off"><span class="is-on">“สั่งจานเดียว น้ำเปล่า แล้วกลับ”</span><span>“จะชวนซื้อเพิ่มยังไงไม่ให้ดูยัดเยียด?”</span><span>“เซตคู่เครื่องดื่มจะคุ้มเขา หรือคุ้มเราคนเดียว?”</span></p></li>
+          <li data-approach="soft" data-cell="3" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">schedule</span>04 · ช่วงที่ร้านเงียบ</span><p style="margin:0;font-weight:600;text-wrap:pretty">ช่วงว่างของร้านควรเอาไปสร้างยอดแบบไหน</p><p class="ij-thought" aria-live="off"><span class="is-on">“บ่ายสองถึงห้าโมง โต๊ะว่างทั้งร้าน”</span><span>“เปิดไฟ เปิดแอร์ มีคนยืนรอ แต่ไม่มีลูกค้า”</span><span>“ปิดพักบ่ายดีไหม หรือหาอะไรขายช่วงนี้?”</span></p></li>
+          <li data-approach="soft" data-cell="4" style="--i:0;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">event_repeat</span>05 · กลับมาซ้ำ</span><p style="margin:0;font-weight:600;text-wrap:pretty">จะทำให้คนแถวนี้กลับมาซ้ำได้อย่างไร</p><p class="ij-thought" aria-live="off"><span class="is-on">“ลูกค้าใหม่มาแล้วหาย ไม่เห็นหน้าอีก”</span><span>“คนละแวกนี้เขากินร้านประจำร้านไหนกัน?”</span><span>“ทำบัตรสะสมแต้มก็แล้ว ยังไม่กลับมา”</span></p></li>
+          <li data-approach="soft" data-cell="5" style="--i:1;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">sell</span>06 · ราคากับความคุ้ม</span><p style="margin:0;font-weight:600;text-wrap:pretty">เมนูไหนมีโอกาสขยับราคาได้ โดยลูกค้ายังรู้สึกว่าคุ้ม</p><p class="ij-thought" aria-live="off"><span class="is-on">“ขึ้นราคาก็กลัวคนหาย ไม่ขึ้นก็ไม่ไหว”</span><span>“ลูกค้าคิดว่าแพง หรือแค่ยังไม่รู้ว่าได้อะไร?”</span><span>“ร้านข้าง ๆ ขายแพงกว่า แต่คนเต็ม”</span></p></li>
+          <li data-approach="soft" data-cell="6" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">restaurant</span>07 · ต้นทุนวัตถุดิบ</span><p style="margin:0;font-weight:600;text-wrap:pretty">เมนูไหนควรดัน เมนูไหนควรระวัง</p><p class="ij-thought" aria-live="off"><span class="is-on">“ของขึ้นทุกเดือน ขายราคาเท่าเดิม”</span><span>“เมนูขายดีที่สุด กำไรน้อยที่สุดหรือเปล่า?”</span><span>“ตัดเมนูไหนได้บ้าง โดยลูกค้าไม่รู้สึก”</span></p></li>
+          <li data-approach="soft" data-cell="7" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">receipt_long</span>08 · ค่าใช้จ่ายประจำ</span><p style="margin:0;font-weight:600;text-wrap:pretty">ค่าเช่าและเวลาเปิดร้านควรถูกใช้ให้คุ้มขึ้นจากยอดช่วงไหน</p><p class="ij-thought" aria-live="off"><span class="is-on">“ค่าเช่าถึงก่อนยอดถึง ทุกสิ้นเดือน”</span><span>“เปิดนานขึ้นจะคุ้มค่าไฟ ค่าคนไหม?”</span><span>“ค่าใช้จ่ายเท่าเดิม แต่ยอดไม่เท่าเดิมแล้ว”</span></p></li>
+          <li data-approach="soft" data-cell="8" style="--i:0;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">reviews</span>09 · รีวิวและคะแนน</span><p style="margin:0;font-weight:600;text-wrap:pretty">รีวิวบอกว่าร้านควรดันหรือแก้อะไรก่อน</p><p class="ij-thought" aria-live="off"><span class="is-on">“รีวิว 3 ดาวอันเดียว ค้างอยู่หน้าแรก”</span><span>“ลูกค้าบอกว่าอร่อย แต่ไม่มีใครเขียนให้”</span><span>“ควรตอบรีวิวนั้นยังไง หรือปล่อยไป?”</span></p></li>
+          <li data-approach="soft" data-cell="9" style="--i:1;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">store</span>10 · ร้านรอบตัว</span><p style="margin:0;font-weight:600;text-wrap:pretty">ร้านเราจะต่างจากร้านรอบตัวตรงไหนในสายตาลูกค้า</p><p class="ij-thought" aria-live="off"><span class="is-on">“ร้านใหม่เปิดข้าง ๆ คนต่อคิวยาว”</span><span>“เขาดีกว่าตรงไหน หรือแค่เห็นง่ายกว่า?”</span><span>“ต้องทำอะไรที่เขาไม่ทำ หรือทำเหมือนเขาให้ดีกว่า?”</span></p></li>
+          <li data-approach="soft" data-cell="10" style="--i:2;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">room_service</span>11 · บริการ</span><p style="margin:0;font-weight:600;text-wrap:pretty">บริการช่วงไหนทำให้ลูกค้าซื้อไม่จบหรือไม่กลับมา</p><p class="ij-thought" aria-live="off"><span class="is-on">“ช่วงพีคออกอาหารช้า ลูกค้าหน้าเสีย”</span><span>“ควรเพิ่มคน หรือแค่จัดคิวใหม่?”</span><span>“ลูกค้ากลุ่มไหนที่รอไม่ได้จริง ๆ?”</span></p></li>
+          <li data-approach="soft" data-cell="11" style="--i:3;background:var(--ij-cell-bg,var(--surface-card));padding:var(--space-5);display:grid;gap:var(--space-2);align-content:start"><span style="font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;font-size:20px;vertical-align:-5px">trending_up</span>12 · ขยายร้าน</span><p style="margin:0;font-weight:600;text-wrap:pretty">ร้านควรโตทางไหนก่อน และเสี่ยงตรงไหน</p><p class="ij-thought" aria-live="off"><span class="is-on">“มีคนถามว่าส่งเดลิเวอรีไหม แต่ไม่รู้จะคุ้มไหม”</span><span>“จะเปิดสาขาสอง หรือทำสาขานี้ให้เต็มก่อน?”</span><span>“โตทางไหนที่ไม่ต้องเสี่ยงเงินก้อนใหญ่?”</span></p></li>
         </ol>
         <p style="margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-4);color:var(--text-secondary);text-wrap:pretty">เจอข้อไหนที่ใช่ร้านคุณ — เล่าให้อิจจี้ฟังก่อนตัดสินใจ <a class="btn" href="https://page.line.me/569ifvmv" target="_blank" rel="noopener noreferrer"><svg class="ij-line-mark" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><use href="#ij-line-logo"></use></svg>เล่าใน LINE <span aria-hidden="true" style="display:inline-block;font-family:var(--font-technical)">↗</span></a></p>
       </div>
@@ -564,7 +564,6 @@
 
     <section id="start" data-screen-label="เริ่มใช้" aria-labelledby="start-title" style="background:var(--product-ijji-gradient);color:var(--fg-on-light-primary);scroll-margin-top:var(--header-height)">
       <div style="max-width:var(--container-reading);margin:0 auto;padding:clamp(56px,9vw,112px) clamp(16px,4vw,32px);display:grid;gap:var(--space-5);justify-items:start">
-        <div data-ij-motif="rotate-b-transparent-ink" aria-hidden="true" style="width:48px;height:48px"><img src="ijji-addon/motif/svg/ijji-rotate-b-transparent-ink.svg" alt="" style="display:block;width:100%;height:100%"></div>
         <p class="eyebrow" style="margin:0;color:var(--fg-on-light-secondary)"><span class="ls-icon" aria-hidden="true" style="font-size:18px;line-height:1;vertical-align:-4px;margin-right:6px;">rocket_launch</span>เริ่มฟรี</p>
         <h2 id="start-title" style="margin:0;font-family:var(--font-display-th);font-weight:700;font-size:var(--type-h2);line-height:1.25;text-wrap:balance;color:var(--fg-on-light-primary)">เริ่มเล่าเรื่องร้านให้อิจจี้ฟัง</h2>
         <p style="margin:0;font-size:var(--type-body-lg);color:var(--fg-on-light-secondary);text-wrap:pretty">ไม่ต้องกรอกฟอร์มยาว ปักหมุดร้าน เล่าปัญหาที่กวนใจ แล้วรับคำวินิจฉัยกับภารกิจแรกได้เลย ยิ่งเล่าชัด คำตอบยิ่งตรงร้านของคุณ</p>
@@ -602,6 +601,7 @@
     </div>
     <div style="border-top:1px solid var(--border-hairline)">
       <p style="max-width:var(--container-default);margin:0 auto;padding:var(--space-4) clamp(16px,4vw,32px);font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-metadata)">© 2026 Landometer · ijji · <span lang="en">Your business buddy around the corner</span></p>
+      <p style="max-width:var(--container-default);margin:0 auto;padding:0 clamp(16px,4vw,32px) var(--space-4);font-size:var(--type-body-sm);color:var(--text-metadata)"><a href="design-system/" style="color:var(--interaction-accent);text-decoration:underline;text-underline-offset:.2em">คู่มือและไฟล์ normative: ijji DS 0.5.2 · Add-on 0.5.5 · LDS 0.9.5</a></p>
       <p style="max-width:var(--container-default);margin:0 auto;padding:0 clamp(16px,4vw,32px) var(--space-4);font-family:var(--font-technical);font-size:var(--type-label);color:var(--text-muted)">ภาพประกอบบุคคลจาก <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em">Pexels</a> ใช้ตาม <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em">Pexels License</a> · บุคคลในภาพไม่ใช่ผู้ใช้หรือผู้รับรอง ijji</p>
     </div>
   </footer>
@@ -622,7 +622,13 @@ class Component extends DCLogic {
       if (this._themeMedia.addEventListener) this._themeMedia.addEventListener('change', this._themeMediaChange);
       else this._themeMedia.addListener(this._themeMediaChange);
     }
-    this.arm(); this.mountMotifs(); this.mountHeroLogo(); this.armNavigation(); this.armCalm(); this.armBookmarks(); this.armCtaCue(); this.armWander();
+    this._approachMedia = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+    this._approachMediaChange = () => this.arm();
+    if (this._approachMedia) {
+      if (this._approachMedia.addEventListener) this._approachMedia.addEventListener('change', this._approachMediaChange);
+      else this._approachMedia.addListener(this._approachMediaChange);
+    }
+    this.arm(); this.mountHeroLogo(); this.armNavigation(); this.armCalm(); this.armBookmarks(); this.armCtaCue(); this.armWander();
   }
   applyThemeMode(nextMode, persist) {
     const mode = ['auto', 'light', 'dark'].includes(nextMode) ? nextMode : 'auto';
@@ -832,25 +838,6 @@ class Component extends DCLogic {
     else this._reducedMotion.addListener(this._motionChange);
     this._calmBar = bar;
   }
-  // Approved ijji.four-beat marks: the static SVG image fallback is the fail-open state; the inline markup from
-  // the approved ijji-motifs.js is what the motion layer (ijji-motion.css) animates.
-  async mountMotifs() {
-    let mod;
-    try { mod = await import('./ijji-addon/motif/ijji-motifs.js'); } catch (e) { return; }
-    const set = mod.IJJI_MOTIFS || {};
-    const fill = () => {
-      const el = this.rootRef.current; if (!el) return;
-      el.querySelectorAll('[data-ij-motif]:not([data-ij-live])').forEach(n => {
-        const svg = set[n.dataset.ijMotif]; if (!svg) return;
-        n.innerHTML = svg; n.dataset.ijLive = '1';
-        const s = n.firstElementChild; if (s) { s.removeAttribute('width'); s.removeAttribute('height'); s.style.width = '100%'; s.style.height = '100%'; s.style.display = 'block'; }
-      });
-    };
-    fill();
-    this.motifMo = new MutationObserver(fill);
-    this.motifMo.observe(this.rootRef.current, { childList: true, subtree: true });
-    setTimeout(() => { if (this.motifMo) this.motifMo.disconnect(); }, 15000);
-  }
   mountHeroLogo() {
     this._heroLogoController = window.IjjiHeroLogo?.mount(this.rootRef.current);
   }
@@ -877,6 +864,10 @@ class Component extends DCLogic {
       if (this._themeMedia.removeEventListener) this._themeMedia.removeEventListener('change', this._themeMediaChange);
       else this._themeMedia.removeListener(this._themeMediaChange);
     }
+    if (this._approachMedia && this._approachMediaChange) {
+      if (this._approachMedia.removeEventListener) this._approachMedia.removeEventListener('change', this._approachMediaChange);
+      else this._approachMedia.removeListener(this._approachMediaChange);
+    }
     if (this._wanderStop) this._wanderStop();
     if (this._wanderIo) this._wanderIo.disconnect();
     if (this._wanderVis) document.removeEventListener('visibilitychange', this._wanderVis);
@@ -887,30 +878,61 @@ class Component extends DCLogic {
   teardown() {
     if (this.io) this.io.disconnect();
     if (this.mo) this.mo.disconnect();
+    const el = this.rootRef.current;
+    if (this._approachScroll) window.removeEventListener('scroll', this._approachScroll);
+    if (this._approachVisibility) document.removeEventListener('visibilitychange', this._approachVisibility);
+    if (el && this._approachFocus) el.removeEventListener('focusin', this._approachFocus);
+    if (this._approachFrame) cancelAnimationFrame(this._approachFrame);
     clearTimeout(this.wd); clearTimeout(this.moEnd);
+    this._approachScroll = this._approachVisibility = this._approachFocus = null;
+    this._approachFrame = null;
     this.io = this.mo = null;
   }
   arm() {
     const el = this.rootRef.current; if (!el) return;
     this.teardown();
-    const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduce = this._approachMedia && this._approachMedia.matches;
     const ok = (this.props.reveal ?? true) && !reduce && 'IntersectionObserver' in window;
     const all = () => el.querySelectorAll('[data-approach]');
     if (!ok) { el.classList.remove('ij-armed'); all().forEach(n => n.classList.add('is-in')); return; }
+    const visible = n => { const r = n.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight; };
+    all().forEach(n => n.classList.toggle('is-in', visible(n) || n.contains(document.activeElement)));
     el.classList.add('ij-armed');
     let fired = false;
     this.io = new IntersectionObserver(entries => {
       fired = true;
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); this.io.unobserve(e.target); } });
+      entries.forEach(e => { if (e.isIntersecting || e.target.contains(document.activeElement)) e.target.classList.add('is-in'); });
     }, { threshold: .14, rootMargin: '0px 0px -12% 0px' });
-    const watch = () => all().forEach(n => { if (!n.classList.contains('is-in') && !n.dataset.ijObs) { n.dataset.ijObs = '1'; this.io.observe(n); } });
+    const observed = new WeakSet();
+    const watch = () => all().forEach(n => { if (!observed.has(n)) { observed.add(n); if (visible(n)) n.classList.add('is-in'); this.io.observe(n); } });
     watch();
+    // Keep reached content readable after two frames; reset only once it is fully offscreen.
+    const pending = new WeakSet();
+    const check = () => {
+      this._approachFrame = null;
+      if (document.hidden || !el.classList.contains('ij-armed')) return;
+      all().forEach(n => {
+        if (!visible(n)) { if (!n.contains(document.activeElement)) n.classList.remove('is-in'); return; }
+        if (n.classList.contains('is-in') || pending.has(n)) return;
+        pending.add(n);
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          pending.delete(n);
+          if (el.classList.contains('ij-armed') && visible(n)) n.classList.add('is-in');
+        }));
+      });
+    };
+    this._approachScroll = () => { if (!this._approachFrame) this._approachFrame = requestAnimationFrame(check); };
+    this._approachVisibility = () => { if (!document.hidden) this._approachScroll(); };
+    this._approachFocus = e => { const n = e.target.closest && e.target.closest('[data-approach]'); if (n) n.classList.add('is-in'); };
+    window.addEventListener('scroll', this._approachScroll, { passive: true });
+    document.addEventListener('visibilitychange', this._approachVisibility);
+    el.addEventListener('focusin', this._approachFocus);
     // content keeps streaming in after mount — pick up new reveal targets for a while, then stop
     this.mo = new MutationObserver(watch);
     this.mo.observe(el, { childList: true, subtree: true });
     this.moEnd = setTimeout(() => { if (this.mo) this.mo.disconnect(); }, 15000);
     // fail-open watchdog: if the observer never reports within 2400ms, land the final state
-    this.wd = setTimeout(() => { if (!fired) { el.classList.remove('ij-armed'); all().forEach(n => n.classList.add('is-in')); } }, 2400);
+    this.wd = setTimeout(() => { if (!fired) { this.teardown(); el.classList.remove('ij-armed'); all().forEach(n => n.classList.add('is-in')); } }, 2400);
   }
   renderVals() {
     const menuOpen = !!this.state.menuOpen;

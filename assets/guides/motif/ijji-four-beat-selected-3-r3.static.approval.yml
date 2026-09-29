@@ -1,0 +1,52 @@
+schemaVersion: ijji-motif-static-approval/1.0
+recordId: IJJI-MOTIF-STATIC-APPROVAL-20260904-01
+status: owner_approved_partial_live_static_set
+approvedAt: 2026-09-04T07:56:55+07:00
+approvedByRole: owner
+expiresAt: null
+instructionSource:
+  kind: current_user_instruction
+  date: 2026-09-04
+sourceArchive:
+  name: ijji motif.zip
+  bytes: 161809
+  sha256: 672b7667af7fef81ab9b9c9c4886851bc9821f448d8b401c0d0b9ac0c86851a8
+family:
+  motifId: ijji.four-beat
+  assetFamily: ijji.four-beat.selected-3
+  revision: 3
+  familyRecord: assets/motifs/ijji-four-beat-selected-3-r3/family-record.json
+  familyRecordSha256: e31b3b51f1acfa35175bdbbec535f2cb0dea678de5a41e37063eced9ed23bfdb
+  identityRole: none
+approvalScope:
+  exactStaticVisualForms: [graph-b, rings-c, rotate-b]
+  fixedSurfaceLiveVariants: [brand-blue, dark, ground-mist]
+  distributedNotLiveApprovedVariants: [canvas, transparent-mint, transparent-ink]
+  permittedTransport: [external_img_aria_hidden, css_background_decorative]
+  prohibitedTransport: [inline_svg, object_embed, supplied_javascript_markup]
+  approvedJobs:
+    - ijji_section_orientation_after_official_identity
+    - ijji_quiet_transition_or_closure
+    - redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist
+  prohibitedContexts:
+    - logo_or_official_identity_substitution
+    - favicon_social_touch_maskable_or_line_identity
+    - chart_map_legend_evidence_or_source_status
+    - semantic_state_progress_score_urgency_or_magnitude
+    - alert_cashflow_food_safety_legal_privacy_or_escalation
+    - business_growth_sales_traffic_confidence_completion_or_success_claim
+  perArtifactGateRequired: true
+  liveUsageAllowed: true_for_exact_live_asset_ids_in_family_record_after_per_artifact_gate
+motion:
+  motionEnabled: false
+  suppliedCssOrJsLiveUseAllowed: false
+evidenceRefs:
+  - assets/verification/motif/originality-and-nontrace-20260904.json
+  - assets/verification/motif/pseudo-logo-test-20260904.json
+  - assets/verification/motif/contrast-20260904.json
+  - assets/verification/motif/static-usage-and-a11y-20260904.json
+rights:
+  ownerControlledUsePermission: ijji_context_only
+  openSourceClaim: false
+  cropRecolorTraceReconstructOrDerivativeAllowed: false
+  distributionAloneExpandsPermission: false

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "ijji-motif-pseudo-logo-test/1.0",
+  "recordId": "IJJI-MOTIF-PSEUDOLOGO-20260904-01",
+  "reviewedAt": "2026-09-04T07:56:55+07:00",
+  "method": "side-by-side visual and structural desk review plus enforced substitution scenarios",
+  "membersReviewed": ["graph-b", "rings-c", "rotate-b"],
+  "structuralFindings": {
+    "containsOfficialWordmark": false,
+    "containsOfficialBodyForms": false,
+    "containsTagline": false,
+    "isCompleteOfficialLockup": false,
+    "couldBecomePseudoLogoIfUsedStandalone": true
+  },
+  "requiredControls": [
+    "identityRole remains none",
+    "approved official ijji identity is established before motif placement",
+    "motif is never used standalone to identify ijji",
+    "motif is prohibited in logo, favicon, social, touch, maskable, LINE identity, signature, and navigation-brand slots"
+  ],
+  "result": "pass_conditionally_with_required_controls",
+  "failureCondition": "Any standalone or identity-substitution use fails this test and is not approved."
+}
+

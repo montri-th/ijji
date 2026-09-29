@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "ijji-motif-contrast-evidence/1.0",
+  "recordId": "IJJI-MOTIF-CONTRAST-20260904-01",
+  "calculatedAt": "2026-09-04T07:56:55+07:00",
+  "method": "WCAG relative luminance and contrast ratio using exact sRGB hex values from delivered SVG bytes",
+  "requiredRatioForRecognitionOrientationOrStructure": 3,
+  "pairings": [
+    {"inkRole": "energy.mint", "ink": "#0AD69C", "surfaceRole": "brand.blue", "surface": "#1D4497", "ratio": 4.777, "result": "pass"},
+    {"inkRole": "energy.mint", "ink": "#0AD69C", "surfaceRole": "surface.card.dark", "surface": "#20292D", "ratio": 7.844, "result": "pass"},
+    {"inkRole": "text.primary.light", "ink": "#182327", "surfaceRole": "ground.mist.stop.0", "surface": "#C4E0EE", "ratio": 11.650, "result": "pass"},
+    {"inkRole": "text.primary.light", "ink": "#182327", "surfaceRole": "ground.mist.stop.0.5", "surface": "#B2E2E2", "ratio": 11.364, "result": "pass"},
+    {"inkRole": "text.primary.light", "ink": "#182327", "surfaceRole": "ground.mist.stop.1", "surface": "#CCE6D0", "ratio": 12.072, "result": "pass"},
+    {"inkRole": "energy.mint", "ink": "#0AD69C", "surfaceRole": "surface.card.light", "surface": "#FCFCFA", "ratio": 1.840, "result": "fail_for_meaningful_use"}
+  ],
+  "variantDecision": {
+    "brand-blue": "fixed_surface_live_eligible",
+    "dark": "fixed_surface_live_eligible",
+    "ground-mist": "fixed_surface_live_eligible",
+    "canvas": "distributed_not_live_approved",
+    "transparent-mint": "host_surface_unbound_not_live_approved",
+    "transparent-ink": "host_surface_unbound_not_live_approved"
+  }
+}
+

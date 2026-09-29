@@ -1,3 +1,20 @@
+# ijji web r10 — prepared release notes
+
+Release ID: `ijji-web-20260930-r10`
+Status: `prepared_not_published`
+Parent: LDS `0.9.5` / `v0.9.5-owner.1` / `color-srgb-08`
+Product: ijji DS `0.5.2` + Add-on `0.5.5`
+
+- Adds versioned normative successors, a one-file Project Source projection, and a public download page/package while preserving historical 0.5.1/0.5.4 documents.
+- Retains the exact approved static motif registry, 18 SVGs, approval, verification records and source archive as auditable historical asset provenance.
+- Loads exact LDS 0.9.5 runtime colors/build-kit after the retained structural layer and pins its package SHA-256.
+- Removes the four-beat inline/looping motif runtime route and unapproved transparent placements; keeps the separately approved finite logo-sting identity.
+- Aligns approach reveal with LDS 0.9.5 reentry behavior, with focus, reduced-motion, visibility and fail-open safeguards.
+- Removes selected-navigation inset highlights while retaining background, weight and focus indication.
+- Publication, live-byte parity and native rendered QA remain separate gates.
+
+---
+
 # ijji web r9 — release notes
 
 Release ID: `ijji-web-20260909-r9`

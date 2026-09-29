@@ -1,9 +1,8 @@
-/* ijji product layer — ijji DS Add-on v0.5.3 (ds-addon-ui-20260902-01) on Landometer Design System v0.9.1.
+/* ijji product layer — ijji DS Add-on v0.5.5 on Landometer Design System v0.9.5.
    Load AFTER styles.css and scope with data-product="ijji". var() only: ijji owns no palette, font, icon
    family, spacing, radius or motion value [IJJI-IDENTITY-01]; every binding below is the one the approved
    reference (machine/ijji-ds-addon/v0.5.3/assets/example-source/styles.css) uses. Authority, hashes and
    the rule digest: addons/ijji/README.md. */
-@import url("motif/ijji-motion.css"); /* ijji.four-beat motif motion layer (approved bytes, unmodified) — only bites on .ijji-motif elements */
 [data-product="ijji"]{
   --ijji-primary-button-bg:var(--interaction-accent);
   --ijji-primary-button-ink:var(--fg-on-deep-primary);

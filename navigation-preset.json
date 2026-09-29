@@ -8,11 +8,12 @@
     "en"
   ],
   "profile": {
-    "classification": "current-v0.9.1-safe-adaptation",
-    "normativeAuthority": "Landometer Design System 0.9.1 / 0.9.1-r8",
+    "classification": "current-v0.9.5-compatible-adaptation",
+    "normativeAuthority": "Landometer Design System 0.9.5 / v0.9.5-owner.1",
     "candidateInput": "Unified navbar design handoff r7",
     "candidateInputIsNormative": false,
-    "ownerSelectedArtifactReference": "Rebuild 02 master-brand presentation"
+    "ownerSelectedArtifactReference": "Rebuild 02 master-brand presentation",
+    "compatibilityNote": "Historical r5 navigation structure retained; current colors and focus behavior use LDS 0.9.5; no decorative bracket or left-edge selected rail."
   },
   "identity": {
     "masterBrand": "Landometer",
@@ -103,12 +104,54 @@
     "minViewportWidthPx": 1280,
     "position": "fixed_right_center",
     "targets": [
-      { "icon": "storefront", "id": "top", "label": { "th": "ภาพรวม", "en": "Overview" } },
-      { "icon": "lightbulb", "id": "why", "label": { "th": "ทำไมต้องมีอิจจี้", "en": "Why ijji" } },
-      { "icon": "map", "id": "locale", "label": { "th": "รอบย่าน", "en": "Your neighbourhood" } },
-      { "icon": "chat", "id": "answer", "label": { "th": "ตัวอย่างคำตอบ", "en": "Sample answer" } },
-      { "icon": "balance", "id": "compare", "label": { "th": "เปรียบเทียบทางเลือก", "en": "How the options compare" } },
-      { "icon": "problem", "id": "problems", "label": { "th": "ปัญหาร้าน 12 แบบ", "en": "12 shop challenges" } }
+      {
+        "icon": "storefront",
+        "id": "top",
+        "label": {
+          "th": "ภาพรวม",
+          "en": "Overview"
+        }
+      },
+      {
+        "icon": "lightbulb",
+        "id": "why",
+        "label": {
+          "th": "ทำไมต้องมีอิจจี้",
+          "en": "Why ijji"
+        }
+      },
+      {
+        "icon": "map",
+        "id": "locale",
+        "label": {
+          "th": "รอบย่าน",
+          "en": "Your neighbourhood"
+        }
+      },
+      {
+        "icon": "chat",
+        "id": "answer",
+        "label": {
+          "th": "ตัวอย่างคำตอบ",
+          "en": "Sample answer"
+        }
+      },
+      {
+        "icon": "balance",
+        "id": "compare",
+        "label": {
+          "th": "เปรียบเทียบทางเลือก",
+          "en": "How the options compare"
+        }
+      },
+      {
+        "icon": "problem",
+        "id": "problems",
+        "label": {
+          "th": "ปัญหาร้าน 12 แบบ",
+          "en": "12 shop challenges"
+        }
+      }
     ],
     "targetSizePx": 44,
     "labelMode": "visible_tooltip_on_hover_or_focus",

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "ijji-motif-static-usage-qa/1.0",
+  "recordId": "IJJI-MOTIF-STATIC-USAGE-QA-20260904-01",
+  "reviewedAt": "2026-09-04T07:56:55+07:00",
+  "sourceInspection": {
+    "selectedSvgCount": 18,
+    "viewBox": "-20 -20 240 240",
+    "embeddedRoleImgAndCreativeAriaLabel": true,
+    "motionEmbeddedInSvg": false,
+    "activeContentFound": false
+  },
+  "renderedEvidence": {
+    "path": "assets/verification/motif/fixed-surfaces-contact-sheet.png",
+    "columns": ["graph-b", "rings-c", "rotate-b"],
+    "rows": ["brand-blue", "dark", "ground-mist"],
+    "source": "exact delivered SVG bytes rendered at 240 by 240 pixels per tile"
+  },
+  "approvedTransport": {
+    "externalImg": {"requiredAttributes": {"alt": "", "aria-hidden": "true"}},
+    "cssBackground": {"accessibilityTreeExposure": "none"}
+  },
+  "unapprovedTransport": ["inline_svg", "object", "embed", "supplied_ijji-motifs.js"],
+  "deletionTestPolicy": {
+    "releaseFinding": "The motif is never necessary to understand content, evidence, state, or action and therefore cannot carry those meanings.",
+    "perArtifactRequirement": "Record the single ijji orientation, transition, or closure job. Remove the motif when its deletion leaves ijji recognition/orientation unchanged or improves comprehension/action.",
+    "flatFallback": "Approved identity, visible text, and whitespace preserve the complete task without the motif."
+  },
+  "accessibilityRequirements": [
+    "approved official identity and any meaningful label exist outside the motif",
+    "the exact motif is hidden from assistive technology",
+    "no state, progress, reading order, or meaning depends on color, geometry, or motion",
+    "actual artifact passes light/dark, 200% zoom, Thai 130%, forced-colors, print, no-image, and assistive-technology checks"
+  ],
+  "motionDecision": "not_approved_static_only",
+  "result": "pass_as_release_policy__artifact_specific_receipt_still_required"
+}

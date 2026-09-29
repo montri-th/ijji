@@ -1,0 +1,1386 @@
+{
+  "schemaVersion": "ijji-motif-family/0.1",
+  "recordId": "IJJI-MOTIF-FAMILY-SELECTED3-R3-20260904",
+  "motifId": "ijji.four-beat",
+  "assetFamily": "ijji.four-beat.selected-3",
+  "revision": 3,
+  "revisionDate": "2026-09-04",
+  "owner": "ijji",
+  "identityRole": "none",
+  "status": "owner_approved_static_partial_live_set",
+  "sourceArchive": {
+    "name": "ijji motif.zip",
+    "installedPath": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+    "bytes": 161809,
+    "sha256": "672b7667af7fef81ab9b9c9c4886851bc9821f448d8b401c0d0b9ac0c86851a8",
+    "entryCount": 63
+  },
+  "compatibleRelease": {
+    "ijjiDesignSystemVersion": "0.5.1",
+    "ijjiDsAddonVersion": "0.5.4",
+    "packageId": "ijji-ds-addon-assets-v0.5.4",
+    "parentLds": "0.9.1-r8/v0.9.1-mp7/color-srgb-05"
+  },
+  "approvalRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+  "familyBoundary": {
+    "ijjiOnly": true,
+    "officialIdentityFirst": true,
+    "attachedCreativeMeaningsNormative": false,
+    "motionEnabled": false,
+    "exactStaticFilesDistributed": 18,
+    "liveEligibleAssetCount": 9,
+    "perArtifactGateRequired": true
+  },
+  "assetRecords": [
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.graph-b.brand-blue",
+      "memberId": "graph-b",
+      "neutralFormName": "four rounded units on an ascending diagonal",
+      "sourceCreativeLabelNonNormative": "Exponential four / Climb from the base",
+      "derivationClass": "owner_approved_measured_logo_form_derivative_exact_hash_only",
+      "pseudoLogoRisk": "high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-graph-b-brand-blue.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8287,
+      "sha256": "f99e49088f14a97e6ba5c787708a1d1252734638d0f363f0c2f113258f57ee48",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "brand-blue",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": "brand.blue",
+        "minimumRecordedContrast": 4.777,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": true,
+      "useStatus": "live_eligible_after_per_artifact_gate"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.graph-b.canvas",
+      "memberId": "graph-b",
+      "neutralFormName": "four rounded units on an ascending diagonal",
+      "sourceCreativeLabelNonNormative": "Exponential four / Climb from the base",
+      "derivationClass": "owner_approved_measured_logo_form_derivative_exact_hash_only",
+      "pseudoLogoRisk": "high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-graph-b-canvas.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8317,
+      "sha256": "d8424a94bb8023e0a6d0f63b442e8d6255b9e65c2c6452631a6e11993cec2e9a",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "canvas",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": "surface.card.light",
+        "minimumRecordedContrast": 1.84,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": false,
+      "useStatus": "distributed_not_live__contrast_below_3_to_1"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.graph-b.dark",
+      "memberId": "graph-b",
+      "neutralFormName": "four rounded units on an ascending diagonal",
+      "sourceCreativeLabelNonNormative": "Exponential four / Climb from the base",
+      "derivationClass": "owner_approved_measured_logo_form_derivative_exact_hash_only",
+      "pseudoLogoRisk": "high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-graph-b-dark.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8315,
+      "sha256": "92ed292262b34111d21cbd26ae2fbd8231bda37c2160d0f8ada8d19750d81c19",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "dark",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": "surface.card.dark",
+        "minimumRecordedContrast": 7.844,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": true,
+      "useStatus": "live_eligible_after_per_artifact_gate"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.graph-b.ground-mist",
+      "memberId": "graph-b",
+      "neutralFormName": "four rounded units on an ascending diagonal",
+      "sourceCreativeLabelNonNormative": "Exponential four / Climb from the base",
+      "derivationClass": "owner_approved_measured_logo_form_derivative_exact_hash_only",
+      "pseudoLogoRisk": "high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-graph-b-ground-mist.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8671,
+      "sha256": "591d69e5286fed28e4022b6d02aa3cb6d6a8d8a461df91ba24de8907e3f5807a",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "ground-mist",
+        "inkRoleRef": "text.primary.light",
+        "allowedRoleRefs": [
+          "text.primary.light"
+        ],
+        "ownedSurfaceRoleRef": "atmosphere.gradient.ground.mist",
+        "minimumRecordedContrast": 11.364,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": true,
+      "useStatus": "live_eligible_after_per_artifact_gate"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.graph-b.transparent-ink",
+      "memberId": "graph-b",
+      "neutralFormName": "four rounded units on an ascending diagonal",
+      "sourceCreativeLabelNonNormative": "Exponential four / Climb from the base",
+      "derivationClass": "owner_approved_measured_logo_form_derivative_exact_hash_only",
+      "pseudoLogoRisk": "high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-graph-b-transparent-ink.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8344,
+      "sha256": "92c6952e506564e4a85ac8f059890329e50662fa50963292c909c1052bac372a",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "transparent-ink",
+        "inkRoleRef": "text.primary.light",
+        "allowedRoleRefs": [
+          "text.primary.light"
+        ],
+        "ownedSurfaceRoleRef": null,
+        "minimumRecordedContrast": null,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": false,
+      "useStatus": "distributed_not_live__host_surface_unbound"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.graph-b.transparent-mint",
+      "memberId": "graph-b",
+      "neutralFormName": "four rounded units on an ascending diagonal",
+      "sourceCreativeLabelNonNormative": "Exponential four / Climb from the base",
+      "derivationClass": "owner_approved_measured_logo_form_derivative_exact_hash_only",
+      "pseudoLogoRisk": "high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-graph-b-transparent-mint.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8217,
+      "sha256": "5df64c77388dc1e0f6ddf83080578db9f945966eb2c4f0c09187db2a4b54f7f7",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "transparent-mint",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": null,
+        "minimumRecordedContrast": null,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": false,
+      "useStatus": "distributed_not_live__host_surface_unbound"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rings-c.brand-blue",
+      "memberId": "rings-c",
+      "neutralFormName": "one central unit with three concentric rings",
+      "sourceCreativeLabelNonNormative": "Three rings / Draw on the phrase",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rings-c-brand-blue.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8530,
+      "sha256": "82e0a26220f54fda854b3e4665c3c6bca64c43d19b048e23bea8a5123be7c276",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "brand-blue",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": "brand.blue",
+        "minimumRecordedContrast": 4.777,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": true,
+      "useStatus": "live_eligible_after_per_artifact_gate"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rings-c.canvas",
+      "memberId": "rings-c",
+      "neutralFormName": "one central unit with three concentric rings",
+      "sourceCreativeLabelNonNormative": "Three rings / Draw on the phrase",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rings-c-canvas.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8560,
+      "sha256": "e631ec90f2a9ea4cc948b47dd1de3803b63f667dfa41ce271c2523161e0be454",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "canvas",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": "surface.card.light",
+        "minimumRecordedContrast": 1.84,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": false,
+      "useStatus": "distributed_not_live__contrast_below_3_to_1"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rings-c.dark",
+      "memberId": "rings-c",
+      "neutralFormName": "one central unit with three concentric rings",
+      "sourceCreativeLabelNonNormative": "Three rings / Draw on the phrase",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rings-c-dark.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8558,
+      "sha256": "935eca1e5c3506a65698c471f8b808ea830e6d33273897563a1ecbd8ac6f3e70",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "dark",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": "surface.card.dark",
+        "minimumRecordedContrast": 7.844,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": true,
+      "useStatus": "live_eligible_after_per_artifact_gate"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rings-c.ground-mist",
+      "memberId": "rings-c",
+      "neutralFormName": "one central unit with three concentric rings",
+      "sourceCreativeLabelNonNormative": "Three rings / Draw on the phrase",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rings-c-ground-mist.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8820,
+      "sha256": "ac6642e269c2580e400ef035fc78f790276837ffddefaaa86a8315e156cb7eb0",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "ground-mist",
+        "inkRoleRef": "text.primary.light",
+        "allowedRoleRefs": [
+          "text.primary.light"
+        ],
+        "ownedSurfaceRoleRef": "atmosphere.gradient.ground.mist",
+        "minimumRecordedContrast": 11.364,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": true,
+      "useStatus": "live_eligible_after_per_artifact_gate"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rings-c.transparent-ink",
+      "memberId": "rings-c",
+      "neutralFormName": "one central unit with three concentric rings",
+      "sourceCreativeLabelNonNormative": "Three rings / Draw on the phrase",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rings-c-transparent-ink.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8493,
+      "sha256": "e138780914ab1afee9a7cfda3f1eb730fa41917b9acdd678a4545009b7597b10",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "transparent-ink",
+        "inkRoleRef": "text.primary.light",
+        "allowedRoleRefs": [
+          "text.primary.light"
+        ],
+        "ownedSurfaceRoleRef": null,
+        "minimumRecordedContrast": null,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": false,
+      "useStatus": "distributed_not_live__host_surface_unbound"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rings-c.transparent-mint",
+      "memberId": "rings-c",
+      "neutralFormName": "one central unit with three concentric rings",
+      "sourceCreativeLabelNonNormative": "Three rings / Draw on the phrase",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rings-c-transparent-mint.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8460,
+      "sha256": "10afbfc96f1a7b4a24ff9220560883efe82bba1e17efbc0dc550dc202e89b028",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "transparent-mint",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": null,
+        "minimumRecordedContrast": null,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": false,
+      "useStatus": "distributed_not_live__host_surface_unbound"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rotate-b.brand-blue",
+      "memberId": "rotate-b",
+      "neutralFormName": "four rounded units arranged around a centre",
+      "sourceCreativeLabelNonNormative": "Turning heads / March forward",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium_high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rotate-b-brand-blue.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8264,
+      "sha256": "dfe1661930f000090c71c66d348654998dc3c255ed35ac913638b5e570ffb7e2",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "brand-blue",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": "brand.blue",
+        "minimumRecordedContrast": 4.777,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": true,
+      "useStatus": "live_eligible_after_per_artifact_gate"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rotate-b.canvas",
+      "memberId": "rotate-b",
+      "neutralFormName": "four rounded units arranged around a centre",
+      "sourceCreativeLabelNonNormative": "Turning heads / March forward",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium_high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rotate-b-canvas.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8294,
+      "sha256": "2864e6858eb6e499d4b0b52e2675fb491b470b857cd055400ae99d5fabd79732",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "canvas",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": "surface.card.light",
+        "minimumRecordedContrast": 1.84,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": false,
+      "useStatus": "distributed_not_live__contrast_below_3_to_1"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rotate-b.dark",
+      "memberId": "rotate-b",
+      "neutralFormName": "four rounded units arranged around a centre",
+      "sourceCreativeLabelNonNormative": "Turning heads / March forward",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium_high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rotate-b-dark.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8292,
+      "sha256": "d38add31343cba9a0f4d5b3362bc7b3aff64b10d9f2771c190ce6a8e5124d795",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "dark",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": "surface.card.dark",
+        "minimumRecordedContrast": 7.844,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": true,
+      "useStatus": "live_eligible_after_per_artifact_gate"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rotate-b.ground-mist",
+      "memberId": "rotate-b",
+      "neutralFormName": "four rounded units arranged around a centre",
+      "sourceCreativeLabelNonNormative": "Turning heads / March forward",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium_high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rotate-b-ground-mist.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8650,
+      "sha256": "f2add7418e19cbd92f522588d4dd3441334f3728d3f99a4b48e2a1aa3463aa94",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "ground-mist",
+        "inkRoleRef": "text.primary.light",
+        "allowedRoleRefs": [
+          "text.primary.light"
+        ],
+        "ownedSurfaceRoleRef": "atmosphere.gradient.ground.mist",
+        "minimumRecordedContrast": 11.364,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": true,
+      "useStatus": "live_eligible_after_per_artifact_gate"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rotate-b.transparent-ink",
+      "memberId": "rotate-b",
+      "neutralFormName": "four rounded units arranged around a centre",
+      "sourceCreativeLabelNonNormative": "Turning heads / March forward",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium_high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rotate-b-transparent-ink.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8321,
+      "sha256": "c5fd50bf5238daeaac753bb7999d5038ca927b8a1ad96ccfd2b337076234fa38",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "transparent-ink",
+        "inkRoleRef": "text.primary.light",
+        "allowedRoleRefs": [
+          "text.primary.light"
+        ],
+        "ownedSurfaceRoleRef": null,
+        "minimumRecordedContrast": null,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": false,
+      "useStatus": "distributed_not_live__host_surface_unbound"
+    },
+    {
+      "motifAssetRecordVersion": "ijji-motif-asset/0.1",
+      "motifId": "ijji.four-beat",
+      "assetFamily": "ijji.four-beat.selected-3",
+      "assetId": "ijji.motif.four-beat.selected-3.r3.rotate-b.transparent-mint",
+      "memberId": "rotate-b",
+      "neutralFormName": "four rounded units arranged around a centre",
+      "sourceCreativeLabelNonNormative": "Turning heads / March forward",
+      "derivationClass": "provider_generated_new_arrangement",
+      "pseudoLogoRisk": "medium_high",
+      "path": "assets/motifs/ijji-four-beat-selected-3-r3/svg/ijji-rotate-b-transparent-mint.svg",
+      "mime": "image/svg+xml",
+      "intrinsicViewBox": "-20 -20 240 240",
+      "bytes": 8194,
+      "sha256": "54fb8ee9c2065e54f1e6de8674b1bf488ef96daf93d81b76cdea38f1466a24c9",
+      "designSourceRef": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+      "observableFormSourceRef": "ijji.logo.legacy.full-square.reference.v1",
+      "identityRole": "none",
+      "roleRegistryRef": "assets/guides/ijji-design-system-v0.5.1.md#1-approved-family-ijji-motif-4b-02",
+      "allowedJobRefs": [
+        "ijji_section_orientation_after_official_identity",
+        "ijji_quiet_transition_or_closure",
+        "redundant_four_labelled_steps_when_exactly_four_authoritative_steps_exist"
+      ],
+      "originalityEvidenceRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "nonTraceComparisonRef": "assets/verification/motif/originality-and-nontrace-20260904.json",
+      "pseudoLogoSubstitutionTestRef": "assets/verification/motif/pseudo-logo-test-20260904.json",
+      "deletionTestEvidenceRef": "assets/verification/motif/static-usage-and-a11y-20260904.json",
+      "approval": {
+        "owner": "Landometer/ijji owner",
+        "approvedAt": "2026-09-04T07:56:55+07:00",
+        "expiresAt": null,
+        "receiptRef": "assets/guides/motif/ijji-four-beat-selected-3-r3.static.approval.yml",
+        "allowedContexts": [
+          "ijji_artifact_after_approved_official_identity",
+          "single_bounded_orientation_transition_or_closure_treatment"
+        ],
+        "prohibitedContexts": [
+          "standalone_identity_or_logo_substitute",
+          "favicon_social_touch_maskable_line_or_navigation_identity",
+          "chart_map_legend_evidence_source_status_or_semantic_state",
+          "alert_cashflow_food_safety_legal_privacy_or_escalation",
+          "business_growth_sales_traffic_confidence_progress_completion_or_success_claim"
+        ]
+      },
+      "colorTreatment": {
+        "type": "lds_role_ref_only",
+        "variant": "transparent-mint",
+        "inkRoleRef": "energy.mint",
+        "allowedRoleRefs": [
+          "energy.mint"
+        ],
+        "ownedSurfaceRoleRef": null,
+        "minimumRecordedContrast": null,
+        "contrastEvidenceRefs": [
+          "assets/verification/motif/contrast-20260904.json"
+        ]
+      },
+      "motionTreatment": {
+        "motionEnabled": false,
+        "reducedMotion": "static_final_state",
+        "suppliedMotionRuntimeApproved": false
+      },
+      "accessibility": {
+        "meaning": "redundant",
+        "permittedTransport": [
+          "external_img_alt_empty_aria_hidden_true",
+          "css_background"
+        ],
+        "inlineUseAllowed": false,
+        "redundantLabelRequiredOutsideAsset": true
+      },
+      "liveUsageAllowed": false,
+      "useStatus": "distributed_not_live__host_surface_unbound"
+    }
+  ]
+}

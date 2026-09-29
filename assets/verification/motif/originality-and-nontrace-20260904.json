@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "ijji-motif-originality-review/1.0",
+  "recordId": "IJJI-MOTIF-ORIGINALITY-20260904-01",
+  "reviewedAt": "2026-09-04T07:56:55+07:00",
+  "reviewType": "static_source_and_geometry_review",
+  "sourceArchiveSha256": "672b7667af7fef81ab9b9c9c4886851bc9821f448d8b401c0d0b9ac0c86851a8",
+  "observableFormSource": {
+    "assetId": "ijji.logo.legacy.full-square.reference.v1",
+    "sha256": "cbeb7bc4db8db795fc669ef521fc05442a275ab63cda866513277cdc75b05a86"
+  },
+  "providerProvenance": {
+    "embeddedC2paPresentInAllSelectedSvg": true,
+    "generator": "Anthropic Files 1.0.0 / Claude",
+    "action": "com.anthropic.claude.provided",
+    "originConfidence": "unknown",
+    "signatureIndependentlyVerified": false,
+    "boundary": "Embedded C2PA is provenance evidence, not independent proof of originality, rights, or conformance."
+  },
+  "safetyAndTraceChecks": {
+    "svgCount": 18,
+    "externalRasterOrImageReferenceFound": false,
+    "scriptOrEventHandlerFound": false,
+    "foreignObjectFound": false,
+    "externalHrefFound": false,
+    "geometryUsesSvgPrimitives": true,
+    "officialLogoWordmarkOrBodyPathPresent": false
+  },
+  "memberFindings": [
+    {
+      "member": "graph-b",
+      "finding": "Four separate circle primitives closely reproduce the measured head radii and horizontal centres declared by the supplied record; no logo body, wordmark, crop, raster embedding, or traced path is present.",
+      "result": "not_independently_original__owner_approved_exact_hash_measured-form-derivative"
+    },
+    {
+      "member": "rings-c",
+      "finding": "One central circle and three concentric circle primitives form a composition not present in the official logo.",
+      "result": "pass"
+    },
+    {
+      "member": "rotate-b",
+      "finding": "Four separate circle primitives are arranged around a centre; no official logo body, wordmark, crop, or traced path is present.",
+      "result": "pass"
+    }
+  ],
+  "conclusion": "conditional_pass_for_registered_static_motif_use_under_the_exact_owner_approved_derivative_and_pseudo-logo_controls",
+  "claimBoundary": "This desk review does not establish copyright authorship or third-party freedom-to-operate."
+}

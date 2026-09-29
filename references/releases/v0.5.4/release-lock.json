@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "ijji-design-assets-release-lock/1.0",
+  "release": {
+    "productSystem": "ijji",
+    "ijjiDesignSystemVersion": "0.5.1",
+    "ijjiDsAddonVersion": "0.5.4",
+    "packageId": "ijji-ds-addon-assets-v0.5.4",
+    "artifactBuildId": "ds-addon-motif-20260904-01",
+    "status": "prepared_immutable_successor_pending_account_install",
+    "active": true
+  },
+  "predecessor": {
+    "ijjiDesignSystemVersion": "0.5.0",
+    "ijjiDsAddonVersion": "0.5.3",
+    "packageId": "ijji-ds-addon-assets-v0.5.3",
+    "releaseLock": "references/releases/v0.5.3/release-lock.json",
+    "historicalBytesChanged": false
+  },
+  "sourceArchive": {
+    "name": "ijji motif.zip",
+    "installedPath": "references/releases/v0.5.4/source/ijji-motif-owner-supplied-20260904.zip",
+    "bytes": 161809,
+    "sha256": "672b7667af7fef81ab9b9c9c4886851bc9821f448d8b401c0d0b9ac0c86851a8",
+    "entryCount": 63,
+    "expandedBytes": 570769,
+    "normalizedExpandedTreeSha256": "cb90919c7e2b6b93818ced193418d35c4d152f2ae7a0224bac11d9dac567e411",
+    "safePathAudit": "passed",
+    "zipIntegrity": "passed",
+    "sourceRole": "owner_supplied_candidate_archive_approved_by_current_instruction"
+  },
+  "installedAssetPack": {
+    "root": "assets/releases/v0.5.4/asset-pack",
+    "allInstalledFiles": 93,
+    "reusableManifestFiles": 84,
+    "allFilesChecksumList": "references/releases/v0.5.4/ALL-FILES-SHA256SUMS.txt",
+    "manifest": "assets/releases/v0.5.4/asset-pack/asset-manifest.json",
+    "manifestSha256": "6c876fe282c46d52f0d2030936ee981473b1fec6227050163e09c64d60cf24fc",
+    "completeForDeliveredSourceSet": true,
+    "completeForAllDesiredBrandAssets": false
+  },
+  "motif": {
+    "motifId": "ijji.four-beat",
+    "assetFamily": "ijji.four-beat.selected-3",
+    "revision": 3,
+    "familyRecord": "assets/releases/v0.5.4/asset-pack/assets/motifs/ijji-four-beat-selected-3-r3/family-record.json",
+    "familyRecordSha256": "e31b3b51f1acfa35175bdbbec535f2cb0dea678de5a41e37063eced9ed23bfdb",
+    "staticSvgFiles": 18,
+    "fixedSurfaceLiveEligibleFiles": 9,
+    "distributedNotLiveApprovedFiles": 9,
+    "motionLiveUseAllowed": false,
+    "identityRole": "none"
+  },
+  "parentLds": {
+    "resolverSkill": "landometer-design-assets",
+    "designSystemVersion": "0.9.1",
+    "authoringRevision": "0.9.1-r8",
+    "rulesetId": "lds-rules-0.9.1",
+    "machinePackage": "v0.9.1-mp7",
+    "colorRegistryId": "color-srgb-05",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1QS6xFe2uiP5G1q-MuyDGRfUiu3hsfqAi",
+    "mustResolveFromParentSkill": true,
+    "automaticRebaseAllowed": false
+  },
+  "authorityBoundary": {
+    "ownerApprovalExpandsExactStaticMotifRights": true,
+    "distributionExpandsUseApproval": false,
+    "bundledLdsFiles": "historical_or_artifact_bundled_reference_only",
+    "fullLdsMachinePackageDelivery": false,
+    "productTruthIncluded": false,
+    "localeInsightEvidenceIncluded": false,
+    "logoUseScopeExpanded": false,
+    "graphBExactMeasuredFormDerivativeApproved": true,
+    "motionRightsExpanded": false
+  },
+  "knownReleaseLimitations": [
+    "The supplied looping motion CSS and JavaScript are retained only in the source archive and are not live runtime assets.",
+    "Canvas motif variants fail 3:1 for meaningful use; transparent variants have no bound host surface; all nine remain distributed but not live-approved.",
+    "Exact SVGs expose non-normative creative aria-label values and are live-eligible only as external aria-hidden images or CSS backgrounds after approved identity.",
+    "graph-b is a high pseudo-logo-risk measured-form derivative and is restricted to the exact registered hashes, identity-first placement, and per-artifact QA.",
+    "Horizontal logo, compact logo, favicon, social preview, and touch or maskable icon remain missing or unapproved.",
+    "The vendored LDS manifest delivers machine-package identity only and does not claim validation.",
+    "ijji.app.json remains a legacy v0.9.0 projection and is not current parent authority on its own.",
+    "The source SVGs contain C2PA metadata whose signature was not independently verified and whose origin confidence is unknown."
+  ]
+}
