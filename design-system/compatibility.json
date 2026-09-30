@@ -122,11 +122,11 @@
         "current ijji product-specific rules and machine values"
       ],
       "embedsSharedFoundation": false,
-      "markdownSha256": "8b8fe59105252db5a25f0bcb1ef7c65eafe29220cba503697979a44661e467b2",
+      "markdownSha256": "289d5c57e932e8433f41d28e4663caa5baa92e7b2b0f806b3fef536354074e3d",
       "markdownBytes": 227830,
-      "jsonSha256": "ee5202d5e701b54d6597e2c39c78b3d4cb18f00f77ad96961ac0998fb7048ed7",
+      "jsonSha256": "09c96c391cf5fc623a2795dbb43dd3952e7ff9b525b6e4fe94adb7e506cdd875",
       "jsonBytes": 253631,
-      "documentId": "ijji-addon-0.5.5-lds-0.9.6-r3",
+      "documentId": "ijji-addon-0.5.5-lds-0.9.6-r1",
       "documentRevision": "standalone-0.9.6-r1",
       "publicationTag": "v0.9.6",
       "baseDocument": {
@@ -145,7 +145,7 @@
   },
   "sourcePolicy": {
     "path": "design-system/source-policy.json",
-    "sha256": "e9b2cd3f1dc0d23c374de2be795d73250e46ca8cf947414637e88c630f2eedaf"
+    "sha256": "a04528bf798610c84914682faf3c9348c86318cb47a483c244c9f3015759bc1d"
   },
   "archivalDocumentStatus": "historical_only; former eight-plus-one instructions cancelled for new authoring",
   "currentAuthoringBoundary": {
