@@ -1,10 +1,10 @@
-ijji - complete LDS 0.9.5 base plus separate ijji Add-on 0.5.5
-Base: https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.md
-Add-on: https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.md
+ijji - complete LDS 0.9.6 base plus separate ijji Add-on 0.5.5
+Base: https://montri-th.github.io/Landometer/v0.9.6/normative/Landometer-Design-System-v0.9.6.md
+Add-on: https://montri-th.github.io/Landometer/v0.9.6/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.6.md
 Upload these two Markdown files to the intended ChatGPT or Claude Project.
 The base owns shared LDS rules and exact shared machine values; the Add-on owns ijji product rules.
-Optional JSON base: https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.json
-Optional JSON Add-on: https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.json
+Optional JSON base: https://montri-th.github.io/Landometer/v0.9.6/normative/Landometer-Design-System-v0.9.6.json
+Optional JSON Add-on: https://montri-th.github.io/Landometer/v0.9.6/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.6.json
 The old eight-LDS-files setup and combined product/base proposal are cancelled for new authoring.
 Remove or deactivate conflicting old design sources; keep product/evidence/rights records.
 Set Project Instructions to the base plus Add-on and verify source access in a new session.

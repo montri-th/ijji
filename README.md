@@ -9,13 +9,15 @@
 - Current published release: `ijji-web-20260909-r9`
 - Stack: static HTML + self-hosted runtime, fonts, imagery, and Landometer Design System assets
 
-## r10 · LDS 0.9.5 migration (prepared)
+## Current authoring · LDS 0.9.6
 
-New design authoring uses two human- and machine-readable design files: the **[complete LDS 0.9.5 base](https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.md)** and the **[separate ijji Add-on 0.5.5](https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.md)**. The base owns all shared rules and exact machine tokens/scales; the Add-on owns ijji DS 0.5.2 / Add-on 0.5.5 product rules without duplicating the base. JSON alternatives are available from the [download page](design-system/index.html); a product Project Source needs the two Markdown files.
+New design authoring uses two human- and machine-readable design files: the **[complete LDS 0.9.6 base](https://montri-th.github.io/Landometer/v0.9.6/normative/Landometer-Design-System-v0.9.6.md)** and the **[separate ijji Add-on 0.5.5](https://montri-th.github.io/Landometer/v0.9.6/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.6.md)**. The base owns all shared rules and exact machine tokens/scales; the Add-on owns ijji DS 0.5.2 / Add-on 0.5.5 product rules without duplicating the base. JSON alternatives are available from the [download page](design-system/index.html); a product Project Source needs the two Markdown files.
 
 Follow the [source policy](design-system/source-policy.json). The former eight-LDS-files setup and combined product/base proposal are cancelled for new work. Remove or deactivate conflicting old design sources in ChatGPT/Claude projects, retain factual product/evidence/rights sources, and point Project Instructions to the current base plus ijji Add-on. Verify source access in a new session; uploading alone does not activate a plugin or the whole team.
 
 The historical normative chain and ZIP remain byte-identical for audit. Their old installation prose is superseded by the current source policy. The exact [motif registry and SVGs](assets/motifs/ijji-four-beat-selected-3-r3/family-record.json) retain their approved asset scope.
+
+The current authoring source uses LDS 0.9.6 / color-srgb-09, standalone-0.9.6-r1. The existing landing runtime remains pinned to LDS 0.9.5 / color-srgb-08; no runtime color or motion asset changes are included in this source-guidance update.
 
 The site keeps its historical structural CSS for layout compatibility and loads the byte-identical LDS 0.9.5 build-kit and color projection after it. The color bridge sets analytical and categorical aliases by explicit theme. The old `_ds` JavaScript bundle and unapproved inline/looping four-beat motif route are inactive; the approved finite ijji logo identity stays. Selected navigation uses restrained fill and type weight, without a bracket or colored edge rail.
 
