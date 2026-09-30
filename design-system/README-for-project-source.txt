@@ -1,6 +1,12 @@
-ijji normative set · DS 0.5.2 + Add-on 0.5.5 on LDS 0.9.5
-For a source-limited ChatGPT Project, upload ijji-project-source-normative-0.5.2-0.5.5.md
-and the eight exact LDS 0.9.5 files it lists. This ZIP includes the full ijji lineage for audit.
-Provide the complete LDS 0.9.5 package pinned in compatibility.json for full verification.
-Set Project instructions to use those exact versions and verify source access.
-Project source upload does not install or activate a plugin for a team.
+ijji - complete LDS 0.9.5 base plus separate ijji Add-on 0.5.5
+Base: https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.md
+Add-on: https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.md
+Upload these two Markdown files to the intended ChatGPT or Claude Project.
+The base owns shared LDS rules and exact shared machine values; the Add-on owns ijji product rules.
+Optional JSON base: https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.json
+Optional JSON Add-on: https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.json
+The old eight-LDS-files setup and combined product/base proposal are cancelled for new authoring.
+Remove or deactivate conflicting old design sources; keep product/evidence/rights records.
+Set Project Instructions to the base plus Add-on and verify source access in a new session.
+Historical Markdown and ZIP files preserve their original bytes for audit only.
+Project source upload does not activate every plugin, client, account or team.

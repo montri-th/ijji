@@ -96,5 +96,35 @@
     "approvalSha256": "e1557807f057d5428c16c0226dfc0b57e500928df40ea435aaa105c64f4ecb03"
   },
   "scope": "project/website adoption only; predecessor releases remain historical",
-  "claimCeiling": "authoring_aligned"
+  "claimCeiling": "authoring_aligned",
+  "projectSource": {
+    "deliveryModel": "complete_base_plus_separate_product_addon",
+    "base": {
+      "markdownUrl": "https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.md",
+      "jsonUrl": "https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.json",
+      "contains": [
+        "complete LDS 0.9.5 shared rules",
+        "exact shared machine tokens and scales"
+      ],
+      "documentRevision": "standalone-0.9.5-r2",
+      "publicationTag": "v0.9.5-standalone-r2"
+    },
+    "addon": {
+      "markdownUrl": "https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.md",
+      "jsonUrl": "https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.json",
+      "contains": [
+        "current ijji product-specific rules and machine values"
+      ],
+      "embedsSharedFoundation": false
+    },
+    "preferredUpload": "markdown",
+    "requiredDesignSourceFileCount": 2,
+    "olderMasterRequired": false,
+    "combinedProductFileRequired": false
+  },
+  "sourcePolicy": {
+    "path": "design-system/source-policy.json",
+    "sha256": "05d4057d58c271b55f10819e1273966a8a05b5de390b376368e9c92d8b2e6e95"
+  },
+  "archivalDocumentStatus": "historical_only; former eight-plus-one instructions cancelled for new authoring"
 }

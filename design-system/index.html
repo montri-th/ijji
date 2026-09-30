@@ -21,7 +21,6 @@
     .versions span{border:1px solid var(--border-default);border-radius:999px;padding:6px 12px;background:var(--surface-card);font-size:.875rem}
     .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
     .card{min-width:0;padding:24px;border:1px solid var(--border-default);border-radius:14px;background:var(--surface-card)}
-    .card:first-child{grid-column:1/-1}
     .card p{color:var(--text-secondary)}
     .action{display:inline-flex;align-items:center;min-height:44px;padding:8px 17px;border:2px solid var(--interaction-accent);border-radius:999px;color:var(--interaction-accent);font-weight:600;text-decoration:none}
     .action:hover{background:var(--surface-blue-tint)}
@@ -29,6 +28,7 @@
     a:focus-visible{outline:3px solid var(--interaction-focus-ring);outline-offset:3px}
     .note{margin:36px 0 0;padding:22px 24px;border:1px solid var(--border-default);border-radius:14px;background:var(--surface-alt)}
     .note p:last-child{margin:0}
+    summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
     footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border-hairline);color:var(--text-metadata)}
     @media(max-width:700px){.grid{grid-template-columns:1fr}.card{padding:20px}}
   </style>
@@ -38,16 +38,14 @@
   <a href="../ijji-TH.dc.html">← กลับหน้า ijji</a>
   <p class="eyebrow" style="margin-top:32px" lang="en">ijji · Design system downloads</p>
   <h1>คู่มือมาตรฐาน ijji สำหรับทีม</h1>
-  <p class="intro">ใช้กติกา ijji รุ่นปัจจุบันคู่กับ Landometer DS 0.9.5 เมื่อทำงานใหม่ใน ChatGPT, Claude, Cowork, Design หรือ Code เอกสารรุ่นก่อนยังอยู่เพื่ออ่านที่มาและดูงานเก่า</p>
-  <div class="versions" aria-label="รุ่นปัจจุบัน"><span>ijji DS 0.5.2</span><span>ijji Add-on 0.5.5</span><span>LDS 0.9.5 · color-srgb-08</span></div>
+  <p class="intro">ใช้ LDS 0.9.5 ฉบับเต็มคู่กับ ijji Add-on แยกไฟล์ รวมสองไฟล์สำหรับ ChatGPT, Claude, Cowork, Design และ Code ทั้งคนและระบบอ่านได้</p>
+  <div class="versions" aria-label="รุ่นปัจจุบัน"><span>LDS 0.9.5 · color-srgb-08</span><span>ijji DS 0.5.2</span><span>ijji Add-on 0.5.5</span></div>
   <div class="grid">
-    <section class="card"><h2>ไฟล์เดียวสำหรับ Project Source</h2><p>กติกา ijji 0.5.2 และ Add-on 0.5.5 ฉบับปัจจุบันที่อ่านได้ในไฟล์เดียว เหมาะกับ Project ที่มีช่องใส่ไฟล์จำกัด ต้องใส่คู่กับไฟล์ LDS 0.9.5 ทั้งแปดรายการที่ระบุในเอกสาร</p><a class="action" href="ijji-project-source-normative-0.5.2-0.5.5.md" download>ดาวน์โหลด normative สำหรับ Project Source (.md)</a></section>
-    <section class="card"><h2>ijji Design System 0.5.2</h2><p>กติกาแบรนด์ เสียง อัตลักษณ์ motif และขอบเขตการใช้ข้อมูล หลังย้ายฐานไป LDS 0.9.5</p><a class="action" href="ijji-design-system-v0.5.2.md" download>ดาวน์โหลดไฟล์ normative (.md)</a></section>
-    <section class="card"><h2>ijji DS Add-on 0.5.5</h2><p>กติกาการใช้ในงานออกแบบและโค้ด รวมทั้งความเข้ากันได้กับ LDS 0.9.5</p><a class="action" href="ijji-ds-addon-v0.5.5.md" download>ดาวน์โหลดไฟล์ normative (.md)</a></section>
-    <section class="card"><h2>ชุดเอกสาร ijji</h2><p>รวมฉบับปัจจุบัน เอกสารสืบทอดเดิม และไฟล์ตรวจรุ่น สำหรับเก็บและตรวจที่มา</p><a class="action" href="ijji-normative-0.5.2-0.5.5-lds0.9.5.zip" download>ดาวน์โหลดชุด ijji (.zip)</a></section>
-    <section class="card"><h2>ฐาน Landometer DS 0.9.5</h2><p>แพ็กเกจหลักฉบับเต็มที่ระบุรุ่นและค่าแฮชไว้ในเอกสาร ijji ต้องอ่านควบคู่กัน</p><a class="action" href="https://github.com/montri-th/Landometer/releases/download/v0.9.5/landometer-design-system-0.9.5.zip">ดาวน์โหลดชุด LDS 0.9.5</a></section>
+    <section class="card"><h2>1. LDS 0.9.5 ฉบับเต็ม</h2><p>กติกากลางฉบับสมบูรณ์ ทั้งแบรนด์ เสียง อัตลักษณ์ การออกแบบ และค่าสีสำหรับเครื่องอ่าน ใช้ไฟล์เดียวแทนการประกอบ LDS หลายรุ่น</p><p><a class="action" href="https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.md">ดาวน์โหลด LDS 0.9.5 (.md)</a></p><p><a href="https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.json">ฉบับ JSON สำหรับระบบ</a></p></section>
+    <section class="card"><h2>2. ijji Add-on 0.5.5</h2><p>กติกาเฉพาะ ijji ทั้งบุคลิก เสียง อัตลักษณ์ และประสบการณ์ผลิตภัณฑ์ ใช้ร่วมกับ LDS 0.9.5 ด้านข้าง โดยไม่รวมกติกากลางซ้ำ</p><p><a class="action" href="https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.md">ดาวน์โหลด ijji Add-on (.md)</a></p><p><a href="https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.json">ฉบับ JSON สำหรับระบบ</a></p></section>
   </div>
-  <div class="note"><h2>วิธีใช้ใน Project source</h2><p>ใส่ไฟล์ ijji ฉบับสำหรับ Project Source ด้านบนหนึ่งไฟล์ พร้อมไฟล์ LDS 0.9.5 แปดไฟล์ที่ระบุในนั้น ระบุใน Project instructions ว่า “ใช้ ijji DS 0.5.2 + Add-on 0.5.5 บน LDS 0.9.5” ตรวจว่าเครื่องมืออ่านไฟล์ได้จริงทุกครั้ง เก็บสายเอกสารเดิมไว้ใน repository เพื่อดูประวัติ การอัปโหลดไฟล์ไม่ได้ติดตั้งปลั๊กอินหรือเปิดใช้ให้ทั้งทีมโดยอัตโนมัติ</p><p>English: upload the one current ijji Project Source file with its eight pinned LDS 0.9.5 files. The full ijji lineage remains available in the repository for audit.</p></div>
+  <div class="note"><h2>ติดตั้งใน Project Source</h2><p>ดาวน์โหลด Markdown ทั้งสองไฟล์ด้านบนแล้วอัปโหลดใน Project ที่ทำงาน ijji: LDS 0.9.5 ฉบับเต็มหนึ่งไฟล์ และ ijji Add-on อีกหนึ่งไฟล์ ไม่ต้องเพิ่ม JSON ซ้ำสำหรับ Project Source</p><p>นำกติกา LDS และ ijji ชุดเดิมที่ขัดกันออกจาก source ที่ใช้งาน หรือยกเลิกการใช้ให้ชัดเจน รวมถึงไฟล์ที่เคยรวมกติกาผลิตภัณฑ์กับ LDS ไว้ด้วยกัน เก็บ Product Brief ข้อมูลจริง และหลักฐานสิทธิ์ไว้ตามเดิม</p><p>ตั้ง Project instructions ว่า “งาน ijji ใหม่ใช้ LDS 0.9.5 ฉบับเต็มเป็นกติกากลาง และใช้ ijji Add-on 0.5.5 สำหรับกติกาเฉพาะผลิตภัณฑ์ อ่านทั้งสองไฟล์ เอกสารออกแบบเก่าที่ขัดกันถูกแทนที่” จากนั้นเปิดแชตใหม่เพื่อตรวจว่าอ่านรุ่น ค่าสี และกติกา ijji ได้จริง</p><p lang="en">Upload two Markdown files: the complete LDS 0.9.5 base and the separate ijji Add-on. The old eight-file setup and combined product/base proposal are cancelled. Source upload does not activate every account, plugin or team automatically.</p></div>
+  <details class="note"><summary>เอกสารประวัติสำหรับตรวจที่มา</summary><p>รายการเหล่านี้เก็บ bytes เดิมไว้เพื่อตรวจประวัติ คำสั่งติดตั้งแบบหลายไฟล์ในเอกสารเก่าไม่ใช้กับงานใหม่แล้ว</p><p><a href="ijji-project-source-normative-0.5.2-0.5.5.md">Project Source แบบเดิม</a> · <a href="ijji-design-system-v0.5.2.md">ijji DS 0.5.2 เดิม</a> · <a href="ijji-ds-addon-v0.5.5.md">Add-on 0.5.5 เดิม</a> · <a href="ijji-normative-0.5.2-0.5.5-lds0.9.5.zip">ชุดเอกสารเดิม (.zip)</a> · <a href="source-policy.json">บันทึกการแทนที่เอกสาร</a></p></details>
   <footer><p>เอกสารรุ่นเก่า: <a href="history/ijji-design-system-v0.5.1.md">ijji DS 0.5.1</a> · <a href="history/ijji-ds-addon-v0.5.4.md">Add-on 0.5.4</a> · <a href="history/ijji-design-system-v0.5.0.md">ijji DS 0.5.0</a> · <a href="history/ijji-ds-addon-v0.5.3.md">Add-on 0.5.3</a></p><p>© 2026 Landometer · ijji</p></footer>
 </main>
 </body>

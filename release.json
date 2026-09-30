@@ -45,7 +45,6 @@
     "completeArtifactConformanceClaim": false
   },
   "normative": {
-    "projectSourceProjection": "design-system/ijji-project-source-normative-0.5.2-0.5.5.md",
     "productDs": "design-system/ijji-design-system-v0.5.2.md",
     "addOn": "design-system/ijji-ds-addon-v0.5.5.md",
     "compatibilityLock": "design-system/compatibility.json",
@@ -58,7 +57,38 @@
     "downloadPage": "design-system/index.html",
     "projectSourcePackage": "design-system/ijji-normative-0.5.2-0.5.5-lds0.9.5.zip",
     "projectSourcePackageSha256": "a1e1a4331868956b5c252f684569d200e1932e0a85508b2667deb04154a1a981",
-    "compatibilityLockSha256": "a105e866d5a36be4173262719c98c4adb42eaf19329706cfbbe434a47f0c2190"
+    "compatibilityLockSha256": "ca7b1ec085e1fa35151485e36c3988ea8737632f33f98d660044927ba7c3d9ca",
+    "historicalProjectSourceProjection": "design-system/ijji-project-source-normative-0.5.2-0.5.5.md",
+    "currentProjectSource": {
+      "deliveryModel": "complete_base_plus_separate_product_addon",
+      "base": {
+        "markdownUrl": "https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.md",
+        "jsonUrl": "https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.json",
+        "contains": [
+          "complete LDS 0.9.5 shared rules",
+          "exact shared machine tokens and scales"
+        ],
+        "documentRevision": "standalone-0.9.5-r2",
+        "publicationTag": "v0.9.5-standalone-r2"
+      },
+      "addon": {
+        "markdownUrl": "https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.md",
+        "jsonUrl": "https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.json",
+        "contains": [
+          "current ijji product-specific rules and machine values"
+        ],
+        "embedsSharedFoundation": false
+      },
+      "preferredUpload": "markdown",
+      "requiredDesignSourceFileCount": 2,
+      "olderMasterRequired": false,
+      "combinedProductFileRequired": false
+    },
+    "sourcePolicy": {
+      "path": "design-system/source-policy.json",
+      "sha256": "05d4057d58c271b55f10819e1273966a8a05b5de390b376368e9c92d8b2e6e95"
+    },
+    "projectSourcePackageStatus": "historical_only; not the current Project Source installer"
   },
   "runtime": {
     "parentCss": "assets/lds/v0.9.5/build-kit/lds-0.9.5.css",

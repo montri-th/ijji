@@ -118,8 +118,9 @@ with zipfile.ZipFile(archive) as zipped:
     names = set(zipped.namelist())
     expected_names = set(lock["product"]["normativeDocsSha256"]) | {"compatibility.json", "README-for-project-source.txt"}
     check(names == expected_names, "normative ZIP membership")
-    for name in names:
-        check(zipped.read(name) == (DOC / name).read_bytes(), f"normative ZIP content {name}")
+    for name in lock["product"]["normativeDocsSha256"]:
+        check(zipped.read(name) == (DOC / name).read_bytes(), f"archival normative ZIP content {name}")
+    check(digest(archive) == "a1e1a4331868956b5c252f684569d200e1932e0a85508b2667deb04154a1a981", "archival ZIP exact bytes preserved")
 
 for page in PAGES:
     source = (ROOT / page).read_text()
@@ -151,8 +152,24 @@ for page in PAGES:
         check(path.is_file() and path.is_relative_to(ROOT), f"{page} local asset {value}")
 
 index = (DOC / "index.html").read_text()
-check(all(path in index for path in ("ijji-project-source-normative-0.5.2-0.5.5.md", "ijji-design-system-v0.5.2.md", "ijji-ds-addon-v0.5.5.md", archive.name, authority["parentPackageUrl"])), "download page links")
-check(release["normative"]["projectSourceProjection"] == "design-system/ijji-project-source-normative-0.5.2-0.5.5.md", "project source projection path")
+policy = json.loads((DOC / "source-policy.json").read_text())
+source = policy["normative"]
+check(source["base"]["markdownUrl"] == "https://montri-th.github.io/Landometer/v0.9.5/normative/Landometer-Design-System-v0.9.5.md", "complete LDS base Markdown URL")
+check(source["addon"]["markdownUrl"] == "https://montri-th.github.io/Landometer/v0.9.5/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.5.md", "separate ijji Add-on Markdown URL")
+for part in ("base", "addon"):
+    check(source[part]["jsonUrl"] == source[part]["markdownUrl"].removesuffix(".md") + ".json", f"{part} JSON alternative")
+    check(all(value in index for value in (source[part]["markdownUrl"], source[part]["jsonUrl"])), f"{part} download links")
+check(source["requiredDesignSourceFileCount"] == 2 and source["olderMasterRequired"] is False and source["addon"]["embedsSharedFoundation"] is False, "complete base plus separate product Add-on")
+check("source-policy.json" in index, "source policy link")
+check("ijji-LDS-v0.9.5-standalone" not in index, "withdrawn combined product route absent")
+check(all(path in index for path in ("ijji-project-source-normative-0.5.2-0.5.5.md", "ijji-design-system-v0.5.2.md", "ijji-ds-addon-v0.5.5.md", archive.name)), "historical downloads retained")
+check(policy["supersession"]["status"] == "cancelled_for_new_authoring", "former delivery cancelled")
+for entry in policy["supersession"]["files"]:
+    check(digest(ROOT / entry["path"]) == entry["sha256"], f"superseded file unchanged: {entry['path']}")
+check(release["normative"]["currentProjectSource"] == source == lock["projectSource"], "one source route across release and compatibility")
+check(digest(DOC / "source-policy.json") == lock["sourcePolicy"]["sha256"] == release["normative"]["sourcePolicy"]["sha256"], "source policy hash")
+check("eight pinned LDS" not in index and "eight exact LDS" not in (DOC / "README-for-project-source.txt").read_text(), "old assembly no longer active onboarding")
+
 ledger = {}
 for line in (ROOT / "SHA256SUMS.txt").read_text().splitlines():
     sha, relative = line.split("  ", 1)
