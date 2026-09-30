@@ -1,3 +1,9 @@
+# Complete LDS base plus separate ijji Add-on - 30 September 2026
+
+The current team download provides the complete LDS 0.9.5 base and separate ijji Add-on 0.5.5 as two Markdown files, with optional JSON alternatives. Shared rules and exact shared machine values remain in the base; product rules remain in the Add-on. The former 8+1 installation and combined product/base proposal are cancelled for new authoring; historical documents and the original ZIP retain their bytes. Runtime, product copy, identity assets and motion are unchanged by this documentation update.
+
+---
+
 # ijji web r10 — prepared release notes
 
 Release ID: `ijji-web-20260930-r10`

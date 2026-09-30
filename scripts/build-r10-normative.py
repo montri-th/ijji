@@ -1,10 +1,9 @@
-"""Build the pinned ijji r10 normative handoff and repository byte ledger."""
+"""Refresh standalone guidance and the byte ledger without rewriting archival releases."""
 
 from __future__ import annotations
 
 import hashlib
 import json
-import zipfile
 from pathlib import Path
 
 
@@ -105,28 +104,39 @@ lock = {
     "scope": "project/website adoption only; predecessor releases remain historical",
     "claimCeiling": "authoring_aligned",
 }
+source_policy = json.loads((DOC / "source-policy.json").read_text())
+lock["projectSource"] = source_policy["normative"]
+lock["sourcePolicy"] = {"path": "design-system/source-policy.json", "sha256": digest(DOC / "source-policy.json")}
+lock["archivalDocumentStatus"] = "historical_only; former eight-plus-one instructions cancelled for new authoring"
 write_json(DOC / "compatibility.json", lock)
 
 readme = DOC / "README-for-project-source.txt"
 readme.write_text(
-    "ijji normative set · DS 0.5.2 + Add-on 0.5.5 on LDS 0.9.5\n"
-    "For a source-limited ChatGPT Project, upload ijji-project-source-normative-0.5.2-0.5.5.md\n"
-    "and the eight exact LDS 0.9.5 files it lists. This ZIP includes the full ijji lineage for audit.\n"
-    "Provide the complete LDS 0.9.5 package pinned in compatibility.json for full verification.\n"
-    "Set Project instructions to use those exact versions and verify source access.\n"
-    "Project source upload does not install or activate a plugin for a team.\n"
+    "ijji - complete LDS 0.9.5 base plus separate ijji Add-on 0.5.5\n"
+    "Base: " + source_policy["normative"]["base"]["markdownUrl"] + "\n"
+    "Add-on: " + source_policy["normative"]["addon"]["markdownUrl"] + "\n"
+    "Upload these two Markdown files to the intended ChatGPT or Claude Project.\n"
+    "The base owns shared LDS rules and exact shared machine values; the Add-on owns ijji product rules.\n"
+    "Optional JSON base: " + source_policy["normative"]["base"]["jsonUrl"] + "\n"
+    "Optional JSON Add-on: " + source_policy["normative"]["addon"]["jsonUrl"] + "\n"
+    "The old eight-LDS-files setup and combined product/base proposal are cancelled for new authoring.\n"
+    "Remove or deactivate conflicting old design sources; keep product/evidence/rights records.\n"
+    "Set Project Instructions to the base plus Add-on and verify source access in a new session.\n"
+    "Historical Markdown and ZIP files preserve their original bytes for audit only.\n"
+    "Project source upload does not activate every plugin, client, account or team.\n"
 )
 
-entries = [DOC / path for path in docs] + [DOC / "compatibility.json", readme]
-with zipfile.ZipFile(ZIP, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
-    for path in entries:
-        entry = zipfile.ZipInfo(path.relative_to(DOC).as_posix(), (2026, 9, 30, 0, 0, 0))
-        entry.compress_type = zipfile.ZIP_DEFLATED
-        entry.external_attr = 0o100644 << 16
-        archive.writestr(entry, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
+# The original r10 ZIP is an immutable audit artifact. Its packaged README and
+# compatibility lock describe the superseded delivery and must not be rewritten.
+assert digest(ZIP) == "a1e1a4331868956b5c252f684569d200e1932e0a85508b2667deb04154a1a981"
 
 release_path = ROOT / "release.json"
 release = json.loads(release_path.read_text())
+release["normative"]["historicalProjectSourceProjection"] = "design-system/ijji-project-source-normative-0.5.2-0.5.5.md"
+release["normative"].pop("projectSourceProjection", None)
+release["normative"]["currentProjectSource"] = source_policy["normative"]
+release["normative"]["sourcePolicy"] = lock["sourcePolicy"]
+release["normative"]["projectSourcePackageStatus"] = "historical_only; not the current Project Source installer"
 release["normative"]["projectSourcePackageSha256"] = digest(ZIP)
 release["normative"]["compatibilityLockSha256"] = digest(DOC / "compatibility.json")
 release["runtime"]["vendoredAssetCount"] = len(runtime)
@@ -141,4 +151,4 @@ for path in sorted(ROOT.rglob("*")):
         continue
     ledger.append(f"{digest(path)}  {path.relative_to(ROOT).as_posix()}")
 (ROOT / "SHA256SUMS.txt").write_text("\n".join(ledger) + "\n")
-print(f"r10 normative ZIP {digest(ZIP)}; {len(runtime)} exact parent runtime files; {len(ledger)} repository files")
+print(f"Preserved archival r10 ZIP {digest(ZIP)}; {len(runtime)} exact parent runtime files; {len(ledger)} repository files")
