@@ -5,8 +5,8 @@
 - Live: <https://montri-th.github.io/ijji/>
 - Thai canonical: <https://montri-th.github.io/ijji/ijji-TH.dc.html>
 - English canonical: <https://montri-th.github.io/ijji/ijji-EN.dc.html>
-- Prepared successor: `ijji-web-20260930-r10` (publication pending)
-- Current published release: `ijji-web-20260909-r9`
+- Website release: `ijji-web-20261001-r11` (see `release.json` and its publication receipt)
+- Previous published source: `162c3fa47070e2ff8cd25d9c3931311e1832f231`
 - Stack: static HTML + self-hosted runtime, fonts, imagery, and Landometer Design System assets
 
 ## Current authoring · LDS 0.9.7
@@ -19,13 +19,17 @@ Follow the [source policy](design-system/source-policy.json). The former eight-L
 
 The historical normative chain and ZIP remain byte-identical for audit. Their old installation prose is superseded by the current source policy. The exact [motif registry and SVGs](assets/motifs/ijji-four-beat-selected-3-r3/family-record.json) retain their approved asset scope.
 
-The current authoring source uses LDS 0.9.7 / color-srgb-10, standalone-0.9.7-r1. The existing landing runtime remains pinned to LDS 0.9.5 / color-srgb-08; no runtime color or motion asset changes are included in this source-guidance update.
+The current authoring source uses LDS 0.9.7 / color-srgb-10, standalone-0.9.7-r1. The landing runtime now loads exact LDS 0.9.7 / color-srgb-10 files. Product copy, section order, approved identity and motion artwork remain unchanged.
 
-The site keeps its historical structural CSS for layout compatibility and loads the byte-identical LDS 0.9.5 build-kit and color projection after it. The color bridge sets analytical and categorical aliases by explicit theme. The old `_ds` JavaScript bundle and unapproved inline/looping four-beat motif route are inactive; the approved finite ijji logo identity stays. Selected navigation uses restrained fill and type weight, without a bracket or colored edge rail.
+The site keeps its historical structural CSS for layout compatibility and loads the byte-identical LDS 0.9.7 build-kit and color projection after it. The color bridge sets analytical and categorical aliases by explicit theme. The old `_ds` JavaScript bundle and unapproved inline/looping four-beat motif route are inactive; the approved finite ijji logo identity stays. Selected navigation uses restrained fill and type weight, without a bracket or colored edge rail.
 
-Run `python3 scripts/verify-r10.py` on this branch. Inspect actual Thai/English pages at narrow and desktop widths and light/dark themes before publishing; package checks and static checks do not establish browser or live deployment QA. `scripts/verify-r9.py` and the r9 release record remain historical checks for the original r9 tag.
+Run `python3 scripts/verify-r11.py` on this branch. Inspect actual Thai/English pages at narrow and desktop widths and light/dark themes before publishing; package checks and static checks do not establish browser or live deployment QA. `scripts/verify-r9.py` and `scripts/verify-r10.py` remain historical checks for their original releases.
 
 The sections below describe the historical r9 release and its original evidence.
+
+## Public identity and sharing
+
+Root and Thai/English pages now expose localized title, description, canonical and Open Graph/Twitter metadata in the initial HTML. Sharing compositions place the unchanged approved mark-only artwork on Brand Blue and reuse existing product language. The r9 mark-only browser favicon remains byte-identical; no new app/touch icon role is claimed. Origin metadata and PNG byte checks do not promise third-party cache refresh. The design-source page explains Story 17 colours, 20 analytical families, same-HEX dark surfaces, optional Location Intelligence and the complete-base/separate-Add-on installation.
 
 ## r9 mark-only identity correction
 
@@ -78,7 +82,7 @@ English hero ยังคง `ijji.logo-sting.r3` แบบเต็มพร้
 
 ## Provenance and integrity
 
-ขอบเขต r10 และ owner authorization อยู่ใน [`release.json`](release.json); r9 เดิมอยู่ใน [`releases/ijji-web-20260909-r9.json`](releases/ijji-web-20260909-r9.json) รายละเอียด source, transform, ข้อยกเว้นเฉพาะ artifact, asset tombstone และ Drive cleanup อยู่ใน [`assets/identity/ijji-favicon-r9.json`](assets/identity/ijji-favicon-r9.json) ส่วน [`SHA256SUMS.txt`](SHA256SUMS.txt) เป็น byte ledger ของ release files ทั้งหมด ยกเว้นตัว ledger เอง การอ้างอิง ijji และ parent LDS เป็น `authoring_aligned` เท่านั้น ไม่ใช่ full machine-package หรือ production-device conformance
+ขอบเขต r11 และ owner authorization อยู่ใน [`release.json`](release.json); r9 เดิมอยู่ใน [`releases/ijji-web-20260909-r9.json`](releases/ijji-web-20260909-r9.json) รายละเอียด source, transform, ข้อยกเว้นเฉพาะ artifact, asset tombstone และ Drive cleanup อยู่ใน [`assets/identity/ijji-favicon-r9.json`](assets/identity/ijji-favicon-r9.json) ส่วน [`SHA256SUMS.txt`](SHA256SUMS.txt) เป็น byte ledger ของ release files ทั้งหมด ยกเว้นตัว ledger เอง การอ้างอิง ijji และ parent LDS เป็น `authoring_aligned` เท่านั้น ไม่ใช่ full machine-package หรือ production-device conformance
 
 ## Local preview
 

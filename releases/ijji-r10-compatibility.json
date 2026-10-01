@@ -1,16 +1,16 @@
 {
   "schemaVersion": "ijji-lds-compatibility/1.0",
-  "id": "ijji-ds-0.5.2-addon-0.5.5-lds-0.9.7",
-  "status": "owner-authorized-r11",
+  "id": "ijji-ds-0.5.2-addon-0.5.5-lds-0.9.5",
+  "status": "owner-authorized-r10-prepared",
   "parent": {
-    "dsVersion": "0.9.7",
-    "releaseRef": "v0.9.7-owner.1",
-    "colorSet": "color-srgb-10",
+    "dsVersion": "0.9.5",
+    "releaseRef": "v0.9.5-owner.1",
+    "colorSet": "color-srgb-08",
     "signatureStatus": "unsigned_owner_distribution",
-    "packageUrl": "https://github.com/montri-th/Landometer/releases/download/v0.9.7/landometer-design-system-0.9.7.zip",
-    "packageSha256": "49b0c5219f2ad93a8905f88acbd55f7f1b1a24ed5c32eced990e1b28f1aade72",
-    "manifestSha256": "02dd4ea4f5a4efee91094c1859b8d5d07ba35f77f29f1e722b4b438a97f4ec22",
-    "releaseJsonSha256": "0a936393fc1ab05f8b32110397546b2a87cc26e46f2661a712bdd2debaa58516"
+    "packageUrl": "https://github.com/montri-th/Landometer/releases/download/v0.9.5/landometer-design-system-0.9.5.zip",
+    "packageSha256": "cd489c282693681c76ebc24b8a31956667678ac7cc2a25947dc557469af11ff0",
+    "manifestSha256": "2f6da2d1e283bdf191a7714704a9818dad262449753abaff4403f47e230ca985",
+    "releaseJsonSha256": "9a2725d21927a19b0d78d04455ad95ad0e7571ce2d45d74da21a17786cc9e829"
   },
   "product": {
     "ijjiDesignSystem": "0.5.2",
@@ -23,11 +23,10 @@
       "history/ijji-design-system-v0.5.1.md": "11ab3c632ab58b56297383c9046df2ead149751ee67027b8d29f32a2f644cda4",
       "history/ijji-ds-addon-v0.5.3.md": "55fb8c2fa8ee1b2feb481a9fb717b8283f9ef1cd4d432c5cd9e83685a6f2fd64",
       "history/ijji-ds-addon-v0.5.4.md": "59f707a0c13e3d0c3ce70535a03973228609e81b66bf7ebcc10920d4cc5333c7"
-    },
-    "normativeDocsStatus": "Historical predecessor documents only. Current required normative files are exactly projectSource.base and projectSource.addon."
+    }
   },
   "webRuntime": {
-    "source": "exact pinned LDS 0.9.7 build-kit plus color projection",
+    "source": "exact pinned LDS 0.9.5 build-kit plus color projection",
     "retainedStructuralCompatibility": "historical ijji 0.9.1 CSS only; no active old JS bundle",
     "vendorFileSha256": {
       "build-kit/assets/Landometer-Logo-TransparentBG.png": "8d706f8021bc4b4fdc0e89117244b54868687b74045be54002321de7aaa7ef92",
@@ -58,9 +57,9 @@
       "build-kit/icons/icon-portfolio-48.png": "443857069292f6910b9e5cc0383cab6da4273acf1e18a47745864729fc46e08e",
       "build-kit/icons/icon-portfolio-512.png": "d8939f6cc7891c47bbb3dce1ddb04d4c30ce4c7e78e29f6fb0061858dafc881f",
       "build-kit/icons/icon-set.json": "aea8f5a7f9793c14a6b183706627e4c2390388b7d8c49129eceacdd9b0bce7a4",
-      "build-kit/lds-0.9.7-components.css": "0977837144503394a8dc79b83c42a22f0bc6ee58a59aeba1d7ffaa30ebf1bf38",
-      "build-kit/lds-0.9.7-ext.css": "11c764df4e3b6d2cd42daecbe8481a2e9ff0913136d987ce3039453ed482221f",
-      "build-kit/lds-0.9.7.css": "5512425b092f9197412ffb0f1b5b0e7a2060172ebf5d83174c6b0e94ef266fee",
+      "build-kit/lds-0.9.5-components.css": "bd37478955a405cd3f871185799399201b95278e943b47d4084d39357a3f8527",
+      "build-kit/lds-0.9.5-ext.css": "53aa80491e936439a2ffcb5758fed5f27f5f5fc19acee8ac58f589baf08494e8",
+      "build-kit/lds-0.9.5.css": "f49c0d9ee9cc0362c5d982faa2362261b5a9d93f91172c667f58473da0ce0d55",
       "build-kit/motif/landometer-motifs.css": "7cc2deb475a8d6e4af331407b2b4b741716c458a8ce885e2fb2859374b93912e",
       "build-kit/motif/landometer-motifs.js": "3a5caef7918a85885b61dd53e049ea8bf2b0a3cea508f587bb14970bfe6deaf2",
       "build-kit/motif/motif-frame.css": "bce9aa3cab8f4f61a15a97bd8dac0835a052b35e0bf19c58d73c160c194a7fc1",
@@ -79,11 +78,10 @@
       "build-kit/motif/svg/rings-quiet.svg": "d494be1f72e833704cd3c20d9d41f60599991d6efd5f670a86e40a7296eb566b",
       "build-kit/motif/svg/slice-full.svg": "8d0dfb62d1ac92738afcd76e8b61b544a5c72bf10b165983235900558447b2df",
       "build-kit/motif/svg/slice-quiet.svg": "c72114d43b81584cbb46251a5519f768087259bf135216f6ea7933a83df4de6b",
-      "machine/color-srgb-10.production.css": "3d34924a249804c4573da5b136303141b67c47f24a3f00dd5d7b86b521d9dfc8",
-      "machine/location-intelligence-0.9.7.css": "8d80360f8fef805e8b69aff67eb9b73df2babda379f19ccbec0beeb293a0999d"
+      "machine/color-srgb-08.production.css": "4a94147d42daf50542d348c601d86e040b28de9a3c8b83b0e149d6bec80bd34b"
     },
-    "bridgePath": "assets/lds/v0.9.7/ijji-compat.css",
-    "bridgeSha256": "55fac7fb140ddba2fc39d68b7c9ea6d367d057241c96202bd0350fcf5364b032"
+    "bridgePath": "assets/lds/v0.9.5/ijji-compat.css",
+    "bridgeSha256": "906b70bf1b51ca21c42b597410f46e078f7f12bb36a8ac108510a352f21dcd01"
   },
   "motifProvenance": {
     "historicalAssetPack": "ijji-ds-addon-assets-v0.5.4",
@@ -147,13 +145,13 @@
   },
   "sourcePolicy": {
     "path": "design-system/source-policy.json",
-    "sha256": "a4672c94089ca6b16b5b2c9f54b9ce6cd4109cabd35b441d21f7f832c2804551"
+    "sha256": "c9427567465f6ca92610e38e32b56fd62835c664697ac3eeaaffa6c9893e3456"
   },
   "archivalDocumentStatus": "historical_only; former eight-plus-one instructions cancelled for new authoring",
   "currentAuthoringBoundary": {
-    "dsVersion": "0.9.7",
-    "releaseRef": "v0.9.7-owner.1",
-    "colorSetId": "color-srgb-10",
-    "scope": "Current landing runtime and authoring use LDS 0.9.7. Historical layout CSS remains a structural compatibility layer; product content and identity/motion artwork are unchanged."
+    "dsVersion": "0.9.5",
+    "releaseRef": "v0.9.5-owner.1",
+    "colorSetId": "color-srgb-08",
+    "scope": "Existing landing runtime remains pinned. This update changes current authoring sources and download pointers only; it does not relabel the deployed runtime or replace historical assets."
   }
 }
