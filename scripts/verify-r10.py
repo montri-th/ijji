@@ -154,8 +154,8 @@ for page in PAGES:
 index = (DOC / "index.html").read_text()
 policy = json.loads((DOC / "source-policy.json").read_text())
 source = policy["normative"]
-check(source["base"]["markdownUrl"] == "https://montri-th.github.io/Landometer/v0.9.6/normative/Landometer-Design-System-v0.9.6.md", "complete LDS base Markdown URL")
-check(source["addon"]["markdownUrl"] == "https://montri-th.github.io/Landometer/v0.9.6/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.6.md", "separate ijji Add-on Markdown URL")
+check(source["base"]["markdownUrl"] == "https://montri-th.github.io/Landometer/v0.9.7/normative/Landometer-Design-System-v0.9.7.md", "complete LDS base Markdown URL")
+check(source["addon"]["markdownUrl"] == "https://montri-th.github.io/Landometer/v0.9.7/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.7.md", "separate ijji Add-on Markdown URL")
 for part in ("base", "addon"):
     check(source[part]["jsonUrl"] == source[part]["markdownUrl"].removesuffix(".md") + ".json", f"{part} JSON alternative")
     check(all(value in index for value in (source[part]["markdownUrl"], source[part]["jsonUrl"])), f"{part} download links")
