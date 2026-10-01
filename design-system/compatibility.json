@@ -86,7 +86,7 @@
   "motifProvenance": {
     "historicalAssetPack": "ijji-ds-addon-assets-v0.5.4",
     "historicalParentLds": "0.9.1",
-    "currentCompatibility": "exact static asset approval inherited by ijji DS 0.5.2 / Add-on 0.5.5; governed parent for new work is LDS 0.9.6",
+    "currentCompatibility": "exact static asset approval inherited by ijji DS 0.5.2 / Add-on 0.5.5; governed parent for new work is LDS 0.9.7",
     "familyRecordPath": "assets/motifs/ijji-four-beat-selected-3-r3/family-record.json",
     "familyRecordSha256": "e31b3b51f1acfa35175bdbbec535f2cb0dea678de5a41e37063eced9ed23bfdb",
     "staticSvgCount": 18,
@@ -100,42 +100,42 @@
   "projectSource": {
     "deliveryModel": "complete_base_plus_separate_product_addon",
     "base": {
-      "markdownUrl": "https://montri-th.github.io/Landometer/v0.9.6/normative/Landometer-Design-System-v0.9.6.md",
-      "jsonUrl": "https://montri-th.github.io/Landometer/v0.9.6/normative/Landometer-Design-System-v0.9.6.json",
+      "markdownUrl": "https://montri-th.github.io/Landometer/v0.9.7/normative/Landometer-Design-System-v0.9.7.md",
+      "jsonUrl": "https://montri-th.github.io/Landometer/v0.9.7/normative/Landometer-Design-System-v0.9.7.json",
       "contains": [
-        "complete LDS 0.9.6 shared rules",
+        "complete LDS 0.9.7 shared rules",
         "exact shared machine tokens and scales"
       ],
-      "documentRevision": "standalone-0.9.6-r1",
-      "publicationTag": "v0.9.6",
-      "colorSetId": "color-srgb-09",
-      "markdownSha256": "c2bed69f48a1fc3c23df1e8010684578bfcf5ef33701a819f65abf18542a3c91",
-      "markdownBytes": 1122346,
-      "jsonSha256": "f3dd5392e4fdc9b3bda8e9435e9252f68b3617b1be66f736fa5e42eca1f4694f",
-      "jsonBytes": 1851669,
-      "documentId": "lds-0.9.6-landometer-standalone-r1"
+      "documentRevision": "standalone-0.9.7-r1",
+      "publicationTag": "v0.9.7",
+      "colorSetId": "color-srgb-10",
+      "markdownSha256": "f4ae912aae11f8346b55836246c4e774f242851635757528a8f33473c0045131",
+      "markdownBytes": 1141965,
+      "jsonSha256": "55730472dc1e3c306b42ecfed75e625a6283518045c8eb1313b0991f4ac5361d",
+      "jsonBytes": 1872866,
+      "documentId": "lds-0.9.7-landometer-standalone-r1"
     },
     "addon": {
-      "markdownUrl": "https://montri-th.github.io/Landometer/v0.9.6/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.6.md",
-      "jsonUrl": "https://montri-th.github.io/Landometer/v0.9.6/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.6.json",
+      "markdownUrl": "https://montri-th.github.io/Landometer/v0.9.7/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.7.md",
+      "jsonUrl": "https://montri-th.github.io/Landometer/v0.9.7/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.7.json",
       "contains": [
         "current ijji product-specific rules and machine values"
       ],
       "embedsSharedFoundation": false,
-      "markdownSha256": "289d5c57e932e8433f41d28e4663caa5baa92e7b2b0f806b3fef536354074e3d",
+      "markdownSha256": "e1abca01a453a36289366bcd66b22a0841b09d8f18c7c236a1967dd78c7df88c",
       "markdownBytes": 227830,
-      "jsonSha256": "09c96c391cf5fc623a2795dbb43dd3952e7ff9b525b6e4fe94adb7e506cdd875",
+      "jsonSha256": "4e9b2e48d4bc585b040085e645e2ec5f7a45baad71b720336d14c96b5cd4cf63",
       "jsonBytes": 253631,
-      "documentId": "ijji-addon-0.5.5-lds-0.9.6-r1",
-      "documentRevision": "standalone-0.9.6-r1",
-      "publicationTag": "v0.9.6",
+      "documentId": "ijji-addon-0.5.5-lds-0.9.7-r1",
+      "documentRevision": "standalone-0.9.7-r1",
+      "publicationTag": "v0.9.7",
       "baseDocument": {
-        "documentId": "lds-0.9.6-landometer-standalone-r1",
-        "path": "Landometer-Design-System-v0.9.6.md",
-        "sha256": "c2bed69f48a1fc3c23df1e8010684578bfcf5ef33701a819f65abf18542a3c91",
-        "dsVersion": "0.9.6",
-        "releaseRef": "v0.9.6-owner.1",
-        "colorSetId": "color-srgb-09"
+        "documentId": "lds-0.9.7-landometer-standalone-r1",
+        "path": "Landometer-Design-System-v0.9.7.md",
+        "sha256": "f4ae912aae11f8346b55836246c4e774f242851635757528a8f33473c0045131",
+        "dsVersion": "0.9.7",
+        "releaseRef": "v0.9.7-owner.1",
+        "colorSetId": "color-srgb-10"
       }
     },
     "preferredUpload": "markdown",
@@ -145,7 +145,7 @@
   },
   "sourcePolicy": {
     "path": "design-system/source-policy.json",
-    "sha256": "a04528bf798610c84914682faf3c9348c86318cb47a483c244c9f3015759bc1d"
+    "sha256": "e282272f0d772b4d50109dbf6f2635c90be6a9ff24f699ffffbb1d40eb0a8bd4"
   },
   "archivalDocumentStatus": "historical_only; former eight-plus-one instructions cancelled for new authoring",
   "currentAuthoringBoundary": {
