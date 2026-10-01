@@ -1,0 +1,26 @@
+{
+  "scope": "current ijji Add-on and website binding audit",
+  "addonVersion": "0.5.5",
+  "documentId": "ijji-addon-0.5.5-lds-0.9.7-r1",
+  "release": {
+    "dsVersion": "0.9.7",
+    "releaseRef": "v0.9.7-owner.1",
+    "colorSetId": "color-srgb-10",
+    "signatureStatus": "unsigned",
+    "signedRelease": false,
+    "normativeDependency": "Landometer-Design-System-v0.9.7.md"
+  },
+  "exactBase": {
+    "documentId": "lds-0.9.7-landometer-standalone-r1",
+    "path": "Landometer-Design-System-v0.9.7.md",
+    "sha256": "d3085cbc0a50195f1cbf0c77b1d77c0d19b84364daf2948eb367348d65432d96",
+    "dsVersion": "0.9.7",
+    "releaseRef": "v0.9.7-owner.1",
+    "colorSetId": "color-srgb-10"
+  },
+  "actualBaseSha256": "d3085cbc0a50195f1cbf0c77b1d77c0d19b84364daf2948eb367348d65432d96",
+  "requiredNormativeFiles": 2,
+  "embedsSharedFoundation": false,
+  "changesRequired": "Website runtime/compatibility/footer were 0.9.5. Corrected to current 0.9.7; current normative Add-on already correctly bound and remains unchanged.",
+  "productTruth": "No new ijji capability claimed; optional Location Profile is design guidance."
+}

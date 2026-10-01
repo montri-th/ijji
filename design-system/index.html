@@ -4,8 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="ดาวน์โหลดคู่มือ normative ของ ijji Design System 0.5.2 และ Add-on 0.5.5 บน Landometer DS 0.9.7">
+  <link rel="canonical" href="https://montri-th.github.io/ijji/design-system/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/identity/ijji-favicon-animated-mark-32-r9-ba9ac2db8984.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ijji · Design system · LDS 0.9.7">
+  <meta property="og:description" content="LDS 0.9.7 ฉบับเต็ม พร้อม ijji Add-on แยกไฟล์ และสิ่งที่เพิ่มจาก 0.9.1">
+  <meta property="og:url" content="https://montri-th.github.io/ijji/design-system/">
+  <meta property="og:image" content="https://montri-th.github.io/ijji/assets/social/ijji-share-th-r11-6e4fae43fd40.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ijji คู่หูธุรกิจ รอบรู้ รอบย่าน รอบร้านคุณ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://montri-th.github.io/ijji/assets/social/ijji-share-th-r11-6e4fae43fd40.png">
   <title>ijji Design System · 0.5.2 / 0.5.5</title>
-  <link rel="stylesheet" href="../assets/lds/v0.9.5/build-kit/lds-0.9.5.css">
+  <link rel="stylesheet" href="../assets/lds/v0.9.7/build-kit/lds-0.9.7.css">
   <style>
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -13,6 +25,7 @@
     main{width:min(100% - 32px,1040px);margin:auto;padding:clamp(40px,7vw,80px) 0 96px}
     h1,h2{font-family:"IBM Plex Sans Thai Looped",sans-serif;line-height:1.24;text-wrap:balance}
     h1{font-size:clamp(2rem,5vw,3.75rem);margin:8px 0 20px}
+    h3{font-size:1.15rem;line-height:1.45;margin:8px 0 12px}
     h2{font-size:clamp(1.4rem,3vw,2rem);margin:0 0 12px}
     p{max-width:68ch;margin:0 0 16px}
     .eyebrow{color:var(--text-metadata);font-size:.875rem;font-weight:600;letter-spacing:.04em}
@@ -40,7 +53,8 @@
   <h1>คู่มือมาตรฐาน ijji สำหรับทีม</h1>
   <p class="intro">ใช้ LDS 0.9.7 ฉบับเต็มคู่กับ ijji Add-on แยกไฟล์ รวมสองไฟล์สำหรับ ChatGPT, Claude, Cowork, Design และ Code ทั้งคนและระบบอ่านได้</p>
   <div class="versions" aria-label="รุ่นปัจจุบัน"><span>LDS 0.9.7 · color-srgb-10</span><span>ijji DS 0.5.2</span><span>ijji Add-on 0.5.5</span></div>
-  <div class="grid">
+  <section class="note" id="what-changed"><p class="eyebrow">จาก LDS 0.9.1 สู่ 0.9.7</p><h2>คงบุคลิก ijji เพิ่มความชัดของข้อมูล</h2><p>เสียงที่เข้าใจเจ้าของร้าน โลโก้ ฟอนต์ และ motif เดิมยังอยู่ครบ ภาพเคลื่อนไหวโลโก้เล่นอย่างมีจุดจบ พร้อมหยุด เล่นต่อ และภาพนิ่งเมื่อผู้ใช้ลดการเคลื่อนไหว</p><div class="grid"><div><h3>สีเล่าเรื่องกับสีข้อมูลมีคนละหน้าที่</h3><p>Brand Energy ใช้กับแบรนด์หลัก ชุด Story 17 สีช่วยกราฟและกราฟิกเสริม ส่วน categorical ใช้ระบุหมวดหมู่ คงชื่อและสัญลักษณ์กำกับ ไม่ให้สีเป็นคำอธิบายเพียงอย่างเดียว</p></div><div><h3>สเกลข้อมูลครบทั้งทางเดียวและสองทาง</h3><p>14 sequential และ 6 diverging ใช้สีหัว–กลาง–ท้ายที่กำหนดไว้ และตารางสีจริง ชุดข้อมูลน้ำ ความเสี่ยง และความหนาแน่นเลือกตามความหมายและตัวหาร สีและทิศทางค่าเหมือนกันทั้งพื้นสว่างและมืด</p></div><div><h3>คิดเรื่องทำเลได้ตรงคำถามขึ้น</h3><p>Location Intelligence เพิ่ม 16 บทบาท: 12 สเกลเชิงปริมาณ และ SWOT 4 มุมมองที่ต้องมีหลักฐาน แยก demand, supply, market size, market share และ spending readiness อย่างมีความหมาย ใช้เป็นแนวทางออกแบบ ไม่ใช่ประกาศว่า ijji เปิดใช้ทุกความสามารถแล้ว</p><p><a href="https://montri-th.github.io/Landometer/v0.9.7/normative/Location-Intelligence-Profile-for-LDS-v0.9.7.md">ดาวน์โหลด Location Profile เมื่อทำงานด้านทำเล</a></p></div><div><h3>เริ่มใช้จากคู่มือสองไฟล์</h3><p>LDS ฉบับเต็มหนึ่งไฟล์ และ ijji Add-on อีกหนึ่งไฟล์ อ่านได้ทั้งคนและเครื่อง ไม่มี master 0.9.4 หรือ patch ที่ต้องประกอบเพิ่ม</p><p><a href="https://montri-th.github.io/Landometer/v0.9.7/#complete-color-atlas">ดูชุดสีและทดลองสเกล 0.9.7</a></p></div></div></section>
+  <div class="grid" style="margin-top:36px">
     <section class="card"><h2>1. LDS 0.9.7 ฉบับเต็ม</h2><p>กติกากลางฉบับสมบูรณ์ ทั้งแบรนด์ เสียง อัตลักษณ์ การออกแบบ และค่าสีสำหรับเครื่องอ่าน ใช้ไฟล์เดียวแทนการประกอบ LDS หลายรุ่น</p><p><a class="action" href="https://montri-th.github.io/Landometer/v0.9.7/normative/Landometer-Design-System-v0.9.7.md">ดาวน์โหลด LDS 0.9.7 (.md)</a></p><p><a href="https://montri-th.github.io/Landometer/v0.9.7/normative/Landometer-Design-System-v0.9.7.json">ฉบับ JSON สำหรับระบบ</a></p></section>
     <section class="card"><h2>2. ijji Add-on 0.5.5</h2><p>กติกาเฉพาะ ijji ทั้งบุคลิก เสียง อัตลักษณ์ และประสบการณ์ผลิตภัณฑ์ ใช้ร่วมกับ LDS 0.9.7 ด้านข้าง โดยไม่รวมกติกากลางซ้ำ</p><p><a class="action" href="https://montri-th.github.io/Landometer/v0.9.7/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.7.md">ดาวน์โหลด ijji Add-on (.md)</a></p><p><a href="https://montri-th.github.io/Landometer/v0.9.7/normative/ijji-Add-on-v0.5.5-for-LDS-v0.9.7.json">ฉบับ JSON สำหรับระบบ</a></p></section>
   </div>

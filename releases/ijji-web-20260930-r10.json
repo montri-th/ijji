@@ -1,8 +1,8 @@
 {
   "schemaVersion": "ijji-product-web-release/1.0",
-  "releaseId": "ijji-web-20261001-r11",
-  "releaseDate": "2026-10-01",
-  "publicationStatus": "release_source",
+  "releaseId": "ijji-web-20260930-r10",
+  "releaseDate": "2026-09-30",
+  "publicationStatus": "prepared_not_published",
   "product": "ijji",
   "locales": [
     {
@@ -23,24 +23,23 @@
     "liveUrl": "https://montri-th.github.io/ijji/"
   },
   "releaseLineage": {
-    "previousPublishedRelease": "ijji-web-20260930-r10",
-    "previousPublishedCommit": "162c3fa47070e2ff8cd25d9c3931311e1832f231",
-    "previousReleaseRecord": "releases/ijji-web-20260930-r10.json",
-    "previousReleaseRecordSha256": "b706b9733f370327898a2e8b76f04e5107c160e18e3c2d6a37e4c748a82c1e0d",
-    "note": "Archived previous record retains its original prepared label; GitHub Pages publication is established separately by the deployed commit. Historical record bytes are immutable.",
-    "historicalVerification": "scripts/verify-r10.py applies to its historical branch, not r11"
+    "previousPublishedRelease": "ijji-web-20260909-r9",
+    "previousPublishedCommit": "b4894463ec16302a9c058f7bb8cf5164e66b7a70",
+    "previousReleaseRecord": "releases/ijji-web-20260909-r9.json",
+    "previousReleaseRecordSha256": "2d3f3039d1c5d648fe86106a992531229518530975f7c1d54d85aaa37ee5be7e",
+    "historicalVerification": "scripts/verify-r9.py applies to the immutable r9 tag, not this successor"
   },
-  "ownerAuthorization": "owner-message:2026-10-01:update-and-publish-all-three-sites-retain-outline-and-review-sharing-hero-favicon",
+  "ownerAuthorization": "owner-message:2026-09-30:migrate-ijji-repo-website-project-source-to-lds0.9.5",
   "authority": {
     "ijjiDesignSystem": "0.5.2",
     "ijjiAddOn": "0.5.5",
-    "parentLDS": "0.9.7",
-    "parentReleaseRef": "v0.9.7-owner.1",
-    "parentColorSet": "color-srgb-10",
-    "parentPackageUrl": "https://github.com/montri-th/Landometer/releases/download/v0.9.7/landometer-design-system-0.9.7.zip",
-    "parentPackageSha256": "49b0c5219f2ad93a8905f88acbd55f7f1b1a24ed5c32eced990e1b28f1aade72",
-    "parentManifestSha256": "02dd4ea4f5a4efee91094c1859b8d5d07ba35f77f29f1e722b4b438a97f4ec22",
-    "parentReleaseJsonSha256": "0a936393fc1ab05f8b32110397546b2a87cc26e46f2661a712bdd2debaa58516",
+    "parentLDS": "0.9.5",
+    "parentReleaseRef": "v0.9.5-owner.1",
+    "parentColorSet": "color-srgb-08",
+    "parentPackageUrl": "https://github.com/montri-th/Landometer/releases/download/v0.9.5/landometer-design-system-0.9.5.zip",
+    "parentPackageSha256": "cd489c282693681c76ebc24b8a31956667678ac7cc2a25947dc557469af11ff0",
+    "parentManifestSha256": "2f6da2d1e283bdf191a7714704a9818dad262449753abaff4403f47e230ca985",
+    "parentReleaseJsonSha256": "9a2725d21927a19b0d78d04455ad95ad0e7571ce2d45d74da21a17786cc9e829",
     "parentSignatureStatus": "unsigned_owner_distribution",
     "conformanceClaim": "authoring_aligned",
     "completeArtifactConformanceClaim": false
@@ -58,7 +57,7 @@
     "downloadPage": "design-system/index.html",
     "projectSourcePackage": "design-system/ijji-normative-0.5.2-0.5.5-lds0.9.5.zip",
     "projectSourcePackageSha256": "a1e1a4331868956b5c252f684569d200e1932e0a85508b2667deb04154a1a981",
-    "compatibilityLockSha256": "6c851429c11973875529f21aeddecfc4a427cd61372e8ca9e23c3116d6b14b54",
+    "compatibilityLockSha256": "605d6d01c8f5dcd96fa20c313ee6663df7167a540e690141157dcda76e5aee86",
     "historicalProjectSourceProjection": "design-system/ijji-project-source-normative-0.5.2-0.5.5.md",
     "currentProjectSource": {
       "deliveryModel": "complete_base_plus_separate_product_addon",
@@ -108,69 +107,58 @@
     },
     "sourcePolicy": {
       "path": "design-system/source-policy.json",
-      "sha256": "a4672c94089ca6b16b5b2c9f54b9ce6cd4109cabd35b441d21f7f832c2804551"
+      "sha256": "c9427567465f6ca92610e38e32b56fd62835c664697ac3eeaaffa6c9893e3456"
     },
-    "projectSourcePackageStatus": "historical_only; not the current Project Source installer",
-    "legacyFieldsStatus": "productDs, addOn, historicalChain, projectSourcePackage and historicalProjectSourceProjection are historical archive fields. Only currentProjectSource identifies current LDS and Add-on normative authority."
+    "projectSourcePackageStatus": "historical_only; not the current Project Source installer"
   },
   "runtime": {
-    "parentCss": "assets/lds/v0.9.7/build-kit/lds-0.9.7.css",
-    "parentColorCss": "assets/lds/v0.9.7/machine/color-srgb-10.production.css",
-    "compatibilityCss": "assets/lds/v0.9.7/ijji-compat.css",
+    "parentCss": "assets/lds/v0.9.5/build-kit/lds-0.9.5.css",
+    "parentColorCss": "assets/lds/v0.9.5/machine/color-srgb-08.production.css",
+    "compatibilityCss": "assets/lds/v0.9.5/ijji-compat.css",
     "retainedHistoricalStructure": "_ds/lds-ijji-add-on-cd48b199-a3d3-4171-adae-7817ca7d57d3/",
     "historicalBundleActive": false,
     "motifInlineJavascriptActive": false,
     "fourBeatMotifMotionActive": false,
     "artifactIdentityOverlay": "ijji.logo-sting.r3 · Landometer Motif Library 1.2.1 · finite once",
-    "vendoredAssetCount": 51,
-    "parentProductionCssSha256": "3d34924a249804c4573da5b136303141b67c47f24a3f00dd5d7b86b521d9dfc8",
+    "vendoredAssetCount": 50,
+    "parentProductionCssSha256": "4a94147d42daf50542d348c601d86e040b28de9a3c8b83b0e149d6bec80bd34b",
     "motifRegistry": "assets/motifs/ijji-four-beat-selected-3-r3/family-record.json",
     "motifRegistrySha256": "e31b3b51f1acfa35175bdbbec535f2cb0dea678de5a41e37063eced9ed23bfdb"
   },
   "scope": {
     "changed": [
-      "Exact LDS 0.9.7 runtime and current authoring binding",
-      "Static root/Thai/English social metadata and task-scoped sharing compositions",
-      "Existing design-source page explains additions since 0.9.1; footer identifies 0.9.7",
-      "Truthful current release status and byte/metadata checks"
+      "parent LDS binding and exact runtime color/build-kit",
+      "versioned ijji DS/Add-on successors, one-file Project Source projection and downloadable normative chain",
+      "exact static motif registry and source provenance retained for audit; unapproved motif runtime removed",
+      "approach reveal replays on visible reentry with focus, reduced-motion and fail-open safeguards",
+      "selected navigation appearance without bracket or left-edge accent"
     ],
     "preserved": [
       "Thai and English product positioning",
       "approved ijji logo-sting identity overlay",
       "product CTA destinations and pricing",
       "owner-first language and product claims",
-      "historical r9 release record and source releases",
-      "All nine product sections and their original order",
-      "Exact r9 browser favicon bytes and approved full-logo finite animation"
+      "historical r9 release record and source releases"
     ]
   },
   "verification": {
-    "sourcePackageIntegrity": "pass: current installed LDS 0.9.7 verifier; bounded package check only",
-    "vendoredRuntimeParity": "51 exact upstream runtime files recorded in compatibility.json",
-    "staticRegression": "scripts/verify-r11.py",
-    "renderedLocal": "Root review passed Thai/English share images and Thai desktop design-source page. Landing and narrow viewport review recorded separately before merge.",
+    "sourcePackageIntegrity": "pass: LDS 0.9.5 owner package 3705/3705 checks, 0 warnings",
+    "vendoredRuntimeParity": "pass: 50 exact LDS runtime files, 18 exact ijji motif SVGs, registry, approval and source archive",
+    "staticRegression": "pass: scripts/verify-r10.py 596 bounded checks; full branch diff has only whitespace notices in byte-preserved historical imports",
+    "renderedLocal": "bounded_pass: local in-app browser TH/EN at 320 and 1280 CSS px; light/dark menu; mobile answer, comparison, problems and closing sections; reentry lifecycle",
     "deployedByteParity": "pending_publication",
     "browserLive": "pending_publication"
   },
   "limitations": [
-    "The retained 0.9.1 structural CSS is a layout compatibility layer. Current shared color and semantic runtime authority is LDS 0.9.7.",
+    "The retained 0.9.1 structural CSS is a compatibility layer, not a reissued LDS 0.9.5 machine package.",
     "Automated asset parity alone does not establish rendering, accessibility, native Thai or product-truth conformance.",
-    "Project source upload and platform/team activation are separate actions.",
-    "Social origin metadata and exact PNG delivery do not prove third-party preview cache refresh.",
-    "No touch/maskable app icon is claimed; the existing approved browser favicon role is preserved."
+    "Project source upload and platform/team activation are separate actions."
   ],
   "currentAuthoring": {
     "dsVersion": "0.9.7",
     "colorSetId": "color-srgb-10",
     "documentRevision": "standalone-0.9.7-r1",
     "publicationTag": "v0.9.7",
-    "scope": "Current runtime, authoring and separate product Add-on; no changed product capability or motion claim."
-  },
-  "publicationEvidence": "Repository source record. Live publication is established by the successful GitHub Pages run and release receipt; source readiness alone is not deployment.",
-  "identityAndSharing": {
-    "manifest": "assets/social/ijji-sharing-r11.json",
-    "sha256": "aa86c7843d971b60a7d16b29e3f09c1b90a54562a7ca15fa4dd45d3e1b2424af",
-    "originMetadata": "initial root, Thai and English HTML; localized OG/Twitter and canonical",
-    "browserIcon": "unchanged approved r9 mark-only PNGs"
+    "scope": "Project-source and authoring guidance only; existing runtime authority remains recorded above."
   }
 }
