@@ -16,10 +16,10 @@
       "documentRevision": "standalone-0.9.7-r1",
       "publicationTag": "v0.9.7",
       "colorSetId": "color-srgb-10",
-      "markdownSha256": "f4ae912aae11f8346b55836246c4e774f242851635757528a8f33473c0045131",
-      "markdownBytes": 1141965,
-      "jsonSha256": "55730472dc1e3c306b42ecfed75e625a6283518045c8eb1313b0991f4ac5361d",
-      "jsonBytes": 1872866,
+      "markdownSha256": "d3085cbc0a50195f1cbf0c77b1d77c0d19b84364daf2948eb367348d65432d96",
+      "markdownBytes": 1142051,
+      "jsonSha256": "540529b6540ceea62a6cd1cddaa0f68e0a940f9c35ae8a7c81adcfb5e8526865",
+      "jsonBytes": 1872952,
       "documentId": "lds-0.9.7-landometer-standalone-r1"
     },
     "addon": {
@@ -29,9 +29,9 @@
         "current ijji product-specific rules and machine values"
       ],
       "embedsSharedFoundation": false,
-      "markdownSha256": "e1abca01a453a36289366bcd66b22a0841b09d8f18c7c236a1967dd78c7df88c",
+      "markdownSha256": "3c244db0b554f64b038e4660f649b31a2c16dd538a13c360080d03ef05f02453",
       "markdownBytes": 227830,
-      "jsonSha256": "4e9b2e48d4bc585b040085e645e2ec5f7a45baad71b720336d14c96b5cd4cf63",
+      "jsonSha256": "c21aac488a77fbacd5bb885399fb0abfd06318debea6658d99aa94bd58d9761d",
       "jsonBytes": 253631,
       "documentId": "ijji-addon-0.5.5-lds-0.9.7-r1",
       "documentRevision": "standalone-0.9.7-r1",
@@ -39,7 +39,7 @@
       "baseDocument": {
         "documentId": "lds-0.9.7-landometer-standalone-r1",
         "path": "Landometer-Design-System-v0.9.7.md",
-        "sha256": "f4ae912aae11f8346b55836246c4e774f242851635757528a8f33473c0045131",
+        "sha256": "d3085cbc0a50195f1cbf0c77b1d77c0d19b84364daf2948eb367348d65432d96",
         "dsVersion": "0.9.7",
         "releaseRef": "v0.9.7-owner.1",
         "colorSetId": "color-srgb-10"
@@ -115,15 +115,15 @@
       "documentRevision": "standalone-0.9.7-r1",
       "publicationTag": "v0.9.7",
       "markdownUrl": "https://montri-th.github.io/Landometer/v0.9.7/normative/Location-Intelligence-Profile-for-LDS-v0.9.7.md",
-      "markdownSha256": "3982b985d4ed9f5000f0a963433561cbb24e2704ea9df1525749d5a567f58c28",
-      "markdownBytes": 124135,
+      "markdownSha256": "5d4856041709735d3a04d4a510a88b551df86c211fdcab8a0707e8fe7c9efc3b",
+      "markdownBytes": 123685,
       "jsonUrl": "https://montri-th.github.io/Landometer/v0.9.7/normative/Location-Intelligence-Profile-for-LDS-v0.9.7.json",
-      "jsonSha256": "bcb0c6248ddeaee7bd4a0263d48e23019fbe935ca7513de778a7189fc39f8ac9",
-      "jsonBytes": 179016,
+      "jsonSha256": "a592bfd8d1934b4c118573b0faabbb54e0c4023cdfce342916ce9b8b752346e2",
+      "jsonBytes": 178573,
       "baseDocument": {
         "documentId": "lds-0.9.7-landometer-standalone-r1",
         "path": "Landometer-Design-System-v0.9.7.md",
-        "sha256": "f4ae912aae11f8346b55836246c4e774f242851635757528a8f33473c0045131",
+        "sha256": "d3085cbc0a50195f1cbf0c77b1d77c0d19b84364daf2948eb367348d65432d96",
         "dsVersion": "0.9.7",
         "releaseRef": "v0.9.7-owner.1",
         "colorSetId": "color-srgb-10"

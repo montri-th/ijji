@@ -57,7 +57,7 @@
     "downloadPage": "design-system/index.html",
     "projectSourcePackage": "design-system/ijji-normative-0.5.2-0.5.5-lds0.9.5.zip",
     "projectSourcePackageSha256": "a1e1a4331868956b5c252f684569d200e1932e0a85508b2667deb04154a1a981",
-    "compatibilityLockSha256": "c825a60c758c8c19880b8a5ff25f7adb3da0777a9a97bee48e9bc5d31fe85738",
+    "compatibilityLockSha256": "605d6d01c8f5dcd96fa20c313ee6663df7167a540e690141157dcda76e5aee86",
     "historicalProjectSourceProjection": "design-system/ijji-project-source-normative-0.5.2-0.5.5.md",
     "currentProjectSource": {
       "deliveryModel": "complete_base_plus_separate_product_addon",
@@ -71,10 +71,10 @@
         "documentRevision": "standalone-0.9.7-r1",
         "publicationTag": "v0.9.7",
         "colorSetId": "color-srgb-10",
-        "markdownSha256": "f4ae912aae11f8346b55836246c4e774f242851635757528a8f33473c0045131",
-        "markdownBytes": 1141965,
-        "jsonSha256": "55730472dc1e3c306b42ecfed75e625a6283518045c8eb1313b0991f4ac5361d",
-        "jsonBytes": 1872866,
+        "markdownSha256": "d3085cbc0a50195f1cbf0c77b1d77c0d19b84364daf2948eb367348d65432d96",
+        "markdownBytes": 1142051,
+        "jsonSha256": "540529b6540ceea62a6cd1cddaa0f68e0a940f9c35ae8a7c81adcfb5e8526865",
+        "jsonBytes": 1872952,
         "documentId": "lds-0.9.7-landometer-standalone-r1"
       },
       "addon": {
@@ -84,9 +84,9 @@
           "current ijji product-specific rules and machine values"
         ],
         "embedsSharedFoundation": false,
-        "markdownSha256": "e1abca01a453a36289366bcd66b22a0841b09d8f18c7c236a1967dd78c7df88c",
+        "markdownSha256": "3c244db0b554f64b038e4660f649b31a2c16dd538a13c360080d03ef05f02453",
         "markdownBytes": 227830,
-        "jsonSha256": "4e9b2e48d4bc585b040085e645e2ec5f7a45baad71b720336d14c96b5cd4cf63",
+        "jsonSha256": "c21aac488a77fbacd5bb885399fb0abfd06318debea6658d99aa94bd58d9761d",
         "jsonBytes": 253631,
         "documentId": "ijji-addon-0.5.5-lds-0.9.7-r1",
         "documentRevision": "standalone-0.9.7-r1",
@@ -94,7 +94,7 @@
         "baseDocument": {
           "documentId": "lds-0.9.7-landometer-standalone-r1",
           "path": "Landometer-Design-System-v0.9.7.md",
-          "sha256": "f4ae912aae11f8346b55836246c4e774f242851635757528a8f33473c0045131",
+          "sha256": "d3085cbc0a50195f1cbf0c77b1d77c0d19b84364daf2948eb367348d65432d96",
           "dsVersion": "0.9.7",
           "releaseRef": "v0.9.7-owner.1",
           "colorSetId": "color-srgb-10"
@@ -107,7 +107,7 @@
     },
     "sourcePolicy": {
       "path": "design-system/source-policy.json",
-      "sha256": "e282272f0d772b4d50109dbf6f2635c90be6a9ff24f699ffffbb1d40eb0a8bd4"
+      "sha256": "c9427567465f6ca92610e38e32b56fd62835c664697ac3eeaaffa6c9893e3456"
     },
     "projectSourcePackageStatus": "historical_only; not the current Project Source installer"
   },
