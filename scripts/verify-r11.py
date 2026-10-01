@@ -6,6 +6,7 @@ import hashlib
 import json
 import re
 import subprocess
+import struct
 import zipfile
 from html.parser import HTMLParser
 from pathlib import Path
@@ -177,6 +178,12 @@ for page in ['index.html'] + PAGES + ['design-system/index.html']:
     for field in ['og:title', 'og:url', 'og:image', 'og:image:width', 'og:image:height', 'og:image:alt']:
         check(f'property="{field}"' in head, f'{page} initial {field}')
     check('name="twitter:card" content="summary_large_image"' in head, f'{page} large image card')
+    og_url = re.search(r'property="og:image" content="([^"]+)"', head).group(1)
+    og_file = ROOT / urlparse(og_url).path.removeprefix('/ijji/')
+    check(og_file.is_file() and og_file.suffix == '.png', f'{page} share image resolves locally')
+    title = re.search(r'property="og:title" content="([^"]+)"', head).group(1)
+    description = re.search(r'property="og:description" content="([^"]+)"', head).group(1)
+    check(len(title) <= 60 and len(description) <= 155, f'{page} social metadata length')
     check('rel="canonical"' in head and '<title>' in head, f'{page} initial discovery')
     check('ijji-favicon-animated-mark-32-r9-ba9ac2db8984.png' in head, f'{page} approved favicon')
     if page in PAGES:
@@ -185,6 +192,9 @@ for page in ['index.html'] + PAGES + ['design-system/index.html']:
 identity = json.loads((ROOT / 'assets/social/ijji-sharing-r11.json').read_text())
 for asset in identity['assets']:
     check(digest(ROOT / asset['path']) == asset['sha256'], f"social or identity hash: {asset['role']}")
+    image_bytes = (ROOT / asset['path']).read_bytes()
+    check(image_bytes[:8] == b'\x89PNG\r\n\x1a\n', f"actual PNG container: {asset['path']}")
+    check(struct.unpack('>II', image_bytes[16:24]) == (asset['intrinsicWidth'], asset['intrinsicHeight']), f"intrinsic image dimensions: {asset['path']}")
 for name in ['ijji-logo-still.png', 'ijji-mark-still.png']:
     rel = f'assets/ijji/logo-sting/layers/{name}'
     check((ROOT / rel).read_bytes() == subprocess.check_output(['git', 'show', f'162c3fa:{rel}'], cwd=ROOT), f'approved source unchanged {name}')
